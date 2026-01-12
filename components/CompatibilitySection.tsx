@@ -13,8 +13,9 @@ import {
     SelectTrigger,
     SelectValue,
 } from "@/components/ui/select"
-import { Users, Heart, Star, Sparkles, Info } from "lucide-react"
+import { Users, Heart, Star, Sparkles, Info, Calendar } from "lucide-react"
 import { calculateCompatibility, calculateLifePath, type CompatibilityType, type CompatibilityResult } from "@/utils/numerology"
+import { parseDate } from "@/utils/date"
 
 interface CompatibilitySectionProps {
     userLifePath: number | null;
@@ -22,15 +23,24 @@ interface CompatibilitySectionProps {
 
 export function CompatibilitySection({ userLifePath }: CompatibilitySectionProps) {
     const [name, setName] = useState("")
-    const [birthDate, setBirthDate] = useState("")
+    const [dateStr, setDateStr] = useState("")
+    const [error, setError] = useState("")
     const [type, setType] = useState<CompatibilityType>("Pareja")
     const [result, setResult] = useState<CompatibilityResult | null>(null)
 
     const handleCalculate = (e: React.FormEvent) => {
         e.preventDefault()
-        if (!userLifePath || !birthDate) return
+        setError("")
 
-        const otherLP = calculateLifePath(birthDate).value
+        if (!userLifePath) return
+
+        const parsedDate = parseDate(dateStr)
+        if (!parsedDate) {
+            setError("Fecha inválida. Usa DD/MM/AAAA")
+            return
+        }
+
+        const otherLP = calculateLifePath(parsedDate).value
         const compResult = calculateCompatibility(userLifePath, otherLP, type)
         setResult(compResult)
     }
@@ -88,18 +98,27 @@ export function CompatibilitySection({ userLifePath }: CompatibilitySectionProps
                         <div className="space-y-4">
                             <div className="space-y-2">
                                 <Label className="text-slate-300">Fecha de Nacimiento</Label>
-                                <Input
-                                    type="date"
-                                    value={birthDate}
-                                    onChange={(e) => setBirthDate(e.target.value)}
-                                    className="bg-white/5 border-white/10 text-slate-100 h-11 [color-scheme:dark]"
-                                    required
-                                />
+                                <div className="relative">
+                                    <Calendar className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-500" />
+                                    <Input
+                                        type="text"
+                                        placeholder="DD/MM/AAAA"
+                                        value={dateStr}
+                                        onChange={(e) => {
+                                            setDateStr(e.target.value)
+                                            setError("")
+                                        }}
+                                        className={`bg-white/5 border-white/10 text-slate-100 h-11 pl-10 ${error ? "border-red-500/50" : ""}`}
+                                        required
+                                    />
+                                </div>
+                                {error && <p className="text-xs text-red-400 pl-1">{error}</p>}
                             </div>
                             <div className="pt-8">
                                 <Button
                                     type="submit"
-                                    className="w-full bg-gold/80 hover:bg-gold text-slate-950 font-bold h-11 shadow-[0_0_15px_rgba(212,175,55,0.2)]"
+                                    className="w-full bg-gold/80 hover:bg-gold text-slate-950 font-bold h-11 shadow-[0_0_15px_rgba(212,175,55,0.2)] disabled:opacity-50"
+                                    disabled={!name || !dateStr}
                                 >
                                     <Sparkles className="mr-2 h-4 w-4" />
                                     Ver Compatibilidad

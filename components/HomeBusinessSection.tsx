@@ -6,21 +6,35 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
-import { Home, Briefcase, MapPin, Sparkles, Paintbrush, Gem } from "lucide-react"
+import { Home, Briefcase, MapPin, Sparkles, Paintbrush, Gem, Calendar } from "lucide-react"
 import { calculateHouseNumerology, type HouseNumerologyResult } from "@/utils/numerology"
 import { cn } from "@/lib/utils"
+import { parseDate } from "@/utils/date"
 
 export function HomeBusinessSection() {
     const [addressNum, setAddressNum] = useState("")
     const [streetName, setStreetName] = useState("")
-    const [moveDate, setMoveDate] = useState("")
+    const [dateStr, setDateStr] = useState("")
+    const [error, setError] = useState("")
     const [result, setResult] = useState<HouseNumerologyResult | null>(null)
 
     const handleCalculate = (e: React.FormEvent) => {
         e.preventDefault()
+        setError("")
+
         if (!addressNum) return
 
-        const res = calculateHouseNumerology(addressNum, streetName, moveDate)
+        let parsedDate: string | undefined = undefined;
+        if (dateStr) {
+            const d = parseDate(dateStr);
+            if (!d) {
+                setError("Fecha inválida. Usa DD/MM/AAAA");
+                return;
+            }
+            parsedDate = d;
+        }
+
+        const res = calculateHouseNumerology(addressNum, streetName, parsedDate)
         setResult(res)
     }
 
@@ -59,17 +73,26 @@ export function HomeBusinessSection() {
                         <div className="space-y-4">
                             <div className="space-y-2">
                                 <Label className="text-slate-300">Fecha de Mudanza / Inicio</Label>
-                                <Input
-                                    type="date"
-                                    value={moveDate}
-                                    onChange={(e) => setMoveDate(e.target.value)}
-                                    className="bg-white/5 border-white/10 text-slate-100 h-11 [color-scheme:dark]"
-                                />
+                                <div className="relative">
+                                    <Calendar className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-500" />
+                                    <Input
+                                        type="text"
+                                        placeholder="DD/MM/AAAA"
+                                        value={dateStr}
+                                        onChange={(e) => {
+                                            setDateStr(e.target.value)
+                                            setError("")
+                                        }}
+                                        className={`bg-white/5 border-white/10 text-slate-100 h-11 pl-10 ${error ? "border-red-500/50" : ""}`}
+                                    />
+                                </div>
+                                {error && <p className="text-xs text-red-400 pl-1">{error}</p>}
                             </div>
                             <div className="pt-8">
                                 <Button
                                     type="submit"
-                                    className="w-full bg-amber-600 hover:bg-amber-500 text-slate-950 font-bold h-11 shadow-[0_0_15px_rgba(217,119,6,0.2)]"
+                                    className="w-full bg-amber-600 hover:bg-amber-500 text-slate-950 font-bold h-11 shadow-[0_0_15px_rgba(217,119,6,0.2)] disabled:opacity-50"
+                                    disabled={!addressNum}
                                 >
                                     <Sparkles className="mr-2 h-4 w-4" />
                                     Calcular Energía

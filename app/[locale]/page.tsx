@@ -133,8 +133,20 @@ export default function Home() {
         </div>
       </div>
 
-      <footer className="py-16 text-slate-400 text-[11px] uppercase tracking-[0.6em] text-center z-10 bg-slate-950/90 backdrop-blur-3xl border-t border-white/5 font-bold mt-auto transition-all duration-1000">
-        &copy; {new Date().getFullYear()} Sabiduría Ancestral • Portal del Destino • Numerología Sagrada
+      <footer className="py-16 text-center z-10 bg-slate-950/90 backdrop-blur-3xl border-t border-white/5 font-bold mt-auto transition-all duration-1000">
+        <div className="flex flex-col items-center gap-6">
+          <a
+            href="https://www.instintosaludable.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gold hover:text-yellow-300 font-bold tracking-wide border-b border-gold/30 hover:border-gold pb-0.5 transition-all text-lg font-mystic"
+          >
+            Adquiere mi eBook completo de Numerología en www.InstintoSaludable.com
+          </a>
+          <p className="text-slate-400 text-[11px] uppercase tracking-[0.6em]">
+            &copy; {new Date().getFullYear()} Sabiduría Ancestral • Portal del Destino • Numerología Sagrada
+          </p>
+        </div>
       </footer>
     </main>
   );
