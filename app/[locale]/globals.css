@@ -1,0 +1,136 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-mystic: var(--font-cinzel), var(--font-playfair);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+}
+
+:root {
+  --background: oklch(0.05 0.02 260);
+  --foreground: oklch(0.98 0.01 260);
+  --card: rgba(10, 10, 46, 0.4);
+  --card-foreground: oklch(0.98 0.01 260);
+  --popover: oklch(0.05 0.02 260);
+  --popover-foreground: oklch(0.98 0.01 260);
+  --primary: #d4af37;
+  --primary-foreground: #000;
+  --secondary: rgba(255, 255, 255, 0.05);
+  --secondary-foreground: #fff;
+  --muted: rgba(255, 255, 255, 0.1);
+  --muted-foreground: oklch(0.7 0.01 260);
+  --accent: rgba(212, 175, 55, 0.2);
+  --accent-foreground: #d4af37;
+  --destructive: oklch(0.6 0.2 25);
+  --border: rgba(212, 175, 55, 0.2);
+  --input: rgba(212, 175, 55, 0.1);
+  --ring: #d4af37;
+  --radius: 0.75rem;
+}
+
+@layer base {
+  body {
+    background: radial-gradient(circle at center, #0a0a2e 0%, #000000 100%);
+    position: relative;
+    overflow-x: hidden;
+    min-height: 100vh;
+  }
+}
+
+@keyframes cosmic-breathing {
+
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+
+  50% {
+    transform: scale(1.03);
+    opacity: 1;
+  }
+}
+
+@keyframes star-twinkle {
+
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: scale(0.8);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+@keyframes float-ethereal {
+
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  33% {
+    transform: translateY(-15px) rotate(2deg);
+  }
+
+  66% {
+    transform: translateY(5px) rotate(-2deg);
+  }
+}
+
+.animate-cosmic-breathing {
+  animation: cosmic-breathing 15s ease-in-out infinite;
+}
+
+.animate-star-twinkle {
+  animation: star-twinkle var(--twinkle-duration, 3s) ease-in-out infinite;
+}
+
+.animate-float-ethereal {
+  animation: float-ethereal var(--float-duration, 10s) ease-in-out infinite;
+}
+
+.glow-gold {
+  text-shadow: 0 0 10px #FFD700, 0 0 20px #FFD700, 0 0 40px rgba(255, 215, 0, 0.5);
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+}
+
+.glow-silver {
+  text-shadow: 0 0 5px #C0C0C0, 0 0 15px rgba(192, 192, 192, 0.4);
+}
+
+.intense-glow {
+  text-shadow: 0 0 15px #FFD700, 0 0 30px rgba(255, 215, 0, 0.6);
+}
+
+.text-gold {
+  background: linear-gradient(to bottom, #d4af37 0%, #f9f295 50%, #d4af37 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.font-mystic {
+  font-family: var(--font-cinzel), serif;
+}
