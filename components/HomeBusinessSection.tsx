@@ -10,8 +10,10 @@ import { Home, Briefcase, MapPin, Sparkles, Paintbrush, Gem, Calendar } from "lu
 import { calculateHouseNumerology, type HouseNumerologyResult } from "@/utils/numerology"
 import { cn } from "@/lib/utils"
 import { parseDate } from "@/utils/date"
+import { useTranslations } from "next-intl"
 
 export function HomeBusinessSection() {
+    const t = useTranslations('HomePage');
     const [addressNum, setAddressNum] = useState("")
     const [streetName, setStreetName] = useState("")
     const [dateStr, setDateStr] = useState("")
@@ -28,7 +30,7 @@ export function HomeBusinessSection() {
         if (dateStr) {
             const d = parseDate(dateStr);
             if (!d) {
-                setError("Fecha inválida. Usa DD/MM/AAAA");
+                setError(t('form.date_error'));
                 return;
             }
             parsedDate = d;
@@ -43,28 +45,28 @@ export function HomeBusinessSection() {
             <Card className="glass-card border-none overflow-hidden">
                 <CardHeader>
                     <CardTitle className="font-mystic text-2xl text-slate-100 flex items-center gap-3">
-                        <Home className="text-gold" /> Vibración del Espacio
+                        <Home className="text-gold" /> {t('spaces.title')}
                     </CardTitle>
                 </CardHeader>
                 <CardContent>
                     <form onSubmit={handleCalculate} className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div className="space-y-4">
                             <div className="space-y-2">
-                                <Label className="text-slate-300">Número de Calle / Puerta</Label>
+                                <Label className="text-slate-300">{t('spaces.form.address_num')}</Label>
                                 <Input
                                     value={addressNum}
                                     onChange={(e) => setAddressNum(e.target.value)}
-                                    placeholder="Ej: 1234"
+                                    placeholder={t('spaces.form.address_placeholder')}
                                     className="bg-white/5 border-white/10 text-slate-100 h-11"
                                     required
                                 />
                             </div>
                             <div className="space-y-2">
-                                <Label className="text-slate-300">Nombre de Calle (Opcional)</Label>
+                                <Label className="text-slate-300">{t('spaces.form.street_name')}</Label>
                                 <Input
                                     value={streetName}
                                     onChange={(e) => setStreetName(e.target.value)}
-                                    placeholder="Ej: Avenida Sol"
+                                    placeholder={t('spaces.form.street_placeholder')}
                                     className="bg-white/5 border-white/10 text-slate-100 h-11"
                                 />
                             </div>
@@ -72,12 +74,12 @@ export function HomeBusinessSection() {
 
                         <div className="space-y-4">
                             <div className="space-y-2">
-                                <Label className="text-slate-300">Fecha de Mudanza / Inicio</Label>
+                                <Label className="text-slate-300">{t('spaces.form.move_date')}</Label>
                                 <div className="relative">
                                     <Calendar className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-500" />
                                     <Input
                                         type="text"
-                                        placeholder="DD/MM/AAAA"
+                                        placeholder={t('form.date_placeholder')}
                                         value={dateStr}
                                         onChange={(e) => {
                                             setDateStr(e.target.value)
@@ -95,7 +97,7 @@ export function HomeBusinessSection() {
                                     disabled={!addressNum}
                                 >
                                     <Sparkles className="mr-2 h-4 w-4" />
-                                    Calcular Energía
+                                    {t('spaces.form.submit')}
                                 </Button>
                             </div>
                         </div>
@@ -119,7 +121,7 @@ export function HomeBusinessSection() {
                                     <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity" />
                                     <span className="text-5xl font-mystic text-white drop-shadow-lg">{result.houseNumber}</span>
                                 </div>
-                                <h3 className="text-gold font-mystic text-xl mb-1">Hogar Nivel {result.houseNumber}</h3>
+                                <h3 className="text-gold font-mystic text-xl mb-1">{t('spaces.result.home_level')} {result.houseNumber}</h3>
                                 <p className="text-[10px] uppercase tracking-widest text-slate-500 font-mono">{result.breakdown}</p>
                             </CardContent>
                         </Card>
@@ -135,8 +137,12 @@ export function HomeBusinessSection() {
                                         <Paintbrush className="w-5 h-5 text-gold/80" />
                                     </div>
                                     <div>
-                                        <h4 className="text-slate-100 font-bold text-lg">{result.synesthesia.sensation}</h4>
-                                        <p className="text-slate-300 text-sm leading-relaxed">{result.synesthesia.advice}</p>
+                                        <h4 className="text-slate-100 font-bold text-lg">
+                                            {t(`results.house.${result.houseNumber}.sensation`)}
+                                        </h4>
+                                        <p className="text-slate-300 text-sm leading-relaxed">
+                                            {t(`results.house.${result.houseNumber}.advice`)}
+                                        </p>
                                     </div>
                                 </div>
 
@@ -145,16 +151,16 @@ export function HomeBusinessSection() {
                                         <Gem className="w-5 h-5 text-gold/80" />
                                     </div>
                                     <div>
-                                        <h4 className="text-slate-100 font-bold text-sm">Cristales de Armonización</h4>
+                                        <h4 className="text-slate-100 font-bold text-sm">{t('spaces.result.crystals')}</h4>
                                         <p className="text-slate-400 text-sm italic">{result.synesthesia.crystals}</p>
                                     </div>
                                 </div>
 
                                 <div className="bg-gold/5 p-4 rounded-lg border border-gold/10">
-                                    <p className="text-[11px] text-gold/80 uppercase font-bold tracking-widest mb-1">Sinestesia del Color</p>
+                                    <p className="text-[11px] text-gold/80 uppercase font-bold tracking-widest mb-1">{t('spaces.result.color_synesthesia')}</p>
                                     <div className="flex items-center gap-3">
                                         <div className={cn("w-4 h-4 rounded-full", result.synesthesia.color)} />
-                                        <p className="text-xs text-slate-300">Este espacio vibra en frecuencias de color que puedes potenciar decorando con estos tonos.</p>
+                                        <p className="text-xs text-slate-300">{t('spaces.result.color_desc')}</p>
                                     </div>
                                 </div>
                             </CardContent>

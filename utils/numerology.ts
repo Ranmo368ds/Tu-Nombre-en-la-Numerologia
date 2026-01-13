@@ -139,7 +139,7 @@ export interface CompatibilityResult {
   score: number;
   synergy: number;
   breakdown: string;
-  interpretation: string;
+  interpretationKey: string;
 }
 
 export function calculateCompatibility(
@@ -152,56 +152,24 @@ export function calculateCompatibility(
   // Basic score calculation (just for demonstration, could be more complex)
   const score = Math.floor(70 + (synergy % 3) * 10 + (myLifePath === otherLifePath ? 5 : 0));
 
-  const interpretations: Record<CompatibilityType, Record<number, string>> = {
-    "Pareja": {
-      1: "Vibración de liderazgo compartido. Construyen un futuro visionario juntos.",
-      2: "Armonía perfecta. Sensibilidad y apoyo mutuo profundo.",
-      3: "Relación llena de alegría, comunicación y expresión creativa.",
-      4: "Estabilidad y lealtad. Construyen una base sólida para el hogar.",
-      5: "Aventura y libertad. Una relación dinámica que nunca se detiene.",
-      6: "Amor nutritivo y protector. El hogar es su santuario.",
-      7: "Conexión espiritual e intelectual. Buscan juntos la verdad profunda.",
-      8: "Poder y abundancia material. Un equipo imparable.",
-      9: "Amor universal y compasivo. Se inspiran mutuamente a ser mejores.",
-      11: "Relación maestra. Evolución espiritual intensamente conectada.",
-      22: "Grandes constructores de un legado conjunto.",
-      33: "Sanación y guía mutua. Amor en su máxima expresión de servicio."
-    },
-    "Socio de negocio": {
-      1: "Enfoque total en metas y resultados innovadores.",
-      4: "Organización y trabajo duro. Éxito asegurado por la estructura.",
-      8: "Gran potencial financiero y proyección de autoridad.",
-    },
-    "Hijo": {
-      1: "Motiva su independencia pero guiando su creatividad.",
-      2: "Se requiere una guía suave y mucha paciencia emocional.",
-      6: "Un vínculo de protección y enseñanza basada en el amor familiar.",
-    },
-    "Mascota": {
-      3: "Mascota alegre que trae mucha comunicación y risas al hogar.",
-      5: "Mascota juguetona y llena de energía. Necesita mucho espacio.",
-      9: "Conexión telepática o muy intuitiva. Un compañero de alma.",
-    }
-  };
-
-  const defaultInterpretation = `Vibración ${synergy}: Existe una energía de ${synergy % 2 === 0 ? "equilibrio y cooperación" : "creatividad y expansión"
-    } entre ambos.`;
+  // Return key prefix + values for component to construct translation key
+  // e.g. 'compatibility.partner.1'
 
   return {
     score: score > 100 ? 100 : score,
     synergy,
     breakdown: `${myLifePath} + ${otherLifePath} = ${myLifePath + otherLifePath} → ${synergy}`,
-    interpretation: interpretations[type]?.[synergy] || defaultInterpretation
+    interpretationKey: `${type.toLowerCase().replace(/ /g, '_')}.${synergy}`
   };
 }
+
 export interface HouseNumerologyResult {
   houseNumber: number;
   houseVibration: number;
   synesthesia: {
     color: string;
-    sensation: string;
-    advice: string;
-    crystals: string;
+    crystals: string; // Keep crystals hardcoded or translate? Crystals are usually universal names, but better translate.
+    // We will just return the ID/Number to let component fetch translations
   };
   breakdown: string;
 }
@@ -219,17 +187,18 @@ export function calculateHouseNumerology(
 
   const houseNumber = reduce(numSum);
 
-  // Synesthesia mapping
+  // Synesthesia mapping (colors and crystals can remain here or move to translation if names vary widely)
+  // For now, let's keep color codes here as they are CSS classes.
   const synesthesiaMap: Record<number, any> = {
-    1: { color: "bg-red-600", sensation: "Energía y Acción", advice: "Ideal para nuevos comienzos e independencia.", crystals: "Granate, Cornalina" },
-    2: { color: "bg-blue-400", sensation: "Paz y Diplomacia", advice: "Fomenta la armonía familiar y la meditación.", crystals: "Cuarzo Rosa, Selenita" },
-    3: { color: "bg-yellow-400", sensation: "Alegría y Creatividad", advice: "Espacio de mucha vida social y expresión artística.", crystals: "Citrino, Pirita" },
-    4: { color: "bg-emerald-600", sensation: "Estabilidad y Orden", advice: "Excelente para trabajar y construir bases sólidas.", crystals: "Jade, Turmalina Negra" },
-    5: { color: "bg-amber-500", sensation: "Cambio y Aventura", advice: "Un hogar dinámico con mucho movimiento constante.", crystals: "Ojo de Tigre, Aventurina" },
-    6: { color: "bg-pink-500", sensation: "Amor y Nutrición", advice: "Punto de encuentro para la familia y el cuidado mutuo.", crystals: "Rodocrosita, Esmeralda" },
-    7: { color: "bg-purple-600", sensation: "Mysticismo y Sabiduría", advice: "Refugio para el estudio profundo y la introspección.", crystals: "Amatista, Lapis Lázuli" },
-    8: { color: "bg-slate-700", sensation: "Poder y Abundancia", advice: "Atrae el éxito material y la gestión eficiente.", crystals: "Obsidiana, Hematita" },
-    9: { color: "bg-indigo-900", sensation: "Humanitarismo y Cierre", advice: "Espacio para la sanación y el amor incondicional.", crystals: "Piedra de Luna, Labradorita" },
+    1: { color: "bg-red-600", crystals: "Granate, Cornalina" },
+    2: { color: "bg-blue-400", crystals: "Cuarzo Rosa, Selenita" },
+    3: { color: "bg-yellow-400", crystals: "Citrino, Pirita" },
+    4: { color: "bg-emerald-600", crystals: "Jade, Turmalina Negra" },
+    5: { color: "bg-amber-500", crystals: "Ojo de Tigre, Aventurina" },
+    6: { color: "bg-pink-500", crystals: "Rodocrosita, Esmeralda" },
+    7: { color: "bg-purple-600", crystals: "Amatista, Lapis Lázuli" },
+    8: { color: "bg-slate-700", crystals: "Obsidiana, Hematita" },
+    9: { color: "bg-indigo-900", crystals: "Piedra de Luna, Labradorita" },
   };
 
   const vib = synesthesiaMap[houseNumber] || synesthesiaMap[1];

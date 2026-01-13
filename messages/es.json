@@ -2,6 +2,300 @@
     "HomePage": {
         "title": "TU NOMBRE EN LA NUMEROLOGÍA",
         "subtitle": "Descubre cómo las letras de tu nombre influyen en tu destino",
-        "portal": "Portal Sagrado Pitagórico"
+        "tabs": {
+            "portal": "Portal",
+            "synergy": "Sinergia",
+            "spaces": "Espacios",
+            "cycles": "Ciclos"
+        },
+        "cycles_content": {
+            "long_cycles": {
+                "title": "Ciclos Largos: Año y Mes Personal",
+                "desc": "El año personal cambia cada 1 de enero (o en tu cumpleaños según configuración) y dura 12 meses. Representa la tendencia general del año. El mes personal te da el 'sabor' de cada mes."
+            },
+            "powerful_advice": {
+                "title": "Consejo Poderoso",
+                "desc": "Al inicio de tu año personal: lee completo el pronóstico anual, marca en calendario los meses fuertes (ej: mes 8 finanzas, mes 6 relaciones, mes 9 cierres). Planifica acciones importantes alineándolas con esos meses."
+            },
+            "practical_tips": {
+                "title": "Consejos Prácticos",
+                "colors": "Colores favorables: llévalos en ropa/accesorios.",
+                "numbers": "Números de la suerte: elige fechas con ellos.",
+                "crystals": "Piedras/cristales: llévalos en citas importantes.",
+                "hours": "Horas/días potentes: pon afirmaciones alineadas (ej: si eres 7 → 'Confío en mi intuición')."
+            },
+            "compatibility": {
+                "title": "Explora Compatibilidades",
+                "desc": "Calcula con pareja, socios, hijos, mascotas, proyectos o marcas. Entiende dinámicas y dónde poner consciencia."
+            },
+            "journal": {
+                "title": "Diario Numerológico",
+                "subtitle": "El hack que más transforma",
+                "instruction": "Cada noche/semana anota:",
+                "prompts": {
+                    "app": "¿Qué dijo la app?",
+                    "reality": "¿Qué pasó realmente?",
+                    "connection": "¿Cómo se conecta?"
+                },
+                "placeholder": "Escribe tus observaciones aquí..."
+            }
+        },
+        "form": {
+            "email_label": "Email",
+            "email_placeholder": "tu@email.com",
+            "email_required_tag": "Requerido",
+            "email_help": "Ingresa tu email para recibir la lectura completa y tips diarios.",
+            "email_error": "Falta tu email para proseguir",
+            "name_label": "Nombre Completo",
+            "name_placeholder": "Ej: Juan Pérez",
+            "date_label": "Fecha de Nacimiento",
+            "date_placeholder": "DD/MM/AAAA",
+            "date_error": "Por favor usa formato DD/MM/AAAA",
+            "calculate_btn": "Calcular mi numerología",
+            "calculate_sending": "Enviando...",
+            "clear_btn": "Limpiar"
+        },
+        "tooltips": {
+            "destiny": "Destino: Suma de todas las letras del nombre completo.",
+            "soul_urge": "Deseo del Alma: Solo vocales (esencia interna).",
+            "personality": "Personalidad: Solo consonantes (imagen externa).",
+            "life_path": "Camino de Vida: Se calcula sumando todos los dígitos de tu fecha (DD+MM+AAAA) hasta reducir a un número del 1 al 9 o Maestro (11, 22, 33)."
+        },
+        "footer": {
+            "ebook_link": "Adquiere mi eBook completo de Numerología en www.InstintoSaludable.com",
+            "copyright": "Sabiduría Ancestral • Portal del Destino • Numerología Sagrada"
+        },
+        "synergy": {
+            "title": "Sinastría de Almas",
+            "subtitle": "Primero calcula tu propia numerología en la pestaña principal para ver la compatibilidad.",
+            "form": {
+                "relation_type": "Tipo de Relación",
+                "partner_name": "Nombre del otro",
+                "partner_placeholder": "Nombre completo",
+                "birth_date": "Fecha de Nacimiento",
+                "submit": "Ver Compatibilidad",
+                "types": {
+                    "partner": "Pareja ✨",
+                    "business": "Socio de Negocio 🤝",
+                    "child": "Hijo/Hija 🍼",
+                    "pet": "Mascota 🐾"
+                }
+            },
+            "result": {
+                "affinity": "Afinidad",
+                "vibrational_synergy": "Sinergia Vibracional:",
+                "strength_default": "Gran capacidad de manifestación conjunta.",
+                "strength_pet": "Vínculo puro y lealtad incondicional.",
+                "challenge_default": "Evitar la competencia de egos.",
+                "challenge_pet": "Entender sus necesidades energéticas."
+            }
+        },
+        "spaces": {
+            "title": "Vibración del Espacio",
+            "form": {
+                "address_num": "Número de Calle / Puerta",
+                "address_placeholder": "Ej: 1234",
+                "street_name": "Nombre de Calle (Opcional)",
+                "street_placeholder": "Ej: Avenida Sol",
+                "move_date": "Fecha de Mudanza / Inicio",
+                "submit": "Calcular Energía"
+            },
+            "result": {
+                "home_level": "Hogar Nivel",
+                "crystals": "Cristales de Armonización",
+                "color_synesthesia": "Sinestesia del Color",
+                "color_desc": "Este espacio vibra en frecuencias de color que puedes potenciar decorando con estos tonos."
+            }
+        },
+        "results": {
+            "labels": {
+                "life_path": "Camino de Vida",
+                "destiny": "Destino",
+                "soul_urge": "Deseo del Alma",
+                "personality": "Personalidad"
+            },
+            "card": {
+                "strengths": "Fortalezas",
+                "challenges": "Desafíos",
+                "source": "Fuente de esta interpretación",
+                "formula": "Fórmula Pitagórica:",
+                "synergy": "Sinergia Cósmica",
+                "love": "Amor:",
+                "career": "Carrera:"
+            },
+            "meanings": {
+                "1": {
+                    "title": "El Líder (The Leader)",
+                    "personality": "Independiente, creativo y con mucha iniciativa.",
+                    "strengths": "Originalidad, coraje e innovación.",
+                    "challenges": "Impaciencia, egoísmo o arrogancia.",
+                    "love": "Busca parejas que respeten su independencia.",
+                    "career": "Emprendedor, director o inventor."
+                },
+                "2": {
+                    "title": "El Pacificador (The Peacemaker)",
+                    "personality": "Diplomático, sensible y cooperativo.",
+                    "strengths": "Empatía, paciencia y armonía.",
+                    "challenges": "Hipersensibilidad o indecisión.",
+                    "love": "Valora la conexión emocional profunda y la armonía.",
+                    "career": "Mediador, consejero o asistente social."
+                },
+                "3": {
+                    "title": "El Comunicador (The Communicator)",
+                    "personality": "Expresivo, optimista y sociable.",
+                    "strengths": "Creatividad, elocuencia y alegría.",
+                    "challenges": "Superficialidad o dispersión de energía.",
+                    "love": "Necesita diversión, romance e inspiración.",
+                    "career": "Escritor, artista, ventas o relaciones públicas."
+                },
+                "4": {
+                    "title": "El Constructor (The Builder)",
+                    "personality": "Disciplinado, práctico y trabajador.",
+                    "strengths": "Estabilidad, lealtad y organización.",
+                    "challenges": "Rigidez o falta de visión creativa.",
+                    "love": "Busca seguridad y compromiso a largo plazo.",
+                    "career": "Ingeniero, gestor o administración."
+                },
+                "5": {
+                    "title": "El Aventurero (The Adventurer)",
+                    "personality": "Versátil, libre y curioso.",
+                    "strengths": "Adaptabilidad, carisma y pensamiento progresista.",
+                    "challenges": "Inquietud o falta de enfoque.",
+                    "love": "Necesita libertad, viajes y aventura constante.",
+                    "career": "Turismo, periodismo o marketing."
+                },
+                "6": {
+                    "title": "El Protector (The Nurturer)",
+                    "personality": "Responsable, amoroso y servicial.",
+                    "strengths": "Cuidado, compasión y sentido de comunidad.",
+                    "challenges": "Meterme en lo que no me importa o perfeccionismo.",
+                    "love": "Dedicado, familiar y protector de su hogar.",
+                    "career": "Educación, salud o servicios comunitarios."
+                },
+                "7": {
+                    "title": "El Buscador (The Seeker)",
+                    "personality": "Analítico, espiritual y reservado.",
+                    "strengths": "Sabiduría, intuición e investigación profunda.",
+                    "challenges": "Aislamiento o cinismo.",
+                    "love": "Necesita espacio personal y conexión intelectual.",
+                    "career": "Científico, filósofo o analista de datos."
+                },
+                "8": {
+                    "title": "El Ejecutivo (The Executive)",
+                    "personality": "Ambicioso, eficiente y orientado al éxito.",
+                    "strengths": "Poder, autoridad y gestión financiera.",
+                    "challenges": "Materialismo o dureza emocional.",
+                    "love": "Busca estabilidad material y estatus compartido.",
+                    "career": "Finanzas, derecho corporativo o política."
+                },
+                "9": {
+                    "title": "El Humanitario (The Humanitarian)",
+                    "personality": "Compassivo, tolerante e idealista.",
+                    "strengths": "Generosidad, mente abierta y altruismo.",
+                    "challenges": "Sentimentalismo excesivo o falta de practicidad.",
+                    "love": "Amor universal, romántico y profundamente empático.",
+                    "career": "Organizaciones sin fines de lucro, medicina o arte."
+                },
+                "11": {
+                    "title": "El Maestro Iluminador (The Intuitive)",
+                    "personality": "Altamente intuitivo, visionario e inspirado.",
+                    "strengths": "Conciencia espiritual, magnetismo y luz.",
+                    "challenges": "Ansiedad extrema o soñar despierto sin actuar.",
+                    "love": "Conexión de alma a alma, intensidad espiritual.",
+                    "career": "Líder espiritual, sanador o coach motivacional."
+                },
+                "22": {
+                    "title": "El Maestro Constructor (The Master Builder)",
+                    "personality": "Práctico pero visionario, gran capacidad de realización.",
+                    "strengths": "Habilidad para manifestar grandes sueños en la realidad.",
+                    "challenges": "Miedo al fracaso ante grandes responsabilidades.",
+                    "love": "Construcción de un legado junto a su pareja.",
+                    "career": "Arquitecto a gran escala, filántropo o líder visionario."
+                },
+                "33": {
+                    "title": "El Maestro Guía (The Master Teacher)",
+                    "personality": "Amor incondicional y devoción altruista.",
+                    "strengths": "Gran capacidad de enseñanza y sacrificio personal.",
+                    "challenges": "Cargar con los problemas de todo el mundo.",
+                    "love": "Amor puro, protector y profundamente nutritivo.",
+                    "career": "Guía espiritual, gran educador o líder mundial de paz."
+                }
+            },
+            "compatibility": {
+                "partner": {
+                    "1": "Vibración de liderazgo compartido. Construyen un futuro visionario juntos.",
+                    "2": "Armonía perfecta. Sensibilidad y apoyo mutuo profundo.",
+                    "3": "Relación llena de alegría, comunicación y expresión creativa.",
+                    "4": "Estabilidad y lealtad. Construyen una base sólida para el hogar.",
+                    "5": "Aventura y libertad. Una relación dinámica que nunca se detiene.",
+                    "6": "Amor nutritivo y protector. El hogar es su santuario.",
+                    "7": "Conexión espiritual e intelectual. Buscan juntos la verdad profunda.",
+                    "8": "Poder y abundancia material. Un equipo imparable.",
+                    "9": "Amor universal y compasivo. Se inspiran mutuamente a ser mejores.",
+                    "11": "Relación maestra. Evolución espiritual intensamente conectada.",
+                    "22": "Grandes constructores de un legado conjunto.",
+                    "33": "Sanación y guía mutua. Amor en su máxima expresión de servicio."
+                },
+                "business_partner": {
+                    "1": "Enfoque total en metas y resultados innovadores.",
+                    "4": "Organización y trabajo duro. Éxito asegurado por la estructura.",
+                    "8": "Gran potencial financiero y proyección de autoridad."
+                },
+                "child": {
+                    "1": "Motiva su independencia pero guiando su creatividad.",
+                    "2": "Se requiere una guía suave y mucha paciencia emocional.",
+                    "6": "Un vínculo de protección y enseñanza basada en el amor familiar."
+                },
+                "pet": {
+                    "3": "Mascota alegre que trae mucha comunicación y risas al hogar.",
+                    "5": "Mascota juguetona y llena de energía. Necesita mucho espacio.",
+                    "9": "Conexión telepática o muy intuitiva. Un compañero de alma."
+                },
+                "default": "Existe una energía de equilibrio y cooperación entre ambos."
+            },
+            "house": {
+                "1": {
+                    "sensation": "Energía y Acción",
+                    "advice": "Ideal para nuevos comienzos e independencia."
+                },
+                "2": {
+                    "sensation": "Paz y Diplomacia",
+                    "advice": "Fomenta la armonía familiar y la meditación."
+                },
+                "3": {
+                    "sensation": "Alegría y Creatividad",
+                    "advice": "Espacio de mucha vida social y expresión artística."
+                },
+                "4": {
+                    "sensation": "Estabilidad y Orden",
+                    "advice": "Excelente para trabajar y construir bases sólidas."
+                },
+                "5": {
+                    "sensation": "Cambio y Aventura",
+                    "advice": "Un hogar dinámico con mucho movimiento constante."
+                },
+                "6": {
+                    "sensation": "Amor y Nutrición",
+                    "advice": "Punto de encuentro para la familia y el cuidado mutuo."
+                },
+                "7": {
+                    "sensation": "Mysticismo y Sabiduría",
+                    "advice": "Refugio para el estudio profundo y la introspección."
+                },
+                "8": {
+                    "sensation": "Poder y Abundancia",
+                    "advice": "Atrae el éxito material y la gestión eficiente."
+                },
+                "9": {
+                    "sensation": "Humanitarismo y Cierre",
+                    "advice": "Espacio para la sanación y el amor incondicional."
+                }
+            },
+            "synergy": {
+                "strength": "Fortaleza",
+                "challenge": "Desafío",
+                "affinity": "Afinidad"
+            }
+        }
     }
 }

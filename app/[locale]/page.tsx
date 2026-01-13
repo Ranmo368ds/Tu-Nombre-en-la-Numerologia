@@ -10,13 +10,14 @@ import {
   calculatePersonalityDetailed,
   type DetailedResult
 } from "@/utils/numerology";
-import { numberMeanings } from "@/data/meanings";
 import { AnimatePresence, motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { CosmicBackground } from "@/components/CosmicBackground";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { CompatibilitySection } from "@/components/CompatibilitySection";
 import { HomeBusinessSection } from "@/components/HomeBusinessSection";
+import { CyclesSection } from "@/components/CyclesSection";
+import { LanguagePicker } from "@/components/LanguagePicker";
 
 export default function Home() {
   const t = useTranslations("HomePage");
@@ -54,6 +55,11 @@ export default function Home() {
             transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1] }}
             className="space-y-6 max-w-5xl"
           >
+            {/* Language Picker */}
+            <div className="absolute top-4 right-4 md:top-8 md:right-8 z-50">
+              <LanguagePicker />
+            </div>
+
             <h1 className="text-4xl md:text-8xl font-mystic text-yellow-400 tracking-tighter glow-gold leading-tight drop-shadow-[0_0_40px_rgba(255,215,0,0.5)]">
               {t('title')}
             </h1>
@@ -68,10 +74,11 @@ export default function Home() {
           {/* Main Tabs Navigation */}
           <Tabs defaultValue="main" className="w-full max-w-6xl mx-auto">
             <div className="flex justify-center mb-12">
-              <TabsList className="grid w-full max-w-md grid-cols-3 bg-white/5 border border-white/10 backdrop-blur-sm">
-                <TabsTrigger value="main">Portal</TabsTrigger>
-                <TabsTrigger value="synergy">Sinergia</TabsTrigger>
-                <TabsTrigger value="spaces">Espacios</TabsTrigger>
+              <TabsList className="grid w-full max-w-2xl grid-cols-4 bg-white/5 border border-white/10 backdrop-blur-sm">
+                <TabsTrigger value="main">{t('tabs.portal')}</TabsTrigger>
+                <TabsTrigger value="synergy">{t('tabs.synergy')}</TabsTrigger>
+                <TabsTrigger value="spaces">{t('tabs.spaces')}</TabsTrigger>
+                <TabsTrigger value="cycles">{t('tabs.cycles')}</TabsTrigger>
               </TabsList>
             </div>
 
@@ -91,30 +98,26 @@ export default function Home() {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 20 }}
                     transition={{ duration: 0.8, type: "spring", damping: 25 }}
-                    className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-16 w-full max-w-6xl mx-auto mb-20 px-4"
+                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
                   >
                     <ResultCard
-                      label="Camino de Vida"
+                      label="life_path"
                       result={results.lifePath}
-                      meaning={numberMeanings[results.lifePath.value]}
                       delay={0.1}
                     />
                     <ResultCard
-                      label="Destino"
+                      label="destiny"
                       result={results.destiny}
-                      meaning={numberMeanings[results.destiny.value]}
                       delay={0.2}
                     />
                     <ResultCard
-                      label="Deseo del Alma"
+                      label="soul_urge"
                       result={results.soulUrge}
-                      meaning={numberMeanings[results.soulUrge.value]}
                       delay={0.3}
                     />
                     <ResultCard
-                      label="Personalidad"
+                      label="personality"
                       result={results.personality}
-                      meaning={numberMeanings[results.personality.value]}
                       delay={0.4}
                     />
                   </motion.div>
@@ -129,6 +132,10 @@ export default function Home() {
             <TabsContent value="spaces">
               <HomeBusinessSection />
             </TabsContent>
+
+            <TabsContent value="cycles">
+              <CyclesSection />
+            </TabsContent>
           </Tabs>
         </div>
       </div>
@@ -139,12 +146,12 @@ export default function Home() {
             href="https://www.instintosaludable.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gold hover:text-yellow-300 font-bold tracking-wide border-b border-gold/30 hover:border-gold pb-0.5 transition-all text-lg font-mystic"
+            className="text-gold hover:text-yellow-300 font-bold tracking-wide border-b border-gold/30 hover:border-gold pb-0.5 transition-all text-lg font-mystic decoration-gold/50 underline-offset-4"
           >
-            Adquiere mi eBook completo de Numerología en www.InstintoSaludable.com
+            Descarga mi eBook completo en www.InstintoSaludable.com
           </a>
           <p className="text-slate-400 text-[11px] uppercase tracking-[0.6em]">
-            &copy; {new Date().getFullYear()} Sabiduría Ancestral • Portal del Destino • Numerología Sagrada
+            &copy; {new Date().getFullYear()} {t('footer.copyright')}
           </p>
         </div>
       </footer>
