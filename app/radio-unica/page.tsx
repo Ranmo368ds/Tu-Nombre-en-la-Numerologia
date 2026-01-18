@@ -277,7 +277,7 @@ export default function RadioUnicaPage() {
                         {/* Product 1: Taza */}
                         <div className="group relative bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:border-yellow-500/50 transition-all duration-300">
                             <div className="aspect-square bg-black flex items-center justify-center p-6 relative">
-                                <img src="/logo-icon-transparent.svg" alt="Taza Oficial" className="w-full h-full object-contain opacity-80 group-hover:scale-110 transition-transform duration-500" />
+                                <img src="/product-mug.jpg" alt="Taza Oficial" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-4">
                                     <span className="text-yellow-400 font-bold text-lg">$15.00</span>
                                 </div>
@@ -294,7 +294,7 @@ export default function RadioUnicaPage() {
                         <div className="group relative bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:border-yellow-500/50 transition-all duration-300">
                             <div className="aspect-square bg-zinc-900 flex items-center justify-center p-4 relative">
                                 <div className="absolute top-2 right-2 bg-yellow-500 text-black text-[10px] font-bold px-2 py-0.5 rounded-full">NUEVO</div>
-                                <img src="/logo-chicago-headphones.svg" alt="Crewneck Clásico" className="w-full h-full object-contain opacity-80 group-hover:scale-110 transition-transform duration-500" />
+                                <img src="/product-crewneck.jpg" alt="Crewneck Clásico" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-4">
                                     <span className="text-yellow-400 font-bold text-lg">$45.00</span>
                                 </div>
@@ -311,7 +311,7 @@ export default function RadioUnicaPage() {
                         <div className="group relative bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:border-yellow-500/50 transition-all duration-300">
                             <div className="aspect-square bg-zinc-900 flex items-center justify-center p-4 relative">
                                 <div className="absolute top-2 right-2 bg-white text-black text-[10px] font-bold px-2 py-0.5 rounded-full">PREMIUM</div>
-                                <img src="/logo-spiral-headphones.svg" alt="Sudadera Oficial" className="w-full h-full object-contain opacity-80 group-hover:scale-110 transition-transform duration-500" />
+                                <img src="/product-hoodie.jpg" alt="Sudadera Oficial" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-4">
                                     <span className="text-yellow-400 font-bold text-lg">$55.00</span>
                                 </div>
@@ -326,7 +326,7 @@ export default function RadioUnicaPage() {
                         {/* Product 4: Playera / T-Shirt */}
                         <div className="group relative bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:border-yellow-500/50 transition-all duration-300">
                             <div className="aspect-square bg-zinc-900 flex items-center justify-center p-6 relative">
-                                <img src="/logo-neon.png" alt="Playera Oficial" className="w-full h-full object-contain opacity-80 group-hover:scale-110 transition-transform duration-500" />
+                                <img src="/product-tshirt.jpg" alt="Playera Oficial" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-4">
                                     <span className="text-yellow-400 font-bold text-lg">$25.00</span>
                                 </div>
