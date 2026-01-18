@@ -1,0 +1,53 @@
+<svg width="600" height="600" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Filter for Neon Glow -->
+    <filter id="neon-orange" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3.5" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="neon-blue" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Group for Headphones -->
+  <g fill="none" stroke="#FF5F1F" stroke-width="6" stroke-linecap="round" filter="url(#neon-orange)">
+    <!-- Arc -->
+    <path d="M150,300 A150,150 0 1,1 450,300" />
+    <!-- Earcups -->
+    <rect x="120" y="280" width="40" height="100" rx="15" fill="none" stroke-width="5"/>
+    <rect x="440" y="280" width="40" height="100" rx="15" fill="none" stroke-width="5"/>
+  </g>
+
+  <!-- Skyline Integration (Simplified for clarity) -->
+  <g fill="none" stroke="#FF5F1F" stroke-width="3" filter="url(#neon-orange)">
+      <!-- Willis Tower ish -->
+      <path d="M280,300 L280,200 L290,200 L290,170 L295,170 L295,200 L305,200 L305,300" />
+      <!-- John Hancock ish -->
+      <path d="M320,300 L320,220 L330,220 L330,210 L335,210 L335,300" />
+      <!-- Other buildings -->
+      <path d="M250,300 L250,240 L270,240 L270,300" />
+      <path d="M350,300 L350,230 L370,230 L370,300" />
+  </g>
+
+  <!-- Sound Waves (Blue & Orange) -->
+  <g stroke-linecap="round" stroke-width="3">
+    <path d="M180,300 L190,270 L200,330 L210,250 L220,350 L230,300" stroke="#FF5F1F" filter="url(#neon-orange)" />
+    <!-- Center energetic wave -->
+    <path d="M280,300 L290,380 L300,220 L310,380 L320,300" stroke="#00FFFF" stroke-width="4" filter="url(#neon-blue)" />
+    
+    <path d="M370,300 L380,250 L390,350 L400,270 L410,330 L420,300" stroke="#FF5F1F" filter="url(#neon-orange)" />
+  </g>
+
+  <!-- Text -->
+  <text x="300" y="460" font-family="Arial, sans-serif" font-weight="bold" font-size="48" fill="none" stroke="#FF5F1F" stroke-width="2" text-anchor="middle" letter-spacing="4" filter="url(#neon-orange)">
+    CHICAGO RADIO
+  </text>
+</svg>

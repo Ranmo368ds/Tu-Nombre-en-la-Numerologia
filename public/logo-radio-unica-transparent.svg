@@ -1,0 +1,23 @@
+<svg width="800" height="300" viewBox="0 0 800 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="neon" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <style>
+    .text { font-family: Helvetica, Arial, sans-serif; font-weight: 900; }
+  </style>
+  
+  <!-- "RADIO" in White -->
+  <text x="50" y="180" font-size="100" fill="#FFFFFF" class="text" letter-spacing="2">RADIO</text>
+  
+  <!-- "UNICA" in Neon Yellow -->
+  <text x="400" y="180" font-size="100" fill="#FFD700" stroke="#FFFF00" stroke-width="2" filter="url(#neon)" class="text" letter-spacing="2">UNICA</text>
+  
+  <!-- Small "CHICAGO" or Tagline -->
+  <text x="400" y="230" font-size="18" fill="#AAAAAA" text-anchor="middle" class="text" letter-spacing="10">CHICAGO</text>
+</svg>

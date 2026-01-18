@@ -1,0 +1,45 @@
+<svg width="600" height="600" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Filter for Neon Glow -->
+    <filter id="neon-gold" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Skyline on Top -->
+  <g fill="#FFA500" transform="translate(0, -20)" filter="url(#neon-gold)">
+     <!-- Stylized Skyline Silhouette following an arc -->
+     <path d="M200,180 L200,150 L210,150 L210,130 L220,130 L220,160 L230,160 L230,120 L245,120 L245,155 L260,155 L260,100 L280,100 L280,150 L290,150 L290,90 L310,90 L310,150 L320,150 L320,110 L340,110 L340,160 L350,160 L350,130 L360,130 L360,170 L380,170 L380,190" stroke="#FFA500" stroke-width="2" />
+  </g>
+
+  <!-- Swirl / Sun Center -->
+  <g fill="none" stroke="#FFA500" stroke-width="12" stroke-linecap="round" filter="url(#neon-gold)">
+     <!-- Spiral Path approximation -->
+     <path d="M300,300 m0,0 a10,10 0 1,1 0,20 a25,25 0 1,0 0,-50 a45,45 0 1,1 0,90 a70,70 0 1,0 0,-140 a100,100 0 1,1 0,200" opacity="1.0" />
+  </g>
+
+  <!-- Earcups -->
+  <g fill="none" stroke="#FFA500" stroke-width="10" filter="url(#neon-gold)">
+    <ellipse cx="160" cy="400" rx="30" ry="70" transform="rotate(-15 160 400)" />
+    <ellipse cx="440" cy="400" rx="30" ry="70" transform="rotate(15 440 400)" />
+  </g>
+  
+  <!-- Splatter / Grunge Accents (Vectorized dots) -->
+  <g fill="#FFA500" filter="url(#neon-gold)">
+      <circle cx="150" cy="250" r="4" />
+      <circle cx="120" cy="300" r="3" />
+      <circle cx="450" cy="220" r="4" />
+      <circle cx="480" cy="280" r="5" />
+      <circle cx="300" cy="80" r="3" />
+  </g>
+
+
+  <!-- Text -->
+  <text x="300" y="550" font-family="Impact, Arial Black, sans-serif" font-size="60" fill="white" stroke="none" text-anchor="middle" letter-spacing="2">
+    RADIO UNICA
+  </text>
+</svg>

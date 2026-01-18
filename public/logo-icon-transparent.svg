@@ -1,0 +1,27 @@
+<svg width="500" height="500" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="15" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFA500;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Abstract Sound Waves / Sun Shape -->
+  <g fill="none" stroke="url(#grad1)" stroke-width="8" stroke-linecap="round" filter="url(#glow)">
+    <!-- Center Point -->
+    <circle cx="250" cy="250" r="10" fill="#FFD700" stroke="none" />
+    
+    <!-- Rings -->
+    <circle cx="250" cy="250" r="60" opacity="1.0" />
+    <circle cx="250" cy="250" r="100" opacity="0.8" stroke-dasharray="20 10"/>
+    <circle cx="250" cy="250" r="140" opacity="0.6" />
+    <circle cx="250" cy="250" r="180" opacity="0.4" stroke-dasharray="40 20"/>
+  </g>
+</svg>

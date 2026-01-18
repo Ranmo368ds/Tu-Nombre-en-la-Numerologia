@@ -15,7 +15,8 @@ import {
     Twitter,
     Menu,
     X,
-    ExternalLink
+    ExternalLink,
+    ShoppingBag
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
@@ -267,144 +268,80 @@ export default function RadioUnicaPage() {
             {/* Shop & Promos Section */}
             <section id="tienda" className="py-24 bg-zinc-950 px-4">
                 <div className="max-w-7xl mx-auto">
-                    <div className="text-center mb-16">
-                        <h2 className="text-4xl md:text-5xl font-black mb-4">TIENDA <span className="text-yellow-500">& FAVORITOS</span></h2>
-                        <p className="text-gray-400 max-w-2xl mx-auto">Lleva la música contigo. Productos exclusivos y nuestras recomendaciones especiales.</p>
+
+                    <div className="flex items-center gap-2 mb-8">
+                        <ShoppingBag className="w-6 h-6 text-yellow-500" />
+                        <h2 className="text-3xl font-bold tracking-tighter">TIENDA & <span className="text-yellow-500">FAVORITOS</span></h2>
                     </div>
-
-                    <div className="grid md:grid-cols-4 gap-6 mb-16">
-                        {/* Hoodie */}
-                        <div className="bg-zinc-900 rounded-3xl overflow-hidden border border-white/5 group hover:border-yellow-500/50 transition-all">
-                            <div className="h-64 bg-zinc-800 relative flex items-center justify-center overflow-hidden">
-                                <img
-                                    src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?q=80&w=1000&auto=format&fit=crop"
-                                    alt="Sudadera Oficial"
-                                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                                />
-                                <span className="absolute top-4 right-4 bg-yellow-500 text-black font-bold px-3 py-1 rounded-full text-sm z-20">PREMIUM</span>
-                            </div>
-                            <div className="p-6">
-                                <h3 className="text-lg font-bold mb-1">Sudadera Oficial</h3>
-                                <p className="text-gray-400 text-xs mb-4">Confort total, logo bordado.</p>
-                                <div className="flex items-center justify-between">
-                                    <span className="text-xl font-bold text-white">$45.00</span>
-                                    <Button size="sm" className="rounded-full bg-white text-black hover:bg-gray-200 font-bold">
-                                        Comprar
-                                    </Button>
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+                        {/* Product 1: Taza */}
+                        <div className="group relative bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:border-yellow-500/50 transition-all duration-300">
+                            <div className="aspect-square bg-black flex items-center justify-center p-6 relative">
+                                <img src="/logo-icon-transparent.svg" alt="Taza Oficial" className="w-full h-full object-contain opacity-80 group-hover:scale-110 transition-transform duration-500" />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-4">
+                                    <span className="text-yellow-400 font-bold text-lg">$15.00</span>
                                 </div>
+                            </div>
+                            <div className="p-4 text-center">
+                                <h3 className="font-bold text-sm mb-2">Taza Oficial</h3>
+                                <Button className="w-full bg-white text-black hover:bg-yellow-500 hover:text-black text-xs font-bold" onClick={() => window.open('https://buy.stripe.com/00w7sK0Iy9vhbWDa9k', '_blank')}>
+                                    COMPRAR
+                                </Button>
                             </div>
                         </div>
 
-                        {/* Crewneck */}
-                        <div className="bg-zinc-900 rounded-3xl overflow-hidden border border-white/5 group hover:border-yellow-500/50 transition-all">
-                            <div className="h-64 bg-zinc-800 relative flex items-center justify-center overflow-hidden">
-                                <img
-                                    src="https://images.unsplash.com/photo-1620799140408-ed5341cd2431?q=80&w=1000&auto=format&fit=crop"
-                                    alt="Crewneck Sweater"
-                                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                                />
-                            </div>
-                            <div className="p-6">
-                                <h3 className="text-lg font-bold mb-1">Crewneck Clásico</h3>
-                                <p className="text-gray-400 text-xs mb-4">Estilo urbano y elegante.</p>
-                                <div className="flex items-center justify-between">
-                                    <span className="text-xl font-bold text-white">$40.00</span>
-                                    <Button size="sm" className="rounded-full bg-white text-black hover:bg-gray-200 font-bold">
-                                        Comprar
-                                    </Button>
+                        {/* Product 2: Crewneck */}
+                        <div className="group relative bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:border-yellow-500/50 transition-all duration-300">
+                            <div className="aspect-square bg-zinc-900 flex items-center justify-center p-4 relative">
+                                <div className="absolute top-2 right-2 bg-yellow-500 text-black text-[10px] font-bold px-2 py-0.5 rounded-full">NUEVO</div>
+                                <img src="/logo-chicago-headphones.svg" alt="Crewneck Clásico" className="w-full h-full object-contain opacity-80 group-hover:scale-110 transition-transform duration-500" />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-4">
+                                    <span className="text-yellow-400 font-bold text-lg">$45.00</span>
                                 </div>
+                            </div>
+                            <div className="p-4 text-center">
+                                <h3 className="font-bold text-sm mb-2">Crewneck Clásico</h3>
+                                <Button className="w-full bg-white text-black hover:bg-yellow-500 hover:text-black text-xs font-bold" onClick={() => window.open('https://buy.stripe.com/8x2eVcaj8bDpe4L0yK', '_blank')}>
+                                    COMPRAR
+                                </Button>
                             </div>
                         </div>
 
-                        {/* T-Shirt */}
-                        <div className="bg-zinc-900 rounded-3xl overflow-hidden border border-white/5 group hover:border-yellow-500/50 transition-all">
-                            <div className="h-64 bg-zinc-800 relative flex items-center justify-center overflow-hidden">
-                                <img
-                                    src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?q=80&w=1000&auto=format&fit=crop"
-                                    alt="Playera Logo"
-                                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                                />
-                            </div>
-                            <div className="p-6">
-                                <h3 className="text-lg font-bold mb-1">Playera Logo Neon</h3>
-                                <p className="text-gray-400 text-xs mb-4">100% Algodón peinado.</p>
-                                <div className="flex items-center justify-between">
-                                    <span className="text-xl font-bold text-white">$25.00</span>
-                                    <Button size="sm" className="rounded-full bg-white text-black hover:bg-gray-200 font-bold">
-                                        Comprar
-                                    </Button>
+                        {/* Product 3: Hoodie */}
+                        <div className="group relative bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:border-yellow-500/50 transition-all duration-300">
+                            <div className="aspect-square bg-zinc-900 flex items-center justify-center p-4 relative">
+                                <div className="absolute top-2 right-2 bg-white text-black text-[10px] font-bold px-2 py-0.5 rounded-full">PREMIUM</div>
+                                <img src="/logo-spiral-headphones.svg" alt="Sudadera Oficial" className="w-full h-full object-contain opacity-80 group-hover:scale-110 transition-transform duration-500" />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-4">
+                                    <span className="text-yellow-400 font-bold text-lg">$55.00</span>
                                 </div>
+                            </div>
+                            <div className="p-4 text-center">
+                                <h3 className="font-bold text-sm mb-2">Sudadera Oficial</h3>
+                                <Button className="w-full bg-white text-black hover:bg-yellow-500 hover:text-black text-xs font-bold" onClick={() => window.open('https://buy.stripe.com/28E8wOezofTFd0HgxI', '_blank')}>
+                                    COMPRAR
+                                </Button>
                             </div>
                         </div>
 
-                        {/* Bumper Sticker */}
-                        <div className="bg-zinc-900 rounded-3xl overflow-hidden border border-white/5 group hover:border-yellow-500/50 transition-all">
-                            <div className="h-64 bg-zinc-800 relative flex items-center justify-center overflow-hidden">
-                                <img
-                                    src="https://images.unsplash.com/photo-1572375992501-4b0892d50c69?q=80&w=1000&auto=format&fit=crop"
-                                    alt="Bumper Sticker"
-                                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                                />
-                                <span className="absolute top-4 right-4 bg-yellow-500 text-black font-bold px-3 py-1 rounded-full text-sm z-20">POPULAR</span>
-                            </div>
-                            <div className="p-6">
-                                <h3 className="text-lg font-bold mb-1">Sticker Pack Oficial</h3>
-                                <p className="text-gray-400 text-xs mb-4">Para tu auto o laptop.</p>
-                                <div className="flex items-center justify-between">
-                                    <span className="text-xl font-bold text-white">$12.00</span>
-                                    <Button size="sm" className="rounded-full bg-white text-black hover:bg-gray-200 font-bold">
-                                        Comprar
-                                    </Button>
+                        {/* Product 4: Gorra */}
+                        <div className="group relative bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:border-yellow-500/50 transition-all duration-300">
+                            <div className="aspect-square bg-zinc-900 flex items-center justify-center p-6 relative">
+                                <img src="/logo-neon.png" alt="Gorra Oficial" className="w-full h-full object-contain opacity-80 group-hover:scale-110 transition-transform duration-500" />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-4">
+                                    <span className="text-yellow-400 font-bold text-lg">$25.00</span>
                                 </div>
+                            </div>
+                            <div className="p-4 text-center">
+                                <h3 className="font-bold text-sm mb-2">Gorra Oficial</h3>
+                                <Button className="w-full bg-white text-black hover:bg-yellow-500 hover:text-black text-xs font-bold" onClick={() => window.open('https://buy.stripe.com/bJe6oG62SdLx8Kr4P0', '_blank')}>
+                                    COMPRAR
+                                </Button>
                             </div>
                         </div>
 
-                        {/* Cap */}
-                        <div className="bg-zinc-900 rounded-3xl overflow-hidden border border-white/5 group hover:border-yellow-500/50 transition-all">
-                            <div className="h-64 bg-zinc-800 relative flex items-center justify-center overflow-hidden">
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10" />
-                                <img
-                                    src="https://images.unsplash.com/photo-1521369909029-2afed882baee?q=80&w=1000&auto=format&fit=crop"
-                                    alt="Gorra Oficial"
-                                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                                />
-                            </div>
-                            <div className="p-6">
-                                <h3 className="text-lg font-bold mb-1">Gorra Oficial</h3>
-                                <p className="text-gray-400 text-xs mb-4">Edición limitada.</p>
-                                <div className="flex items-center justify-between">
-                                    <span className="text-xl font-bold text-white">$25.00</span>
-                                    <Button size="sm" className="rounded-full bg-white text-black hover:bg-gray-200 font-bold">
-                                        Comprar
-                                    </Button>
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* Mug */}
-                        <div className="bg-zinc-900 rounded-3xl overflow-hidden border border-white/5 group hover:border-yellow-500/50 transition-all">
-                            <div className="h-64 bg-zinc-800 relative flex items-center justify-center overflow-hidden">
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10" />
-                                <img
-                                    src="https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?q=80&w=1000&auto=format&fit=crop"
-                                    alt="Taza Cafe"
-                                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                                />
-                            </div>
-                            <div className="p-6">
-                                <h3 className="text-lg font-bold mb-1">Taza Oficial</h3>
-                                <p className="text-gray-400 text-xs mb-4">Empieza con actitud.</p>
-                                <div className="flex items-center justify-between">
-                                    <span className="text-xl font-bold text-white">$15.00</span>
-                                    <Button size="sm" className="rounded-full bg-white text-black hover:bg-gray-200 font-bold">
-                                        Comprar
-                                    </Button>
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* Amazon Picks / Affiliate */}
-                        <div className="md:col-span-2 bg-gradient-to-br from-yellow-600 to-yellow-800 rounded-3xl overflow-hidden relative group text-center flex flex-col items-center justify-center p-8">
+                        {/* Amazon Picks - Full Width on Mobile, Col span 2 on Desktop if needed, or just regular card */}
+                        <div className="col-span-2 md:col-span-4 bg-gradient-to-r from-yellow-500/20 to-purple-500/20 border border-white/10 rounded-2xl p-6 flex flex-col md:flex-row items-center justify-between gap-6 relative overflow-hidden group">
                             <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors" />
                             <h3 className="text-2xl font-black text-white relative z-10 mb-2">AMAZON PICKS</h3>
                             <p className="text-yellow-100 relative z-10 mb-6 max-w-sm">Nuestra selección de equipo de audio y música.</p>
