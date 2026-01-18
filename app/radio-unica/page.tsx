@@ -201,6 +201,7 @@ export default function RadioUnicaPage() {
                                 variant="outline"
                                 size="lg"
                                 className="w-full sm:w-auto border-white/20 hover:bg-white/10 text-white rounded-full h-14 px-8 text-lg"
+                                onClick={() => window.open('https://www.speakpipe.com/RadioUnica', '_blank')}
                             >
                                 <Mic className="mr-2 w-5 h-5" />
                                 Mandar Saludo
@@ -453,7 +454,10 @@ export default function RadioUnicaPage() {
                             <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors" />
                             <h3 className="text-2xl font-black text-white relative z-10 mb-2">{t('amazon_picks.title')}</h3>
                             <p className="text-yellow-100 relative z-10 mb-6 max-w-sm">{t('amazon_picks.desc')}</p>
-                            <Button className="relative z-10 rounded-full bg-black text-white hover:bg-zinc-900 border border-yellow-500/50">
+                            <Button
+                                className="relative z-10 rounded-full bg-black text-white hover:bg-zinc-900 border border-yellow-500/50"
+                                onClick={() => window.open('https://amzn.to/4bFtbUt', '_blank')}
+                            >
                                 {t('amazon_picks.btn')} <ExternalLink className="ml-2 w-4 h-4" />
                             </Button>
                         </div>
@@ -486,10 +490,16 @@ export default function RadioUnicaPage() {
                     </p>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-lg mx-auto mb-12">
-                        <Button className="h-14 bg-[#25D366] hover:bg-[#20bd5a] text-black font-bold text-lg rounded-xl">
+                        <Button
+                            className="h-14 bg-[#25D366] hover:bg-[#20bd5a] text-black font-bold text-lg rounded-xl"
+                            onClick={() => window.open('https://wa.me/18475029685', '_blank')}
+                        >
                             Whatsapp
                         </Button>
-                        <Button className="h-14 bg-blue-600 hover:bg-blue-700 text-white font-bold text-lg rounded-xl">
+                        <Button
+                            className="h-14 bg-blue-600 hover:bg-blue-700 text-white font-bold text-lg rounded-xl"
+                            onClick={() => window.open('https://www.speakpipe.com/RadioUnica', '_blank')}
+                        >
                             SpeakPipe (Voz)
                         </Button>
                     </div>
