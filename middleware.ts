@@ -40,3 +40,4 @@ export const config = {
     // Match only internationalized pathnames + root
     matcher: ['/', '/(en|es|fr|pt|it|de|ru|pl)/:path*']
 };
+ 
