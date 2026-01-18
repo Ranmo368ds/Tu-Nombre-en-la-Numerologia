@@ -54,10 +54,43 @@ export default function RadioUnicaPage() {
     const [isPlaying, setIsPlaying] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [volume, setVolume] = useState(80);
+    const [formStatus, setFormStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
     const audioRef = React.useRef<HTMLAudioElement>(null);
 
     // Real stream URL from Live365
     const STREAM_URL = "https://streaming.live365.com/a23237";
+
+    const handleSongRequest = async (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        setFormStatus('submitting');
+
+        const formData = new FormData(e.currentTarget);
+        const data = Object.fromEntries(formData);
+
+        try {
+            const response = await fetch("https://formspree.io/f/mojjjzdk", {
+                method: "POST",
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            });
+
+            if (response.ok) {
+                setFormStatus('success');
+                (e.target as HTMLFormElement).reset();
+            } else {
+                // If error, just reset to idle for now or keep submitting state? 
+                // Let's just log it.
+                console.error("Form submission failed");
+                setFormStatus('error');
+            }
+        } catch (error) {
+            console.error("Form submission error", error);
+            setFormStatus('error');
+        }
+    };
 
     const togglePlay = () => {
         if (audioRef.current) {
@@ -513,23 +546,69 @@ export default function RadioUnicaPage() {
                     </div>
 
                     {/* Song Request Form */}
-                    <div className="max-w-md mx-auto bg-white/5 border border-white/10 rounded-2xl p-8 mb-16 text-left">
+                    {/* Song Request Form */}
+                    <div className="max-w-md mx-auto bg-white/5 border border-white/10 rounded-2xl p-8 mb-16 text-left relative overflow-hidden">
+
+                        {/* Status Message Overlay */}
+                        <AnimatePresence>
+                            {formStatus === 'success' && (
+                                <motion.div
+                                    initial={{ opacity: 0 }}
+                                    animate={{ opacity: 1 }}
+                                    className="absolute inset-0 bg-zinc-900 z-20 flex flex-col items-center justify-center text-center p-6"
+                                >
+                                    <div className="w-16 h-16 bg-green-500/20 text-green-500 rounded-full flex items-center justify-center mb-4">
+                                        <Music className="w-8 h-8" />
+                                    </div>
+                                    <h3 className="text-2xl font-bold text-white mb-2">¡Recibido!</h3>
+                                    <p className="text-gray-400 mb-6">Tu petición ha sido enviada a la cabina.</p>
+                                    <Button
+                                        onClick={() => setFormStatus('idle')}
+                                        className="bg-white text-black hover:bg-gray-200"
+                                    >
+                                        Pedir otra canción
+                                    </Button>
+                                </motion.div>
+                            )}
+                        </AnimatePresence>
+
                         <h3 className="text-2xl font-bold mb-6 text-center">Pide tu Canción</h3>
-                        <form action="https://formspree.io/f/mojjjzdk" method="POST" className="space-y-4">
+                        <form onSubmit={handleSongRequest} className="space-y-4">
                             <div>
                                 <label className="block text-sm font-medium text-gray-400 mb-1">Tu Nombre</label>
-                                <input type="text" name="name" className="w-full bg-black/50 border border-white/10 rounded-lg px-4 py-3 focus:border-yellow-500 focus:outline-none transition-colors" placeholder="Ej. Juan Pérez" required />
+                                <input
+                                    type="text"
+                                    name="name"
+                                    required
+                                    className="w-full bg-black/50 border border-white/10 rounded-lg px-4 py-3 focus:border-yellow-500 focus:outline-none transition-colors"
+                                    placeholder="Ej. Juan Pérez"
+                                />
                             </div>
                             <div>
                                 <label className="block text-sm font-medium text-gray-400 mb-1">Canción / Artista</label>
-                                <input type="text" name="song" className="w-full bg-black/50 border border-white/10 rounded-lg px-4 py-3 focus:border-yellow-500 focus:outline-none transition-colors" placeholder="Ej. La Incondicional - Luis Miguel" required />
+                                <input
+                                    type="text"
+                                    name="song"
+                                    required
+                                    className="w-full bg-black/50 border border-white/10 rounded-lg px-4 py-3 focus:border-yellow-500 focus:outline-none transition-colors"
+                                    placeholder="Ej. La Incondicional - Luis Miguel"
+                                />
                             </div>
                             <div>
                                 <label className="block text-sm font-medium text-gray-400 mb-1">Dedicatoria (Opcional)</label>
-                                <textarea name="message" rows={3} className="w-full bg-black/50 border border-white/10 rounded-lg px-4 py-3 focus:border-yellow-500 focus:outline-none transition-colors" placeholder="Un saludo para..." />
+                                <textarea
+                                    name="message"
+                                    rows={3}
+                                    className="w-full bg-black/50 border border-white/10 rounded-lg px-4 py-3 focus:border-yellow-500 focus:outline-none transition-colors"
+                                    placeholder="Un saludo para..."
+                                />
                             </div>
-                            <Button type="submit" className="w-full bg-yellow-500 hover:bg-yellow-600 text-black font-bold h-12 rounded-lg text-lg">
-                                Enviar Petición
+                            <Button
+                                type="submit"
+                                disabled={formStatus === 'submitting'}
+                                className="w-full bg-yellow-500 hover:bg-yellow-600 text-black font-bold h-12 rounded-lg text-lg disabled:opacity-50 disabled:cursor-not-allowed"
+                            >
+                                {formStatus === 'submitting' ? 'Enviando...' : 'Enviar Petición'}
                             </Button>
                         </form>
                     </div>
