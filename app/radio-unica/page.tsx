@@ -19,6 +19,13 @@ import {
     ShoppingBag
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import {
+    Dialog,
+    DialogContent,
+    DialogTrigger,
+    DialogTitle,
+    DialogDescription
+} from '@/components/ui/dialog';
 
 export default function RadioUnicaPage() {
     const [isPlaying, setIsPlaying] = useState(false);
@@ -276,12 +283,24 @@ export default function RadioUnicaPage() {
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                         {/* Product 1: Taza */}
                         <div className="group relative bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:border-yellow-500/50 transition-all duration-300">
-                            <div className="aspect-square bg-black flex items-center justify-center p-6 relative">
-                                <img src="/product-mug.jpg" alt="Taza Oficial" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-4">
-                                    <span className="text-yellow-400 font-bold text-lg">$15.00</span>
-                                </div>
-                            </div>
+                            <Dialog>
+                                <DialogTrigger asChild>
+                                    <div className="aspect-square bg-black flex items-center justify-center relative cursor-zoom-in">
+                                        <img src="/product-mug.jpg" alt="Taza Oficial" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-4">
+                                            <span className="text-yellow-400 font-bold text-lg">VER DETALLES</span>
+                                        </div>
+                                    </div>
+                                </DialogTrigger>
+                                <DialogContent className="bg-zinc-950 border-zinc-800 max-w-md">
+                                    <DialogTitle className="text-white">Taza Oficial Radio Unica</DialogTitle>
+                                    <img src="/product-mug.jpg" alt="Taza Zoom" className="w-full rounded-lg" />
+                                    <DialogDescription className="text-yellow-500 font-bold text-center">
+                                        $15.00 <br />
+                                        <span className="text-zinc-400 font-normal text-xs">* Envío seguro a todo USA</span>
+                                    </DialogDescription>
+                                </DialogContent>
+                            </Dialog>
                             <div className="p-4 text-center">
                                 <h3 className="font-bold text-sm mb-2">Taza Oficial</h3>
                                 <Button className="w-full bg-white text-black hover:bg-yellow-500 hover:text-black text-xs font-bold" onClick={() => window.open('https://buy.stripe.com/00w7sK0Iy9vhbWDa9k', '_blank')}>
@@ -292,13 +311,25 @@ export default function RadioUnicaPage() {
 
                         {/* Product 2: Crewneck */}
                         <div className="group relative bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:border-yellow-500/50 transition-all duration-300">
-                            <div className="aspect-square bg-zinc-900 flex items-center justify-center p-4 relative">
-                                <div className="absolute top-2 right-2 bg-yellow-500 text-black text-[10px] font-bold px-2 py-0.5 rounded-full">NUEVO</div>
-                                <img src="/product-crewneck.jpg" alt="Crewneck Clásico" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-4">
-                                    <span className="text-yellow-400 font-bold text-lg">$45.00</span>
-                                </div>
-                            </div>
+                            <Dialog>
+                                <DialogTrigger asChild>
+                                    <div className="aspect-square bg-zinc-900 flex items-center justify-center relative cursor-zoom-in">
+                                        <div className="absolute top-2 right-2 bg-yellow-500 text-black text-[10px] font-bold px-2 py-0.5 rounded-full z-10">NUEVO</div>
+                                        <img src="/product-crewneck.jpg" alt="Crewneck Clásico" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-4">
+                                            <span className="text-yellow-400 font-bold text-lg">VER DETALLES</span>
+                                        </div>
+                                    </div>
+                                </DialogTrigger>
+                                <DialogContent className="bg-zinc-950 border-zinc-800 max-w-md">
+                                    <DialogTitle className="text-white">Crewneck Clásico</DialogTitle>
+                                    <img src="/product-crewneck.jpg" alt="Crewneck Zoom" className="w-full rounded-lg" />
+                                    <DialogDescription className="text-yellow-500 font-bold text-center">
+                                        $45.00 <br />
+                                        <span className="text-zinc-400 font-normal text-xs">* Selecciona tu TALLA al pagar (S, M, L, XL)</span>
+                                    </DialogDescription>
+                                </DialogContent>
+                            </Dialog>
                             <div className="p-4 text-center">
                                 <h3 className="font-bold text-sm mb-2">Crewneck Clásico</h3>
                                 <Button className="w-full bg-white text-black hover:bg-yellow-500 hover:text-black text-xs font-bold" onClick={() => window.open('https://buy.stripe.com/8x2eVcaj8bDpe4L0yK', '_blank')}>
@@ -309,13 +340,25 @@ export default function RadioUnicaPage() {
 
                         {/* Product 3: Hoodie */}
                         <div className="group relative bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:border-yellow-500/50 transition-all duration-300">
-                            <div className="aspect-square bg-zinc-900 flex items-center justify-center p-4 relative">
-                                <div className="absolute top-2 right-2 bg-white text-black text-[10px] font-bold px-2 py-0.5 rounded-full">PREMIUM</div>
-                                <img src="/product-hoodie.jpg" alt="Sudadera Oficial" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-4">
-                                    <span className="text-yellow-400 font-bold text-lg">$55.00</span>
-                                </div>
-                            </div>
+                            <Dialog>
+                                <DialogTrigger asChild>
+                                    <div className="aspect-square bg-zinc-900 flex items-center justify-center relative cursor-zoom-in">
+                                        <div className="absolute top-2 right-2 bg-white text-black text-[10px] font-bold px-2 py-0.5 rounded-full z-10">PREMIUM</div>
+                                        <img src="/product-hoodie.jpg" alt="Sudadera Oficial" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-4">
+                                            <span className="text-yellow-400 font-bold text-lg">VER DETALLES</span>
+                                        </div>
+                                    </div>
+                                </DialogTrigger>
+                                <DialogContent className="bg-zinc-950 border-zinc-800 max-w-md">
+                                    <DialogTitle className="text-white">Sudadera Premium</DialogTitle>
+                                    <img src="/product-hoodie.jpg" alt="Sudadera Zoom" className="w-full rounded-lg" />
+                                    <DialogDescription className="text-yellow-500 font-bold text-center">
+                                        $55.00 <br />
+                                        <span className="text-zinc-400 font-normal text-xs">* Selecciona tu TALLA al pagar</span>
+                                    </DialogDescription>
+                                </DialogContent>
+                            </Dialog>
                             <div className="p-4 text-center">
                                 <h3 className="font-bold text-sm mb-2">Sudadera Oficial</h3>
                                 <Button className="w-full bg-white text-black hover:bg-yellow-500 hover:text-black text-xs font-bold" onClick={() => window.open('https://buy.stripe.com/28E8wOezofTFd0HgxI', '_blank')}>
@@ -325,12 +368,24 @@ export default function RadioUnicaPage() {
                         </div>
                         {/* Product 4: Playera / T-Shirt */}
                         <div className="group relative bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:border-yellow-500/50 transition-all duration-300">
-                            <div className="aspect-square bg-zinc-900 flex items-center justify-center p-6 relative">
-                                <img src="/product-tshirt.jpg" alt="Playera Oficial" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-4">
-                                    <span className="text-yellow-400 font-bold text-lg">$25.00</span>
-                                </div>
-                            </div>
+                            <Dialog>
+                                <DialogTrigger asChild>
+                                    <div className="aspect-square bg-zinc-900 flex items-center justify-center relative cursor-zoom-in">
+                                        <img src="/product-tshirt.jpg" alt="Playera Oficial" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-4">
+                                            <span className="text-yellow-400 font-bold text-lg">VER DETALLES</span>
+                                        </div>
+                                    </div>
+                                </DialogTrigger>
+                                <DialogContent className="bg-zinc-950 border-zinc-800 max-w-md">
+                                    <DialogTitle className="text-white">Playera Oficial</DialogTitle>
+                                    <img src="/product-tshirt.jpg" alt="Playera Zoom" className="w-full rounded-lg" />
+                                    <DialogDescription className="text-yellow-500 font-bold text-center">
+                                        $25.00 <br />
+                                        <span className="text-zinc-400 font-normal text-xs">* Selecciona tu TALLA y COLOR al pagar</span>
+                                    </DialogDescription>
+                                </DialogContent>
+                            </Dialog>
                             <div className="p-4 text-center">
                                 <h3 className="font-bold text-sm mb-2">Playera / T-Shirt</h3>
                                 <Button className="w-full bg-white text-black hover:bg-yellow-500 hover:text-black text-xs font-bold" onClick={() => window.open('https://buy.stripe.com/7sYaEW76W9vh1hZ3KW3wQ0W', '_blank')}>
