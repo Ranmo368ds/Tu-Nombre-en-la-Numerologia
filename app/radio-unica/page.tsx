@@ -518,8 +518,14 @@ function RadioUnicaContent() {
                             <h3 className="text-3xl font-bold text-white mb-2">Tu Marca Aquí</h3>
                             <p className="text-gray-400 max-w-md">Llega a miles de oyentes en Chicago y todo el mundo. Anúnciate en Radio Unica.</p>
                         </div>
-                        <Button size="lg" className="relative z-10 rounded-full bg-white text-black hover:bg-gray-200 font-bold px-8">
-                            Contactar Ventas
+                        <Button
+                            asChild
+                            size="lg"
+                            className="relative z-10 rounded-full bg-white text-black hover:bg-gray-200 font-bold px-8"
+                        >
+                            <a href="mailto:RadioUnicaUS@gmail.com?subject=Información%20Publicidad%20Radio%20Unica">
+                                Contactar Ventas
+                            </a>
                         </Button>
                     </div>
                 </div>
