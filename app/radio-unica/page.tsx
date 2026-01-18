@@ -39,7 +39,7 @@ const messagesDict: Record<string, any> = {
     pt: ptMessages
 };
 
-export default function RadioUnicaPage() {
+function RadioUnicaContent() {
     const searchParams = useSearchParams();
     const lang = searchParams.get('lang') || 'es';
     const t = (key: string) => {
@@ -681,5 +681,13 @@ export default function RadioUnicaPage() {
 
             <audio ref={audioRef} src={STREAM_URL} preload="none" />
         </div>
+    );
+}
+
+export default function RadioUnicaPage() {
+    return (
+        <React.Suspense fallback={<div className="min-h-screen bg-black flex items-center justify-center text-white">Cargando...</div>}>
+            <RadioUnicaContent />
+        </React.Suspense>
     );
 }
