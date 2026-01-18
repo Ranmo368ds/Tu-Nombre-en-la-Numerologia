@@ -323,18 +323,17 @@ export default function RadioUnicaPage() {
                                 </Button>
                             </div>
                         </div>
-
-                        {/* Product 4: Gorra */}
+                        {/* Product 4: Playera / T-Shirt */}
                         <div className="group relative bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:border-yellow-500/50 transition-all duration-300">
                             <div className="aspect-square bg-zinc-900 flex items-center justify-center p-6 relative">
-                                <img src="/logo-neon.png" alt="Gorra Oficial" className="w-full h-full object-contain opacity-80 group-hover:scale-110 transition-transform duration-500" />
+                                <img src="/logo-neon.png" alt="Playera Oficial" className="w-full h-full object-contain opacity-80 group-hover:scale-110 transition-transform duration-500" />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-4">
                                     <span className="text-yellow-400 font-bold text-lg">$25.00</span>
                                 </div>
                             </div>
                             <div className="p-4 text-center">
-                                <h3 className="font-bold text-sm mb-2">Gorra Oficial</h3>
-                                <Button className="w-full bg-white text-black hover:bg-yellow-500 hover:text-black text-xs font-bold" onClick={() => window.open('https://buy.stripe.com/bJe6oG62SdLx8Kr4P0', '_blank')}>
+                                <h3 className="font-bold text-sm mb-2">Playera / T-Shirt</h3>
+                                <Button className="w-full bg-white text-black hover:bg-yellow-500 hover:text-black text-xs font-bold" onClick={() => window.open('https://buy.stripe.com/7sYaEW76W9vh1hZ3KW3wQ0W', '_blank')}>
                                     COMPRAR
                                 </Button>
                             </div>
