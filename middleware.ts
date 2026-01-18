@@ -21,14 +21,7 @@ export default function middleware(request: NextRequest) {
             url.pathname === `/${loc}` || url.pathname.startsWith(`/${loc}/`)
         );
 
-        if (isLocalePath) {
-            url.pathname = '/';
-            return NextResponse.redirect(url);
-        }
-
-        // 2. Serve the Radio App:
-        // If they are at root, show the Radio Unica page (rewrite)
-        if (url.pathname === '/') {
+        if (isLocalePath || url.pathname === '/') {
             url.pathname = '/radio-unica';
             return NextResponse.rewrite(url);
         }
