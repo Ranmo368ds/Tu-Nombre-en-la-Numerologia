@@ -5,17 +5,23 @@ import { NextRequest, NextResponse } from 'next/server';
 const intlMiddleware = createMiddleware(routing);
 
 export default function middleware(request: NextRequest) {
-    const hostname = request.headers.get('host');
+    // Check both standard host and x-forwarded-host (for proxies/Vercel)
+    const hostname = request.headers.get('x-forwarded-host') || request.headers.get('host');
 
     // Domain Routing for Radio Unica
     // If the user visits radiounica.us (any subdmain)
     if (hostname && (hostname.includes('radiounica.us') || hostname.includes('radio-unica'))) {
         const url = request.nextUrl.clone();
+        const { pathname } = url;
 
-        // 1. Trap Locale Paths:
-        // If the Numerology app logic tried to redirect to /en, /es, etc, 
-        // OR if the user manually goes there, we force them back to '/' 
-        // to avoid showing the Numerology interface.
+        // Avoid rewrite loop if we are already at /radio-unica or requesting assets
+        if (pathname.startsWith('/radio-unica') || pathname.startsWith('/_next') || pathname.includes('.')) {
+            return NextResponse.next();
+        }
+
+        // 1. Trap Locale Paths & Root:
+        // If the user is at root '/' OR any locale path '/en', '/es', etc.
+        // We rewrite them all to the radio app.
         const locales = ['en', 'es', 'fr', 'pt', 'it', 'de', 'ru', 'pl'];
         const isLocalePath = locales.some(loc =>
             url.pathname === `/${loc}` || url.pathname.startsWith(`/${loc}/`)
