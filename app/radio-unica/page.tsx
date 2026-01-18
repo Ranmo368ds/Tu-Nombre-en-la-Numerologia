@@ -198,13 +198,15 @@ export default function RadioUnicaPage() {
                                 ESCUCHAR AHORA
                             </Button>
                             <Button
+                                asChild
                                 variant="outline"
                                 size="lg"
                                 className="w-full sm:w-auto border-white/20 hover:bg-white/10 text-white rounded-full h-14 px-8 text-lg"
-                                onClick={() => window.open('https://www.speakpipe.com/RadioUnica', '_blank')}
                             >
-                                <Mic className="mr-2 w-5 h-5" />
-                                Mandar Saludo
+                                <a href="https://www.speakpipe.com/RadioUnica" target="_blank" rel="noopener noreferrer">
+                                    <Mic className="mr-2 w-5 h-5" />
+                                    Mandar Saludo
+                                </a>
                             </Button>
                         </div>
                     </motion.div>
@@ -455,10 +457,12 @@ export default function RadioUnicaPage() {
                             <h3 className="text-2xl font-black text-white relative z-10 mb-2">{t('amazon_picks.title')}</h3>
                             <p className="text-yellow-100 relative z-10 mb-6 max-w-sm">{t('amazon_picks.desc')}</p>
                             <Button
+                                asChild
                                 className="relative z-10 rounded-full bg-black text-white hover:bg-zinc-900 border border-yellow-500/50"
-                                onClick={() => window.open('https://amzn.to/4bFtbUt', '_blank')}
                             >
-                                {t('amazon_picks.btn')} <ExternalLink className="ml-2 w-4 h-4" />
+                                <a href="https://amzn.to/4bFtbUt" target="_blank" rel="noopener noreferrer">
+                                    {t('amazon_picks.btn')} <ExternalLink className="ml-2 w-4 h-4" />
+                                </a>
                             </Button>
                         </div>
                     </div>
@@ -491,16 +495,20 @@ export default function RadioUnicaPage() {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-lg mx-auto mb-12">
                         <Button
+                            asChild
                             className="h-14 bg-[#25D366] hover:bg-[#20bd5a] text-black font-bold text-lg rounded-xl"
-                            onClick={() => window.open('https://wa.me/18475029685', '_blank')}
                         >
-                            Whatsapp
+                            <a href="https://wa.me/18475029685" target="_blank" rel="noopener noreferrer">
+                                Whatsapp
+                            </a>
                         </Button>
                         <Button
+                            asChild
                             className="h-14 bg-blue-600 hover:bg-blue-700 text-white font-bold text-lg rounded-xl"
-                            onClick={() => window.open('https://www.speakpipe.com/RadioUnica', '_blank')}
                         >
-                            SpeakPipe (Voz)
+                            <a href="https://www.speakpipe.com/RadioUnica" target="_blank" rel="noopener noreferrer">
+                                SpeakPipe (Voz)
+                            </a>
                         </Button>
                     </div>
 
