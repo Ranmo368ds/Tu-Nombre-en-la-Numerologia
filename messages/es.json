@@ -297,5 +297,28 @@
                 "affinity": "Afinidad"
             }
         }
+    },
+    "RadioUnica": {
+        "title": "TIENDA & FAVORITOS",
+        "view_details": "VER DETALLES",
+        "buy": "COMPRAR",
+        "new": "NUEVO",
+        "premium": "PREMIUM",
+        "select_size": "Selecciona tu TALLA al pagar",
+        "select_size_color": "Selecciona tu TALLA y COLOR al pagar",
+        "shipping_safe": "Envío seguro a todo USA",
+        "adjustable": "Unitalla Ajustable",
+        "amazon_picks": {
+            "title": "AMAZON PICKS",
+            "desc": "Nuestra selección de equipo de audio y música.",
+            "btn": "Ver Lista Completa"
+        },
+        "products": {
+            "mug": "Taza Oficial",
+            "crewneck": "Crewneck Clásico",
+            "hoodie": "Sudadera Oficial",
+            "tshirt": "Playera / T-Shirt",
+            "cap": "Gorra Oficial"
+        }
     }
 }

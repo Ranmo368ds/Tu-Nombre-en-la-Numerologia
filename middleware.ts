@@ -14,23 +14,24 @@ export default function middleware(request: NextRequest) {
         const url = request.nextUrl.clone();
         const { pathname } = url;
 
-        // Avoid rewrite loop if we are already at /radio-unica or requesting assets
+        // Avoid rewrite loop or blocking assets
         if (pathname.startsWith('/radio-unica') || pathname.startsWith('/_next') || pathname.includes('.')) {
             return NextResponse.next();
         }
 
-        // 1. Trap Locale Paths & Root:
-        // If the user is at root '/' OR any locale path '/en', '/es', etc.
-        // We rewrite them all to the radio app.
+        // Detect language from path (e.g., /en, /pt)
+        let lang = 'es'; // Default
         const locales = ['en', 'es', 'fr', 'pt', 'it', 'de', 'ru', 'pl'];
-        const isLocalePath = locales.some(loc =>
-            url.pathname === `/${loc}` || url.pathname.startsWith(`/${loc}/`)
-        );
+        const pathSegment = pathname.split('/')[1];
 
-        if (isLocalePath || url.pathname === '/') {
-            url.pathname = '/radio-unica';
-            return NextResponse.rewrite(url);
+        if (locales.includes(pathSegment)) {
+            lang = pathSegment;
         }
+
+        // Rewrite to the radio app with language param
+        url.pathname = '/radio-unica';
+        url.searchParams.set('lang', lang);
+        return NextResponse.rewrite(url);
     }
 
     return intlMiddleware(request);
@@ -40,4 +41,4 @@ export const config = {
     // Match only internationalized pathnames + root
     matcher: ['/', '/(en|es|fr|pt|it|de|ru|pl)/:path*']
 };
- 
+

@@ -297,5 +297,28 @@
                 "affinity": "Affinity"
             }
         }
+    },
+    "RadioUnica": {
+        "title": "SHOP & FAVORITES",
+        "view_details": "VIEW DETAILS",
+        "buy": "BUY NOW",
+        "new": "NEW",
+        "premium": "PREMIUM",
+        "select_size": "Select your SIZE at checkout",
+        "select_size_color": "Select your SIZE and COLOR at checkout",
+        "shipping_safe": "Secure shipping to all USA",
+        "adjustable": "Adjustable One Size",
+        "amazon_picks": {
+            "title": "AMAZON PICKS",
+            "desc": "Our selection of audio and music gear.",
+            "btn": "View Full List"
+        },
+        "products": {
+            "mug": "Official Mug",
+            "crewneck": "Classic Crewneck",
+            "hoodie": "Official Hoodie",
+            "tshirt": "T-Shirt / Tee",
+            "cap": "Official Cap"
+        }
     }
 }

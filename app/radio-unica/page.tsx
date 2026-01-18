@@ -27,7 +27,30 @@ import {
     DialogDescription
 } from '@/components/ui/dialog';
 
+import { useSearchParams } from 'next/navigation';
+import esMessages from '../../messages/es.json';
+import enMessages from '../../messages/en.json';
+import ptMessages from '../../messages/pt.json';
+
+// Simple types for our specific structure to avoid TS errors
+const messagesDict: Record<string, any> = {
+    es: esMessages,
+    en: enMessages,
+    pt: ptMessages
+};
+
 export default function RadioUnicaPage() {
+    const searchParams = useSearchParams();
+    const lang = searchParams.get('lang') || 'es';
+    const t = (key: string) => {
+        const keys = key.split('.');
+        let value = messagesDict[lang]?.RadioUnica;
+        for (const k of keys) {
+            value = value?.[k];
+        }
+        return value || key;
+    };
+
     const [isPlaying, setIsPlaying] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [volume, setVolume] = useState(80);
@@ -89,7 +112,7 @@ export default function RadioUnicaPage() {
                             <a href="#inicio" className="text-sm font-medium hover:text-yellow-500 transition-colors">INICIO</a>
                             <a href="#programacion" className="text-sm font-medium hover:text-yellow-500 transition-colors">PROGRAMACIÓN</a>
                             <a href="#nosotros" className="text-sm font-medium hover:text-yellow-500 transition-colors">NOSOTROS</a>
-                            <a href="#tienda" className="text-sm font-medium hover:text-yellow-500 transition-colors">TIENDA</a>
+                            <a href="#tienda" className="text-sm font-medium hover:text-yellow-500 transition-colors">{t('title')}</a>
                             <a href="#contacto" className="text-sm font-medium hover:text-yellow-500 transition-colors">CONTACTO</a>
                             <Button
                                 className="bg-yellow-500 hover:bg-yellow-600 text-black font-bold rounded-full px-6"
@@ -278,9 +301,12 @@ export default function RadioUnicaPage() {
 
                     <div className="flex items-center gap-2 mb-8">
                         <ShoppingBag className="w-6 h-6 text-yellow-500" />
-                        <h2 className="text-3xl font-bold tracking-tighter">TIENDA & <span className="text-yellow-500">FAVORITOS</span></h2>
+                        <h2 className="text-3xl font-bold tracking-tighter">{t('title')}</h2>
                     </div>
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+
+                        {/* Product 5: Gorra (New) - Putting it first or last? Let's put it last or based on logic. Let's append it purely. */}
+
                         {/* Product 1: Taza */}
                         <div className="group relative bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:border-yellow-500/50 transition-all duration-300">
                             <Dialog>
@@ -288,23 +314,23 @@ export default function RadioUnicaPage() {
                                     <div className="aspect-square bg-black flex items-center justify-center relative cursor-zoom-in">
                                         <img src="/product-mug.jpg" alt="Taza Oficial" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                                         <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-4">
-                                            <span className="text-yellow-400 font-bold text-lg">VER DETALLES</span>
+                                            <span className="text-yellow-400 font-bold text-lg">{t('view_details')}</span>
                                         </div>
                                     </div>
                                 </DialogTrigger>
                                 <DialogContent className="bg-zinc-950 border-zinc-800 max-w-md">
-                                    <DialogTitle className="text-white">Taza Oficial Radio Unica</DialogTitle>
+                                    <DialogTitle className="text-white">{t('products.mug')}</DialogTitle>
                                     <img src="/product-mug.jpg" alt="Taza Zoom" className="w-full rounded-lg" />
                                     <DialogDescription className="text-yellow-500 font-bold text-center">
                                         $15.00 <br />
-                                        <span className="text-zinc-400 font-normal text-xs">* Envío seguro a todo USA</span>
+                                        <span className="text-zinc-400 font-normal text-xs">* {t('shipping_safe')}</span>
                                     </DialogDescription>
                                 </DialogContent>
                             </Dialog>
                             <div className="p-4 text-center">
-                                <h3 className="font-bold text-sm mb-2">Taza Oficial</h3>
+                                <h3 className="font-bold text-sm mb-2">{t('products.mug')}</h3>
                                 <Button className="w-full bg-white text-black hover:bg-yellow-500 hover:text-black text-xs font-bold" onClick={() => window.open('https://buy.stripe.com/00w7sK0Iy9vhbWDa9k', '_blank')}>
-                                    COMPRAR
+                                    {t('buy')}
                                 </Button>
                             </div>
                         </div>
@@ -314,19 +340,19 @@ export default function RadioUnicaPage() {
                             <Dialog>
                                 <DialogTrigger asChild>
                                     <div className="aspect-square bg-zinc-900 flex items-center justify-center relative cursor-zoom-in">
-                                        <div className="absolute top-2 right-2 bg-yellow-500 text-black text-[10px] font-bold px-2 py-0.5 rounded-full z-10">NUEVO</div>
+                                        <div className="absolute top-2 right-2 bg-yellow-500 text-black text-[10px] font-bold px-2 py-0.5 rounded-full z-10">{t('new')}</div>
                                         <img src="/product-crewneck.jpg" alt="Crewneck Clásico" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                                         <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-4">
-                                            <span className="text-yellow-400 font-bold text-lg">VER DETALLES</span>
+                                            <span className="text-yellow-400 font-bold text-lg">{t('view_details')}</span>
                                         </div>
                                     </div>
                                 </DialogTrigger>
                                 <DialogContent className="bg-zinc-950 border-zinc-800 max-w-md">
-                                    <DialogTitle className="text-white">Crewneck Clásico</DialogTitle>
+                                    <DialogTitle className="text-white">{t('products.crewneck')}</DialogTitle>
                                     <img src="/product-crewneck.jpg" alt="Crewneck Zoom" className="w-full rounded-lg" />
                                     <DialogDescription className="text-yellow-500 font-bold text-center">
                                         $45.00 <br />
-                                        <span className="text-zinc-400 font-normal text-xs">* Selecciona tu TALLA al pagar (S, M, L, XL)</span>
+                                        <span className="text-zinc-400 font-normal text-xs">* {t('select_size')} (S, M, L, XL)</span>
                                     </DialogDescription>
                                 </DialogContent>
                             </Dialog>
@@ -343,19 +369,19 @@ export default function RadioUnicaPage() {
                             <Dialog>
                                 <DialogTrigger asChild>
                                     <div className="aspect-square bg-zinc-900 flex items-center justify-center relative cursor-zoom-in">
-                                        <div className="absolute top-2 right-2 bg-white text-black text-[10px] font-bold px-2 py-0.5 rounded-full z-10">PREMIUM</div>
+                                        <div className="absolute top-2 right-2 bg-white text-black text-[10px] font-bold px-2 py-0.5 rounded-full z-10">{t('premium')}</div>
                                         <img src="/product-hoodie.jpg" alt="Sudadera Oficial" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                                         <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-4">
-                                            <span className="text-yellow-400 font-bold text-lg">VER DETALLES</span>
+                                            <span className="text-yellow-400 font-bold text-lg">{t('view_details')}</span>
                                         </div>
                                     </div>
                                 </DialogTrigger>
                                 <DialogContent className="bg-zinc-950 border-zinc-800 max-w-md">
-                                    <DialogTitle className="text-white">Sudadera Premium</DialogTitle>
+                                    <DialogTitle className="text-white">{t('products.hoodie')}</DialogTitle>
                                     <img src="/product-hoodie.jpg" alt="Sudadera Zoom" className="w-full rounded-lg" />
                                     <DialogDescription className="text-yellow-500 font-bold text-center">
                                         $55.00 <br />
-                                        <span className="text-zinc-400 font-normal text-xs">* Selecciona tu TALLA al pagar</span>
+                                        <span className="text-zinc-400 font-normal text-xs">* {t('select_size')}</span>
                                     </DialogDescription>
                                 </DialogContent>
                             </Dialog>
@@ -373,16 +399,16 @@ export default function RadioUnicaPage() {
                                     <div className="aspect-square bg-zinc-900 flex items-center justify-center relative cursor-zoom-in">
                                         <img src="/product-tshirt.jpg" alt="Playera Oficial" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                                         <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-4">
-                                            <span className="text-yellow-400 font-bold text-lg">VER DETALLES</span>
+                                            <span className="text-yellow-400 font-bold text-lg">{t('view_details')}</span>
                                         </div>
                                     </div>
                                 </DialogTrigger>
                                 <DialogContent className="bg-zinc-950 border-zinc-800 max-w-md">
-                                    <DialogTitle className="text-white">Playera Oficial</DialogTitle>
+                                    <DialogTitle className="text-white">{t('products.tshirt')}</DialogTitle>
                                     <img src="/product-tshirt.jpg" alt="Playera Zoom" className="w-full rounded-lg" />
                                     <DialogDescription className="text-yellow-500 font-bold text-center">
                                         $25.00 <br />
-                                        <span className="text-zinc-400 font-normal text-xs">* Selecciona tu TALLA y COLOR al pagar</span>
+                                        <span className="text-zinc-400 font-normal text-xs">* {t('select_size_color')}</span>
                                     </DialogDescription>
                                 </DialogContent>
                             </Dialog>
@@ -394,13 +420,41 @@ export default function RadioUnicaPage() {
                             </div>
                         </div>
 
+                        {/* Product 5: Gorra */}
+                        <div className="group relative bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:border-yellow-500/50 transition-all duration-300">
+                            <Dialog>
+                                <DialogTrigger asChild>
+                                    <div className="aspect-square bg-zinc-900 flex items-center justify-center relative cursor-zoom-in">
+                                        <img src="/product-cap.jpg" alt="Gorra Oficial" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-4">
+                                            <span className="text-yellow-400 font-bold text-lg">{t('view_details')}</span>
+                                        </div>
+                                    </div>
+                                </DialogTrigger>
+                                <DialogContent className="bg-zinc-950 border-zinc-800 max-w-md">
+                                    <DialogTitle className="text-white">{t('products.cap')}</DialogTitle>
+                                    <img src="/product-cap.jpg" alt="Gorra Zoom" className="w-full rounded-lg" />
+                                    <DialogDescription className="text-yellow-500 font-bold text-center">
+                                        $30.00 <br />
+                                        <span className="text-zinc-400 font-normal text-xs">* {t('adjustable')}</span>
+                                    </DialogDescription>
+                                </DialogContent>
+                            </Dialog>
+                            <div className="p-4 text-center">
+                                <h3 className="font-bold text-sm mb-2">Gorra Oficial</h3>
+                                <Button className="w-full bg-white text-black hover:bg-yellow-500 hover:text-black text-xs font-bold" onClick={() => window.open('https://buy.stripe.com/PLACEHOLDER_LINK_GORRA', '_blank')}>
+                                    COMPRAR
+                                </Button>
+                            </div>
+                        </div>
+
                         {/* Amazon Picks - Full Width on Mobile, Col span 2 on Desktop if needed, or just regular card */}
-                        <div className="col-span-2 md:col-span-4 bg-gradient-to-r from-yellow-500/20 to-purple-500/20 border border-white/10 rounded-2xl p-6 flex flex-col md:flex-row items-center justify-between gap-6 relative overflow-hidden group">
+                        <div className="col-span-2 md:col-span-3 lg:col-span-5 bg-gradient-to-r from-yellow-500/20 to-purple-500/20 border border-white/10 rounded-2xl p-6 flex flex-col md:flex-row items-center justify-between gap-6 relative overflow-hidden group">
                             <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors" />
-                            <h3 className="text-2xl font-black text-white relative z-10 mb-2">AMAZON PICKS</h3>
-                            <p className="text-yellow-100 relative z-10 mb-6 max-w-sm">Nuestra selección de equipo de audio y música.</p>
+                            <h3 className="text-2xl font-black text-white relative z-10 mb-2">{t('amazon_picks.title')}</h3>
+                            <p className="text-yellow-100 relative z-10 mb-6 max-w-sm">{t('amazon_picks.desc')}</p>
                             <Button className="relative z-10 rounded-full bg-black text-white hover:bg-zinc-900 border border-yellow-500/50">
-                                Ver Lista Completa <ExternalLink className="ml-2 w-4 h-4" />
+                                {t('amazon_picks.btn')} <ExternalLink className="ml-2 w-4 h-4" />
                             </Button>
                         </div>
                     </div>
