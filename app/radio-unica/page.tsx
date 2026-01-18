@@ -365,8 +365,10 @@ export default function RadioUnicaPage() {
                             </Dialog>
                             <div className="p-4 text-center">
                                 <h3 className="font-bold text-sm mb-2">{t('products.mug')}</h3>
-                                <Button className="w-full bg-white text-black hover:bg-yellow-500 hover:text-black text-xs font-bold" onClick={() => window.open('https://buy.stripe.com/dRmcN49f4fTF2m31CO3wQ10', '_blank')}>
-                                    {t('buy')}
+                                <Button className="w-full bg-white text-black hover:bg-yellow-500 hover:text-black text-xs font-bold" asChild>
+                                    <a href="https://buy.stripe.com/dRmcN49f4fTF2m31CO3wQ10" target="_blank" rel="noopener noreferrer">
+                                        {t('buy')}
+                                    </a>
                                 </Button>
                             </div>
                         </div>
@@ -393,9 +395,11 @@ export default function RadioUnicaPage() {
                                 </DialogContent>
                             </Dialog>
                             <div className="p-4 text-center">
-                                <h3 className="font-bold text-sm mb-2">Crewneck Clásico</h3>
-                                <Button className="w-full bg-white text-black hover:bg-yellow-500 hover:text-black text-xs font-bold" onClick={() => window.open('https://buy.stripe.com/9B6fZgaj8gXJbWDepA3wQ0Y', '_blank')}>
-                                    {t('buy')}
+                                <h3 className="font-bold text-sm mb-2">{t('products.crewneck')}</h3>
+                                <Button className="w-full bg-white text-black hover:bg-yellow-500 hover:text-black text-xs font-bold" asChild>
+                                    <a href="https://buy.stripe.com/9B6fZgaj8gXJbWDepA3wQ0Y" target="_blank" rel="noopener noreferrer">
+                                        {t('buy')}
+                                    </a>
                                 </Button>
                             </div>
                         </div>
@@ -422,9 +426,11 @@ export default function RadioUnicaPage() {
                                 </DialogContent>
                             </Dialog>
                             <div className="p-4 text-center">
-                                <h3 className="font-bold text-sm mb-2">Sudadera Oficial</h3>
-                                <Button className="w-full bg-white text-black hover:bg-yellow-500 hover:text-black text-xs font-bold" onClick={() => window.open('https://buy.stripe.com/28E00ifDsePB8KrftE3wQ0Z', '_blank')}>
-                                    {t('buy')}
+                                <h3 className="font-bold text-sm mb-2">{t('products.hoodie')}</h3>
+                                <Button className="w-full bg-white text-black hover:bg-yellow-500 hover:text-black text-xs font-bold" asChild>
+                                    <a href="https://buy.stripe.com/28E00ifDsePB8KrftE3wQ0Z" target="_blank" rel="noopener noreferrer">
+                                        {t('buy')}
+                                    </a>
                                 </Button>
                             </div>
                         </div>
@@ -450,8 +456,10 @@ export default function RadioUnicaPage() {
                             </Dialog>
                             <div className="p-4 text-center">
                                 <h3 className="font-bold text-sm mb-2">{t('products.tshirt')}</h3>
-                                <Button className="w-full bg-white text-black hover:bg-yellow-500 hover:text-black text-xs font-bold" onClick={() => window.open('https://buy.stripe.com/7sY28qfDs9vh2m395g3wQ11', '_blank')}>
-                                    {t('buy')}
+                                <Button className="w-full bg-white text-black hover:bg-yellow-500 hover:text-black text-xs font-bold" asChild>
+                                    <a href="https://buy.stripe.com/7sY28qfDs9vh2m395g3wQ11" target="_blank" rel="noopener noreferrer">
+                                        {t('buy')}
+                                    </a>
                                 </Button>
                             </div>
                         </div>
@@ -477,9 +485,11 @@ export default function RadioUnicaPage() {
                                 </DialogContent>
                             </Dialog>
                             <div className="p-4 text-center">
-                                <h3 className="font-bold text-sm mb-2">Gorra Oficial</h3>
-                                <Button className="w-full bg-white text-black hover:bg-yellow-500 hover:text-black text-xs font-bold" onClick={() => window.open('https://buy.stripe.com/14A7sKaj86j57GnepA3wQ0X', '_blank')}>
-                                    {t('buy')}
+                                <h3 className="font-bold text-sm mb-2">{t('products.cap')}</h3>
+                                <Button className="w-full bg-white text-black hover:bg-yellow-500 hover:text-black text-xs font-bold" asChild>
+                                    <a href="https://buy.stripe.com/14A7sKaj86j57GnepA3wQ0X" target="_blank" rel="noopener noreferrer">
+                                        {t('buy')}
+                                    </a>
                                 </Button>
                             </div>
                         </div>
