@@ -329,7 +329,7 @@ export default function RadioUnicaPage() {
                             </Dialog>
                             <div className="p-4 text-center">
                                 <h3 className="font-bold text-sm mb-2">{t('products.mug')}</h3>
-                                <Button className="w-full bg-white text-black hover:bg-yellow-500 hover:text-black text-xs font-bold" onClick={() => window.open('https://buy.stripe.com/00w7sK0Iy9vhbWDa9k', '_blank')}>
+                                <Button className="w-full bg-white text-black hover:bg-yellow-500 hover:text-black text-xs font-bold" onClick={() => window.open('https://buy.stripe.com/dRmcN49f4fTF2m31CO3wQ10', '_blank')}>
                                     {t('buy')}
                                 </Button>
                             </div>
@@ -358,8 +358,8 @@ export default function RadioUnicaPage() {
                             </Dialog>
                             <div className="p-4 text-center">
                                 <h3 className="font-bold text-sm mb-2">Crewneck Clásico</h3>
-                                <Button className="w-full bg-white text-black hover:bg-yellow-500 hover:text-black text-xs font-bold" onClick={() => window.open('https://buy.stripe.com/8x2eVcaj8bDpe4L0yK', '_blank')}>
-                                    COMPRAR
+                                <Button className="w-full bg-white text-black hover:bg-yellow-500 hover:text-black text-xs font-bold" onClick={() => window.open('https://buy.stripe.com/9B6fZgaj8gXJbWDepA3wQ0Y', '_blank')}>
+                                    {t('buy')}
                                 </Button>
                             </div>
                         </div>
@@ -387,8 +387,8 @@ export default function RadioUnicaPage() {
                             </Dialog>
                             <div className="p-4 text-center">
                                 <h3 className="font-bold text-sm mb-2">Sudadera Oficial</h3>
-                                <Button className="w-full bg-white text-black hover:bg-yellow-500 hover:text-black text-xs font-bold" onClick={() => window.open('https://buy.stripe.com/28E8wOezofTFd0HgxI', '_blank')}>
-                                    COMPRAR
+                                <Button className="w-full bg-white text-black hover:bg-yellow-500 hover:text-black text-xs font-bold" onClick={() => window.open('https://buy.stripe.com/28E00ifDsePB8KrftE3wQ0Z', '_blank')}>
+                                    {t('buy')}
                                 </Button>
                             </div>
                         </div>
@@ -413,9 +413,9 @@ export default function RadioUnicaPage() {
                                 </DialogContent>
                             </Dialog>
                             <div className="p-4 text-center">
-                                <h3 className="font-bold text-sm mb-2">Playera / T-Shirt</h3>
-                                <Button className="w-full bg-white text-black hover:bg-yellow-500 hover:text-black text-xs font-bold" onClick={() => window.open('https://buy.stripe.com/7sYaEW76W9vh1hZ3KW3wQ0W', '_blank')}>
-                                    COMPRAR
+                                <h3 className="font-bold text-sm mb-2">{t('products.tshirt')}</h3>
+                                <Button className="w-full bg-white text-black hover:bg-yellow-500 hover:text-black text-xs font-bold" onClick={() => window.open('https://buy.stripe.com/7sY28qfDs9vh2m395g3wQ11', '_blank')}>
+                                    {t('buy')}
                                 </Button>
                             </div>
                         </div>
@@ -442,8 +442,8 @@ export default function RadioUnicaPage() {
                             </Dialog>
                             <div className="p-4 text-center">
                                 <h3 className="font-bold text-sm mb-2">Gorra Oficial</h3>
-                                <Button className="w-full bg-white text-black hover:bg-yellow-500 hover:text-black text-xs font-bold" onClick={() => window.open('https://buy.stripe.com/PLACEHOLDER_LINK_GORRA', '_blank')}>
-                                    COMPRAR
+                                <Button className="w-full bg-white text-black hover:bg-yellow-500 hover:text-black text-xs font-bold" onClick={() => window.open('https://buy.stripe.com/14A7sKaj86j57GnepA3wQ0X', '_blank')}>
+                                    {t('buy')}
                                 </Button>
                             </div>
                         </div>
