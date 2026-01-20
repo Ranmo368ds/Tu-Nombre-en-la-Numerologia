@@ -1,301 +1,57 @@
 {
     "HomePage": {
-        "title": "O SEU NOME NA NUMEROLOGIA",
-        "subtitle": "Descubra como as letras do seu nome influenciam o seu destino",
-        "tabs": {
-            "portal": "Portal",
-            "synergy": "Sinergia",
-            "spaces": "Espaços",
-            "cycles": "Ciclos"
+        "title": "Bem-vindo ao Instinto Saludable",
+        "subtitle": "Seu caminho para o bem-estar holístico",
+        "nav": {
+            "home": "Início",
+            "shop": "Loja",
+            "oils": "Óleos Essenciais",
+            "ebooks": "eBooks",
+            "emusic": "eMusic",
+            "holistic": "Holístico",
+            "blog": "Blog",
+            "contact": "Contato",
+            "numerology": "Numerologia",
+            "tarot": "Tarot"
         },
-        "cycles_content": {
-            "long_cycles": {
-                "title": "Ciclos Longos: Ano e Mês Pessoal",
-                "desc": "O ano pessoal muda a cada 1º de janeiro (ou no seu aniversário, dependendo da configuração) e dura 12 meses. Representa a tendência geral do ano. O mês pessoal dá o 'sabor' de cada mês."
-            },
-            "powerful_advice": {
-                "title": "Conselho Poderoso",
-                "desc": "No início do seu ano pessoal: leia a previsão anual completa, marque no calendário os meses fortes (ex: mês 8 finanças, mês 6 relacionamentos, mês 9 encerramentos). Planeje ações importantes alinhando-as com esses meses."
-            },
-            "practical_tips": {
-                "title": "Conselhos Práticos",
-                "colors": "Cores favoráveis: use em roupas/acessórios.",
-                "numbers": "Números da sorte: escolha datas com eles.",
-                "crystals": "Pedras/cristais: leve em compromissos importantes.",
-                "hours": "Horas/dias poderosos: use afirmações alinhadas (ex: se é 7 → 'Confio na minha intuição')."
-            },
-            "compatibility": {
-                "title": "Explore Compatibilidades",
-                "desc": "Calcule com parceiro, sócios, filhos, animais, projetos ou marcas. Entenda dinâmicas e onde colocar consciência."
-            },
-            "journal": {
-                "title": "Diário Numerológico",
-                "subtitle": "O Hack que Mais Transforma",
-                "instruction": "Toda noite/semana anote:",
-                "prompts": {
-                    "app": "O que o app disse?",
-                    "reality": "O que aconteceu realmente?",
-                    "connection": "Como se conecta?"
-                },
-                "placeholder": "Escreva suas observações aqui..."
-            }
+        "hero": {
+            "title": "Desperte Seu Instinto",
+            "subtitle": "Encontre o equilíbrio perfeito entre corpo, mente e espírito.",
+            "cta_contact": "Entre em Contato Agora",
+            "cta_shop": "Ver Loja"
         },
-        "form": {
-            "email_label": "Email",
-            "email_placeholder": "voce@email.com",
-            "email_required_tag": "Requerido",
-            "email_help": "Insira o seu email para receber a leitura completa e dicas diárias.",
-            "email_error": "O seu email é necessário para prosseguir",
-            "name_label": "Nome Completo",
-            "name_placeholder": "Ex: João Silva",
-            "date_label": "Data de Nascimento",
-            "date_placeholder": "DD/MM/AAAA",
-            "date_error": "Por favor use o formato DD/MM/AAAA",
-            "calculate_btn": "Calcular a minha numerologia",
-            "calculate_sending": "A enviar...",
-            "clear_btn": "Limpar"
+        "categories": {
+            "title": "Explorar por Categoria",
+            "oils": "Óleos",
+            "crystals": "Cristais",
+            "ebooks": "eBooks",
+            "music": "Música",
+            "supplements": "Suplementos",
+            "kids": "Crianças"
         },
-        "tooltips": {
-            "destiny": "Destino: Soma de todas as letras do nome completo.",
-            "soul_urge": "Desejo da Alma: Apenas vogais (essência interior).",
-            "personality": "Personalidade: Apenas consoantes (imagem exterior).",
-            "life_path": "Caminho de Vida: Calculado somando todos os dígitos da sua data (DD+MM+AAAA) reduzindo a 1-9 ou Mestre (11, 22, 33)."
+        "bestsellers": {
+            "title": "Produtos Mais Vendidos",
+            "view_product": "Ver Produto"
+        },
+        "features": {
+            "numerology_title": "Numerologia Sagrada",
+            "numerology_desc": "Descubra o mapa da sua alma e destino através dos números.",
+            "radio_title": "Radio Única",
+            "radio_desc": "Música e conteúdo para elevar sua vibração 24 horas.",
+            "oils_title": "Óleos Essenciais",
+            "oils_desc": "Aromaterapia pura para curar e harmonizar seu ambiente."
         },
         "footer": {
-            "ebook_link": "Obtenha o meu eBook completo de Numerologia em www.InstintoSaludable.com",
-            "copyright": "Sabedoria Ancestral • Portal do Destino • Numerologia Sagrada"
-        },
-        "synergy": {
-            "title": "Sinastria de Almas",
-            "subtitle": "Primeiro calcule sua própria numerologia na aba principal para ver a compatibilidade.",
-            "form": {
-                "relation_type": "Tipo de Relação",
-                "partner_name": "Nome do outro",
-                "partner_placeholder": "Nome completo",
-                "birth_date": "Data de Nascimento",
-                "submit": "Ver Compatibilidade",
-                "types": {
-                    "partner": "Parceiro ✨",
-                    "business": "Sócio de Negócios 🤝",
-                    "child": "Filho/Filha 🍼",
-                    "pet": "Animal 🐾"
-                }
-            },
-            "result": {
-                "affinity": "Afinidade",
-                "vibrational_synergy": "Sinergia Vibracional:",
-                "strength_default": "Grande capacidade de manifestação conjunta.",
-                "strength_pet": "Vínculo puro e lealdade incondicional.",
-                "challenge_default": "Evitar a competição de egos.",
-                "challenge_pet": "Entender suas necessidades energéticas."
-            }
-        },
-        "spaces": {
-            "title": "Vibração do Espaço",
-            "form": {
-                "address_num": "Número da Rua / Porta",
-                "address_placeholder": "Ex: 1234",
-                "street_name": "Nome da Rua (Opcional)",
-                "street_placeholder": "Ex: Avenida Sol",
-                "move_date": "Data de Mudança / Início",
-                "submit": "Calcular Energia"
-            },
-            "result": {
-                "home_level": "Nível do Lar",
-                "crystals": "Cristais de Harmonização",
-                "color_synesthesia": "Sinestesia das Cores",
-                "color_desc": "Este espaço vibra em frequências de cor que você pode potencializar decorando com esses tons."
-            }
-        },
-        "results": {
-            "labels": {
-                "life_path": "Caminho de Vida",
-                "destiny": "Destino",
-                "soul_urge": "Desejo da Alma",
-                "personality": "Personalidade"
-            },
-            "card": {
-                "strengths": "Forças",
-                "challenges": "Desafios",
-                "source": "Fonte desta interpretação",
-                "formula": "Fórmula Pitagórica:",
-                "synergy": "Sinergia Cósmica",
-                "love": "Amor:",
-                "career": "Carreira:"
-            },
-            "meanings": {
-                "1": {
-                    "title": "O Líder",
-                    "personality": "Independente, criativo e com muita iniciativa.",
-                    "strengths": "Originalidade, coragem e inovação.",
-                    "challenges": "Impaciência, egoísmo ou arrogância.",
-                    "love": "Procura parceiros que respeitem a sua independência.",
-                    "career": "Empreendedor, diretor ou inventor."
-                },
-                "2": {
-                    "title": "O Pacificador",
-                    "personality": "Diplomático, sensível e cooperativo.",
-                    "strengths": "Empatia, paciência e harmonia.",
-                    "challenges": "Hipersensibilidade ou indecisão.",
-                    "love": "Valoriza a conexão emocional profunda e a harmonia.",
-                    "career": "Mediador, conselheiro ou assistente social."
-                },
-                "3": {
-                    "title": "O Comunicador",
-                    "personality": "Expressivo, otimista e sociável.",
-                    "strengths": "Criatividade, eloquência e alegria.",
-                    "challenges": "Superficialidade ou dispersão de energia.",
-                    "love": "Precisa de diversão, romance e inspiração.",
-                    "career": "Escritor, artista, vendas ou relações públicas."
-                },
-                "4": {
-                    "title": "O Construtor",
-                    "personality": "Disciplinado, prático e trabalhador.",
-                    "strengths": "Estabilidade, lealdade e organização.",
-                    "challenges": "Rigidez ou falta de visão criativa.",
-                    "love": "Procura segurança e compromisso a longo prazo.",
-                    "career": "Engenheiro, gestor ou administração."
-                },
-                "5": {
-                    "title": "O Aventureiro",
-                    "personality": "Versátil, livre e curioso.",
-                    "strengths": "Adaptabilidade, carisma e pensamento progressista.",
-                    "challenges": "Inquietação ou falta de foco.",
-                    "love": "Precisa de liberdade, viagens e aventura constante.",
-                    "career": "Turismo, jornalismo ou marketing."
-                },
-                "6": {
-                    "title": "O Protetor",
-                    "personality": "Responsável, amoroso e prestativo.",
-                    "strengths": "Cuidado, compaixão e sentido de comunidade.",
-                    "challenges": "Intromissão ou perfeccionismo.",
-                    "love": "Dedicado, familiar e protetor do seu lar.",
-                    "career": "Educação, saúde ou serviços comunitários."
-                },
-                "7": {
-                    "title": "O Buscador",
-                    "personality": "Analítico, espiritual e reservado.",
-                    "strengths": "Sabedoria, intuição e investigação profunda.",
-                    "challenges": "Isolamento ou cinismo.",
-                    "love": "Precisa de espaço pessoal e conexão intelectual.",
-                    "career": "Cientista, filósofo ou analista de dados."
-                },
-                "8": {
-                    "title": "O Executivo",
-                    "personality": "Ambicioso, eficiente e orientado para o sucesso.",
-                    "strengths": "Poder, autoridade e gestão financeira.",
-                    "challenges": "Materialismo ou dureza emocional.",
-                    "love": "Procura estabilidade material e status partilhado.",
-                    "career": "Finanças, direito corporativo ou política."
-                },
-                "9": {
-                    "title": "O Humanitário",
-                    "personality": "Compassivo, tolerante e idealista.",
-                    "strengths": "Generosidade, mente aberta e altruísmo.",
-                    "challenges": "Sentimentalismo excessivo ou falta de praticidade.",
-                    "love": "Amor universal, romântico e profundamente empático.",
-                    "career": "Organizações sem fins lucrativos, medicina ou arte."
-                },
-                "11": {
-                    "title": "O Mestre Intuitivo",
-                    "personality": "Altamente intuitivo, visionário e inspirado.",
-                    "strengths": "Consciência espiritual, magnetismo e luz.",
-                    "challenges": "Ansiedade extrema ou sonhar acordado sem agir.",
-                    "love": "Conexão de alma para alma, intensidade espiritual.",
-                    "career": "Líder espiritual, curador ou coach motivacional."
-                },
-                "22": {
-                    "title": "O Mestre Construtor",
-                    "personality": "Prático mas visionário, grande capacidade de realização.",
-                    "strengths": "Habilidade para manifestar grandes sonhos na realidade.",
-                    "challenges": "Medo do fracasso diante de grandes responsabilidades.",
-                    "love": "Construção de um legado junto com o parceiro.",
-                    "career": "Arquiteto em grande escala, filantropo ou líder visionário."
-                },
-                "33": {
-                    "title": "O Mestre Guia",
-                    "personality": "Amor incondicional e devoção altruísta.",
-                    "strengths": "Grande capacidade de ensino e sacrifício pessoal.",
-                    "challenges": "Carregar os problemas de todo o mundo.",
-                    "love": "Amor puro, protetor e profundamente nutritivo.",
-                    "career": "Guia espiritual, grande educador ou líder mundial da paz."
-                }
-            },
-            "compatibility": {
-                "partner": {
-                    "1": "Vibração de liderança partilhada. Construindo um futuro visionário juntos.",
-                    "2": "Harmonia perfeita. Profundo apoio mútuo e sensibilidade.",
-                    "3": "Relacionamento cheio de alegria, comunicação e expressão criativa.",
-                    "4": "Estabilidade e lealdade. Construindo uma base sólida para o lar.",
-                    "5": "Aventura e liberdade. Um relacionamento dinâmico que nunca para.",
-                    "6": "Amor nutritivo e protetor. O lar é o seu santuário.",
-                    "7": "Conexão espiritual e intelectual. Procurando a verdade profunda juntos.",
-                    "8": "Poder e abundância material. Uma equipa imparável.",
-                    "9": "Amor universal e compassivo. Inspirando-se mutuamente a ser melhores.",
-                    "11": "Relacionamento mestre. Evolução espiritual intensamente conectada.",
-                    "22": "Grandes construtores de um legado conjunto.",
-                    "33": "Cura e orientação mútua. Amor na sua mais alta expressão de serviço."
-                },
-                "business_partner": {
-                    "1": "Foco total em metas e resultados inovadores.",
-                    "4": "Organização e trabalho árduo. Sucesso assegurado pela estrutura.",
-                    "8": "Grande potencial financeiro e projeção de autoridade."
-                },
-                "child": {
-                    "1": "Incentiva sua independência enquanto guia sua criatividade.",
-                    "2": "Requer orientação gentil e paciência emocional.",
-                    "6": "Um vínculo de proteção e ensino baseado no amor familiar."
-                },
-                "pet": {
-                    "3": "Animal alegre trazendo muita comunicação e risos ao lar.",
-                    "5": "Animal brincalhão e enérgico. Precisa de muito espaço.",
-                    "9": "Conexão telepática ou muito intuitiva. Um companheiro de alma."
-                },
-                "default": "Existe uma energia de equilíbrio e cooperação entre ambos."
-            },
-            "house": {
-                "1": {
-                    "sensation": "Energia e Ação",
-                    "advice": "Ideal para novos começos e independência."
-                },
-                "2": {
-                    "sensation": "Paz e Diplomacia",
-                    "advice": "Fomenta a harmonia familiar e a meditação."
-                },
-                "3": {
-                    "sensation": "Alegria e Criatividade",
-                    "advice": "Espaço de vida social e expressão artística."
-                },
-                "4": {
-                    "sensation": "Estabilidade e Ordem",
-                    "advice": "Excelente para trabalhar e construir bases sólidas."
-                },
-                "5": {
-                    "sensation": "Mudança e Aventura",
-                    "advice": "Um lar dinâmico com movimento constante."
-                },
-                "6": {
-                    "sensation": "Amor e Nutrição",
-                    "advice": "Ponto de encontro para a família e cuidado mútuo."
-                },
-                "7": {
-                    "sensation": "Misticismo e Sabedoria",
-                    "advice": "Refúgio para estudo profundo e introspecção."
-                },
-                "8": {
-                    "sensation": "Poder e Abundância",
-                    "advice": "Atrai sucesso material e gestão eficiente."
-                },
-                "9": {
-                    "sensation": "Humanitarismo e Encerramento",
-                    "advice": "Espaço para cura e amor incondicional."
-                }
-            },
-            "synergy": {
-                "strength": "Força",
-                "challenge": "Desafio",
-                "affinity": "Afinidade"
-            }
+            "explore": "Explorar",
+            "legal": "Legal",
+            "shop": "Loja",
+            "numerology": "Numerologia",
+            "blog": "Blog",
+            "about": "Sobre",
+            "privacy": "Privacidade",
+            "terms": "Termos",
+            "rights": "Todos os direitos reservados",
+            "tagline": "Seu refúgio digital para cura, autoconhecimento e bem-estar holístico. Descubra o poder da sua própria energia."
         }
     },
     "RadioUnica": {
@@ -319,6 +75,41 @@
             "hoodie": "Moletom Oficial",
             "tshirt": "Camiseta / T-Shirt",
             "cap": "Boné Oficial"
+        }
+    },
+    "Shop": {
+        "title": "Loja Holística",
+        "subtitle": "Ferramentas selecionadas para seu bem-estar físico, mental e espiritual.",
+        "filters": {
+            "all": "Todos",
+            "oils": "Óleos",
+            "crystals": "Cristais",
+            "ebooks": "eBooks",
+            "music": "Música",
+            "holistic": "Holístico",
+            "merch": "Merch Radio Unica"
+        },
+        "product": {
+            "add_to_cart": "Adicionar ao Carrinho",
+            "details": "Ver Detalhes",
+            "price": "Preço",
+            "features": "Características",
+            "description": "Descrição"
+        },
+        "upsells": "Você também pode gostar"
+    },
+    "Contact": {
+        "title": "Entre em Contato",
+        "subtitle": "Estamos aqui para ouvir e guiá-lo em seu caminho.",
+        "form": {
+            "name": "Nome",
+            "email": "Email",
+            "message": "Mensagem",
+            "send": "Enviar Mensagem",
+            "success": "Mensagem enviada com sucesso!",
+            "placeholder_name": "Seu nome completo",
+            "placeholder_email": "voce@email.com",
+            "placeholder_message": "Como podemos ajudá-lo?"
         }
     }
 }

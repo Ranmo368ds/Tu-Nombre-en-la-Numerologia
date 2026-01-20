@@ -1,5 +1,66 @@
 {
+    "SEO": {
+        "title": "Instinto Saludable | Bienestar Holístico y Numerología",
+        "description": "Explora tu camino hacia el bienestar integral con aceites esenciales, numerología pitagórica y sabiduría ancestral. Despierta tu instinto hoy.",
+        "og_title": "Despierta tu Instinto Saludable",
+        "og_description": "Acompañamos tu proceso de sanación y autoconocimiento con herramientas holísticas de alta vibración."
+    },
     "HomePage": {
+        "title": "Bienvenido a Instinto Saludable",
+        "subtitle": "Tu camino hacia el bienestar integral",
+        "nav": {
+            "home": "Inicio",
+            "shop": "Tienda",
+            "oils": "Aceites",
+            "ebooks": "eBooks",
+            "emusic": "eMusic",
+            "holistic": "Holistic",
+            "blog": "Blog",
+            "contact": "Contacto",
+            "numerology": "Numerología",
+            "tarot": "Tarot"
+        },
+        "hero": {
+            "title": "Despierta tu Instinto",
+            "subtitle": "Encuentra el equilibrio perfecto entre cuerpo, mente y espíritu.",
+            "cta_contact": "Contáctanos Ahora",
+            "cta_shop": "Ver Tienda"
+        },
+        "categories": {
+            "title": "Explora por Categoría",
+            "oils": "Aceites",
+            "crystals": "Cristales",
+            "ebooks": "eBooks",
+            "music": "Música",
+            "supplements": "Suplementos",
+            "kids": "Niños"
+        },
+        "bestsellers": {
+            "title": "Productos Más Vendidos",
+            "view_product": "Ver Producto"
+        },
+        "features": {
+            "numerology_title": "Numerología Sagrada",
+            "numerology_desc": "Descubre el mapa de tu alma y tu destino a través de los números.",
+            "radio_title": "Radio Unica",
+            "radio_desc": "Música y contenidos para elevar tu vibración las 24 horas.",
+            "uils_title": "Aceites Esenciales",
+            "oils_desc": "Aromaterapia pura para sanar y armonizar tu entorno."
+        },
+        "footer": {
+            "explore": "Explora",
+            "legal": "Legal",
+            "shop": "Tienda",
+            "numerology": "Numerología",
+            "blog": "Blog",
+            "about": "Nosotros",
+            "privacy": "Privacidad",
+            "terms": "Términos",
+            "rights": "Todos los derechos reservados",
+            "tagline": "Tu refugio digital para la sanación, el autoconocimiento y el bienestar integral. Descubre el poder de tu propia energía."
+        }
+    },
+    "Numerology": {
         "title": "TU NOMBRE EN LA NUMEROLOGÍA",
         "subtitle": "Descubre cómo las letras de tu nombre influyen en tu destino",
         "tabs": {
@@ -116,7 +177,7 @@
             },
             "card": {
                 "strengths": "Fortalezas",
-                "challenges": "Desafíos",
+                "challenges": "Desafios",
                 "source": "Fuente de esta interpretación",
                 "formula": "Fórmula Pitagórica:",
                 "synergy": "Sinergia Cósmica",
@@ -319,6 +380,49 @@
             "hoodie": "Sudadera Oficial",
             "tshirt": "Playera / T-Shirt",
             "cap": "Gorra Oficial"
+        }
+    },
+    "Shop": {
+        "title": "Tienda Holística",
+        "subtitle": "Herramientas seleccionadas para tu bienestar físico, mental y espiritual.",
+        "filters": {
+            "all": "Todos",
+            "oils": "Aceites",
+            "crystals": "Cristales",
+            "ebooks": "eBooks",
+            "music": "Música",
+            "holistic": "Holistic",
+            "merch": "Merch Radio Única"
+        },
+        "product": {
+            "add_to_cart": "Añadir al Carrito",
+            "details": "Ver Detalles",
+            "price": "Precio",
+            "features": "Características",
+            "description": "Descripción"
+        },
+        "upsells": "También te podría interesar",
+        "footer": {
+            "tagline": "Tu refugio digital para la sanación, el autoconocimiento y el bienestar integral.",
+            "pages": "Páginas",
+            "contact": "Contacto",
+            "email": "instintosaludableusa@gmail.com",
+            "location": "Chicago, IL",
+            "rights": "Todos los derechos reservados"
+        }
+    },
+    "Contact": {
+        "title": "Contáctanos",
+        "subtitle": "Estamos aquí para escucharte y guiarte en tu camino.",
+        "form": {
+            "name": "Nombre",
+            "email": "Correo Electrónico",
+            "message": "Mensaje",
+            "send": "Enviar Mensaje",
+            "success": "¡Mensaje enviado con éxito!",
+            "placeholder_name": "Tu nombre completo",
+            "placeholder_email": "tu@email.com",
+            "placeholder_message": "¿En qué podemos ayudarte?"
         }
     }
 }

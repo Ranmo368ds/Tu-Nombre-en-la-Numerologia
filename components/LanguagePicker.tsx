@@ -22,13 +22,13 @@ export function LanguagePicker() {
 
     return (
         <Select value={locale} onValueChange={handleLanguageChange}>
-            <SelectTrigger className="w-[140px] bg-white/5 border-white/10 text-slate-200 hover:bg-white/10 transition-colors">
+            <SelectTrigger className="w-[140px] bg-white border-stone-200 text-stone-700 hover:bg-stone-50 transition-colors">
                 <div className="flex items-center gap-2">
-                    <Globe className="w-4 h-4 text-gold/70" />
+                    <Globe className="w-4 h-4 text-emerald-600" />
                     <SelectValue placeholder="Idioma" />
                 </div>
             </SelectTrigger>
-            <SelectContent className="bg-slate-950 border-white/10 text-slate-200">
+            <SelectContent className="bg-white border-stone-200 text-stone-700">
                 <SelectItem value="es">Español</SelectItem>
                 <SelectItem value="en">English</SelectItem>
                 <SelectItem value="fr">Français</SelectItem>

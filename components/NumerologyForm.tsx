@@ -19,7 +19,8 @@ interface NumerologyFormProps {
 }
 
 export function NumerologyForm({ onCalculate, onClear }: NumerologyFormProps) {
-    const t = useTranslations("HomePage");
+    const t = useTranslations("Numerology");
+    const tHome = useTranslations("HomePage");
     const [name, setName] = useState("");
     const [dateStr, setDateStr] = useState("");
     const [email, setEmail] = useState("");
@@ -145,9 +146,9 @@ export function NumerologyForm({ onCalculate, onClear }: NumerologyFormProps) {
                                         <Info className="w-3.5 h-3.5 text-gold/50 cursor-help" />
                                     </TooltipTrigger>
                                     <TooltipContent className="max-w-xs space-y-2 p-3">
-                                        <p><strong>Destino:</strong> {t('tooltips.destiny').split(': ')[1]}</p>
-                                        <p><strong>Deseo del Alma:</strong> {t('tooltips.soul_urge').split(': ')[1]}</p>
-                                        <p><strong>Personalidad:</strong> {t('tooltips.personality').split(': ')[1]}</p>
+                                        <p><strong>Destino:</strong> {t('tooltips.destiny').includes(':') ? t('tooltips.destiny').split(': ')[1] : t('tooltips.destiny')}</p>
+                                        <p><strong>Deseo del Alma:</strong> {t('tooltips.soul_urge').includes(':') ? t('tooltips.soul_urge').split(': ')[1] : t('tooltips.soul_urge')}</p>
+                                        <p><strong>Personalidad:</strong> {t('tooltips.personality').includes(':') ? t('tooltips.personality').split(': ')[1] : t('tooltips.personality')}</p>
                                     </TooltipContent>
                                 </Tooltip>
                             </div>
@@ -171,7 +172,7 @@ export function NumerologyForm({ onCalculate, onClear }: NumerologyFormProps) {
                                         <Info className="w-3.5 h-3.5 text-gold/50 cursor-help" />
                                     </TooltipTrigger>
                                     <TooltipContent className="max-w-xs p-3">
-                                        <p><strong>Camino de Vida:</strong> {t('tooltips.life_path').split(': ')[1]}</p>
+                                        <p><strong>Camino de Vida:</strong> {t('tooltips.life_path').includes(':') ? t('tooltips.life_path').split(': ')[1] : t('tooltips.life_path')}</p>
                                     </TooltipContent>
                                 </Tooltip>
                             </div>

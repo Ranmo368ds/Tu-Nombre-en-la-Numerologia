@@ -1,5 +1,60 @@
 {
     "HomePage": {
+        "title": "Witamy w Instinto Saludable",
+        "subtitle": "Twoja droga do holistycznego dobrostanu",
+        "nav": {
+            "home": "Strona główna",
+            "shop": "Sklep",
+            "oils": "Olejki eteryczne",
+            "ebooks": "eBooki",
+            "emusic": "Muzyka",
+            "holistic": "Holistyczny",
+            "blog": "Blog",
+            "contact": "Kontakt",
+            "numerology": "Numerologia",
+            "tarot": "Tarot"
+        },
+        "hero": {
+            "title": "Obudź Swój Instynkt",
+            "subtitle": "Znajdź idealną równowagę między ciałem, umysłem i duchem.",
+            "cta_contact": "Skontaktuj się teraz",
+            "cta_shop": "Zobacz sklep"
+        },
+        "categories": {
+            "title": "Przeglądaj według kategorii",
+            "oils": "Olejki",
+            "crystals": "Kryształy",
+            "ebooks": "eBooki",
+            "music": "Muzyka",
+            "supplements": "Suplementy",
+            "kids": "Dzieci"
+        },
+        "bestsellers": {
+            "title": "Najlepiej sprzedające się produkty",
+            "view_product": "Zobacz produkt"
+        },
+        "features": {
+            "numerology_title": "Święta Numerologia",
+            "numerology_desc": "Odkryj mapę swojej duszy i przeznaczenia przez liczby.",
+            "radio_title": "Radio Única",
+            "radio_desc": "Muzyka i treści podnoszące twoją wibrację 24 godziny na dobę.",
+            "oils_title": "Olejki eteryczne",
+            "oils_desc": "Czysta aromaterapia do leczenia i harmonizowania twojego otoczenia."
+        },
+        "footer": {
+            "explore": "Eksploruj",
+            "legal": "Prawne",
+            "shop": "Sklep",
+            "numerology": "Numerologia",
+            "blog": "Blog",
+            "about": "O nas",
+            "privacy": "Prywatność",
+            "terms": "Warunki",
+            "rights": "Wszelkie prawa zastrzeżone",
+            "tagline": "Twoje cyfrowe schronienie dla uzdrowienia, samopoznania i holistycznego dobrostanu. Odkryj moc własnej energii."
+        }
+    },
+    "Numerology": {
         "title": "TWOJE IMIĘ W NUMEROLOGII",
         "subtitle": "Odkryj, jak litery w Twoim imieniu wpływają na Twoje przeznaczenie",
         "tabs": {
@@ -296,6 +351,64 @@
                 "challenge": "Wyzwanie",
                 "affinity": "Powinowactwo"
             }
+        }
+    },
+    "RadioUnica": {
+        "title": "LOJA & FAVORITOS",
+        "view_details": "VER DETALHES",
+        "buy": "COMPRAR",
+        "new": "NOVO",
+        "premium": "PREMIUM",
+        "select_size": "Selecione seu TAMANHO no pagamento",
+        "select_size_color": "Selecione TAMANHO e COR no pagamento",
+        "shipping_safe": "Envio seguro para todo os EUA",
+        "adjustable": "Tamanho Único Ajustável",
+        "amazon_picks": {
+            "title": "ESCOLHAS AMAZON",
+            "desc": "Nossa seleção de equipamentos de áudio e música.",
+            "btn": "Ver Lista Completa"
+        },
+        "products": {
+            "mug": "Caneca Oficial",
+            "crewneck": "Crewneck Clássico",
+            "hoodie": "Moletom Oficial",
+            "tshirt": "Camiseta / T-Shirt",
+            "cap": "Boné Oficial"
+        }
+    },
+    "Shop": {
+        "title": "Sklep holistyczny",
+        "subtitle": "Wybrane narzędzia dla twojego fizycznego, mentalnego i duchowego dobrostanu.",
+        "filters": {
+            "all": "Wszystkie",
+            "oils": "Olejki",
+            "crystals": "Kryształy",
+            "ebooks": "eBooki",
+            "music": "Muzyka",
+            "holistic": "Holistyczny",
+            "merch": "Gadżety Radio Unica"
+        },
+        "product": {
+            "add_to_cart": "Dodaj do koszyka",
+            "details": "Zobacz szczegóły",
+            "price": "Cena",
+            "features": "Cechy",
+            "description": "Opis"
+        },
+        "upsells": "Może ci się również spodobać"
+    },
+    "Contact": {
+        "title": "Skontaktuj się z nami",
+        "subtitle": "Jesteśmy tutaj, aby cię wysłuchać i poprowadzić na twojej drodze.",
+        "form": {
+            "name": "Imię",
+            "email": "Email",
+            "message": "Wiadomość",
+            "send": "Wyślij wiadomość",
+            "success": "Wiadomość wysłana pomyślnie!",
+            "placeholder_name": "Twoje pełne imię",
+            "placeholder_email": "ty@email.com",
+            "placeholder_message": "Jak możemy ci pomóc?"
         }
     }
 }

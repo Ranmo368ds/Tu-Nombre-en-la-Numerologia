@@ -1,5 +1,66 @@
 {
+    "SEO": {
+        "title": "Healthy Instinct | Holistic Well-being & Numerology",
+        "description": "Explore your path to integral well-being with essential oils, Pythagorean numerology, and ancestral wisdom. Awaken your instinct today.",
+        "og_title": "Awaken your Healthy Instinct",
+        "og_description": "We accompany your healing and self-knowledge process with high-vibration holistic tools."
+    },
     "HomePage": {
+        "title": "Welcome to Instinto Saludable",
+        "subtitle": "Your path to holistic wellness",
+        "nav": {
+            "home": "Home",
+            "shop": "Shop",
+            "oils": "Essential Oils",
+            "ebooks": "eBooks",
+            "emusic": "eMusic",
+            "holistic": "Holistic",
+            "blog": "Blog",
+            "contact": "Contact",
+            "numerology": "Numerology",
+            "tarot": "Tarot"
+        },
+        "hero": {
+            "title": "Awaken Your Instinct",
+            "subtitle": "Find the perfect balance between body, mind, and spirit.",
+            "cta_contact": "Contact Us",
+            "cta_shop": "Shop Now"
+        },
+        "categories": {
+            "title": "Shop by Category",
+            "oils": "Oils",
+            "crystals": "Crystals",
+            "ebooks": "eBooks",
+            "music": "Music",
+            "supplements": "Supplements",
+            "kids": "Kids"
+        },
+        "bestsellers": {
+            "title": "Bestsellers",
+            "view_product": "View Product"
+        },
+        "features": {
+            "numerology_title": "Sacred Numerology",
+            "numerology_desc": "Discover the map of your soul and destiny through numbers.",
+            "radio_title": "Radio Unica",
+            "radio_desc": "Music and content to raise your vibration 24/7.",
+            "uils_title": "Essential Oils",
+            "oils_desc": "Pure aromatherapy to heal and harmonize your environment."
+        },
+        "footer": {
+            "explore": "Explore",
+            "legal": "Legal",
+            "shop": "Shop",
+            "numerology": "Numerology",
+            "blog": "Blog",
+            "about": "About",
+            "privacy": "Privacy",
+            "terms": "Terms",
+            "rights": "All rights reserved",
+            "tagline": "Your digital refuge for healing, self-knowledge and holistic wellness. Discover the power of your own energy."
+        }
+    },
+    "Numerology": {
         "title": "YOUR NAME IN NUMEROLOGY",
         "subtitle": "Discover how the letters of your name influence your destiny",
         "tabs": {
@@ -319,6 +380,41 @@
             "hoodie": "Official Hoodie",
             "tshirt": "T-Shirt / Tee",
             "cap": "Official Cap"
+        }
+    },
+    "Shop": {
+        "title": "Holistic Shop",
+        "subtitle": "Curated tools for your physical, mental, and spiritual wellness.",
+        "filters": {
+            "all": "All",
+            "oils": "Oils",
+            "crystals": "Crystals",
+            "ebooks": "eBooks",
+            "music": "Music",
+            "holistic": "Holistic",
+            "merch": "Radio Unica Merch"
+        },
+        "product": {
+            "add_to_cart": "Add to Cart",
+            "details": "View Details",
+            "price": "Price",
+            "features": "Features",
+            "description": "Description"
+        },
+        "upsells": "You might also like"
+    },
+    "Contact": {
+        "title": "Contact Us",
+        "subtitle": "We are here to listen and guide you on your path.",
+        "form": {
+            "name": "Name",
+            "email": "Email",
+            "message": "Message",
+            "send": "Send Message",
+            "success": "Message sent successfully!",
+            "placeholder_name": "Your full name",
+            "placeholder_email": "you@email.com",
+            "placeholder_message": "How can we help you?"
         }
     }
 }
