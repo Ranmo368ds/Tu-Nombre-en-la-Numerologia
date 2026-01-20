@@ -21,6 +21,8 @@ export function Board() {
         selectElement,
         pan,
         setPan,
+        zoom,
+        setZoom,
         selectedEmoji
     } = useBoardStore();
 
@@ -67,9 +69,21 @@ export function Board() {
 
     const getCanvasCoords = (clientX: number, clientY: number) => {
         return {
-            x: clientX - pan.x,
-            y: clientY - pan.y
+            x: (clientX - pan.x) / zoom,
+            y: (clientY - pan.y) / zoom
         };
+    };
+
+    const handleWheel = (e: React.WheelEvent) => {
+        if (e.ctrlKey || e.metaKey) {
+            e.preventDefault();
+            const delta = e.deltaY;
+            const scaleFactor = 0.999 ** delta;
+            const newZoom = Math.min(Math.max(zoom * scaleFactor, 0.1), 5);
+            setZoom(newZoom);
+        } else {
+            setPan(pan.x - e.deltaX, pan.y - e.deltaY);
+        }
     };
 
     const handlePointerDown = (e: React.PointerEvent<HTMLDivElement>) => {
@@ -538,6 +552,7 @@ export function Board() {
             onPointerDown={handlePointerDown}
             onPointerMove={handlePointerMove}
             onPointerUp={handlePointerUp}
+            onWheel={handleWheel}
         >
             <input
                 ref={fileInputRef}
@@ -554,7 +569,7 @@ export function Board() {
                 pointerEvents: 'none',
                 touchAction: 'none'
             }}>
-                <g transform={`translate(${pan.x}, ${pan.y})`}>
+                <g transform={`translate(${pan.x}, ${pan.y}) scale(${zoom})`}>
                     {elements.map((el) => {
                         const isSelected = el.isSelected;
                         const selectionStyle = isSelected ? {

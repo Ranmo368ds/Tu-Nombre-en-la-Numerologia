@@ -1,7 +1,7 @@
 "use client";
 
 import { useBoardStore } from "@/store/useBoardStore";
-import { MousePointer2, Hand, Pen, Square, Circle, Triangle, ArrowRight, Pentagon, Hexagon, Octagon, Star, Type, User, Users, Minus, Image as ImageIcon, Baby, Heart, Smile } from "lucide-react";
+import { MousePointer2, Hand, Pen, Square, Circle, Triangle, ArrowRight, Pentagon, Hexagon, Octagon, Star, Type, User, Users, Minus, Image as ImageIcon, Baby, Heart, Smile, ZoomIn, ZoomOut, Maximize } from "lucide-react";
 import { useState } from "react";
 
 const mainTools = [
@@ -64,7 +64,7 @@ const colors = [
 ];
 
 export function Toolbar() {
-    const { tool, setTool, strokeColor, setStrokeColor, fillColor, setFillColor, strokeWidth, setStrokeWidth, selectedEmoji, setSelectedEmoji } = useBoardStore();
+    const { tool, setTool, strokeColor, setStrokeColor, fillColor, setFillColor, strokeWidth, setStrokeWidth, selectedEmoji, setSelectedEmoji, zoom, setZoom, setPan } = useBoardStore();
     const [showShapes, setShowShapes] = useState(false);
     const [showFigures, setShowFigures] = useState(false);
     const [showEmojis, setShowEmojis] = useState(false);
@@ -506,42 +506,84 @@ export function Toolbar() {
                     👤
                 </button>
 
-                {/* Emoji Button */}
-                <button
-                    onClick={() => {
-                        setShowEmojis(!showEmojis);
-                        setShowShapes(false);
-                        setShowFigures(false);
-                        setShowStrokeColorPicker(false);
-                        setTool('emoji');
-                    }}
-                    style={{
-                        padding: '12px',
-                        borderRadius: '12px',
-                        backgroundColor: tool === 'emoji' ? '#000' : '#f3f4f6',
-                        color: tool === 'emoji' ? '#fff' : '#374151',
-                        border: 'none',
-                        cursor: 'pointer',
-                        transition: 'all 0.2s',
-                        transform: tool === 'emoji' ? 'scale(1.1)' : 'scale(1)',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center'
-                    }}
-                    title="Emojis"
-                    onMouseEnter={(e) => {
-                        if (tool !== 'emoji') {
-                            e.currentTarget.style.backgroundColor = '#e5e7eb';
-                        }
-                    }}
-                    onMouseLeave={(e) => {
-                        if (tool !== 'emoji') {
-                            e.currentTarget.style.backgroundColor = '#f3f4f6';
-                        }
-                    }}
-                >
-                    <Smile style={{ width: '24px', height: '24px' }} />
-                </button>
+                {/* Zoom Controls */}
+                <div style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '4px',
+                    padding: '4px',
+                    backgroundColor: '#f3f4f6',
+                    borderRadius: '12px',
+                    border: '2px solid #e5e7eb',
+                    flexShrink: 0
+                }}>
+                    <button
+                        onClick={() => setZoom(Math.min(zoom * 1.2, 5))}
+                        style={{
+                            padding: '8px',
+                            borderRadius: '8px',
+                            backgroundColor: 'white',
+                            border: 'none',
+                            cursor: 'pointer',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            transition: 'all 0.2s',
+                            flexShrink: 0
+                        }}
+                        title="Acercar (+)"
+                    >
+                        <ZoomIn style={{ width: '20px', height: '20px' }} />
+                    </button>
+                    <div style={{
+                        fontSize: '11px',
+                        fontWeight: 'bold',
+                        color: '#4b5563',
+                        minWidth: '35px',
+                        textAlign: 'center'
+                    }}>
+                        {Math.round(zoom * 100)}%
+                    </div>
+                    <button
+                        onClick={() => setZoom(Math.max(zoom / 1.2, 0.1))}
+                        style={{
+                            padding: '8px',
+                            borderRadius: '8px',
+                            backgroundColor: 'white',
+                            border: 'none',
+                            cursor: 'pointer',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            transition: 'all 0.2s',
+                            flexShrink: 0
+                        }}
+                        title="Alejar (-)"
+                    >
+                        <ZoomOut style={{ width: '20px', height: '20px' }} />
+                    </button>
+                    <button
+                        onClick={() => {
+                            setZoom(1);
+                            setPan(0, 0);
+                        }}
+                        style={{
+                            padding: '8px',
+                            borderRadius: '8px',
+                            backgroundColor: 'white',
+                            border: 'none',
+                            cursor: 'pointer',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            transition: 'all 0.2s',
+                            flexShrink: 0
+                        }}
+                        title="Restablecer"
+                    >
+                        <Maximize style={{ width: '20px', height: '20px' }} />
+                    </button>
+                </div>
 
 
                 {/* Stroke Width Button */}
