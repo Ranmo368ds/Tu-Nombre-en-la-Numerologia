@@ -1,5 +1,5 @@
-import { Board } from "@/collaborative-board/components/Board/Board";
-import { Toolbar } from "@/collaborative-board/components/Toolbar/Toolbar";
+import { Board } from "@/components/Board/Board";
+import { Toolbar } from "@/components/Toolbar/Toolbar";
 
 export default function Home() {
   return (

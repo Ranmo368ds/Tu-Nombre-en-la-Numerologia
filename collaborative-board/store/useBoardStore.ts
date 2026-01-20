@@ -1,6 +1,6 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
-import { BoardElement, ToolType } from '@/collaborative-board/types/board';
+import { BoardElement, ToolType } from '@/types/board';
 
 interface BoardState {
     elements: BoardElement[];

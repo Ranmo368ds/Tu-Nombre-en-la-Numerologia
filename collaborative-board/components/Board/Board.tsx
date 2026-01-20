@@ -1,11 +1,11 @@
 "use client";
 
-import { useBoardStore } from "@/collaborative-board/store/useBoardStore";
+import { useBoardStore } from "@/store/useBoardStore";
 import { useState, useEffect, useRef } from "react";
 import { getStroke } from "perfect-freehand";
-import { getSvgPathFromStroke } from "@/collaborative-board/utils/getSvgPathFromStroke";
-import { getPolygonPoints, getStarPoints, getHeartPath, getPathBounds, isPointInBounds, offsetPoints, getManStickFigure, getWomanStickFigure, getBoyStickFigure, getGirlStickFigure, getGrandfatherStickFigure, getGrandmotherStickFigure, getBabyStickFigure, getDogStickFigure, getCatStickFigure } from "@/collaborative-board/utils/geometry";
-import { Point } from "@/collaborative-board/types/board";
+import { getSvgPathFromStroke } from "@/utils/getSvgPathFromStroke";
+import { getPolygonPoints, getStarPoints, getHeartPath, getPathBounds, isPointInBounds, offsetPoints, getManStickFigure, getWomanStickFigure, getBoyStickFigure, getGirlStickFigure, getGrandfatherStickFigure, getGrandmotherStickFigure, getBabyStickFigure, getDogStickFigure, getCatStickFigure } from "@/utils/geometry";
+import { Point } from "@/types/board";
 import { ImageIcon } from "lucide-react";
 import { v4 as uuidv4 } from "uuid";
 

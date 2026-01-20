@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { SacredGeometryType } from '@/collaborative-board/types/board';
+import { SacredGeometryType } from '@/types/board';
 
 interface SacredShapeProps {
     type: SacredGeometryType;
