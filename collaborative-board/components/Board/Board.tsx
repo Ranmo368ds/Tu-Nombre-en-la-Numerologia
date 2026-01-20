@@ -19,12 +19,16 @@ export function Board() {
         updateElement,
         deleteElement,
         selectElement,
+        pan,
+        setPan,
         selectedEmoji
     } = useBoardStore();
 
     const [currentPoints, setCurrentPoints] = useState<Point[]>([]);
     const [currentId, setCurrentId] = useState<string | null>(null);
     const [isDragging, setIsDragging] = useState(false);
+    const [isPanning, setIsPanning] = useState(false);
+    const [lastPanPosition, setLastPanPosition] = useState({ x: 0, y: 0 });
     const [isResizing, setIsResizing] = useState(false);
     const [resizeHandle, setResizeHandle] = useState<string | null>(null);
     const [dragOffset, setDragOffset] = useState({ x: 0, y: 0 });
@@ -61,9 +65,26 @@ export function Board() {
         }
     }, [editingTextId]);
 
+    const getCanvasCoords = (clientX: number, clientY: number) => {
+        return {
+            x: clientX - pan.x,
+            y: clientY - pan.y
+        };
+    };
+
     const handlePointerDown = (e: React.PointerEvent<HTMLDivElement>) => {
-        const x = e.clientX;
-        const y = e.clientY;
+        if (editingTextId) {
+            setEditingTextId(null);
+            return;
+        }
+
+        const { x, y } = getCanvasCoords(e.clientX, e.clientY);
+
+        if (tool === 'pan') {
+            setIsPanning(true);
+            setLastPanPosition({ x: e.clientX, y: e.clientY });
+            return;
+        }
 
         // Check if clicking on an element for selection/dragging/resizing
         if (tool === 'select') {
@@ -382,21 +403,31 @@ export function Board() {
     };
 
     const handlePointerMove = (e: React.PointerEvent<HTMLDivElement>) => {
+        if (isPanning) {
+            const dx = e.clientX - lastPanPosition.x;
+            const dy = e.clientY - lastPanPosition.y;
+            setPan(pan.x + dx, pan.y + dy);
+            setLastPanPosition({ x: e.clientX, y: e.clientY });
+            return;
+        }
+
+        const { x, y } = getCanvasCoords(e.clientX, e.clientY);
+
         if (tool === 'pen' && currentId) {
-            const point = { x: e.clientX, y: e.clientY, pressure: e.pressure };
+            const point = { x, y, pressure: e.pressure };
             const newPoints = [...currentPoints, point];
             setCurrentPoints(newPoints);
             updateElement(currentId, { points: newPoints });
         } else if (tool === 'line' && currentId) {
             updateElement(currentId, {
-                x2: e.clientX,
-                y2: e.clientY
+                x2: x,
+                y2: y
             });
         } else if (tool === 'select' && isResizing && resizeHandle) {
             const selected = elements.find(el => el.isSelected);
             if (selected) {
-                const dx = e.clientX - selected.x!;
-                const dy = e.clientY - selected.y!;
+                const dxText = x - selected.x!;
+                const dyText = y - selected.y!;
                 const minSize = 20;
 
                 // Figures, images, and emojis should always be proportional
@@ -408,35 +439,35 @@ export function Board() {
                 if (shouldBeProportional) {
                     const ratio = (selected.width || 1) / (selected.height || 1);
                     if (resizeHandle === 'se') {
-                        const newWidth = Math.max(minSize, dx);
+                        const newWidth = Math.max(minSize, dxText);
                         updateElement(selected.id, { width: newWidth, height: newWidth / ratio });
                     } else if (resizeHandle === 'ne') {
-                        const newWidth = Math.max(minSize, dx);
+                        const newWidth = Math.max(minSize, dxText);
                         const newHeight = newWidth / ratio;
                         updateElement(selected.id, { y: selected.y! + (selected.height! - newHeight), width: newWidth, height: newHeight });
                     } else if (resizeHandle === 'sw') {
-                        const newWidth = Math.max(minSize, (selected.width || 0) - (e.clientX - selected.x!));
+                        const newWidth = Math.max(minSize, (selected.width || 0) - (x - selected.x!));
                         const newHeight = newWidth / ratio;
-                        updateElement(selected.id, { x: e.clientX, width: newWidth, height: newHeight });
+                        updateElement(selected.id, { x: x, width: newWidth, height: newHeight });
                     } else if (resizeHandle === 'nw') {
-                        const newWidth = Math.max(minSize, (selected.width || 0) - (e.clientX - selected.x!));
+                        const newWidth = Math.max(minSize, (selected.width || 0) - (x - selected.x!));
                         const newHeight = newWidth / ratio;
-                        updateElement(selected.id, { x: e.clientX, y: selected.y! + (selected.height! - newHeight), width: newWidth, height: newHeight });
+                        updateElement(selected.id, { x: x, y: selected.y! + (selected.height! - newHeight), width: newWidth, height: newHeight });
                     }
                 } else {
                     // Non-proportional for others (rects, notes, etc.)
                     if (resizeHandle === 'se') {
-                        updateElement(selected.id, { width: Math.max(minSize, dx), height: Math.max(minSize, dy) });
+                        updateElement(selected.id, { width: Math.max(minSize, dxText), height: Math.max(minSize, dyText) });
                     } else if (resizeHandle === 'ne') {
-                        const newHeight = (selected.height || 0) - (e.clientY - selected.y!);
-                        updateElement(selected.id, { y: e.clientY, width: Math.max(minSize, dx), height: Math.max(minSize, newHeight) });
+                        const newHeight = (selected.height || 0) - (y - selected.y!);
+                        updateElement(selected.id, { y: y, width: Math.max(minSize, dxText), height: Math.max(minSize, newHeight) });
                     } else if (resizeHandle === 'sw') {
-                        const newWidth = (selected.width || 0) - (e.clientX - selected.x!);
-                        updateElement(selected.id, { x: e.clientX, width: Math.max(minSize, newWidth), height: Math.max(minSize, dy) });
+                        const newWidth = (selected.width || 0) - (x - selected.x!);
+                        updateElement(selected.id, { x: x, width: Math.max(minSize, newWidth), height: Math.max(minSize, dyText) });
                     } else if (resizeHandle === 'nw') {
-                        const newWidth = (selected.width || 0) - (e.clientX - selected.x!);
-                        const newHeight = (selected.height || 0) - (e.clientY - selected.y!);
-                        updateElement(selected.id, { x: e.clientX, y: e.clientY, width: Math.max(minSize, newWidth), height: Math.max(minSize, newHeight) });
+                        const newWidth = (selected.width || 0) - (x - selected.x!);
+                        const newHeight = (selected.height || 0) - (y - selected.y!);
+                        updateElement(selected.id, { x: x, y: y, width: Math.max(minSize, newWidth), height: Math.max(minSize, newHeight) });
                     }
                 }
             }
@@ -445,16 +476,16 @@ export function Board() {
             if (selected) {
                 if (selected.type === 'path' && selected.points) {
                     const bounds = getPathBounds(selected.points);
-                    const newX = e.clientX - dragOffset.x;
-                    const newY = e.clientY - dragOffset.y;
+                    const newX = x - dragOffset.x;
+                    const newY = y - dragOffset.y;
                     const dx = newX - bounds.minX;
                     const dy = newY - bounds.minY;
                     const newPoints = offsetPoints(selected.points, dx, dy);
                     updateElement(selected.id, { points: newPoints });
                 } else {
                     updateElement(selected.id, {
-                        x: e.clientX - dragOffset.x,
-                        y: e.clientY - dragOffset.y
+                        x: x - dragOffset.x,
+                        y: y - dragOffset.y
                     });
                 }
             }
@@ -466,6 +497,7 @@ export function Board() {
         setCurrentPoints([]);
         setIsDragging(false);
         setIsResizing(false);
+        setIsPanning(false);
         setResizeHandle(null);
     };
 
@@ -500,7 +532,8 @@ export function Board() {
                 backgroundColor: '#f9fafb',
                 position: 'relative',
                 overflow: 'hidden',
-                cursor: tool === 'pen' ? 'crosshair' : tool === 'select' ? 'default' : tool === 'text' ? 'text' : 'copy'
+                cursor: tool === 'pan' ? 'grab' : tool === 'pen' ? 'crosshair' : tool === 'select' ? 'default' : tool === 'text' ? 'text' : 'copy',
+                touchAction: 'none'
             }}
             onPointerDown={handlePointerDown}
             onPointerMove={handlePointerMove}
@@ -518,157 +551,159 @@ export function Board() {
                 inset: 0,
                 width: '100%',
                 height: '100%',
-                pointerEvents: 'none'
+                pointerEvents: 'none',
+                touchAction: 'none'
             }}>
-                {elements.map((el) => {
-                    const isSelected = el.isSelected;
-                    const selectionStyle = isSelected ? {
-                        filter: 'drop-shadow(0 0 8px rgba(59, 130, 246, 0.5))',
-                        strokeWidth: 3
-                    } : {};
+                <g transform={`translate(${pan.x}, ${pan.y})`}>
+                    {elements.map((el) => {
+                        const isSelected = el.isSelected;
+                        const selectionStyle = isSelected ? {
+                            filter: 'drop-shadow(0 0 8px rgba(59, 130, 246, 0.5))',
+                            strokeWidth: 3
+                        } : {};
 
-                    if (el.type === 'path' && el.points && el.points.length > 0) {
-                        const stroke = getStroke(el.points, {
-                            size: el.strokeWidth || 8,
-                            thinning: 0.5,
-                            smoothing: 0.5,
-                            streamline: 0.5,
-                        });
-                        const pathData = getSvgPathFromStroke(stroke);
-                        return (
-                            <path
-                                key={el.id}
-                                d={pathData}
-                                fill={el.strokeColor}
-                                style={isSelected ? selectionStyle : {}}
-                            />
-                        );
-                    }
+                        if (el.type === 'path' && el.points && el.points.length > 0) {
+                            const stroke = getStroke(el.points, {
+                                size: el.strokeWidth || 8,
+                                thinning: 0.5,
+                                smoothing: 0.5,
+                                streamline: 0.5,
+                            });
+                            const pathData = getSvgPathFromStroke(stroke);
+                            return (
+                                <path
+                                    key={el.id}
+                                    d={pathData}
+                                    fill={el.strokeColor}
+                                    style={isSelected ? selectionStyle : {}}
+                                />
+                            );
+                        }
 
-                    if (el.type === 'line') {
-                        return (
-                            <line
-                                key={el.id}
-                                x1={el.x}
-                                y1={el.y}
-                                x2={el.x2 || el.x}
-                                y2={el.y2 || el.y}
-                                stroke={isSelected ? '#3b82f6' : el.strokeColor}
-                                strokeWidth={isSelected ? (el.strokeWidth || 4) + 2 : (el.strokeWidth || 4)}
-                                strokeLinecap="round"
-                            />
-                        );
-                    }
+                        if (el.type === 'line') {
+                            return (
+                                <line
+                                    key={el.id}
+                                    x1={el.x}
+                                    y1={el.y}
+                                    x2={el.x2 || el.x}
+                                    y2={el.y2 || el.y}
+                                    stroke={isSelected ? '#3b82f6' : el.strokeColor}
+                                    strokeWidth={isSelected ? (el.strokeWidth || 4) + 2 : (el.strokeWidth || 4)}
+                                    strokeLinecap="round"
+                                />
+                            );
+                        }
 
-                    if (el.type === 'rect') {
-                        return (
-                            <rect
-                                key={el.id}
-                                x={el.x}
-                                y={el.y}
-                                width={el.width}
-                                height={el.height}
-                                fill={el.backgroundColor}
-                                stroke={isSelected ? '#3b82f6' : el.strokeColor}
-                                strokeWidth={isSelected ? (el.strokeWidth || 4) + 2 : (el.strokeWidth || 4)}
-                                rx={8}
-                            />
-                        );
-                    }
+                        if (el.type === 'rect') {
+                            return (
+                                <rect
+                                    key={el.id}
+                                    x={el.x}
+                                    y={el.y}
+                                    width={el.width}
+                                    height={el.height}
+                                    fill={el.backgroundColor}
+                                    stroke={isSelected ? '#3b82f6' : el.strokeColor}
+                                    strokeWidth={isSelected ? (el.strokeWidth || 4) + 2 : (el.strokeWidth || 4)}
+                                    rx={8}
+                                />
+                            );
+                        }
 
-                    if (el.type === 'circle') {
-                        return (
-                            <ellipse
-                                key={el.id}
-                                cx={el.x! + (el.width! / 2)}
-                                cy={el.y! + (el.height! / 2)}
-                                rx={el.width! / 2}
-                                ry={el.height! / 2}
-                                fill={el.backgroundColor}
-                                stroke={isSelected ? '#3b82f6' : el.strokeColor}
-                                strokeWidth={isSelected ? (el.strokeWidth || 4) + 2 : (el.strokeWidth || 4)}
-                            />
-                        );
-                    }
+                        if (el.type === 'circle') {
+                            return (
+                                <ellipse
+                                    key={el.id}
+                                    cx={el.x! + (el.width! / 2)}
+                                    cy={el.y! + (el.height! / 2)}
+                                    rx={el.width! / 2}
+                                    ry={el.height! / 2}
+                                    fill={el.backgroundColor}
+                                    stroke={isSelected ? '#3b82f6' : el.strokeColor}
+                                    strokeWidth={isSelected ? (el.strokeWidth || 4) + 2 : (el.strokeWidth || 4)}
+                                />
+                            );
+                        }
 
-                    if (el.type === 'triangle') {
-                        const cx = el.x! + el.width! / 2;
-                        const cy = el.y! + el.height! / 2;
-                        const radius = el.width! / 2;
-                        return (
-                            <polygon
-                                key={el.id}
-                                points={getPolygonPoints(cx, cy, radius, 3)}
-                                fill={el.backgroundColor}
-                                stroke={isSelected ? '#3b82f6' : el.strokeColor}
-                                strokeWidth={isSelected ? (el.strokeWidth || 4) + 2 : (el.strokeWidth || 4)}
-                            />
-                        );
-                    }
+                        if (el.type === 'triangle') {
+                            const cx = el.x! + el.width! / 2;
+                            const cy = el.y! + el.height! / 2;
+                            const radius = el.width! / 2;
+                            return (
+                                <polygon
+                                    key={el.id}
+                                    points={getPolygonPoints(cx, cy, radius, 3)}
+                                    fill={el.backgroundColor}
+                                    stroke={isSelected ? '#3b82f6' : el.strokeColor}
+                                    strokeWidth={isSelected ? (el.strokeWidth || 4) + 2 : (el.strokeWidth || 4)}
+                                />
+                            );
+                        }
 
-                    if (el.type === 'pentagon') {
-                        const cx = el.x! + el.width! / 2;
-                        const cy = el.y! + el.height! / 2;
-                        const radius = el.width! / 2;
-                        return (
-                            <polygon
-                                key={el.id}
-                                points={getPolygonPoints(cx, cy, radius, 5)}
-                                fill={el.backgroundColor}
-                                stroke={isSelected ? '#3b82f6' : el.strokeColor}
-                                strokeWidth={isSelected ? (el.strokeWidth || 4) + 2 : (el.strokeWidth || 4)}
-                            />
-                        );
-                    }
+                        if (el.type === 'pentagon') {
+                            const cx = el.x! + el.width! / 2;
+                            const cy = el.y! + el.height! / 2;
+                            const radius = el.width! / 2;
+                            return (
+                                <polygon
+                                    key={el.id}
+                                    points={getPolygonPoints(cx, cy, radius, 5)}
+                                    fill={el.backgroundColor}
+                                    stroke={isSelected ? '#3b82f6' : el.strokeColor}
+                                    strokeWidth={isSelected ? (el.strokeWidth || 4) + 2 : (el.strokeWidth || 4)}
+                                />
+                            );
+                        }
 
-                    if (el.type === 'hexagon') {
-                        const cx = el.x! + el.width! / 2;
-                        const cy = el.y! + el.height! / 2;
-                        const radius = el.width! / 2;
-                        return (
-                            <polygon
-                                key={el.id}
-                                points={getPolygonPoints(cx, cy, radius, 6)}
-                                fill={el.backgroundColor}
-                                stroke={isSelected ? '#3b82f6' : el.strokeColor}
-                                strokeWidth={isSelected ? (el.strokeWidth || 4) + 2 : (el.strokeWidth || 4)}
-                            />
-                        );
-                    }
+                        if (el.type === 'hexagon') {
+                            const cx = el.x! + el.width! / 2;
+                            const cy = el.y! + el.height! / 2;
+                            const radius = el.width! / 2;
+                            return (
+                                <polygon
+                                    key={el.id}
+                                    points={getPolygonPoints(cx, cy, radius, 6)}
+                                    fill={el.backgroundColor}
+                                    stroke={isSelected ? '#3b82f6' : el.strokeColor}
+                                    strokeWidth={isSelected ? (el.strokeWidth || 4) + 2 : (el.strokeWidth || 4)}
+                                />
+                            );
+                        }
 
-                    if (el.type === 'octagon') {
-                        const cx = el.x! + el.width! / 2;
-                        const cy = el.y! + el.height! / 2;
-                        const radius = el.width! / 2;
-                        return (
-                            <polygon
-                                key={el.id}
-                                points={getPolygonPoints(cx, cy, radius, 8)}
-                                fill={el.backgroundColor}
-                                stroke={isSelected ? '#3b82f6' : el.strokeColor}
-                                strokeWidth={isSelected ? (el.strokeWidth || 4) + 2 : (el.strokeWidth || 4)}
-                            />
-                        );
-                    }
+                        if (el.type === 'octagon') {
+                            const cx = el.x! + el.width! / 2;
+                            const cy = el.y! + el.height! / 2;
+                            const radius = el.width! / 2;
+                            return (
+                                <polygon
+                                    key={el.id}
+                                    points={getPolygonPoints(cx, cy, radius, 8)}
+                                    fill={el.backgroundColor}
+                                    stroke={isSelected ? '#3b82f6' : el.strokeColor}
+                                    strokeWidth={isSelected ? (el.strokeWidth || 4) + 2 : (el.strokeWidth || 4)}
+                                />
+                            );
+                        }
 
-                    if (el.type === 'star') {
-                        const cx = el.x! + el.width! / 2;
-                        const cy = el.y! + el.height! / 2;
-                        const outerRadius = el.width! / 2;
-                        const innerRadius = outerRadius * 0.4;
-                        return (
-                            <polygon
-                                key={el.id}
-                                points={getStarPoints(cx, cy, outerRadius, innerRadius, 5)}
-                                fill={el.backgroundColor}
-                                stroke={isSelected ? '#3b82f6' : el.strokeColor}
-                                strokeWidth={isSelected ? (el.strokeWidth || 4) + 2 : (el.strokeWidth || 4)}
-                            />
-                        );
-                    }
+                        if (el.type === 'star') {
+                            const cx = el.x! + el.width! / 2;
+                            const cy = el.y! + el.height! / 2;
+                            const outerRadius = el.width! / 2;
+                            const innerRadius = outerRadius * 0.4;
+                            return (
+                                <polygon
+                                    key={el.id}
+                                    points={getStarPoints(cx, cy, outerRadius, innerRadius, 5)}
+                                    fill={el.backgroundColor}
+                                    stroke={isSelected ? '#3b82f6' : el.strokeColor}
+                                    strokeWidth={isSelected ? (el.strokeWidth || 4) + 2 : (el.strokeWidth || 4)}
+                                />
+                            );
+                        }
 
-                    if (el.type === 'arrow') {
-                        const arrowPath = `
+                        if (el.type === 'arrow') {
+                            const arrowPath = `
             M ${el.x} ${el.y! + el.height! / 2}
             L ${el.x! + el.width! * 0.7} ${el.y! + el.height! / 2}
             L ${el.x! + el.width! * 0.7} ${el.y}
@@ -677,256 +712,257 @@ export function Board() {
             L ${el.x! + el.width! * 0.7} ${el.y! + el.height! / 2}
             Z
             `;
-                        return (
-                            <path
-                                key={el.id}
-                                d={arrowPath}
-                                fill={el.backgroundColor}
-                                stroke={isSelected ? '#3b82f6' : el.strokeColor}
-                                strokeWidth={isSelected ? (el.strokeWidth || 4) + 2 : (el.strokeWidth || 4)}
-                            />
-                        );
-                    }
+                            return (
+                                <path
+                                    key={el.id}
+                                    d={arrowPath}
+                                    fill={el.backgroundColor}
+                                    stroke={isSelected ? '#3b82f6' : el.strokeColor}
+                                    strokeWidth={isSelected ? (el.strokeWidth || 4) + 2 : (el.strokeWidth || 4)}
+                                />
+                            );
+                        }
 
-                    if (el.type === 'text') {
-                        return (
-                            <text
-                                key={el.id}
-                                x={el.x}
-                                y={(el.y || 0) + (el.fontSize || 24)}
-                                fill={el.strokeColor}
-                                fontSize={el.fontSize || 24}
-                                style={{
-                                    userSelect: 'none',
-                                    filter: isSelected ? 'drop-shadow(0 0 4px #3b82f6)' : 'none',
-                                    fontWeight: '500'
-                                }}
-                            >
-                                {el.text}
-                            </text>
-                        );
-                    }
+                        if (el.type === 'text') {
+                            return (
+                                <text
+                                    key={el.id}
+                                    x={el.x}
+                                    y={(el.y || 0) + (el.fontSize || 24)}
+                                    fill={el.strokeColor}
+                                    fontSize={el.fontSize || 24}
+                                    style={{
+                                        userSelect: 'none',
+                                        filter: isSelected ? 'drop-shadow(0 0 4px #3b82f6)' : 'none',
+                                        fontWeight: '500'
+                                    }}
+                                >
+                                    {el.text}
+                                </text>
+                            );
+                        }
 
-                    if (el.type === 'note') {
-                        return (
-                            <g key={el.id}>
-                                <rect
+                        if (el.type === 'note') {
+                            return (
+                                <g key={el.id}>
+                                    <rect
+                                        x={el.x}
+                                        y={el.y}
+                                        width={el.width}
+                                        height={el.height}
+                                        fill={el.backgroundColor}
+                                        stroke={isSelected ? '#3b82f6' : 'rgba(0,0,0,0.1)'}
+                                        strokeWidth={isSelected ? 3 : 1}
+                                        style={{
+                                            filter: 'drop-shadow(0 4px 6px rgba(0,0,0,0.1))'
+                                        }}
+                                    />
+                                    <foreignObject
+                                        x={el.x! + 10}
+                                        y={el.y! + 10}
+                                        width={el.width! - 20}
+                                        height={el.height! - 20}
+                                    >
+                                        <div style={{
+                                            width: '100%',
+                                            height: '100%',
+                                            fontSize: '16px',
+                                            color: '#374151',
+                                            overflow: 'hidden',
+                                            wordBreak: 'break-word',
+                                            userSelect: 'none'
+                                        }}>
+                                            {el.text}
+                                        </div>
+                                    </foreignObject>
+                                </g>
+                            );
+                        }
+
+                        // Person and animal silhouettes
+                        if (el.type === 'person_man') {
+                            return (
+                                <path
+                                    key={el.id}
+                                    d={getManStickFigure(el.x!, el.y!, el.width!, el.height!)}
+                                    fill="none"
+                                    stroke={isSelected ? '#3b82f6' : el.strokeColor}
+                                    strokeWidth={isSelected ? (el.strokeWidth || 4) / 2 + 2 : (el.strokeWidth || 4) / 2}
+                                    strokeLinejoin="round"
+                                />
+                            );
+                        }
+
+                        if (el.type === 'heart') {
+                            return (
+                                <path
+                                    key={el.id}
+                                    d={getHeartPath(el.x!, el.y!, el.width!, el.height!)}
+                                    fill={el.backgroundColor || 'none'}
+                                    stroke={isSelected ? '#3b82f6' : el.strokeColor}
+                                    strokeWidth={isSelected ? (el.strokeWidth || 4) + 2 : (el.strokeWidth || 4)}
+                                    strokeLinejoin="round"
+                                />
+                            );
+                        }
+
+                        if (el.type === 'person_woman') {
+                            return (
+                                <path
+                                    key={el.id}
+                                    d={getWomanStickFigure(el.x!, el.y!, el.width!, el.height!)}
+                                    fill="none"
+                                    stroke={isSelected ? '#3b82f6' : el.strokeColor}
+                                    strokeWidth={isSelected ? (el.strokeWidth || 4) / 2 + 2 : (el.strokeWidth || 4) / 2}
+                                    strokeLinecap="round"
+                                />
+                            );
+                        }
+
+                        if (el.type === 'emoji') {
+                            return (
+                                <text
+                                    key={el.id}
+                                    x={el.x! + el.width! / 2}
+                                    y={el.y! + el.height! * 0.85}
+                                    fontSize={el.height! * 0.9}
+                                    textAnchor="middle"
+                                    style={{
+                                        userSelect: 'none',
+                                        filter: isSelected ? 'drop-shadow(0 0 4px #3b82f6)' : 'none'
+                                    }}
+                                >
+                                    {el.text}
+                                </text>
+                            );
+                        }
+
+                        if (el.type === 'person_grandfather') {
+                            return (
+                                <path
+                                    key={el.id}
+                                    d={getGrandfatherStickFigure(el.x!, el.y!, el.width!, el.height!)}
+                                    fill="none"
+                                    stroke={isSelected ? '#3b82f6' : el.strokeColor}
+                                    strokeWidth={isSelected ? (el.strokeWidth || 4) + 2 : (el.strokeWidth || 4)}
+                                    strokeLinecap="round"
+                                />
+                            );
+                        }
+
+                        if (el.type === 'person_grandmother') {
+                            return (
+                                <path
+                                    key={el.id}
+                                    d={getGrandmotherStickFigure(el.x!, el.y!, el.width!, el.height!)}
+                                    fill="none"
+                                    stroke={isSelected ? '#3b82f6' : el.strokeColor}
+                                    strokeWidth={isSelected ? (el.strokeWidth || 4) + 2 : (el.strokeWidth || 4)}
+                                    strokeLinecap="round"
+                                />
+                            );
+                        }
+
+                        if (el.type === 'person_baby') {
+                            return (
+                                <path
+                                    key={el.id}
+                                    d={getBabyStickFigure(el.x!, el.y!, el.width!, el.height!)}
+                                    fill="none"
+                                    stroke={isSelected ? '#3b82f6' : el.strokeColor}
+                                    strokeWidth={isSelected ? (el.strokeWidth || 4) + 2 : (el.strokeWidth || 4)}
+                                    strokeLinecap="round"
+                                />
+                            );
+                        }
+
+                        if (el.type === 'person_boy') {
+                            return (
+                                <path
+                                    key={el.id}
+                                    d={getBoyStickFigure(el.x!, el.y!, el.width!, el.height!)}
+                                    fill="none"
+                                    stroke={isSelected ? '#3b82f6' : el.strokeColor}
+                                    strokeWidth={isSelected ? (el.strokeWidth || 4) / 2 + 2 : (el.strokeWidth || 4) / 2}
+                                    strokeLinecap="round"
+                                />
+                            );
+                        }
+
+                        if (el.type === 'person_girl') {
+                            return (
+                                <path
+                                    key={el.id}
+                                    d={getGirlStickFigure(el.x!, el.y!, el.width!, el.height!)}
+                                    fill="none"
+                                    stroke={isSelected ? '#3b82f6' : el.strokeColor}
+                                    strokeWidth={isSelected ? (el.strokeWidth || 4) / 2 + 2 : (el.strokeWidth || 4) / 2}
+                                    strokeLinecap="round"
+                                />
+                            );
+                        }
+
+                        if (el.type === 'animal_dog') {
+                            return (
+                                <path
+                                    key={el.id}
+                                    d={getDogStickFigure(el.x!, el.y!, el.width!, el.height!)}
+                                    fill="none"
+                                    stroke={isSelected ? '#3b82f6' : el.strokeColor}
+                                    strokeWidth={isSelected ? (el.strokeWidth || 4) / 2 + 2 : (el.strokeWidth || 4) / 2}
+                                    strokeLinecap="round"
+                                />
+                            );
+                        }
+
+                        if (el.type === 'animal_cat') {
+                            return (
+                                <path
+                                    key={el.id}
+                                    d={getCatStickFigure(el.x!, el.y!, el.width!, el.height!)}
+                                    fill="none"
+                                    stroke={isSelected ? '#3b82f6' : el.strokeColor}
+                                    strokeWidth={isSelected ? (el.strokeWidth || 4) / 2 + 2 : (el.strokeWidth || 4) / 2}
+                                    strokeLinecap="round"
+                                />
+                            );
+                        }
+
+                        if (el.type === 'image') {
+                            return (
+                                <image
+                                    key={el.id}
+                                    href={el.src}
                                     x={el.x}
                                     y={el.y}
                                     width={el.width}
                                     height={el.height}
-                                    fill={el.backgroundColor}
-                                    stroke={isSelected ? '#3b82f6' : 'rgba(0,0,0,0.1)'}
-                                    strokeWidth={isSelected ? 3 : 1}
-                                    style={{
-                                        filter: 'drop-shadow(0 4px 6px rgba(0,0,0,0.1))'
-                                    }}
+                                    preserveAspectRatio="xMidYMid meet"
+                                    style={isSelected ? { filter: 'drop-shadow(0 0 8px rgba(59, 130, 246, 0.5))' } : {}}
                                 />
-                                <foreignObject
-                                    x={el.x! + 10}
-                                    y={el.y! + 10}
-                                    width={el.width! - 20}
-                                    height={el.height! - 20}
-                                >
-                                    <div style={{
-                                        width: '100%',
-                                        height: '100%',
-                                        fontSize: '16px',
-                                        color: '#374151',
-                                        overflow: 'hidden',
-                                        wordBreak: 'break-word',
-                                        userSelect: 'none'
-                                    }}>
-                                        {el.text}
-                                    </div>
-                                </foreignObject>
-                            </g>
-                        );
-                    }
+                            );
+                        }
 
-                    // Person and animal silhouettes
-                    if (el.type === 'person_man') {
-                        return (
-                            <path
-                                key={el.id}
-                                d={getManStickFigure(el.x!, el.y!, el.width!, el.height!)}
-                                fill="none"
-                                stroke={isSelected ? '#3b82f6' : el.strokeColor}
-                                strokeWidth={isSelected ? (el.strokeWidth || 4) / 2 + 2 : (el.strokeWidth || 4) / 2}
-                                strokeLinejoin="round"
-                            />
-                        );
-                    }
-
-                    if (el.type === 'heart') {
-                        return (
-                            <path
-                                key={el.id}
-                                d={getHeartPath(el.x!, el.y!, el.width!, el.height!)}
-                                fill={el.backgroundColor || 'none'}
-                                stroke={isSelected ? '#3b82f6' : el.strokeColor}
-                                strokeWidth={isSelected ? (el.strokeWidth || 4) + 2 : (el.strokeWidth || 4)}
-                                strokeLinejoin="round"
-                            />
-                        );
-                    }
-
-                    if (el.type === 'person_woman') {
-                        return (
-                            <path
-                                key={el.id}
-                                d={getWomanStickFigure(el.x!, el.y!, el.width!, el.height!)}
-                                fill="none"
-                                stroke={isSelected ? '#3b82f6' : el.strokeColor}
-                                strokeWidth={isSelected ? (el.strokeWidth || 4) / 2 + 2 : (el.strokeWidth || 4) / 2}
-                                strokeLinecap="round"
-                            />
-                        );
-                    }
-
-                    if (el.type === 'emoji') {
-                        return (
-                            <text
-                                key={el.id}
-                                x={el.x! + el.width! / 2}
-                                y={el.y! + el.height! * 0.85}
-                                fontSize={el.height! * 0.9}
-                                textAnchor="middle"
-                                style={{
-                                    userSelect: 'none',
-                                    filter: isSelected ? 'drop-shadow(0 0 4px #3b82f6)' : 'none'
-                                }}
-                            >
-                                {el.text}
-                            </text>
-                        );
-                    }
-
-                    if (el.type === 'person_grandfather') {
-                        return (
-                            <path
-                                key={el.id}
-                                d={getGrandfatherStickFigure(el.x!, el.y!, el.width!, el.height!)}
-                                fill="none"
-                                stroke={isSelected ? '#3b82f6' : el.strokeColor}
-                                strokeWidth={isSelected ? (el.strokeWidth || 4) + 2 : (el.strokeWidth || 4)}
-                                strokeLinecap="round"
-                            />
-                        );
-                    }
-
-                    if (el.type === 'person_grandmother') {
-                        return (
-                            <path
-                                key={el.id}
-                                d={getGrandmotherStickFigure(el.x!, el.y!, el.width!, el.height!)}
-                                fill="none"
-                                stroke={isSelected ? '#3b82f6' : el.strokeColor}
-                                strokeWidth={isSelected ? (el.strokeWidth || 4) + 2 : (el.strokeWidth || 4)}
-                                strokeLinecap="round"
-                            />
-                        );
-                    }
-
-                    if (el.type === 'person_baby') {
-                        return (
-                            <path
-                                key={el.id}
-                                d={getBabyStickFigure(el.x!, el.y!, el.width!, el.height!)}
-                                fill="none"
-                                stroke={isSelected ? '#3b82f6' : el.strokeColor}
-                                strokeWidth={isSelected ? (el.strokeWidth || 4) + 2 : (el.strokeWidth || 4)}
-                                strokeLinecap="round"
-                            />
-                        );
-                    }
-
-                    if (el.type === 'person_boy') {
-                        return (
-                            <path
-                                key={el.id}
-                                d={getBoyStickFigure(el.x!, el.y!, el.width!, el.height!)}
-                                fill="none"
-                                stroke={isSelected ? '#3b82f6' : el.strokeColor}
-                                strokeWidth={isSelected ? (el.strokeWidth || 4) / 2 + 2 : (el.strokeWidth || 4) / 2}
-                                strokeLinecap="round"
-                            />
-                        );
-                    }
-
-                    if (el.type === 'person_girl') {
-                        return (
-                            <path
-                                key={el.id}
-                                d={getGirlStickFigure(el.x!, el.y!, el.width!, el.height!)}
-                                fill="none"
-                                stroke={isSelected ? '#3b82f6' : el.strokeColor}
-                                strokeWidth={isSelected ? (el.strokeWidth || 4) / 2 + 2 : (el.strokeWidth || 4) / 2}
-                                strokeLinecap="round"
-                            />
-                        );
-                    }
-
-                    if (el.type === 'animal_dog') {
-                        return (
-                            <path
-                                key={el.id}
-                                d={getDogStickFigure(el.x!, el.y!, el.width!, el.height!)}
-                                fill="none"
-                                stroke={isSelected ? '#3b82f6' : el.strokeColor}
-                                strokeWidth={isSelected ? (el.strokeWidth || 4) / 2 + 2 : (el.strokeWidth || 4) / 2}
-                                strokeLinecap="round"
-                            />
-                        );
-                    }
-
-                    if (el.type === 'animal_cat') {
-                        return (
-                            <path
-                                key={el.id}
-                                d={getCatStickFigure(el.x!, el.y!, el.width!, el.height!)}
-                                fill="none"
-                                stroke={isSelected ? '#3b82f6' : el.strokeColor}
-                                strokeWidth={isSelected ? (el.strokeWidth || 4) / 2 + 2 : (el.strokeWidth || 4) / 2}
-                                strokeLinecap="round"
-                            />
-                        );
-                    }
-
-                    if (el.type === 'image') {
-                        return (
-                            <image
-                                key={el.id}
-                                href={el.src}
-                                x={el.x}
-                                y={el.y}
-                                width={el.width}
-                                height={el.height}
-                                preserveAspectRatio="xMidYMid meet"
-                                style={isSelected ? { filter: 'drop-shadow(0 0 8px rgba(59, 130, 246, 0.5))' } : {}}
-                            />
-                        );
-                    }
-
-                    return null;
-                })}
-                {/* Selection Handles */}
-                {elements.find(el => el.isSelected && el.type !== 'path') && (
-                    <g fill="#3b82f6" stroke="white" strokeWidth="2">
-                        {(() => {
-                            const el = elements.find(e => e.isSelected)!;
-                            const handles = [
-                                { id: 'nw', x: el.x, y: el.y },
-                                { id: 'ne', x: (el.x || 0) + (el.width || 0), y: el.y },
-                                { id: 'sw', x: el.x, y: (el.y || 0) + (el.height || 0) },
-                                { id: 'se', x: (el.x || 0) + (el.width || 0), y: (el.y || 0) + (el.height || 0) }
-                            ];
-                            return handles.map(h => (
-                                <circle key={h.id} cx={h.x} cy={h.y} r="6" style={{ cursor: `${h.id}-resize`, pointerEvents: 'auto' }} />
-                            ));
-                        })()}
-                    </g>
-                )}
+                        return null;
+                    })}
+                    {/* Selection Handles */}
+                    {elements.find(el => el.isSelected && el.type !== 'path') && (
+                        <g fill="#3b82f6" stroke="white" strokeWidth="2">
+                            {(() => {
+                                const el = elements.find(e => e.isSelected)!;
+                                const handles = [
+                                    { id: 'nw', x: el.x, y: el.y },
+                                    { id: 'ne', x: (el.x || 0) + (el.width || 0), y: el.y },
+                                    { id: 'sw', x: el.x, y: (el.y || 0) + (el.height || 0) },
+                                    { id: 'se', x: (el.x || 0) + (el.width || 0), y: (el.y || 0) + (el.height || 0) }
+                                ];
+                                return handles.map(h => (
+                                    <circle key={h.id} cx={h.x} cy={h.y} r="6" style={{ cursor: `${h.id}-resize`, pointerEvents: 'auto' }} />
+                                ));
+                            })()}
+                        </g>
+                    )}
+                </g>
             </svg>
 
             {/* Hidden input for editing text */}
@@ -941,8 +977,8 @@ export function Board() {
                         onPointerDown={(e) => e.stopPropagation()}
                         style={{
                             position: 'absolute',
-                            top: el.y,
-                            left: el.x,
+                            top: el.y + pan.y,
+                            left: el.x + pan.x,
                             zIndex: 1000,
                             width: el.width || 200,
                             height: el.height || 'auto'

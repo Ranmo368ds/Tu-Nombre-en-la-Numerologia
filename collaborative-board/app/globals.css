@@ -25,3 +25,7 @@ body {
   background: #cbd5e1;
   border-radius: 3px;
 }
+
+.toolbar-container::-webkit-scrollbar {
+  display: none;
+}

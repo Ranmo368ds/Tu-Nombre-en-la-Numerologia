@@ -1,11 +1,12 @@
 "use client";
 
 import { useBoardStore } from "@/store/useBoardStore";
-import { MousePointer2, Pen, Square, Circle, Triangle, ArrowRight, Pentagon, Hexagon, Octagon, Star, Type, User, Users, Minus, Image as ImageIcon, Baby, Heart, Smile } from "lucide-react";
+import { MousePointer2, Hand, Pen, Square, Circle, Triangle, ArrowRight, Pentagon, Hexagon, Octagon, Star, Type, User, Users, Minus, Image as ImageIcon, Baby, Heart, Smile } from "lucide-react";
 import { useState } from "react";
 
 const mainTools = [
     { id: 'select' as const, icon: MousePointer2, label: 'Seleccionar' },
+    { id: 'pan' as const, icon: Hand, label: 'Mover' },
     { id: 'pen' as const, icon: Pen, label: 'Lápiz' },
     { id: 'line' as const, icon: Minus, label: 'Línea' },
     { id: 'star' as const, icon: Star, label: 'Estrella' },
@@ -387,14 +388,18 @@ export function Toolbar() {
                 transform: 'translateX(-50%)',
                 display: 'flex',
                 alignItems: 'center',
-                gap: '12px',
+                gap: '8px',
                 padding: '12px',
                 backgroundColor: 'white',
                 borderRadius: '16px',
                 boxShadow: '0 10px 40px rgba(0,0,0,0.2)',
                 border: '2px solid #e5e7eb',
-                zIndex: 999
-            }}>
+                zIndex: 999,
+                maxWidth: '95vw',
+                overflowX: 'auto',
+                scrollbarWidth: 'none',
+                msOverflowStyle: 'none'
+            }} className="toolbar-container">
                 {mainTools.map((t) => {
                     const Icon = t.icon;
                     const isActive = tool === t.id;
@@ -414,7 +419,8 @@ export function Toolbar() {
                                 transform: isActive ? 'scale(1.1)' : 'scale(1)',
                                 display: 'flex',
                                 alignItems: 'center',
-                                justifyContent: 'center'
+                                justifyContent: 'center',
+                                flexShrink: 0
                             }}
                             title={t.label}
                             onMouseEnter={(e) => {

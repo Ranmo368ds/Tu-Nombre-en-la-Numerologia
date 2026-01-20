@@ -26,6 +26,6 @@ export interface BoardElement {
     src?: string; // For images
 }
 
-export type ToolType = 'select' | 'pen' | 'note' | 'text' | 'emoji' | 'line' | 'rect' | 'circle' | 'triangle' | 'arrow' | 'pentagon' | 'hexagon' | 'octagon' | 'star' | 'heart' | 'person_man' | 'person_woman' | 'person_boy' | 'person_girl' | 'person_grandfather' | 'person_grandmother' | 'person_baby' | 'animal_dog' | 'animal_cat' | 'image';
+export type ToolType = 'select' | 'pan' | 'pen' | 'note' | 'text' | 'emoji' | 'line' | 'rect' | 'circle' | 'triangle' | 'arrow' | 'pentagon' | 'hexagon' | 'octagon' | 'star' | 'heart' | 'person_man' | 'person_woman' | 'person_boy' | 'person_girl' | 'person_grandfather' | 'person_grandmother' | 'person_baby' | 'animal_dog' | 'animal_cat' | 'image';
 
 export type SacredGeometryType = 'seed_of_life' | 'flower_of_life' | 'metatrons_cube';
