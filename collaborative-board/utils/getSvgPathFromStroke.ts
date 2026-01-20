@@ -1,4 +1,4 @@
-import { getStroke } from "perfect-freehand";
+// No imports needed
 
 export function getSvgPathFromStroke(stroke: number[][]) {
     if (!stroke.length) return "";

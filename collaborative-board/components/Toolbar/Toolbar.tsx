@@ -1,7 +1,7 @@
 "use client";
 
 import { useBoardStore } from "@/store/useBoardStore";
-import { MousePointer2, Pen, StickyNote, Square, Circle, Triangle, ArrowRight, Pentagon, Hexagon, Octagon, Star, Type, User, Users, Minus, Image as ImageIcon, Baby, Heart, Smile } from "lucide-react";
+import { MousePointer2, Pen, Square, Circle, Triangle, ArrowRight, Pentagon, Hexagon, Octagon, Star, Type, User, Users, Minus, Image as ImageIcon, Baby, Heart, Smile } from "lucide-react";
 import { useState } from "react";
 
 const mainTools = [
@@ -238,7 +238,6 @@ export function Toolbar() {
                     zIndex: 998
                 }}>
                     {figureTools.map((t) => {
-                        const Icon = t.icon;
                         const isActive = tool === t.id;
 
                         return (

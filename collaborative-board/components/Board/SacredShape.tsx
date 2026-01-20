@@ -46,7 +46,6 @@ export function SacredShape({ type, width, height, stroke }: SacredShapeProps) {
         // Layer 2
         for (let i = 0; i < 6; i++) {
             const rad = (i * 60 * Math.PI) / 180;
-            const radNext = ((i * 60 + 60) * Math.PI) / 180;
             // Intersections
             const midX = cx + radius * Math.sqrt(3) * Math.cos(rad + Math.PI / 6);
             const midY = cy + radius * Math.sqrt(3) * Math.sin(rad + Math.PI / 6);

@@ -6,7 +6,6 @@ import { getStroke } from "perfect-freehand";
 import { getSvgPathFromStroke } from "@/utils/getSvgPathFromStroke";
 import { getPolygonPoints, getStarPoints, getHeartPath, getPathBounds, isPointInBounds, offsetPoints, getManStickFigure, getWomanStickFigure, getBoyStickFigure, getGirlStickFigure, getGrandfatherStickFigure, getGrandmotherStickFigure, getBabyStickFigure, getDogStickFigure, getCatStickFigure } from "@/utils/geometry";
 import { Point } from "@/types/board";
-import { ImageIcon } from "lucide-react";
 import { v4 as uuidv4 } from "uuid";
 
 export function Board() {
@@ -30,12 +29,12 @@ export function Board() {
     const [resizeHandle, setResizeHandle] = useState<string | null>(null);
     const [dragOffset, setDragOffset] = useState({ x: 0, y: 0 });
     const [editingTextId, setEditingTextId] = useState<string | null>(null);
-    const textInputRef = useRef<HTMLInputElement>(null);
+    const textInputRef = useRef<HTMLInputElement | HTMLTextAreaElement>(null);
     const fileInputRef = useRef<HTMLInputElement>(null);
     const [isMounted, setIsMounted] = useState(false);
 
     useEffect(() => {
-        setIsMounted(true);
+        setTimeout(() => setIsMounted(true), 0);
     }, []);
 
     // Delete selected element on Delete key
@@ -111,7 +110,6 @@ export function Board() {
             }
 
             if (clickedElement) {
-                const isAlreadySelected = clickedElement.isSelected;
                 selectElement(clickedElement.id);
 
                 if (clickedElement.type === 'path' && clickedElement.points) {
@@ -952,7 +950,7 @@ export function Board() {
                     >
                         {isNote ? (
                             <textarea
-                                ref={textInputRef as any}
+                                ref={textInputRef as React.RefObject<HTMLTextAreaElement>}
                                 value={el.text || ''}
                                 onChange={(e) => updateElement(editingTextId, { text: e.target.value })}
                                 onBlur={() => setEditingTextId(null)}
@@ -971,7 +969,7 @@ export function Board() {
                             />
                         ) : (
                             <input
-                                ref={textInputRef}
+                                ref={textInputRef as React.RefObject<HTMLInputElement>}
                                 type="text"
                                 value={el.text || ''}
                                 onChange={(e) => updateElement(editingTextId, { text: e.target.value })}
