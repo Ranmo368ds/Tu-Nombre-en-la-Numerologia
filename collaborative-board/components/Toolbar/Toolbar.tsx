@@ -64,7 +64,7 @@ const colors = [
 ];
 
 export function Toolbar() {
-    const { tool, setTool, strokeColor, setStrokeColor, fillColor, setFillColor, strokeWidth, setStrokeWidth, selectedEmoji, setSelectedEmoji, zoom, setZoom, setPan } = useBoardStore();
+    const { elements, updateElement, tool, setTool, strokeColor, setStrokeColor, fillColor, setFillColor, strokeWidth, setStrokeWidth, selectedEmoji, setSelectedEmoji, zoom, setZoom, setPan } = useBoardStore();
     const [showShapes, setShowShapes] = useState(false);
     const [showFigures, setShowFigures] = useState(false);
     const [showEmojis, setShowEmojis] = useState(false);
@@ -104,6 +104,11 @@ export function Toolbar() {
                             onClick={() => {
                                 setStrokeColor(color.value);
                                 setShowStrokeColorPicker(false);
+                                // Update selected element
+                                const selected = elements.find(el => el.isSelected);
+                                if (selected) {
+                                    updateElement(selected.id, { strokeColor: color.value });
+                                }
                             }}
                             style={{
                                 width: '36px',
@@ -146,6 +151,11 @@ export function Toolbar() {
                             onClick={() => {
                                 setFillColor(color.value);
                                 setShowFillColorPicker(false);
+                                // Update selected element
+                                const selected = elements.find(el => el.isSelected);
+                                if (selected) {
+                                    updateElement(selected.id, { backgroundColor: color.value });
+                                }
                             }}
                             style={{
                                 width: '36px',
@@ -188,6 +198,11 @@ export function Toolbar() {
                             onClick={() => {
                                 setStrokeWidth(size.value);
                                 setShowStroke(false);
+                                // Update selected element
+                                const selected = elements.find(el => el.isSelected);
+                                if (selected) {
+                                    updateElement(selected.id, { strokeWidth: size.value });
+                                }
                             }}
                             style={{
                                 padding: '10px 20px',
