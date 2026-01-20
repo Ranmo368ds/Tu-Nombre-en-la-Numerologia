@@ -94,5 +94,26 @@
             "placeholder_email": "vous@email.com",
             "placeholder_message": "Comment pouvons-nous vous aider?"
         }
+    },
+    "Numerology": {
+        "title": "VOTRE NOM EN NUMÉROLOGIE",
+        "subtitle": "Découvrez comment les lettres de votre nom influencent votre destin",
+        "tabs": {
+            "portal": "Portail",
+            "synergy": "Synergie",
+            "spaces": "Espaces",
+            "cycles": "Cycles"
+        },
+        "cycles_content": {
+            "long_cycles": {
+                "title": "Cycles Longs : Année et Mois Personnel",
+                "desc": "L'année personnelle change chaque 1er janvier et dure 12 mois. Elle représente la tendance générale de l'année."
+            }
+        }
+    },
+    "RadioUnica": {
+        "title": "BOUTIQUE & FAVORIS",
+        "view_details": "VOIR DÉTAILS",
+        "buy": "ACHETER"
     }
 }

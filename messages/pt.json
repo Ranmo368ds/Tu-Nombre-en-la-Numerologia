@@ -117,5 +117,21 @@
             "placeholder_email": "voce@email.com",
             "placeholder_message": "Como podemos ajudá-lo?"
         }
+    },
+    "Numerology": {
+        "title": "SEU NOME NA NUMEROLOGIA",
+        "subtitle": "Descubra como as letras do seu nome influenciam seu destino",
+        "tabs": {
+            "portal": "Portal",
+            "synergy": "Sinergia",
+            "spaces": "Espaços",
+            "cycles": "Ciclos"
+        },
+        "cycles_content": {
+            "long_cycles": {
+                "title": "Ciclos Longos: Ano e Mês Pessoal",
+                "desc": "O ano pessoal muda todo dia 1º de janeiro e dura 12 meses."
+            }
+        }
     }
 }

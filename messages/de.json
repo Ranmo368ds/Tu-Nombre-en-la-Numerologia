@@ -94,5 +94,26 @@
             "placeholder_email": "sie@email.com",
             "placeholder_message": "Wie können wir Ihnen helfen?"
         }
+    },
+    "Numerology": {
+        "title": "IHR NAME IN DER NUMEROLOGIE",
+        "subtitle": "Entdecken Sie, wie die Buchstaben Ihres Namens Ihr Schicksal beeinflussen",
+        "tabs": {
+            "portal": "Portal",
+            "synergy": "Synergie",
+            "spaces": "Räume",
+            "cycles": "Zyklen"
+        },
+        "cycles_content": {
+            "long_cycles": {
+                "title": "Langzeitzyklen: Persönliches Jahr & Monat",
+                "desc": "Das persönliche Jahr ändert sich jeden 1. Januar und dauert 12 Monate."
+            }
+        }
+    },
+    "RadioUnica": {
+        "title": "SHOP & FAVORITEN",
+        "view_details": "DETAILS ANZEIGEN",
+        "buy": "KAUFEN"
     }
 }
