@@ -109,6 +109,57 @@
                 "title": "Cicli Lunghi: Anno e Mese Personale",
                 "desc": "L'anno personale cambia ogni 1° gennaio e dura 12 mesi."
             }
+        },
+        "form": {
+            "email_label": "Email",
+            "email_placeholder": "tu@email.com",
+            "email_required_tag": "Richiesto",
+            "email_help": "Inserisci la tua email per ricevere la lettura completa.",
+            "email_error": "Email mancante",
+            "name_label": "Nome Completo",
+            "name_placeholder": "Es: Mario Rossi",
+            "date_label": "Data di Nascita",
+            "date_placeholder": "GG/MM/AAAA",
+            "date_error": "Formato GG/MM/AAAA richiesto",
+            "calculate_btn": "Calcola la mia numerologia",
+            "calculate_sending": "Invio...",
+            "clear_btn": "Cancella"
+        },
+        "synergy": {
+            "title": "Sinastria delle Anime",
+            "subtitle": "Calcola prima la tua numerologia per vedere la compatibilità.",
+            "form": {
+                "relation_type": "Tipo di Relazione",
+                "partner_name": "Nome dell'altro",
+                "partner_placeholder": "Nome completo",
+                "birth_date": "Data di Nascita",
+                "submit": "Vedi Compatibilità",
+                "types": {
+                    "partner": "Partner ✨",
+                    "business": "Socio 🤝",
+                    "child": "Figlio/a 🍼",
+                    "pet": "Animale 🐾"
+                }
+            }
+        },
+        "spaces": {
+            "title": "Vibrazione dello Spazio",
+            "form": {
+                "address_num": "Numero Civico / Porta",
+                "address_placeholder": "Es: 1234",
+                "street_name": "Nome della Via (Opzionale)",
+                "street_placeholder": "Es: Via del Sole",
+                "move_date": "Data del Trasloco",
+                "submit": "Calcola Energia"
+            }
+        },
+        "results": {
+            "labels": {
+                "life_path": "Cammino di Vita",
+                "destiny": "Destino",
+                "soul_urge": "Desiderio dell'Anima",
+                "personality": "Personalità"
+            }
         }
     },
     "RadioUnica": {

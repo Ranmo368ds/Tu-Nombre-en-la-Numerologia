@@ -468,7 +468,8 @@ export function Toolbar() {
                         transform: shapeTools.some(s => s.id === tool) ? 'scale(1.1)' : 'scale(1)',
                         display: 'flex',
                         alignItems: 'center',
-                        justifyContent: 'center'
+                        justifyContent: 'center',
+                        flexShrink: 0
                     }}
                     title="Formas"
                     onMouseEnter={(e) => {
@@ -504,7 +505,8 @@ export function Toolbar() {
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
-                        fontSize: '20px'
+                        fontSize: '20px',
+                        flexShrink: 0
                     }}
                     title="Figuras"
                     onMouseEnter={(e) => {
@@ -526,57 +528,66 @@ export function Toolbar() {
                     display: 'flex',
                     alignItems: 'center',
                     gap: '4px',
-                    padding: '4px',
+                    padding: '6px',
                     backgroundColor: '#f3f4f6',
-                    borderRadius: '12px',
+                    borderRadius: '14px',
                     border: '2px solid #e5e7eb',
-                    flexShrink: 0
+                    flexShrink: 0,
+                    boxShadow: 'inset 0 2px 4px rgba(0,0,0,0.05)'
                 }}>
-                    <button
-                        onClick={() => setZoom(Math.min(zoom * 1.2, 5))}
-                        style={{
-                            padding: '8px',
-                            borderRadius: '8px',
-                            backgroundColor: 'white',
-                            border: 'none',
-                            cursor: 'pointer',
-                            display: 'flex',
-                            alignItems: 'center',
-                            justifyContent: 'center',
-                            transition: 'all 0.2s',
-                            flexShrink: 0
-                        }}
-                        title="Acercar (+)"
-                    >
-                        <ZoomIn style={{ width: '20px', height: '20px' }} />
-                    </button>
-                    <div style={{
-                        fontSize: '11px',
-                        fontWeight: 'bold',
-                        color: '#4b5563',
-                        minWidth: '35px',
-                        textAlign: 'center'
-                    }}>
-                        {Math.round(zoom * 100)}%
-                    </div>
                     <button
                         onClick={() => setZoom(Math.max(zoom / 1.2, 0.1))}
                         style={{
                             padding: '8px',
-                            borderRadius: '8px',
+                            borderRadius: '10px',
                             backgroundColor: 'white',
-                            border: 'none',
+                            border: '1px solid #e5e7eb',
                             cursor: 'pointer',
                             display: 'flex',
                             alignItems: 'center',
                             justifyContent: 'center',
                             transition: 'all 0.2s',
-                            flexShrink: 0
+                            flexShrink: 0,
+                            boxShadow: '0 2px 4px rgba(0,0,0,0.05)'
                         }}
                         title="Alejar (-)"
+                        onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#f9fafb'}
+                        onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'white'}
                     >
-                        <ZoomOut style={{ width: '20px', height: '20px' }} />
+                        <ZoomOut style={{ width: '20px', height: '20px', color: '#4b5563' }} />
                     </button>
+                    <div style={{
+                        fontSize: '12px',
+                        fontWeight: '700',
+                        color: '#1f2937',
+                        minWidth: '45px',
+                        textAlign: 'center',
+                        fontFamily: 'monospace'
+                    }}>
+                        {Math.round(zoom * 100)}%
+                    </div>
+                    <button
+                        onClick={() => setZoom(Math.min(zoom * 1.2, 5))}
+                        style={{
+                            padding: '8px',
+                            borderRadius: '10px',
+                            backgroundColor: 'white',
+                            border: '1px solid #e5e7eb',
+                            cursor: 'pointer',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            transition: 'all 0.2s',
+                            flexShrink: 0,
+                            boxShadow: '0 2px 4px rgba(0,0,0,0.05)'
+                        }}
+                        title="Acercar (+)"
+                        onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#f9fafb'}
+                        onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'white'}
+                    >
+                        <ZoomIn style={{ width: '20px', height: '20px', color: '#4b5563' }} />
+                    </button>
+                    <div style={{ width: '1px', height: '20px', backgroundColor: '#e5e7eb', margin: '0 4px' }} />
                     <button
                         onClick={() => {
                             setZoom(1);
@@ -584,19 +595,22 @@ export function Toolbar() {
                         }}
                         style={{
                             padding: '8px',
-                            borderRadius: '8px',
+                            borderRadius: '10px',
                             backgroundColor: 'white',
-                            border: 'none',
+                            border: '1px solid #e5e7eb',
                             cursor: 'pointer',
                             display: 'flex',
                             alignItems: 'center',
                             justifyContent: 'center',
                             transition: 'all 0.2s',
-                            flexShrink: 0
+                            flexShrink: 0,
+                            boxShadow: '0 2px 4px rgba(0,0,0,0.05)'
                         }}
-                        title="Restablecer"
+                        title="Restablecer vista"
+                        onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#f9fafb'}
+                        onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'white'}
                     >
-                        <Maximize style={{ width: '20px', height: '20px' }} />
+                        <Maximize style={{ width: '20px', height: '20px', color: '#4b5563' }} />
                     </button>
                 </div>
 

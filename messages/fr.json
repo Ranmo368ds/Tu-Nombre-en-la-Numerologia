@@ -109,6 +109,57 @@
                 "title": "Cycles Longs : Année et Mois Personnel",
                 "desc": "L'année personnelle change chaque 1er janvier et dure 12 mois. Elle représente la tendance générale de l'année."
             }
+        },
+        "form": {
+            "email_label": "Email",
+            "email_placeholder": "vous@email.com",
+            "email_required_tag": "Requis",
+            "email_help": "Entrez votre email pour recevoir la lecture complète.",
+            "email_error": "Email manquant",
+            "name_label": "Nom Complet",
+            "name_placeholder": "Ex: Jean Dupont",
+            "date_label": "Date de Naissance",
+            "date_placeholder": "JJ/MM/AAAA",
+            "date_error": "Format JJ/MM/AAAA requis",
+            "calculate_btn": "Calculer ma numérologie",
+            "calculate_sending": "Envoi...",
+            "clear_btn": "Effacer"
+        },
+        "synergy": {
+            "title": "Sinastrie des Âmes",
+            "subtitle": "Calculez d'abord votre propre numérologie pour voir la compatibilité.",
+            "form": {
+                "relation_type": "Type de Relation",
+                "partner_name": "Nom de l'autre",
+                "partner_placeholder": "Nom complet",
+                "birth_date": "Date de Naissance",
+                "submit": "Voir Compatibilité",
+                "types": {
+                    "partner": "Partenaire ✨",
+                    "business": "Associé 🤝",
+                    "child": "Enfant 🍼",
+                    "pet": "Animal 🐾"
+                }
+            }
+        },
+        "spaces": {
+            "title": "Vibration de l'Espace",
+            "form": {
+                "address_num": "Numéro de Rue / Porte",
+                "address_placeholder": "Ex: 1234",
+                "street_name": "Nom de la Rue (Optionnel)",
+                "street_placeholder": "Ex: Avenue du Soleil",
+                "move_date": "Date d'Emménagement",
+                "submit": "Calculer l'Énergie"
+            }
+        },
+        "results": {
+            "labels": {
+                "life_path": "Chemin de Vie",
+                "destiny": "Destin",
+                "soul_urge": "Désir de l'Âme",
+                "personality": "Personnalité"
+            }
         }
     },
     "RadioUnica": {

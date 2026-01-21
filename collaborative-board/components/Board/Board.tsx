@@ -94,6 +94,9 @@ export function Board() {
 
         const { x, y } = getCanvasCoords(e.clientX, e.clientY);
 
+        // Capture pointer to ensure move/up events are received
+        e.currentTarget.setPointerCapture(e.pointerId);
+
         if (tool === 'pan') {
             setIsPanning(true);
             setLastPanPosition({ x: e.clientX, y: e.clientY });
@@ -546,7 +549,7 @@ export function Board() {
                 backgroundColor: '#f9fafb',
                 position: 'relative',
                 overflow: 'hidden',
-                cursor: tool === 'pan' ? 'grab' : tool === 'pen' ? 'crosshair' : tool === 'select' ? 'default' : tool === 'text' ? 'text' : 'copy',
+                cursor: tool === 'pan' ? (isPanning ? 'grabbing' : 'grab') : tool === 'pen' ? 'crosshair' : tool === 'select' ? 'default' : tool === 'text' ? 'text' : 'copy',
                 touchAction: 'none'
             }}
             onPointerDown={handlePointerDown}

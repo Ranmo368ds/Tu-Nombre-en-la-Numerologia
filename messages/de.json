@@ -109,6 +109,57 @@
                 "title": "Langzeitzyklen: Persönliches Jahr & Monat",
                 "desc": "Das persönliche Jahr ändert sich jeden 1. Januar und dauert 12 Monate."
             }
+        },
+        "form": {
+            "email_label": "E-Mail",
+            "email_placeholder": "du@email.com",
+            "email_required_tag": "Erforderlich",
+            "email_help": "Geben Sie Ihre E-Mail-Adresse ein, um die vollständige Lesung zu erhalten.",
+            "email_error": "E-Mail fehlt",
+            "name_label": "Vollständiger Name",
+            "name_placeholder": "Z.B. Max Mustermann",
+            "date_label": "Geburtsdatum",
+            "date_placeholder": "TT/MM/JJJJ",
+            "date_error": "Format TT/MM/JJJJ erforderlich",
+            "calculate_btn": "Meine Numerologie berechnen",
+            "calculate_sending": "Senden...",
+            "clear_btn": "Löschen"
+        },
+        "synergy": {
+            "title": "Seelensynastrie",
+            "subtitle": "Berechnen Sie zuerst Ihre eigene Numerologie, um die Kompatibilität zu sehen.",
+            "form": {
+                "relation_type": "Art der Beziehung",
+                "partner_name": "Name des anderen",
+                "partner_placeholder": "Vollständiger Name",
+                "birth_date": "Geburtsdatum",
+                "submit": "Kompatibilität anzeigen",
+                "types": {
+                    "partner": "Partner ✨",
+                    "business": "Geschäftspartner 🤝",
+                    "child": "Kind 🍼",
+                    "pet": "Haustier 🐾"
+                }
+            }
+        },
+        "spaces": {
+            "title": "Vibration des Raumes",
+            "form": {
+                "address_num": "Hausnummer",
+                "address_placeholder": "Z.B. 1234",
+                "street_name": "Straßenname (Optional)",
+                "street_placeholder": "Z.B. Sonnenallee",
+                "move_date": "Einzugsdatum",
+                "submit": "Energie berechnen"
+            }
+        },
+        "results": {
+            "labels": {
+                "life_path": "Lebensweg",
+                "destiny": "Bestimmung",
+                "soul_urge": "Seelenwunsch",
+                "personality": "Persönlichkeit"
+            }
         }
     },
     "RadioUnica": {

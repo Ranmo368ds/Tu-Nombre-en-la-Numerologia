@@ -8,14 +8,13 @@ export function NewsletterPopup() {
     const [isOpen, setIsOpen] = useState(false);
 
     useEffect(() => {
-        // Show popup after 5 seconds
+        // Show popup after 15 seconds (instead of 5) to let user navigate first
         const timer = setTimeout(() => {
-            // Check if user has already dismissed it in this session (optional, for now just show it)
             const hasSeen = sessionStorage.getItem("newsletter_seen");
             if (!hasSeen) {
                 setIsOpen(true);
             }
-        }, 5000);
+        }, 15000);
 
         return () => clearTimeout(timer);
     }, []);

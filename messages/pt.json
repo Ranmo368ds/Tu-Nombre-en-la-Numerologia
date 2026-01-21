@@ -132,6 +132,57 @@
                 "title": "Ciclos Longos: Ano e Mês Pessoal",
                 "desc": "O ano pessoal muda todo dia 1º de janeiro e dura 12 meses."
             }
+        },
+        "form": {
+            "email_label": "E-mail",
+            "email_placeholder": "tu@email.com",
+            "email_required_tag": "Obrigatório",
+            "email_help": "Insira seu e-mail para receber a leitura completa.",
+            "email_error": "E-mail em falta",
+            "name_label": "Nome Completo",
+            "name_placeholder": "Ex: João Silva",
+            "date_label": "Data de Nascimento",
+            "date_placeholder": "DD/MM/AAAA",
+            "date_error": "Formato DD/MM/AAAA necessário",
+            "calculate_btn": "Calcular minha numerologia",
+            "calculate_sending": "Enviando...",
+            "clear_btn": "Limpar"
+        },
+        "synergy": {
+            "title": "Sinastria de Almas",
+            "subtitle": "Primeiro calcule sua própria numerologia para ver a compatibilidade.",
+            "form": {
+                "relation_type": "Tipo de Relação",
+                "partner_name": "Nome do outro",
+                "partner_placeholder": "Nome completo",
+                "birth_date": "Data de Nascimento",
+                "submit": "Ver Compatibilidade",
+                "types": {
+                    "partner": "Parceiro ✨",
+                    "business": "Sócio 🤝",
+                    "child": "Filho/a 🍼",
+                    "pet": "Animal 🐾"
+                }
+            }
+        },
+        "spaces": {
+            "title": "Vibração do Espaço",
+            "form": {
+                "address_num": "Número da Casa / Porta",
+                "address_placeholder": "Ex: 1234",
+                "street_name": "Nome da Rua (Opcional)",
+                "street_placeholder": "Ex: Avenida Sol",
+                "move_date": "Data de Mudança",
+                "submit": "Calcular Energia"
+            }
+        },
+        "results": {
+            "labels": {
+                "life_path": "Caminho de Vida",
+                "destiny": "Destino",
+                "soul_urge": "Desejo da Alma",
+                "personality": "Personalidade"
+            }
         }
     }
 }

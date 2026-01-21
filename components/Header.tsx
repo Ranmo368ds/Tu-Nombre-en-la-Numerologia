@@ -23,14 +23,14 @@ export function Header() {
 
                 {/* Desktop Navigation */}
                 <div className="hidden lg:flex items-center gap-6 text-sm font-medium tracking-wide text-stone-600">
-                    <Link href="/shop?category=oils" className="hover:text-primary transition-colors uppercase text-[10px] tracking-widest">{t("nav.oils")}</Link>
-                    <Link href="/shop?category=ebooks" className="hover:text-primary transition-colors uppercase text-[10px] tracking-widest">{t("nav.ebooks")}</Link>
-                    <Link href="/shop?category=music" className="hover:text-primary transition-colors uppercase text-[10px] tracking-widest">{t("nav.emusic")}</Link>
-                    <Link href="/shop?category=holistic" className="hover:text-primary transition-colors uppercase text-[10px] tracking-widest">{t("nav.holistic")}</Link>
-                    <Link href="/blog" className="hover:text-primary transition-colors uppercase text-[10px] tracking-widest">{t("nav.blog")}</Link>
-                    <Link href="/numerology" className="hover:text-primary transition-colors uppercase text-[10px] tracking-widest">{t("nav.numerology")}</Link>
-                    <Link href="/tarot" className="hover:text-primary transition-colors uppercase text-[10px] tracking-widest">{t("nav.tarot")}</Link>
-                    <Link href="/contact" className="hover:text-primary transition-colors uppercase text-[10px] tracking-widest">{t("nav.contact")}</Link>
+                    <Link href="/shop?category=oils" className="hover:text-primary transition-colors uppercase text-[11px] tracking-widest px-2 py-1">{t("nav.oils")}</Link>
+                    <Link href="/shop?category=ebooks" className="hover:text-primary transition-colors uppercase text-[11px] tracking-widest px-2 py-1">{t("nav.ebooks")}</Link>
+                    <Link href="/shop?category=music" className="hover:text-primary transition-colors uppercase text-[11px] tracking-widest px-2 py-1">{t("nav.emusic")}</Link>
+                    <Link href="/shop?category=holistic" className="hover:text-primary transition-colors uppercase text-[11px] tracking-widest px-2 py-1">{t("nav.holistic")}</Link>
+                    <Link href="/blog" className="hover:text-primary transition-colors uppercase text-[11px] tracking-widest px-2 py-1">{t("nav.blog")}</Link>
+                    <Link href="/numerology" className="hover:text-primary transition-colors uppercase text-[11px] tracking-widest px-2 py-1">{t("nav.numerology")}</Link>
+                    <Link href="/tarot" className="hover:text-primary transition-colors uppercase text-[11px] tracking-widest px-2 py-1">{t("nav.tarot")}</Link>
+                    <Link href="/contact" className="hover:text-primary transition-colors uppercase text-[11px] tracking-widest px-2 py-1">{t("nav.contact")}</Link>
                 </div>
 
                 {/* Right Side Controls */}
