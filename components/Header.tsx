@@ -29,7 +29,7 @@ export function Header() {
                     <Link href="/shop?category=holistic" className="hover:text-primary transition-colors uppercase text-[11px] tracking-widest px-2 py-1">{t("nav.holistic")}</Link>
                     <Link href="/blog" className="hover:text-primary transition-colors uppercase text-[11px] tracking-widest px-2 py-1">{t("nav.blog")}</Link>
                     <Link href="/numerology" className="hover:text-primary transition-colors uppercase text-[11px] tracking-widest px-2 py-1">{t("nav.numerology")}</Link>
-                    <Link href="/tarot" className="hover:text-primary transition-colors uppercase text-[11px] tracking-widest px-2 py-1">{t("nav.tarot")}</Link>
+                    <a href="https://tarot-deck-covers.vercel.app" className="hover:text-primary transition-colors uppercase text-[11px] tracking-widest px-2 py-1">{t("nav.tarot")}</a>
                     <Link href="/contact" className="hover:text-primary transition-colors uppercase text-[11px] tracking-widest px-2 py-1">{t("nav.contact")}</Link>
                 </div>
 
@@ -78,7 +78,7 @@ export function Header() {
                     <Link href="/shop?category=holistic" onClick={() => setIsMenuOpen(false)} className="block text-stone-600 font-medium">{t("nav.holistic")}</Link>
                     <Link href="/blog" onClick={() => setIsMenuOpen(false)} className="block text-stone-600 font-medium">{t("nav.blog")}</Link>
                     <Link href="/numerology" onClick={() => setIsMenuOpen(false)} className="block text-stone-600 font-medium">{t("nav.numerology")}</Link>
-                    <Link href="/tarot" onClick={() => setIsMenuOpen(false)} className="block text-stone-600 font-medium">{t("nav.tarot")}</Link>
+                    <a href="https://tarot-deck-covers.vercel.app" onClick={() => setIsMenuOpen(false)} className="block text-stone-600 font-medium">{t("nav.tarot")}</a>
                     <Link href="/contact" onClick={() => setIsMenuOpen(false)} className="block text-stone-600 font-medium">{t("nav.contact")}</Link>
                     <div className="pt-4 border-t border-stone-100 flex justify-between items-center bg-stone-50/50 -mx-6 px-6 py-4">
                         <div className="flex flex-col">

@@ -58,7 +58,7 @@ export function Footer() {
                     <ul className="space-y-4">
                         <li><Link href="/" className="hover:text-primary-light transition-colors">{tNav("home")}</Link></li>
                         <li><Link href="/numerology" className="hover:text-primary-light transition-colors">{tNav("numerology")}</Link></li>
-                        <li><Link href="/tarot" className="hover:text-primary-light transition-colors">{tNav("tarot")}</Link></li>
+                        <li><a href="https://tarot-deck-covers.vercel.app" className="hover:text-primary-light transition-colors">{tNav("tarot")}</a></li>
                         <li><Link href="/blog" className="hover:text-primary-light transition-colors">{tNav("blog")}</Link></li>
                         <li><Link href="/contact" className="hover:text-primary-light transition-colors">{tNav("contact")}</Link></li>
                         <li className="pt-2 border-t border-stone-800">
