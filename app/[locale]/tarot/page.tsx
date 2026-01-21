@@ -6,6 +6,7 @@ import { ArrowLeft, Sparkles } from "lucide-react";
 
 export default function TarotPage() {
     const tNav = useTranslations("HomePage.nav");
+    const tTarot = useTranslations("TarotPage");
 
     return (
         <div className="min-h-screen bg-gradient-to-br from-purple-900 via-indigo-900 to-purple-800 flex flex-col items-center justify-center p-6 text-center relative overflow-hidden">
@@ -18,10 +19,10 @@ export default function TarotPage() {
             <div className="relative z-10 max-w-2xl">
                 <Sparkles className="w-16 h-16 mx-auto mb-6 text-purple-200 animate-pulse" />
                 <h1 className="text-5xl font-mystic font-bold text-white mb-6 drop-shadow-lg">
-                    Tarot Místico
+                    {tTarot("title")}
                 </h1>
                 <p className="text-purple-100 text-lg mb-8 leading-relaxed">
-                    Próximamente: Lecturas de tarot personalizadas, tiradas interactivas y guías espirituales para iluminar tu camino.
+                    {tTarot("description")}
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                     <Link
@@ -35,7 +36,7 @@ export default function TarotPage() {
                         href="/numerology"
                         className="px-8 py-4 bg-purple-500 hover:bg-purple-600 text-white rounded-full font-medium transition-all shadow-lg shadow-purple-500/50"
                     >
-                        Prueba Numerología
+                        {tTarot("cta_numerology")}
                     </Link>
                 </div>
             </div>
