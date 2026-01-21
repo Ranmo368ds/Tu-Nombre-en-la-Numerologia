@@ -12,14 +12,32 @@ export default function ContactClient() {
     const [formState, setFormState] = useState({ name: "", email: "", message: "" });
     const [status, setStatus] = useState<"idle" | "submitting" | "success">("idle");
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         setStatus("submitting");
-        // Simulate API call
-        setTimeout(() => {
-            setStatus("success");
-            setFormState({ name: "", email: "", message: "" });
-        }, 1500);
+
+        const formId = process.env.NEXT_PUBLIC_FORMSPREE_CONTACT_ID || "mqkvznpb"; // Placeholder fallback
+
+        try {
+            const response = await fetch(`https://formspree.io/f/${formId}`, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(formState),
+            });
+
+            if (response.ok) {
+                setStatus("success");
+                setFormState({ name: "", email: "", message: "" });
+            } else {
+                throw new Error("Failed to submit");
+            }
+        } catch (error) {
+            console.error("Formspree error:", error);
+            alert("Vaya, hubo un error enviando tu mensaje. Por favor intenta de nuevo o escríbenos a instintosaludableusa@gmail.com");
+            setStatus("idle");
+        }
     };
 
     return (

@@ -27,10 +27,9 @@ export function NumerologyForm({ onCalculate, onClear }: NumerologyFormProps) {
     const [errors, setErrors] = useState<{ date?: string, email?: string }>({});
     const [isSubmitting, setIsSubmitting] = useState(false);
 
-    // TODO: REEMPLAZA ESTO CON TU FORM ID REAL DE FORMSPREE
-    // Ejemplo: "mzbjqypo" -> "https://formspree.io/f/mzbjqypo"
-    // Endpoint from .env or fallback (replace logic handled in .env.local)
-    const FORMSPREE_ENDPOINT = process.env.NEXT_PUBLIC_FORMSPREE_ENDPOINT || "https://formspree.io/f/xgooeyqd";
+    // Unified Formspree ID system
+    const formId = process.env.NEXT_PUBLIC_FORMSPREE_NUMEROLOGY_ID || "xgooeyqd";
+    const FORMSPREE_ENDPOINT = `https://formspree.io/f/${formId}`;
 
     const validateEmail = (email: string) => {
         return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);

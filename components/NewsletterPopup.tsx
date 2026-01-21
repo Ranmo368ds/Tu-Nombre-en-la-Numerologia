@@ -19,9 +19,42 @@ export function NewsletterPopup() {
         return () => clearTimeout(timer);
     }, []);
 
+    const [formState, setFormState] = useState({ name: "", email: "" });
+    const [status, setStatus] = useState<"idle" | "submitting" | "success">("idle");
+
     const handleClose = () => {
         setIsOpen(false);
         sessionStorage.setItem("newsletter_seen", "true");
+    };
+
+    const handleSubmit = async (e: React.FormEvent) => {
+        e.preventDefault();
+        setStatus("submitting");
+
+        const formId = process.env.NEXT_PUBLIC_FORMSPREE_NEWSLETTER_ID || "mqkvznpb"; // Placeholder fallback
+
+        try {
+            const response = await fetch(`https://formspree.io/f/${formId}`, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(formState),
+            });
+
+            if (response.ok) {
+                setStatus("success");
+                setTimeout(() => {
+                    handleClose();
+                }, 3000);
+            } else {
+                throw new Error("Failed to subscribe");
+            }
+        } catch (error) {
+            console.error("Newsletter error:", error);
+            alert("No pudimos procesar tu suscripción. Por favor intenta de nuevo.");
+            setStatus("idle");
+        }
     };
 
     return (
@@ -49,39 +82,65 @@ export function NewsletterPopup() {
                             <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-emerald-50 to-transparent -z-10" />
 
                             <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto text-emerald-600 shadow-inner">
-                                <Mail className="w-8 h-8" />
+                                {status === "success" ? <Sparkles className="w-8 h-8" /> : <Mail className="w-8 h-8" />}
                             </div>
 
-                            <div>
-                                <h3 className="text-2xl font-bold text-emerald-950 font-mystic">
-                                    Únete a la Tribu
-                                </h3>
-                                <p className="text-stone-600 mt-2 text-sm leading-relaxed">
-                                    Recibe consejos holísticos, descuentos exclusivos en aceites y novedades de numerología.
-                                </p>
-                            </div>
-
-                            <form className="space-y-4" onSubmit={(e) => { e.preventDefault(); handleClose(); }}>
-                                <div className="space-y-3">
-                                    <input
-                                        type="text"
-                                        placeholder="Tu Nombre"
-                                        className="w-full px-4 py-3 rounded-xl bg-white border border-stone-200 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all text-sm"
-                                    />
-                                    <input
-                                        type="email"
-                                        placeholder="Tu Email"
-                                        className="w-full px-4 py-3 rounded-xl bg-white border border-stone-200 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all text-sm"
-                                    />
-                                </div>
-                                <button
-                                    type="submit"
-                                    className="w-full py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold rounded-xl transition-colors shadow-lg shadow-emerald-200 flex items-center justify-center gap-2"
+                            {status === "success" ? (
+                                <motion.div
+                                    initial={{ opacity: 0, scale: 0.9 }}
+                                    animate={{ opacity: 1, scale: 1 }}
+                                    className="space-y-4 py-4"
                                 >
-                                    <Sparkles className="w-4 h-4" />
-                                    Suscribirme Gratis
-                                </button>
-                            </form>
+                                    <h3 className="text-2xl font-bold text-emerald-950 font-mystic">¡Bienvenido a la Tribu!</h3>
+                                    <p className="text-stone-600">Tu suscripción ha sido confirmada. Muy pronto recibirás sorpresas en tu email.</p>
+                                </motion.div>
+                            ) : (
+                                <>
+                                    <div>
+                                        <h3 className="text-2xl font-bold text-emerald-950 font-mystic">
+                                            Únete a la Tribu
+                                        </h3>
+                                        <p className="text-stone-600 mt-2 text-sm leading-relaxed">
+                                            Recibe consejos holísticos, descuentos exclusivos en aceites y novedades de numerología.
+                                        </p>
+                                    </div>
+
+                                    <form className="space-y-4" onSubmit={handleSubmit}>
+                                        <div className="space-y-3">
+                                            <input
+                                                required
+                                                type="text"
+                                                placeholder="Tu Nombre"
+                                                value={formState.name}
+                                                onChange={(e) => setFormState({ ...formState, name: e.target.value })}
+                                                className="w-full px-4 py-3 rounded-xl bg-white border border-stone-200 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all text-sm"
+                                            />
+                                            <input
+                                                required
+                                                type="email"
+                                                placeholder="Tu Email"
+                                                value={formState.email}
+                                                onChange={(e) => setFormState({ ...formState, email: e.target.value })}
+                                                className="w-full px-4 py-3 rounded-xl bg-white border border-stone-200 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all text-sm"
+                                            />
+                                        </div>
+                                        <button
+                                            type="submit"
+                                            disabled={status === "submitting"}
+                                            className="w-full py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold rounded-xl transition-colors shadow-lg shadow-emerald-200 flex items-center justify-center gap-2 disabled:opacity-70"
+                                        >
+                                            {status === "submitting" ? (
+                                                <span className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                                            ) : (
+                                                <>
+                                                    <Sparkles className="w-4 h-4" />
+                                                    Suscribirme Gratis
+                                                </>
+                                            )}
+                                        </button>
+                                    </form>
+                                </>
+                            )}
 
                             <p className="text-xs text-stone-400">
                                 Respetamos tu privacidad. Sin spam. <br />
