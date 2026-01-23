@@ -763,10 +763,15 @@
             "text": "¿Tienes preguntas?",
             "button": "WhatsApp"
         },
-        "directory": {
-            "text": "Nuestro Directorio en <p>Pinterest</p> tiene +80 pins organizados por categorías de servicios que ayudan a que clientes encuentren negocios como el tuyo cuando están listos para comprar o contratar. Puedes explorar las secciones, guardar tu favorito y contactarlos directamente.",
-            "link": "https://www.pinterest.com/genesmarketing/latino-business-directory-chicago-suburbs/",
-            "cta": "Ver Directorio en Pinterest"
+        "seo": {
+            "title": "Genes Marketing | Directorio de Negocios Latinos en Pinterest - Chicago & USA",
+            "description": "Promociona tu negocio latino en Pinterest con pines profesionales optimizados. Directorio de +80 negocios en Chicago y USA. Sin mensualidades, resultados duraderos.",
+            "keywords": "marketing pinterest, negocios latinos, directorio negocios chicago, pinterest marketing usa, promoción negocios hispanos, seo pinterest, pines profesionales, marketing digital latinos, negocios hispanos chicago, directorio latino estados unidos",
+            "og_title": "Genes Marketing - Directorio #1 de Negocios Latinos en Pinterest",
+            "og_description": "Creamos pines profesionales optimizados con SEO para tu negocio. +80 negocios ya confían en nosotros. Chicago Northwest Suburbs y todo USA.",
+            "og_image_alt": "Genes Marketing - Directorio de Negocios Latinos en Pinterest",
+            "twitter_title": "Genes Marketing | Promociona tu Negocio Latino en Pinterest",
+            "twitter_description": "Pines profesionales + SEO + Directorio curado = Más clientes para tu negocio. Sin mensualidades."
         }
     }
 }

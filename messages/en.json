@@ -747,6 +747,16 @@
         "floating_whatsapp": {
             "text": "Have questions?",
             "button": "WhatsApp"
+        },
+        "seo": {
+            "title": "Genes Marketing | Latino Business Directory on Pinterest - Chicago & USA",
+            "description": "Promote your Latino business on Pinterest with professional optimized pins. Directory of +80 businesses in Chicago and USA. No monthly fees, lasting results.",
+            "keywords": "pinterest marketing, latino businesses, chicago business directory, pinterest marketing usa, hispanic business promotion, pinterest seo, professional pins, latino digital marketing, hispanic businesses chicago, latino directory united states",
+            "og_title": "Genes Marketing - #1 Latino Business Directory on Pinterest",
+            "og_description": "We create professional SEO-optimized pins for your business. +80 businesses already trust us. Chicago Northwest Suburbs and all USA.",
+            "og_image_alt": "Genes Marketing - Latino Business Directory on Pinterest",
+            "twitter_title": "Genes Marketing | Promote Your Latino Business on Pinterest",
+            "twitter_description": "Professional pins + SEO + Curated directory = More customers for your business. No monthly fees."
         }
     }
 }

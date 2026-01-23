@@ -5,7 +5,11 @@ export default function robots(): MetadataRoute.Robots {
         rules: {
             userAgent: '*',
             allow: '/',
+            disallow: ['/api/', '/admin/', '/_next/'],
         },
-        sitemap: 'https://instintosaludable.com/sitemap.xml',
+        sitemap: [
+            'https://instintosaludable.com/sitemap.xml',
+            'https://genesmarketing.com/sitemap.xml',
+        ],
     };
 }
