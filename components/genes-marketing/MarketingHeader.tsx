@@ -2,7 +2,7 @@
 
 import React from "react";
 import { Link } from "@/src/i18n/routing";
-import { LanguagePicker } from "@/components/LanguagePicker";
+import { MarketingLanguagePicker } from "@/components/genes-marketing/MarketingLanguagePicker";
 
 export default function MarketingHeader() {
     return (
@@ -15,7 +15,7 @@ export default function MarketingHeader() {
 
                 {/* Right Side */}
                 <div className="flex items-center gap-4">
-                    <LanguagePicker variant="dark" />
+                    <MarketingLanguagePicker variant="dark" />
                 </div>
             </div>
         </header>

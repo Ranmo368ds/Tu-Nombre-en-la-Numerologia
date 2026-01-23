@@ -11,7 +11,7 @@ import {
 } from "@/components/ui/select";
 import { Globe } from "lucide-react";
 
-export function LanguagePicker({ variant = "light" }: { variant?: "light" | "dark" }) {
+export function MarketingLanguagePicker({ variant = "light" }: { variant?: "light" | "dark" }) {
     const locale = useLocale();
     const router = useRouter();
     const pathname = usePathname();
@@ -39,14 +39,7 @@ export function LanguagePicker({ variant = "light" }: { variant?: "light" | "dar
                 }`}>
                 <SelectItem value="es">Español</SelectItem>
                 <SelectItem value="en">English</SelectItem>
-                <SelectItem value="fr">Français</SelectItem>
-                <SelectItem value="pt">Português</SelectItem>
-                <SelectItem value="it">Italiano</SelectItem>
-                <SelectItem value="de">Deutsch</SelectItem>
-                <SelectItem value="ru">Русский</SelectItem>
-                <SelectItem value="pl">Polski</SelectItem>
             </SelectContent>
         </Select>
     );
 }
-
