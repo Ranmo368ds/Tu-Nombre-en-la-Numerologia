@@ -652,7 +652,9 @@
                 "terms": "Términos"
             },
             "rights": "© {year} Genes Marketing. Todos los derechos reservados.",
-            "made_with": "Hecho con ❤️ para la comunidad Latina."
+            "made_with": "Hecho con ❤️ para la comunidad Latina.",
+            "phone": "+1 (847) 502-9685",
+            "email": "GetOnBoard@genesmarketing.com"
         },
         "popup": {
             "time": {
@@ -699,7 +701,7 @@
             "whatsapp_label": "Envíanos un mensaje",
             "whatsapp_button": "Chat en WhatsApp",
             "email_label": "Escríbenos",
-            "email": "ventas@genes.marketing",
+            "email": "GetOnBoard@genesmarketing.com",
             "availability": "Lunes – Viernes, 9am – 6pm CST"
         }
     }

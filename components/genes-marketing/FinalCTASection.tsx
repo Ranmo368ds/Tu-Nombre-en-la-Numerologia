@@ -31,7 +31,7 @@ export default function FinalCTASection() {
                         href="https://wa.me/18475029685"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-white/5 hover:bg-white/10 text-white font-bold text-xl px-10 py-5 rounded-full border border-white/20 transition-all text-center"
+                        className="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-[#25D366] hover:bg-[#20BA5A] text-white font-bold text-xl px-10 py-5 rounded-full shadow-2xl transition-all text-center"
                     >
                         {t('cta_whatsapp')}
                     </a>
