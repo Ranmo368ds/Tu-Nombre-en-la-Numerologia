@@ -694,7 +694,18 @@
             "whatsapp_button": "Chat on WhatsApp",
             "email_label": "Email us",
             "email": "GetOnBoard@genesmarketing.com",
-            "availability": "Monday – Friday, 9am – 6pm CST"
+            "availability": "Monday – Friday, 9am – 6pm CST",
+            "form_title": "Have questions?",
+            "form_subtitle": "Complete the form and a specialist will contact you soon.",
+            "form_name": "Name",
+            "form_name_placeholder": "Enter your name",
+            "form_phone": "Phone",
+            "form_phone_placeholder": "(555) 000-0000",
+            "form_email": "Email",
+            "form_email_placeholder": "you@company.com",
+            "form_message": "Message",
+            "form_message_placeholder": "How can we help you?",
+            "form_submit": "Send Message"
         }
     }
 }

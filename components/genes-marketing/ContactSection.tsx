@@ -62,36 +62,36 @@ export default function ContactSection() {
                     {/* Contact Form Side */}
                     <div className="md:w-7/12 p-12">
                         <div className="mb-10">
-                            <h2 className="text-4xl font-bold text-[#0B1220] mb-4">¿Tienes dudas?</h2>
+                            <h2 className="text-4xl font-bold text-[#0B1220] mb-4">{t('form_title')}</h2>
                             <p className="text-slate-500 text-lg">
-                                Completa el formulario y un especialista te contactará pronto.
+                                {t('form_subtitle')}
                             </p>
                         </div>
 
                         <form className="space-y-6">
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div className="space-y-2">
-                                    <label htmlFor="name" className="text-sm font-bold text-slate-700 uppercase tracking-wide">Nombre</label>
-                                    <input type="text" id="name" className="w-full px-6 py-4 rounded-xl border border-slate-200 focus:ring-2 focus:ring-[#E11D2E] focus:border-transparent outline-none transition-all text-slate-900 bg-slate-50" placeholder="Escribe tu nombre" />
+                                    <label htmlFor="name" className="text-sm font-bold text-slate-700 uppercase tracking-wide">{t('form_name')}</label>
+                                    <input type="text" id="name" className="w-full px-6 py-4 rounded-xl border border-slate-200 focus:ring-2 focus:ring-[#E11D2E] focus:border-transparent outline-none transition-all text-slate-900 bg-slate-50" placeholder={t('form_name_placeholder')} />
                                 </div>
                                 <div className="space-y-2">
-                                    <label htmlFor="phone" className="text-sm font-bold text-slate-700 uppercase tracking-wide">Teléfono</label>
-                                    <input type="tel" id="phone" className="w-full px-6 py-4 rounded-xl border border-slate-200 focus:ring-2 focus:ring-[#E11D2E] focus:border-transparent outline-none transition-all text-slate-900 bg-slate-50" placeholder="(555) 000-0000" />
+                                    <label htmlFor="phone" className="text-sm font-bold text-slate-700 uppercase tracking-wide">{t('form_phone')}</label>
+                                    <input type="tel" id="phone" className="w-full px-6 py-4 rounded-xl border border-slate-200 focus:ring-2 focus:ring-[#E11D2E] focus:border-transparent outline-none transition-all text-slate-900 bg-slate-50" placeholder={t('form_phone_placeholder')} />
                                 </div>
                             </div>
 
                             <div className="space-y-2">
-                                <label htmlFor="email" className="text-sm font-bold text-slate-700 uppercase tracking-wide">Email</label>
-                                <input type="email" id="email" className="w-full px-6 py-4 rounded-xl border border-slate-200 focus:ring-2 focus:ring-[#E11D2E] focus:border-transparent outline-none transition-all text-slate-900 bg-slate-50" placeholder="tu@empresa.com" />
+                                <label htmlFor="email" className="text-sm font-bold text-slate-700 uppercase tracking-wide">{t('form_email')}</label>
+                                <input type="email" id="email" className="w-full px-6 py-4 rounded-xl border border-slate-200 focus:ring-2 focus:ring-[#E11D2E] focus:border-transparent outline-none transition-all text-slate-900 bg-slate-50" placeholder={t('form_email_placeholder')} />
                             </div>
 
                             <div className="space-y-2">
-                                <label htmlFor="message" className="text-sm font-bold text-slate-700 uppercase tracking-wide">Mensaje</label>
-                                <textarea id="message" rows={4} className="w-full px-6 py-4 rounded-xl border border-slate-200 focus:ring-2 focus:ring-[#E11D2E] focus:border-transparent outline-none transition-all resize-none text-slate-900 bg-slate-50" placeholder="¿En qué podemos ayudarte?"></textarea>
+                                <label htmlFor="message" className="text-sm font-bold text-slate-700 uppercase tracking-wide">{t('form_message')}</label>
+                                <textarea id="message" rows={4} className="w-full px-6 py-4 rounded-xl border border-slate-200 focus:ring-2 focus:ring-[#E11D2E] focus:border-transparent outline-none transition-all resize-none text-slate-900 bg-slate-50" placeholder={t('form_message_placeholder')}></textarea>
                             </div>
 
                             <button type="submit" className="w-full py-5 px-8 bg-[#0B1220] hover:bg-slate-800 text-white rounded-2xl font-bold transition-all flex items-center justify-center gap-3 text-lg shadow-xl shadow-slate-900/10">
-                                Enviar Mensaje
+                                {t('form_submit')}
                                 <Send className="w-5 h-5" />
                             </button>
                         </form>
