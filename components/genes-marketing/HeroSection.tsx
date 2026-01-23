@@ -21,7 +21,23 @@ export default function HeroSection() {
                     </div>
 
                     <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 leading-tight tracking-tight">
-                        {t('title')}
+                        {t.rich('title', {
+                            p: (chunks) => (
+                                <a
+                                    href="https://www.pinterest.com/genesmarketing/latino-business-directory-chicago-suburbs/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center gap-1 hover:opacity-80 transition-opacity"
+                                >
+                                    <img
+                                        src="/images/pinterest-seeklogo.png"
+                                        alt="Pinterest"
+                                        className="h-10 md:h-14 w-auto object-contain"
+                                    />
+                                    {chunks}
+                                </a>
+                            )
+                        })}
                     </h1>
 
                     <p className="text-lg md:text-2xl text-amber-400 font-medium mb-8 leading-relaxed max-w-3xl mx-auto italic">

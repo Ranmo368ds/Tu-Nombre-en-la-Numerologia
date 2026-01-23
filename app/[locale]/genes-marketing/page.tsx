@@ -6,6 +6,7 @@ import FinalCTASection from "@/components/genes-marketing/FinalCTASection";
 import FooterSection from "@/components/genes-marketing/FooterSection";
 import HeroSection from "@/components/genes-marketing/HeroSection";
 import HowItWorksSection from "@/components/genes-marketing/HowItWorksSection";
+import PinterestDirectorySection from "@/components/genes-marketing/PinterestDirectorySection";
 import MarketingHeader from "@/components/genes-marketing/MarketingHeader";
 import Popup from "@/components/genes-marketing/Popup";
 import PricingSection from "@/components/genes-marketing/PricingSection";
@@ -34,6 +35,7 @@ export default async function GenesMarketingPage({ params }: { params: Promise<{
             <MarketingHeader />
             <Popup />
             <HeroSection />
+            <PinterestDirectorySection />
             <ContactSection />
             <div id="benefits">
                 <BenefitsSection />

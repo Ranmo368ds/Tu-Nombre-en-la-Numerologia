@@ -433,7 +433,7 @@
     "MarketingPage": {
         "hero": {
             "badge": "Directorio #1 para Latinos en Estados Unidos",
-            "title": "Promociona tu Negocio Latino en todo Estados Unidos con Pinterest",
+            "title": "Promociona tu Negocio Latino en todo Estados Unidos con <p>Pinterest</p>",
             "subtitle": "Creamos pines profesionales, los optimizamos con SEO y colocamos tu negocio en nuestro Directorio de Negocios Latinos para generar visibilidad, tráfico y clientes reales — a nivel local o nacional.",
             "bullets": [
                 "Los pines no desaparecen en 24 horas: siguen generando visitas por semanas/meses",
@@ -450,10 +450,15 @@
             "tagline": "Sistema probado con resultados reales en los suburbios del noroeste de Chicago y el sur de Wisconsin.",
             "reinforcement": "Atrae clientes que ya están buscando tus servicios — sin pagar anuncios mensuales ni depender de redes sociales."
         },
+        "directory": {
+            "text": "Nuestro Directorio en <p>Pinterest</p> tiene +80 pins organizados por categorías de servicios que ayudan a que clientes encuentren negocios como el tuyo cuando están listos para comprar o contratar. Puedes explorar las secciones, guardar tu favorito y contactarlos directamente.",
+            "link": "https://www.pinterest.com/genesmarketing/latino-business-directory-chicago-suburbs/",
+            "cta": "Ver Directorio en Pinterest"
+        },
         "benefits": {
-            "title": "Por qué Pinterest funciona para negocios locales y de USA",
-            "intro": "Pinterest no es solo una red social: es un motor de búsqueda visual donde la gente planea compras y servicios. A diferencia de Facebook/Instagram, el contenido no muere en 24 horas: un pin puede seguir apareciendo en búsquedas durante semanas o meses.",
-            "description": "Pinterest es un motor de búsqueda visual: la gente viene aquí para planificar, comparar y elegir servicios. A diferencia de las publicaciones sociales que desaparecen rápido, los pines de Pinterest pueden seguir apareciendo en las búsquedas durante semanas o incluso meses. Eso significa visibilidad y tráfico constantes de personas que buscan activamente lo que ofreces.",
+            "title": "Por qué <p>Pinterest</p> funciona para negocios locales y de USA",
+            "intro": "<p>Pinterest</p> no es solo una red social: es un motor de búsqueda visual donde la gente planea compras y servicios. A diferencia de Facebook/Instagram, el contenido no muere en 24 horas: un pin puede seguir apareciendo en búsquedas durante semanas o meses.",
+            "description": "<p>Pinterest</p> es un motor de búsqueda visual: la gente viene aquí para planificar, comparar y elegir servicios. A diferencia de las publicaciones sociales que desaparecen rápido, los pines de <p>Pinterest</p> pueden seguir apareciendo en las búsquedas durante semanas o incluso meses. Eso significa visibilidad y tráfico constantes de personas que buscan activamente lo que ofreces.",
             "usp": [
                 "El tráfico impulsado por búsquedas te ayuda a ser descubierto",
                 "Los pines siguen funcionando mucho después de publicarlos",
@@ -462,15 +467,15 @@
             "items": {
                 "traffic": {
                     "title": "Tráfico Constante en el Tiempo",
-                    "desc": "Pinterest funciona como una búsqueda: cuando la gente busca servicios e ideas, tu pin puede seguir apareciendo con el tiempo. A diferencia de los posts que desaparecen rápido, los pines pueden seguir generando visitas al sitio web y consultas mucho después de ser publicados."
+                    "desc": "<p>Pinterest</p> funciona como una búsqueda: cuando la gente busca servicios e ideas, tu pin puede seguir apareciendo con el tiempo. A diferencia de los posts que desaparecen rápido, los pines pueden seguir generando visitas al sitio web y consultas mucho después de ser publicados."
                 },
                 "intent": {
                     "title": "Clientes con Alta Intención",
-                    "desc": "Los usuarios de Pinterest son planificadores. Guardan opciones, comparan proveedores y regresan cuando están listos para reservar o comprar. Eso significa que los clics suelen venir de personas con una intención real, no de un simple scroll casual."
+                    "desc": "Los usuarios de <p>Pinterest</p> son planificadores. Guardan opciones, comparan proveedores y regresan cuando están listos para reservar o comprar. Eso significa que los clics suelen venir de personas con una intención real, no de un simple scroll casual."
                 },
                 "seo": {
                     "title": "Optimización SEO en Pinterest",
-                    "desc": "Optimizamos títulos, palabras clave y categorías para que te encuentren. Usamos términos de servicio + ubicación (ejemplo: 'Servicio de limpieza en los suburbios de Chicago') para que Pinterest entienda lo que ofreces."
+                    "desc": "Optimizamos títulos, palabras clave y categorías para que te encuentren. Usamos términos de servicio + ubicación (ejemplo: 'Servicio de limpieza en los suburbios de Chicago') para que <p>Pinterest</p> entienda lo que ofreces."
                 },
                 "community": {
                     "title": "Destacado en la Comunidad Latina",
@@ -482,7 +487,7 @@
                 },
                 "performance": {
                     "title": "Rendimiento Medible",
-                    "desc": "Pinterest proporciona métricas claras (impresiones, pines guardados, clics salientes). Usamos esas señales para entender qué contenido funciona mejor y cómo seguir mejorando la visibilidad y los resultados."
+                    "desc": "<p>Pinterest</p> proporciona métricas claras (impresiones, pines guardados, clics salientes). Usamos esas señales para entender qué contenido funciona mejor y cómo seguir mejorando la visibilidad y los resultados."
                 }
             },
             "contrast": "A diferencia de Facebook o Instagram, los pines no desaparecen en 24 horas: siguen generando visibilidad, clics y clientes con el tiempo."
@@ -490,7 +495,7 @@
         "industries": {
             "title": "Soluciones para cada industria",
             "subtitle": "Adaptamos nuestra estrategia a las necesidades específicas de tu negocio.",
-            "footer": "Estos ejemplos muestran cómo diferentes industrias pueden usar Pinterest para atraer clientes que buscan y planifican activamente.",
+            "footer": "Estos ejemplos muestran cómo diferentes industrias pueden usar <p>Pinterest</p> para atraer clientes que buscan y planifican activamente.",
             "items": [
                 {
                     "title": "Sealcoating Services",
@@ -542,11 +547,11 @@
         },
         "pricing": {
             "title": "Qué Incluye Cada Paquete",
-            "subtitle": "Envíanos la información de tu negocio — nosotros nos encargamos de la estrategia, diseño y publicación en Pinterest.",
+            "subtitle": "Envíanos la información de tu negocio — nosotros nos encargamos de la estrategia, diseño y publicación en <p>Pinterest</p>.",
             "packages_list": {
                 "basic": {
                     "name": "Basic",
-                    "desc": "Perfecto para negocios que recién comienzan en Pinterest",
+                    "desc": "Perfecto para negocios que recién comienzan en <p>Pinterest</p>",
                     "ideal": "Negocios locales que buscan visibilidad y descubrimiento sin complicaciones.",
                     "delivery": "3–5 días hábiles",
                     "cta": "Empezar Ahora"
@@ -667,7 +672,7 @@
             "mini_cta": "¿Quieres que te recomendemos el plan ideal? → Chat en WhatsApp"
         },
         "final_cta": {
-            "title": "¿Listo para destacar en Pinterest?",
+            "title": "¿Listo para destacar en <p>Pinterest</p>?",
             "description": "Aparece en el Directorio de Negocios Latinos con pines profesionales optimizados para búsqueda — para que los clientes puedan encontrarte y contactarte.",
             "cta_packages": "Ver Paquetes",
             "cta_whatsapp": "Chat en WhatsApp",
@@ -757,6 +762,11 @@
         "floating_whatsapp": {
             "text": "¿Tienes preguntas?",
             "button": "WhatsApp"
+        },
+        "directory": {
+            "text": "Nuestro Directorio en <p>Pinterest</p> tiene +80 pins organizados por categorías de servicios que ayudan a que clientes encuentren negocios como el tuyo cuando están listos para comprar o contratar. Puedes explorar las secciones, guardar tu favorito y contactarlos directamente.",
+            "link": "https://www.pinterest.com/genesmarketing/latino-business-directory-chicago-suburbs/",
+            "cta": "Ver Directorio en Pinterest"
         }
     }
 }
