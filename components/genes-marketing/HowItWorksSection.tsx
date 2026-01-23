@@ -7,18 +7,18 @@ export default function HowItWorksSection() {
     const STEPS = [
         {
             icon: ClipboardList,
-            title: t('steps.step1.title'),
-            description: t('steps.step1.desc'),
+            title: t('steps.0.title'),
+            description: t('steps.0.desc'),
         },
         {
             icon: LayoutDashboard,
-            title: t('steps.step2.title'),
-            description: t('steps.step2.desc'),
+            title: t('steps.1.title'),
+            description: t('steps.1.desc'),
         },
         {
             icon: TrendingUp,
-            title: t('steps.step3.title'),
-            description: t('steps.step3.desc'),
+            title: t('steps.2.title'),
+            description: t('steps.2.desc'),
         },
     ];
 
@@ -51,13 +51,26 @@ export default function HowItWorksSection() {
                     ))}
                 </div>
 
-                <div className="mt-16 text-center">
-                    <p className="text-[#B8C1D1]/60 font-medium italic">
-                        {t('note')}
-                    </p>
+                <div className="mt-16 text-center max-w-2xl mx-auto mb-8">
+                    <div className="inline-flex items-start gap-3 bg-white/5 border border-white/10 rounded-2xl p-6 backdrop-blur-sm">
+                        <p className="text-lg text-white font-medium text-left">
+                            {t('footer')}
+                        </p>
+                    </div>
+                </div>
+
+                <div className="text-center">
+                    <a
+                        href="#pricing"
+                        className="inline-flex items-center gap-3 px-10 py-5 bg-[#E11D2E] hover:bg-[#B81422] text-white rounded-full font-bold text-xl transition-all shadow-2xl shadow-red-900/40 hover:scale-105"
+                    >
+                        {t('cta')}
+                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                        </svg>
+                    </a>
                 </div>
             </div>
         </section>
     );
 }
-

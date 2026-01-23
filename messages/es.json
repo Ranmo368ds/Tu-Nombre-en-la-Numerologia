@@ -434,18 +434,25 @@
         "hero": {
             "badge": "Directorio #1 para Latinos en Estados Unidos",
             "title": "Promociona tu Negocio Latino en todo Estados Unidos con Pinterest",
-            "subtitle": "Creamos pines profesionales de Pinterest, los optimizamos con SEO y colocamos tu negocio en nuestro Directorio de Negocios Latinos para generar visibilidad, tráfico y clientes potenciales reales, a nivel local o nacional.",
+            "subtitle": "Creamos pines profesionales, los optimizamos con SEO y colocamos tu negocio en nuestro Directorio de Negocios Latinos para generar visibilidad, tráfico y clientes reales — a nivel local o nacional.",
             "bullets": [
-                "Visibilidad duradera (los pines no desaparecen en 24 horas)",
-                "Exposición local, estatal o nacional — tú eliges"
+                "Los pines no desaparecen en 24 horas: siguen generando visitas por semanas/meses",
+                "Clientes con intención real: buscan, comparan y eligen proveedores",
+                "Enlace directo a tu web, WhatsApp o Google Business Profile"
             ],
             "cta_packages": "Ver Paquetes",
             "cta_whatsapp": "Chat en WhatsApp",
+            "credibility": "Sistema probado con resultados reales en Chicago Northwest Suburbs y el sur de Wisconsin — listo para escalar a todo USA",
+            "cta_microcopy": [
+                "Respuesta rápida (Lun–Vie 9am–6pm CST)",
+                "Sin contratos. Pago único por paquete"
+            ],
             "tagline": "Sistema probado con resultados reales en los suburbios del noroeste de Chicago y el sur de Wisconsin.",
             "reinforcement": "Atrae clientes que ya están buscando tus servicios — sin pagar anuncios mensuales ni depender de redes sociales."
         },
         "benefits": {
             "title": "Por qué Pinterest funciona para negocios locales y de USA",
+            "intro": "Pinterest no es solo una red social: es un motor de búsqueda visual donde la gente planea compras y servicios. A diferencia de Facebook/Instagram, el contenido no muere en 24 horas: un pin puede seguir apareciendo en búsquedas durante semanas o meses.",
             "description": "Pinterest es un motor de búsqueda visual: la gente viene aquí para planificar, comparar y elegir servicios. A diferencia de las publicaciones sociales que desaparecen rápido, los pines de Pinterest pueden seguir apareciendo en las búsquedas durante semanas o incluso meses. Eso significa visibilidad y tráfico constantes de personas que buscan activamente lo que ofreces.",
             "usp": [
                 "El tráfico impulsado por búsquedas te ayuda a ser descubierto",
@@ -530,7 +537,8 @@
                     "desc": "Preparación de impuestos y asesoría fiscal profesional."
                 }
             ],
-            "reinforcement": "¿No ves tu industria aquí? También trabajamos con otros servicios locales, profesionales y negocios en crecimiento en todo Estados Unidos."
+            "reinforcement": "¿No ves tu industria aquí? También trabajamos con otros servicios locales, profesionales y negocios en crecimiento en todo Estados Unidos.",
+            "guidance": "Estas son algunas industrias que ven resultados. Si tu negocio no está en la lista, también podemos adaptarlo a tu categoría."
         },
         "pricing": {
             "title": "Qué Incluye Cada Paquete",
@@ -574,26 +582,42 @@
             "payment_suffix": "/ pago único",
             "ideal_label": "Ideal para:",
             "delivery_label": "Entrega:",
-            "pro_social_proof": "⭐ El paquete más elegido por negocios locales en Chicago, el Midwest y otras ciudades de USA."
+            "pro_social_proof": "⭐ El paquete más elegido por negocios locales en Chicago, el Midwest y otras ciudades de USA.",
+            "header_subtitle": "Inversión única, beneficios continuos (sin mensualidades ni contratos)",
+            "guidance": {
+                "title": "¿Cuál elegir?",
+                "basic": "para empezar",
+                "pro": "para crecer más rápido",
+                "elite": "para competir fuerte en categorías demandadas"
+            },
+            "pro_badge": "Más popular",
+            "pro_cta": "Elegir Pro (Recomendado)",
+            "requirements_title": "Qué necesitamos de ti",
+            "requirements_text": "Logo + fotos + ciudad + link/WhatsApp (2 minutos)",
+            "disclaimer_full": "Los resultados varían según industria, ubicación y competencia. Garantizamos implementación profesional, optimización y publicación — no ventas específicas."
         },
         "how_it_works": {
-            "title": "Tan fácil como 1–2–3",
-            "subtitle": "No necesitas ser un experto en marketing. Nosotros nos encargamos de la parte técnica.",
-            "steps": {
-                "step1": {
-                    "title": "1. Elige tu Paquete",
-                    "desc": "Selecciona el plan que coincida con tus objetivos: visibilidad local, un posicionamiento más sólido o exposición nacional."
+            "title": "Tan Fácil como 1-2-3",
+            "subtitle": "No necesitas ser experto en marketing. Nosotros manejamos la parte técnica.",
+            "steps": [
+                {
+                    "number": "1",
+                    "title": "Elige tu plan",
+                    "desc": "Selecciona el paquete que mejor se adapte a tus objetivos"
                 },
-                "step2": {
-                    "title": "2. Envíanos tu Información",
-                    "desc": "Comparte tu logo, fotos, servicios, ubicación y enlace de contacto preferido. No se requiere sitio web."
+                {
+                    "number": "2",
+                    "title": "Envíanos tu info",
+                    "desc": "Logo, fotos, servicios, ubicación y link preferido"
                 },
-                "step3": {
-                    "title": "3. Creamos, Publicamos y Optimizamos",
-                    "desc": "Diseñamos tus pines de Pinterest, los optimizamos para la búsqueda, te colocamos en la categoría correcta y publicamos todo por ti."
+                {
+                    "number": "3",
+                    "title": "Recibe clientes",
+                    "desc": "Nosotros diseñamos, optimizamos y publicamos"
                 }
-            },
-            "note": "Tus pines permanecen activos y visibles en las búsquedas, trabajando para tu negocio incluso cuando no estás en línea."
+            ],
+            "footer": "Nosotros diseñamos, optimizamos y publicamos. Tú solo respondes mensajes y conviertes.",
+            "cta": "Empezar ahora"
         },
         "faq": {
             "title": "Preguntas Frecuentes",
@@ -630,15 +654,26 @@
                 {
                     "q": "¿Esto es local o nacional?",
                     "a": "Ambas. Pinterest es una plataforma nacional. Optimizamos tus pines para exposición local, estatal o en todo EE. UU., dependiendo de los objetivos de tu negocio."
+                },
+                {
+                    "q": "¿Pinterest es mundial?",
+                    "a": "Sí, Pinterest es una plataforma global. Nosotros enfocamos tu estrategia a Estados Unidos (o local según tu servicio) para maximizar resultados en tu mercado objetivo."
+                },
+                {
+                    "q": "¿Puedo aparecer en varias ciudades/estados?",
+                    "a": "Sí, con el paquete Elite o una estrategia multi-ciudad podemos optimizar tu presencia para múltiples ubicaciones en Estados Unidos."
                 }
-            ]
+            ],
+            "mini_cta": "¿Quieres que te recomendemos el plan ideal? → Chat en WhatsApp"
         },
         "final_cta": {
             "title": "¿Listo para destacar en Pinterest?",
             "description": "Aparece en el Directorio de Negocios Latinos con pines profesionales optimizados para búsqueda — para que los clientes puedan encontrarte y contactarte.",
             "cta_packages": "Ver Paquetes",
             "cta_whatsapp": "Chat en WhatsApp",
-            "trust": "Sistema probado con resultados reales en negocios locales y adaptable a nivel nacional en Estados Unidos."
+            "trust": "Sistema probado con resultados reales en negocios locales y adaptable a nivel nacional en Estados Unidos.",
+            "title_alt": "¿Listo para recibir más clientes?",
+            "subtitle_alt": "No dejes pasar otro día sin que tu negocio sea descubierto por personas que ya están buscando lo que ofreces."
         },
         "footer": {
             "title": "Genes Marketing",
@@ -718,6 +753,10 @@
             "form_message": "Mensaje",
             "form_message_placeholder": "¿En qué podemos ayudarte?",
             "form_submit": "Enviar Mensaje"
+        },
+        "floating_whatsapp": {
+            "text": "¿Tienes preguntas?",
+            "button": "WhatsApp"
         }
     }
 }

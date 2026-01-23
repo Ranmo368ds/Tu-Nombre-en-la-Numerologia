@@ -10,6 +10,7 @@ import MarketingHeader from "@/components/genes-marketing/MarketingHeader";
 import Popup from "@/components/genes-marketing/Popup";
 import PricingSection from "@/components/genes-marketing/PricingSection";
 import TestimonialsSection from "@/components/genes-marketing/TestimonialsSection";
+import FloatingWhatsApp from "@/components/genes-marketing/FloatingWhatsApp";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
@@ -44,6 +45,7 @@ export default async function GenesMarketingPage({ params }: { params: Promise<{
             <FAQSection />
             <FinalCTASection />
             <FooterSection />
+            <FloatingWhatsApp />
         </main>
     );
 }

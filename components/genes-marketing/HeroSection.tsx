@@ -41,10 +41,14 @@ export default function HeroSection() {
                             <span className="text-amber-500 font-bold">•</span>
                             {t('bullets.1')}
                         </li>
+                        <li className="flex items-start gap-2">
+                            <span className="text-amber-500 font-bold">•</span>
+                            {t('bullets.2')}
+                        </li>
                     </ul>
 
                     <p className="text-sm text-green-400 font-semibold mb-8 tracking-wide">
-                        {t('tagline')}
+                        {t('credibility')}
                     </p>
 
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -55,6 +59,16 @@ export default function HeroSection() {
                         <a href="https://wa.me/18475029685" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto px-8 py-4 bg-[#16A34A] hover:bg-[#16A34A]/80 text-white rounded-full font-bold text-lg transition-all border border-green-700/50 flex items-center justify-center gap-2 text-center">
                             {t('cta_whatsapp')}
                         </a>
+                    </div>
+
+                    <div className="mt-4 flex flex-col sm:flex-row items-center justify-center gap-4 text-xs text-[#B8C1D1]/70">
+                        <span className="flex items-center gap-1">
+                            <span className="text-green-400">✓</span> {t('cta_microcopy.0')}
+                        </span>
+                        <span className="hidden sm:inline">•</span>
+                        <span className="flex items-center gap-1">
+                            <span className="text-green-400">✓</span> {t('cta_microcopy.1')}
+                        </span>
                     </div>
 
                     <div className="mt-12 flex items-center justify-center gap-8 text-[#B8C1D1] grayscale opacity-50">
