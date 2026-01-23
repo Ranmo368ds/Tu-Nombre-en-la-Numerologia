@@ -17,10 +17,7 @@ export function LanguagePicker({ variant = "light" }: { variant?: "light" | "dar
     const pathname = usePathname();
 
     const handleLanguageChange = (newLocale: string) => {
-        // Ensure we don't have the locale in the pathname already if it's being passed to router.replace
-        // next-intl's usePathname should return the path without the locale, but just in case:
-        const cleanPathname = pathname.replace(/^\/(en|es|fr|pt|it|de|ru|pl)/, '') || '/';
-        router.replace(cleanPathname, { locale: newLocale });
+        router.replace(pathname, { locale: newLocale });
     };
 
     const isDark = variant === "dark";
@@ -28,8 +25,8 @@ export function LanguagePicker({ variant = "light" }: { variant?: "light" | "dar
     return (
         <Select value={locale} onValueChange={handleLanguageChange}>
             <SelectTrigger className={`w-[140px] transition-colors ${isDark
-                    ? "bg-white/5 border-white/10 text-white hover:bg-white/10"
-                    : "bg-white border-stone-200 text-stone-700 hover:bg-stone-50"
+                ? "bg-white/5 border-white/10 text-white hover:bg-white/10"
+                : "bg-white border-stone-200 text-stone-700 hover:bg-stone-50"
                 }`}>
                 <div className="flex items-center gap-2">
                     <Globe className={`w-4 h-4 ${isDark ? "text-emerald-400" : "text-emerald-600"}`} />
@@ -37,8 +34,8 @@ export function LanguagePicker({ variant = "light" }: { variant?: "light" | "dar
                 </div>
             </SelectTrigger>
             <SelectContent className={`${isDark
-                    ? "bg-[#111A2E] border-white/10 text-white"
-                    : "bg-white border-stone-200 text-stone-700"
+                ? "bg-[#111A2E] border-white/10 text-white"
+                : "bg-white border-stone-200 text-stone-700"
                 }`}>
                 <SelectItem value="es">Español</SelectItem>
                 <SelectItem value="en">English</SelectItem>
