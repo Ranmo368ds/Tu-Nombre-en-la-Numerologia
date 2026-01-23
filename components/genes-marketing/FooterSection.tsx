@@ -47,6 +47,17 @@ export default function FooterSection() {
                                     {t('phone')}
                                 </a>
                             </li>
+                            <li>
+                                <a
+                                    href="https://www.pinterest.com/genesmarketing/latino-business-directory-chicago-suburbs/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="hover:text-white transition-colors flex items-start gap-2"
+                                >
+                                    <span className="text-red-500">📌</span>
+                                    <span>Ver Directorio en Pinterest</span>
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </div>
