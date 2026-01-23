@@ -13,9 +13,19 @@ export function Header() {
     const [isMenuOpen, setIsMenuOpen] = React.useState(false);
     const { toggleCart, totalItems } = useCart();
     const pathname = usePathname();
+    const [isMarketingDomain, setIsMarketingDomain] = React.useState(false);
 
-    // Hide global header on the marketing landing page
-    if (pathname === "/genes-marketing") {
+    React.useEffect(() => {
+        if (typeof window !== "undefined") {
+            const hostname = window.location.hostname;
+            if (hostname.includes("genesmarketing.com") || hostname.includes("genes-marketing")) {
+                setIsMarketingDomain(true);
+            }
+        }
+    }, []);
+
+    // Hide global header on the marketing landing page or domain
+    if (pathname === "/genes-marketing" || isMarketingDomain) {
         return null;
     }
 
