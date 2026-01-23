@@ -111,8 +111,7 @@ export default function IndustriesSection() {
                     {INDUSTRIES.map((industry, index) => (
                         <div key={index} className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
                             <div className="absolute inset-0">
-                                <img
-                                    src={industry.image}
+                                <img loading="lazy" src={industry.image}
                                     alt={industry.title}
                                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                                 />
