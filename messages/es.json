@@ -429,5 +429,278 @@
             "placeholder_email": "tu@email.com",
             "placeholder_message": "¿En qué podemos ayudarte?"
         }
+    },
+    "MarketingPage": {
+        "hero": {
+            "badge": "Directorio #1 para Latinos en Estados Unidos",
+            "title": "Promociona tu Negocio Latino en todo Estados Unidos con Pinterest",
+            "subtitle": "Creamos pines profesionales de Pinterest, los optimizamos con SEO y colocamos tu negocio en nuestro Directorio de Negocios Latinos para generar visibilidad, tráfico y clientes potenciales reales, a nivel local o nacional.",
+            "bullets": [
+                "Visibilidad duradera (los pines no desaparecen en 24 horas)",
+                "Exposición local, estatal o nacional — tú eliges"
+            ],
+            "cta_packages": "Ver Paquetes",
+            "cta_whatsapp": "Chat en WhatsApp",
+            "tagline": "Sistema probado con resultados reales en los suburbios del noroeste de Chicago y el sur de Wisconsin.",
+            "reinforcement": "Atrae clientes que ya están buscando tus servicios — sin pagar anuncios mensuales ni depender de redes sociales."
+        },
+        "benefits": {
+            "title": "Por qué Pinterest funciona para negocios locales y de USA",
+            "description": "Pinterest es un motor de búsqueda visual: la gente viene aquí para planificar, comparar y elegir servicios. A diferencia de las publicaciones sociales que desaparecen rápido, los pines de Pinterest pueden seguir apareciendo en las búsquedas durante semanas o incluso meses. Eso significa visibilidad y tráfico constantes de personas que buscan activamente lo que ofreces.",
+            "usp": [
+                "El tráfico impulsado por búsquedas te ayuda a ser descubierto",
+                "Los pines siguen funcionando mucho después de publicarlos",
+                "Ideal para servicios, restaurantes, tiendas y profesionales"
+            ],
+            "items": {
+                "traffic": {
+                    "title": "Tráfico Constante en el Tiempo",
+                    "desc": "Pinterest funciona como una búsqueda: cuando la gente busca servicios e ideas, tu pin puede seguir apareciendo con el tiempo. A diferencia de los posts que desaparecen rápido, los pines pueden seguir generando visitas al sitio web y consultas mucho después de ser publicados."
+                },
+                "intent": {
+                    "title": "Clientes con Alta Intención",
+                    "desc": "Los usuarios de Pinterest son planificadores. Guardan opciones, comparan proveedores y regresan cuando están listos para reservar o comprar. Eso significa que los clics suelen venir de personas con una intención real, no de un simple scroll casual."
+                },
+                "seo": {
+                    "title": "Optimización SEO en Pinterest",
+                    "desc": "Optimizamos títulos, palabras clave y categorías para que te encuentren. Usamos términos de servicio + ubicación (ejemplo: 'Servicio de limpieza en los suburbios de Chicago') para que Pinterest entienda lo que ofreces."
+                },
+                "community": {
+                    "title": "Destacado en la Comunidad Latina",
+                    "desc": "Esto es más que una publicación al azar: es tu lugar dentro de un directorio curado para negocios latinos. Esto añade credibilidad, ayuda al descubrimiento por categoría y genera confianza en los nuevos clientes."
+                },
+                "creative": {
+                    "title": "Pines Profesionales que Convierten",
+                    "desc": "Creamos pines que lucen profesionales y confiables: título claro, visuales impactantes y una llamada a la acción directa. Esto mejora las tasas de clics y hace que tu negocio sea la elección obvia."
+                },
+                "performance": {
+                    "title": "Rendimiento Medible",
+                    "desc": "Pinterest proporciona métricas claras (impresiones, pines guardados, clics salientes). Usamos esas señales para entender qué contenido funciona mejor y cómo seguir mejorando la visibilidad y los resultados."
+                }
+            },
+            "contrast": "A diferencia de Facebook o Instagram, los pines no desaparecen en 24 horas: siguen generando visibilidad, clics y clientes con el tiempo."
+        },
+        "industries": {
+            "title": "Soluciones para cada industria",
+            "subtitle": "Adaptamos nuestra estrategia a las necesidades específicas de tu negocio.",
+            "footer": "Estos ejemplos muestran cómo diferentes industrias pueden usar Pinterest para atraer clientes que buscan y planifican activamente.",
+            "items": [
+                {
+                    "title": "Sealcoating Services",
+                    "desc": "Protege y mantén el asfalto de tus clientes."
+                },
+                {
+                    "title": "Yard Signs",
+                    "desc": "Publicidad local efectiva en cada rincón."
+                },
+                {
+                    "title": "Embroidery Services",
+                    "desc": "Personalización técnica para empresas y eventos."
+                },
+                {
+                    "title": "Direct Mail (EDDM)",
+                    "desc": "Llega a cada buzón con correos directos."
+                },
+                {
+                    "title": "Remodelaciones",
+                    "desc": "Cocinas, baños y renovaciones completas."
+                },
+                {
+                    "title": "Catering & Comida",
+                    "desc": "Eventos, taquizas y servicios gastronómicos."
+                },
+                {
+                    "title": "Landscaping",
+                    "desc": "Diseño y mantenimiento de jardines."
+                },
+                {
+                    "title": "Limpieza Profesional",
+                    "desc": "Casas, oficinas y limpieza profunda."
+                },
+                {
+                    "title": "Salones de Belleza",
+                    "desc": "Estética, uñas y servicios de spa."
+                },
+                {
+                    "title": "Servicios Legales",
+                    "desc": "Abogados, notarios y asesoría profesional."
+                }
+            ],
+            "reinforcement": "¿No ves tu industria aquí? También trabajamos con otros servicios locales, profesionales y negocios en crecimiento en todo Estados Unidos."
+        },
+        "pricing": {
+            "title": "Qué Incluye Cada Paquete",
+            "subtitle": "Envíanos la información de tu negocio — nosotros nos encargamos de la estrategia, diseño y publicación en Pinterest.",
+            "packages_list": {
+                "basic": {
+                    "name": "Basic",
+                    "desc": "Perfecto para negocios que recién comienzan en Pinterest",
+                    "ideal": "Negocios locales que buscan visibilidad y descubrimiento sin complicaciones.",
+                    "delivery": "3–5 días hábiles",
+                    "cta": "Empezar Ahora"
+                },
+                "pro": {
+                    "name": "Pro",
+                    "desc": "La mejor opción para visibilidad constante y un posicionamiento más sólido",
+                    "ideal": "Negocios que quieren una exposición constante y mayores probabilidades de recibir consultas.",
+                    "delivery": "5–7 días hábiles",
+                    "cta": "Elegir Pro"
+                },
+                "elite": {
+                    "name": "Elite",
+                    "desc": "Máxima exposición para negocios competitivos o con alcance nacional",
+                    "ideal": "Negocios que apuntan a categorías de alta demanda o alcance multi-ciudad / USA.",
+                    "delivery": "7–10 días hábiles",
+                    "cta": "Hazte Elite"
+                }
+            },
+            "common_features_title": "Todo lo que incluimos en cada paquete:",
+            "common_features": [
+                "Diseño profesional de pines (diseño limpio y de alta conversión)",
+                "Optimización SEO (palabras clave, títulos, descripciones, temas etiquetados)",
+                "Ubicación por categoría en el Directorio de Negocios Latinos",
+                "Configuración de enlaces (sitio web, WhatsApp, página de reservas o Google)",
+                "Llamada a la acción fuerte para generar clics y consultas",
+                "Posicionamiento específico por industria (para que te encuentren los clientes adecuados)",
+                "Control de calidad antes de publicar",
+                "Soporte básico para ediciones (pequeñas actualizaciones de texto/enlaces)"
+            ],
+            "no_website": "¿No tienes sitio web? No hay problema — podemos enlazar a WhatsApp o a tu Perfil de Negocio de Google.",
+            "disclaimer": "Los resultados varían según la industria, ubicación, temporada y competencia. Garantizamos una configuración, optimización y colocación profesional — no resultados de ventas específicos.",
+            "payment_suffix": "/ pago único",
+            "ideal_label": "Ideal para:",
+            "delivery_label": "Entrega:",
+            "pro_social_proof": "⭐ El paquete más elegido por negocios locales en Chicago, el Midwest y otras ciudades de USA."
+        },
+        "how_it_works": {
+            "title": "Tan fácil como 1–2–3",
+            "subtitle": "No necesitas ser un experto en marketing. Nosotros nos encargamos de la parte técnica.",
+            "steps": {
+                "step1": {
+                    "title": "1. Elige tu Paquete",
+                    "desc": "Selecciona el plan que coincida con tus objetivos: visibilidad local, un posicionamiento más sólido o exposición nacional."
+                },
+                "step2": {
+                    "title": "2. Envíanos tu Información",
+                    "desc": "Comparte tu logo, fotos, servicios, ubicación y enlace de contacto preferido. No se requiere sitio web."
+                },
+                "step3": {
+                    "title": "3. Creamos, Publicamos y Optimizamos",
+                    "desc": "Diseñamos tus pines de Pinterest, los optimizamos para la búsqueda, te colocamos en la categoría correcta y publicamos todo por ti."
+                }
+            },
+            "note": "Tus pines permanecen activos y visibles en las búsquedas, trabajando para tu negocio incluso cuando no estás en línea."
+        },
+        "faq": {
+            "title": "Preguntas Frecuentes",
+            "subtitle": "Resolvemos tus dudas para que tomes la mejor decisión.",
+            "items": [
+                {
+                    "q": "¿Necesito tener una cuenta de Pinterest?",
+                    "a": "No. No necesitas administrar Pinterest tú mismo. Nosotros creamos, optimizamos y publicamos los pines para tu negocio. Si ya tienes una cuenta, podemos conectarla y optimizarla."
+                },
+                {
+                    "q": "¿Es este un pago único o mensual?",
+                    "a": "Este es un pago único por paquete. No hay tarifas mensuales obligatorias. Tus pines permanecen activos y visibles en las búsquedas después de publicarlos."
+                },
+                {
+                    "q": "¿Qué pasa si no tengo página web?",
+                    "a": "No hay problema. Podemos enlazar tu pin a WhatsApp, una página de reservas, Instagram o tu Perfil de Negocio de Google."
+                },
+                {
+                    "q": "¿Cuánto tiempo tarda en verse resultados?",
+                    "a": "Pinterest funciona de manera diferente a las redes sociales. Alguna actividad puede comenzar en días, pero los resultados más sólidos generalmente se construyen con el tiempo a medida que los pines continúan apareciendo en las búsquedas."
+                },
+                {
+                    "q": "¿Qué tipo de negocios funcionan mejor en Pinterest?",
+                    "a": "Empresas de servicios, restaurantes, profesionales locales, comercio minorista y servicios visuales funcionan especialmente bien. Adaptamos la estrategia a tu industria."
+                },
+                {
+                    "q": "¿Puedo actualizar mi pin más adelante?",
+                    "a": "Sí. Pequeñas actualizaciones como enlaces o ajustes de texto están incluidas. Rediseños más grandes o pines adicionales pueden requerir una mejora de paquete."
+                },
+                {
+                    "q": "¿Garantizan ventas o leads?",
+                    "a": "Garantizamos una configuración profesional, optimización SEO y una colocación correcta. Los resultados varían según la industria, la ubicación, la temporada y la competencia, por lo que no se garantizan resultados de ventas específicos."
+                },
+                {
+                    "q": "¿Esto es local o nacional?",
+                    "a": "Ambas. Pinterest es una plataforma nacional. Optimizamos tus pines para exposición local, estatal o en todo EE. UU., dependiendo de los objetivos de tu negocio."
+                }
+            ]
+        },
+        "final_cta": {
+            "title": "¿Listo para destacar en Pinterest?",
+            "description": "Aparece en el Directorio de Negocios Latinos con pines profesionales optimizados para búsqueda — para que los clientes puedan encontrarte y contactarte.",
+            "cta_packages": "Ver Paquetes",
+            "cta_whatsapp": "Chat en WhatsApp",
+            "trust": "Sistema probado con resultados reales en negocios locales y adaptable a nivel nacional en Estados Unidos."
+        },
+        "footer": {
+            "title": "Genes Marketing",
+            "description": "Ayudando a emprendedores latinos en Estados Unidos a crecer a través del poder de Pinterest.",
+            "links_title": "Enlaces",
+            "links": {
+                "home": "Inicio",
+                "benefits": "Beneficios",
+                "pricing": "Precios",
+                "contact": "Contacto"
+            },
+            "legal_title": "Legal",
+            "legal": {
+                "privacy": "Privacidad",
+                "terms": "Términos"
+            },
+            "rights": "© {year} Genes Marketing. Todos los derechos reservados.",
+            "made_with": "Hecho con ❤️ para la comunidad Latina."
+        },
+        "popup": {
+            "time": {
+                "title": "¡No te vayas sin anunciarte!",
+                "subtitle": "Únete a nuestra lista y recibe tips semanales para crecer tu negocio en USA.",
+                "cta": "Suscribirme Gratis"
+            },
+            "exit": {
+                "badge": "Oferta Especial",
+                "title": "¡Espera! Obtén 10% OFF",
+                "subtitle": "En tu primer paquete si te registras hoy. No dejes pasar esta oportunidad de crecimiento.",
+                "cta": "Obtener mi Descuento"
+            },
+            "form": {
+                "placeholder": "Tu correo electrónico",
+                "success": "¡Gracias! Revisa tu correo.",
+                "note": "No spam. Solo tips de valor."
+            }
+        },
+        "testimonials": {
+            "title": "Historias de éxito real",
+            "subtitle": "Únete a cientos de negocios latinos que ya están creciendo con nosotros.",
+            "items": [
+                {
+                    "name": "Maria González",
+                    "business": "Taquería Los Primos",
+                    "quote": "Desde que nos anunciamos en Genes Marketing, recibimos llamadas preguntando por nuestros eventos de catering cada semana. ¡Increíble!"
+                },
+                {
+                    "name": "Carlos Rivera",
+                    "business": "Rivera Construction",
+                    "quote": "No entendía Pinterest, pero ellos lo hicieron todo por mí. Ahora tengo clientes que me encuentran buscando remodelaciones en Chicago."
+                },
+                {
+                    "name": "Ana Torres",
+                    "business": "Beauty by Ana",
+                    "quote": "Mis clientas me dicen que vieron mis diseños de uñas en Pinterest. La inversión se pagó sola en la primera semana."
+                }
+            ]
+        },
+        "contact_info": {
+            "title": "Contacta con un Especialista",
+            "subtitle": "Estamos aquí para ayudarte a llevar tu negocio al siguiente nivel en Pinterest.",
+            "whatsapp_label": "Envíanos un mensaje",
+            "whatsapp_button": "Chat en WhatsApp",
+            "email_label": "Escríbenos",
+            "email": "ventas@genes.marketing",
+            "availability": "Lunes – Viernes, 9am – 6pm CST"
+        }
     }
 }

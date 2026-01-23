@@ -421,5 +421,278 @@
             "placeholder_email": "you@email.com",
             "placeholder_message": "How can we help you?"
         }
+    },
+    "MarketingPage": {
+        "hero": {
+            "badge": "#1 Directory for Latinos in the United States",
+            "title": "Promote your Latino Business across the United States with Pinterest",
+            "subtitle": "We create professional Pinterest pins, optimize them with SEO, and feature your business in our Latino Business Directory to generate visibility, traffic, and real leads, locally or nationwide.",
+            "bullets": [
+                "Long-lasting visibility (pins don't disappear in 24 hours)",
+                "Local, state, or national exposure — you choose"
+            ],
+            "cta_packages": "View Packages",
+            "cta_whatsapp": "Chat on WhatsApp",
+            "tagline": "Proven system with real results in northwest Chicago suburbs and southern Wisconsin.",
+            "reinforcement": "Attract customers who are already looking for your services — without paying monthly ads or depending on social media."
+        },
+        "benefits": {
+            "title": "Why Pinterest works for local and USA businesses",
+            "description": "Pinterest is a visual search engine: people come here to plan, compare, and choose services. Unlike social posts that disappear quickly, Pinterest pins can keep appearing in searches for weeks or even months. That means consistent visibility and traffic from people actively looking for what you offer.",
+            "usp": [
+                "Search-driven traffic helps you get discovered",
+                "Pins keep working long after posting",
+                "Ideal for services, restaurants, shops, and professionals"
+            ],
+            "items": {
+                "traffic": {
+                    "title": "Constant Traffic over Time",
+                    "desc": "Pinterest works like a search: when people look for services and ideas, your pin can keep appearing over time. Unlike posts that disappear quickly, pins can keep generating website visits and inquiries long after being published."
+                },
+                "intent": {
+                    "title": "High Intent Customers",
+                    "desc": "Pinterest users are planners. They save options, compare providers, and return when they're ready to book or buy. This means clicks usually come from people with real intent, not just casual scrolling."
+                },
+                "seo": {
+                    "title": "Pinterest SEO Optimization",
+                    "desc": "We optimize titles, keywords, and categories so you get found. We use service + location terms (e.g., 'Cleaning service in Chicago suburbs') so Pinterest understands what you offer."
+                },
+                "community": {
+                    "title": "Featured in the Latino Community",
+                    "desc": "This is more than a random post: it's your place within a curated directory for Latino businesses. This adds credibility, helps category discovery, and builds trust with new customers."
+                },
+                "creative": {
+                    "title": "Professional Pins that Convert",
+                    "desc": "We create pins that look professional and trustworthy: clear titles, impactful visuals, and a direct call to action. This improves click-through rates and makes your business the obvious choice."
+                },
+                "performance": {
+                    "title": "Measurable Performance",
+                    "desc": "Pinterest provides clear metrics (impressions, saves, outbound clicks). We use those signals to understand what content works best and how to keep improving visibility and results."
+                }
+            },
+            "contrast": "Unlike Facebook or Instagram, pins don't disappear in 24 hours: they continue to generate visibility, clicks, and customers over time."
+        },
+        "industries": {
+            "title": "Solutions for Every Industry",
+            "subtitle": "We adapt our strategy to the specific needs of your business.",
+            "footer": "These examples show how different industries can use Pinterest to attract customers who are actively searching and planning.",
+            "items": [
+                {
+                    "title": "Sealcoating Services",
+                    "desc": "Protect and maintain your customers' asphalt."
+                },
+                {
+                    "title": "Yard Signs",
+                    "desc": "Effective local advertising in every corner."
+                },
+                {
+                    "title": "Embroidery Services",
+                    "desc": "Technical customization for companies and events."
+                },
+                {
+                    "title": "Direct Mail (EDDM)",
+                    "desc": "Reach every mailbox with direct mail."
+                },
+                {
+                    "title": "Remodeling",
+                    "desc": "Kitchens, bathrooms, and full renovations."
+                },
+                {
+                    "title": "Catering & Food",
+                    "desc": "Events, taquizas, and gastronomic services."
+                },
+                {
+                    "title": "Landscaping",
+                    "desc": "Garden design and maintenance."
+                },
+                {
+                    "title": "Professional Cleaning",
+                    "desc": "Houses, offices, and deep cleaning."
+                },
+                {
+                    "title": "Beauty Salons",
+                    "desc": "Esthetics, nails, and spa services."
+                },
+                {
+                    "title": "Legal Services",
+                    "desc": "Lawyers, notaries, and professional advice."
+                }
+            ],
+            "reinforcement": "Don't see your industry here? We also work with other local services, professionals, and growing businesses across the United States."
+        },
+        "pricing": {
+            "title": "What Each Package Includes",
+            "subtitle": "Send us your business information — we take care of the strategy, design, and posting on Pinterest.",
+            "packages_list": {
+                "basic": {
+                    "name": "Basic",
+                    "desc": "Perfect for businesses just starting on Pinterest",
+                    "ideal": "Local businesses looking for visibility and discovery without complications.",
+                    "delivery": "3–5 business days",
+                    "cta": "Start Now"
+                },
+                "pro": {
+                    "name": "Pro",
+                    "desc": "The best choice for consistent visibility and a more solid positioning",
+                    "ideal": "Businesses wanting constant exposure and higher chances of receiving inquiries.",
+                    "delivery": "5–7 business days",
+                    "cta": "Choose Pro"
+                },
+                "elite": {
+                    "name": "Elite",
+                    "desc": "Maximum exposure for competitive businesses or national reach",
+                    "ideal": "Businesses aiming for high-demand categories or multi-city / USA reach.",
+                    "delivery": "7–10 business days",
+                    "cta": "Go Elite"
+                }
+            },
+            "common_features_title": "Everything we include in every package:",
+            "common_features": [
+                "Professional pin design (clean, high-conversion design)",
+                "SEO Optimization (keywords, titles, descriptions, tagged topics)",
+                "Category placement in the Latino Business Directory",
+                "Link setup (website, WhatsApp, booking page, or Google)",
+                "Strong Call to Action to generate clicks and inquiries",
+                "Industry-specific positioning (so the right customers find you)",
+                "Quality control before posting",
+                "Basic support for edits (small text/link updates)"
+            ],
+            "no_website": "Don't have a website? No problem — we can link to WhatsApp or your Google Business Profile.",
+            "disclaimer": "Results vary by industry, location, season, and competition. We guarantee professional setup, optimization, and placement — not specific sales results.",
+            "payment_suffix": "/ one-time payment",
+            "ideal_label": "Ideal for:",
+            "delivery_label": "Delivery:",
+            "pro_social_proof": "⭐ The most chosen package by local businesses in Chicago, the Midwest, and other US cities."
+        },
+        "how_it_works": {
+            "title": "As easy as 1–2–3",
+            "subtitle": "You don't need to be a marketing expert. We handle the technical part.",
+            "steps": {
+                "step1": {
+                    "title": "1. Choose your Package",
+                    "desc": "Select the plan that matches your goals: local visibility, solid positioning, or national exposure."
+                },
+                "step2": {
+                    "title": "2. Send us your Info",
+                    "desc": "Share your logo, photos, services, location, and preferred contact link. No website required."
+                },
+                "step3": {
+                    "title": "3. We Create, Post, and Optimize",
+                    "desc": "We design your Pinterest pins, optimize them for search, place you in the correct category, and post everything for you."
+                }
+            },
+            "note": "Your pins remain active and visible in searches, working for your business even when you're offline."
+        },
+        "faq": {
+            "title": "Frequently Asked Questions",
+            "subtitle": "We resolve your doubts so you can make the best decision.",
+            "items": [
+                {
+                    "q": "Do I need a Pinterest account?",
+                    "a": "No. You don't need to manage Pinterest yourself. We create, optimize, and post pins for your business. If you already have an account, we can connect and optimize it."
+                },
+                {
+                    "q": "Is this a one-time or monthly payment?",
+                    "a": "This is a one-time payment per package. There are no mandatory monthly fees. Your pins remain active and visible in searches after posting."
+                },
+                {
+                    "q": "What happens if I don't have a website?",
+                    "a": "No problem. We can link your pin to WhatsApp, a booking page, Instagram, or your Google Business Profile."
+                },
+                {
+                    "q": "How long does it take to see results?",
+                    "a": "Pinterest works differently than social media. Some activity may start within days, but the strongest results generally build over time as pins continue to appear in searches."
+                },
+                {
+                    "q": "What type of businesses work best on Pinterest?",
+                    "a": "Service businesses, restaurants, local professionals, retail, and visual services work especially well. We adapt the strategy to your industry."
+                },
+                {
+                    "q": "Can I update my pin later?",
+                    "a": "Yes. Small updates like links or text adjustments are included. Larger redesigns or additional pins may require a package upgrade."
+                },
+                {
+                    "q": "Do you guarantee sales or leads?",
+                    "a": "We guarantee professional setup, SEO optimization, and correct placement. Results vary by industry, location, season, and competition, so specific sales results are not guaranteed."
+                },
+                {
+                    "q": "Is this local or national?",
+                    "a": "Both. Pinterest is a national platform. We optimize your pins for local, state, or nationwide exposure, depending on your business goals."
+                }
+            ]
+        },
+        "final_cta": {
+            "title": "Ready to stand out on Pinterest?",
+            "description": "Appear in the Latino Business Directory with professional search-optimized pins — so customers can find and contact you.",
+            "cta_packages": "View Packages",
+            "cta_whatsapp": "Chat on WhatsApp",
+            "trust": "Proven system with real results in local businesses and adaptable to a national level in the United States."
+        },
+        "footer": {
+            "title": "Genes Marketing",
+            "description": "Helping Latino entrepreneurs in the United States grow through the power of Pinterest.",
+            "links_title": "Links",
+            "links": {
+                "home": "Home",
+                "benefits": "Benefits",
+                "pricing": "Pricing",
+                "contact": "Contact"
+            },
+            "legal_title": "Legal",
+            "legal": {
+                "privacy": "Privacy",
+                "terms": "Terms"
+            },
+            "rights": "© {year} Genes Marketing. All rights reserved.",
+            "made_with": "Made with ❤️ for the Latino community."
+        },
+        "popup": {
+            "time": {
+                "title": "Don't leave without advertising!",
+                "subtitle": "Join our list and receive weekly tips to grow your business in the USA.",
+                "cta": "Subscribe for Free"
+            },
+            "exit": {
+                "badge": "Special Offer",
+                "title": "Wait! Get 10% OFF",
+                "subtitle": "On your first package if you register today. Don't miss this growth opportunity.",
+                "cta": "Get my Discount"
+            },
+            "form": {
+                "placeholder": "Your email address",
+                "success": "Thank you! Check your email.",
+                "note": "No spam. Only high-value tips."
+            }
+        },
+        "testimonials": {
+            "title": "Real Success Stories",
+            "subtitle": "Join hundreds of Latino businesses already growing with us.",
+            "items": [
+                {
+                    "name": "Maria González",
+                    "business": "Taquería Los Primos",
+                    "quote": "Since we started advertising on Genes Marketing, we receive calls asking for our catering events every week. Incredible!"
+                },
+                {
+                    "name": "Carlos Rivera",
+                    "business": "Rivera Construction",
+                    "quote": "I didn't understand Pinterest, but they did it all for me. Now I have customers finding me by searching for remodels in Chicago."
+                },
+                {
+                    "name": "Ana Torres",
+                    "business": "Beauty by Ana",
+                    "quote": "My clients tell me they saw my nail designs on Pinterest. The investment paid for itself in the first week."
+                }
+            ]
+        },
+        "contact_info": {
+            "title": "Contact a Specialist",
+            "subtitle": "We are here to help you take your business to the next level on Pinterest.",
+            "whatsapp_label": "Send us a message",
+            "whatsapp_button": "Chat on WhatsApp",
+            "email_label": "Email us",
+            "email": "ventas@genes.marketing",
+            "availability": "Monday – Friday, 9am – 6pm CST"
+        }
     }
 }

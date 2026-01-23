@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Link } from "@/src/i18n/routing";
+import { Link, usePathname } from "@/src/i18n/routing";
 import { useTranslations } from "next-intl";
 import { LanguagePicker } from "./LanguagePicker";
 import { Menu, X, ShoppingBag } from "lucide-react";
@@ -12,6 +12,12 @@ export function Header() {
     const t = useTranslations("HomePage");
     const [isMenuOpen, setIsMenuOpen] = React.useState(false);
     const { toggleCart, totalItems } = useCart();
+    const pathname = usePathname();
+
+    // Hide global header on the marketing landing page
+    if (pathname === "/genes-marketing") {
+        return null;
+    }
 
     return (
         <nav className="fixed w-full z-50 bg-[#FDFBF7]/90 backdrop-blur-md border-b border-stone-100">
