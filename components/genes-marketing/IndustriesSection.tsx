@@ -1,4 +1,4 @@
-import { Utensils, Sparkles, Hammer, Scissors, Truck, Shirt, Megaphone, Mail, Home, Wrench, ShieldCheck, Briefcase } from "lucide-react";
+import { Utensils, Sparkles, Hammer, Scissors, Truck, Shirt, Megaphone, Mail, Home, Wrench, ShieldCheck, Briefcase, Calculator } from "lucide-react";
 import { useTranslations } from "next-intl";
 
 export default function IndustriesSection() {
@@ -11,7 +11,7 @@ export default function IndustriesSection() {
             description: t('items.0.desc'),
             color: "text-amber-500",
             bg: "bg-amber-500/10",
-            image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=800&auto=format&fit=crop"
+            image: "/images/Sealcoating Services.webp"
         },
         {
             icon: Sparkles,
@@ -19,7 +19,7 @@ export default function IndustriesSection() {
             description: t('items.1.desc'),
             color: "text-cyan-500",
             bg: "bg-cyan-500/10",
-            image: "https://images.unsplash.com/photo-1581578731117-104f2a41272c?q=80&w=800&auto=format&fit=crop"
+            image: "/images/Catering & Food.png"
         },
         {
             icon: Hammer,
@@ -27,7 +27,7 @@ export default function IndustriesSection() {
             description: t('items.2.desc'),
             color: "text-slate-500",
             bg: "bg-slate-500/10",
-            image: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=800&auto=format&fit=crop"
+            image: "/images/Remodeling Services.jpg"
         },
         {
             icon: Wrench,
@@ -35,7 +35,7 @@ export default function IndustriesSection() {
             description: t('items.3.desc'),
             color: "text-blue-500",
             bg: "bg-blue-500/10",
-            image: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=800&auto=format&fit=crop"
+            image: "/images/Landscaping.jpg"
         },
         {
             icon: Scissors,
@@ -43,7 +43,7 @@ export default function IndustriesSection() {
             description: t('items.4.desc'),
             color: "text-pink-500",
             bg: "bg-pink-500/10",
-            image: "https://images.unsplash.com/photo-1560066984-12186d30b73c?q=80&w=800&auto=format&fit=crop"
+            image: "/images/Professional Cleaning.jpg"
         },
         {
             icon: Home,
@@ -59,7 +59,7 @@ export default function IndustriesSection() {
             description: t('items.6.desc'),
             color: "text-slate-800",
             bg: "bg-slate-800/10",
-            image: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=800&auto=format&fit=crop"
+            image: "/images/Beauty Salons.jpg"
         },
         {
             icon: Shirt,
@@ -84,6 +84,14 @@ export default function IndustriesSection() {
             color: "text-red-500",
             bg: "bg-red-500/10",
             image: "https://images.unsplash.com/photo-1579389083078-4e7018379f7e?q=80&w=800&auto=format&fit=crop"
+        },
+        {
+            icon: Calculator,
+            title: t('items.10.title'),
+            description: t('items.10.desc'),
+            color: "text-emerald-600",
+            bg: "bg-emerald-600/10",
+            image: "/images/tax Legal Services.webp"
         },
     ];
 
