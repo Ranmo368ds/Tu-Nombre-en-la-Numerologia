@@ -1736,5 +1736,93 @@
             "button": "Request Free Strategy",
             "smallPrint": "No commitment. Focused on real results."
         }
+    },
+    "LocalMarketingPage": {
+        "seo": {
+            "title": "Smart Local Advertising | EDDM Flyers, Digital & Pinterest",
+            "description": "Local physical + digital advertising that generates real calls. EDDM flyers direct to homes + digital page + Pinterest. Chicago Northwest Suburbs.",
+            "keywords": "local advertising, local marketing, eddm flyers, pinterest marketing, local leads, local business marketing"
+        },
+        "hero": {
+            "badge": "Smart Local Advertising That Actually Works",
+            "title": "Advertising That Generates Real Calls",
+            "subtitle": "We combine direct-to-home EDDM Flyers + Your own Digital Page + Pinterest to create the most powerful local marketing ecosystem for your business.",
+            "cta": "I want to be in the next flyer"
+        },
+        "problem": {
+            "title": "Why traditional advertising fails?",
+            "item1": "Cards that no one sees or get thrown away",
+            "item2": "Costly and inefficient manual distribution",
+            "item3": "Digital ads without real local reach"
+        },
+        "solution": {
+            "title": "The Solution: Physical + Digital Ecosystem",
+            "item1": "Flyer sent direct to homes (USPS)",
+            "item2": "Landing page for participating businesses",
+            "item3": "Functional QR code for traceability",
+            "item4": "Pinterest included for visual reinforcement"
+        },
+        "steps": {
+            "title": "How It Works in 3 Steps",
+            "step1": {
+                "title": "Join the flyer",
+                "description": "Reserve your spot in the area where you want to work."
+            },
+            "step2": {
+                "title": "We design & send",
+                "description": "We create your ad and send it direct to mailboxes via EDDM."
+            },
+            "step3": {
+                "title": "Get results",
+                "description": "Start receiving calls and constant digital traffic."
+            }
+        },
+        "pinterest": {
+            "badge": "EXCLUSIVE BONUS",
+            "title": "Digital Power with Pinterest",
+            "item1": "Professional pins of your services",
+            "item2": "Pinterest-optimized SEO",
+            "item3": "Inclusion in Chicago Latino Directory",
+            "item4": "Constant traffic without extra ad spend"
+        },
+        "pricing": {
+            "title": "Choose Your Growth Package",
+            "mostPopular": "Most Popular",
+            "selectPlan": "Reserve your spot now",
+            "basic": {
+                "name": "BASIC",
+                "features": {
+                    "item1": "Inclusion in shared EDDM flyer",
+                    "item2": "Basic digital page",
+                    "item3": "Contact QR code",
+                    "item4": "1 professional Pinterest Pin"
+                }
+            },
+            "pro": {
+                "name": "PRO",
+                "features": {
+                    "item1": "Everything in BASIC",
+                    "item2": "Industry-optimized digital page",
+                    "item3": "3 optimized SEO Pins",
+                    "item4": "Featured Pinterest inclusion",
+                    "item5": "Direct contact buttons"
+                }
+            },
+            "elite": {
+                "name": "ELITE",
+                "features": {
+                    "item1": "Preferred position on the flyer",
+                    "item2": "Dedicated individual page per service",
+                    "item3": "5 specialized SEO Pins",
+                    "item4": "Geo-localized optimization per city",
+                    "item5": "Priority for future mailings"
+                }
+            }
+        },
+        "finalCTA": {
+            "title": "Ready to dominate your local market?",
+            "subtitle": "Reserve your spot now. Limited spaces per area to guarantee exclusivity.",
+            "button": "Reserve your spot now"
+        }
     }
 }

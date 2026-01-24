@@ -1751,5 +1751,93 @@
             "button": "Solicitar Estrategia Gratis",
             "smallPrint": "Sin compromiso. Enfocado a resultados reales."
         }
+    },
+    "LocalMarketingPage": {
+        "seo": {
+            "title": "Publicidad Local Inteligente | Flyers EDDM, Digital y Pinterest",
+            "description": "Publicidad local física + digital que genera llamadas reales. Flyers EDDM directos a casas + página digital + Pinterest. Chicago Northwest Suburbs.",
+            "keywords": "publicidad local, marketing local, flyers eddm, pinterest marketing, leads locales, marketing para negocios locales"
+        },
+        "hero": {
+            "badge": "Publicidad Local Inteligente que Sí Funciona",
+            "title": "Publicidad que Sí Genera Llamadas Reales",
+            "subtitle": "Combinamos Flyers EDDM directos a casas + Tu propia Página Digital + Pinterest para crear el ecosistema de marketing local más potente para tu negocio.",
+            "cta": "Quiero aparecer en el próximo flyer"
+        },
+        "problem": {
+            "title": "¿Por qué la publicidad tradicional falla?",
+            "item1": "Tarjetas que nadie ve o se tiran",
+            "item2": "Reparto manual costoso e ineficiente",
+            "item3": "Publicidad digital sin alcance local real"
+        },
+        "solution": {
+            "title": "La Solución: El Ecosistema Físico + Digital",
+            "item1": "Flyer enviado directo a casas (USPS)",
+            "item2": "Página web para los negocios participantes",
+            "item3": "Código QR funcional para trazabilidad",
+            "item4": "Pinterest incluido como refuerzo visual"
+        },
+        "steps": {
+            "title": "Cómo Funciona en 3 Pasos",
+            "step1": {
+                "title": "Te unes al flyer",
+                "description": "Reserva tu espacio en la zona donde quieres trabajar."
+            },
+            "step2": {
+                "title": "Diseñamos y enviamos",
+                "description": "Creamos tu anuncio y lo enviamos directo a los buzones vía EDDM."
+            },
+            "step3": {
+                "title": "Recibes resultados",
+                "description": "Empieza a recibir llamadas y tráfico digital constante."
+            }
+        },
+        "pinterest": {
+            "badge": "BONUS EXCLUSIVO",
+            "title": "Potencia Digital con Pinterest",
+            "item1": "Pines profesionales de tus servicios",
+            "item2": "SEO optimizado en Pinterest",
+            "item3": "Inclusión en Directorio Latino Chicago",
+            "item4": "Tráfico constante sin pagar anuncios extra"
+        },
+        "pricing": {
+            "title": "Elige tu Paquete de Crecimiento",
+            "mostPopular": "Más Vendido",
+            "selectPlan": "Reserva tu espacio ahora",
+            "basic": {
+                "name": "BASIC",
+                "features": {
+                    "item1": "Inclusión en flyer EDDM compartido",
+                    "item2": "Página digital básica",
+                    "item3": "Código QR de contacto",
+                    "item4": "1 Pin profesional en Pinterest"
+                }
+            },
+            "pro": {
+                "name": "PRO",
+                "features": {
+                    "item1": "Todo lo incluido en BASIC",
+                    "item2": "Página digital optimizada por industria",
+                    "item3": "3 Pines SEO optimizados",
+                    "item4": "Inclusión destacada en Pinterest",
+                    "item5": "Botones de contacto directos"
+                }
+            },
+            "elite": {
+                "name": "ELITE",
+                "features": {
+                    "item1": "Posición preferente en el flyer",
+                    "item2": "Página individual dedicada por servicio",
+                    "item3": "5 Pines SEO especializados",
+                    "item4": "Optimización geolocalizada por ciudad",
+                    "item5": "Prioridad en próximos envíos"
+                }
+            }
+        },
+        "finalCTA": {
+            "title": "¿Listo para dominar tu mercado local?",
+            "subtitle": "Reserva tu espacio ahora. Cupos limitados por zona para garantizar exclusividad.",
+            "button": "Reserva tu espacio ahora"
+        }
     }
 }
