@@ -1023,5 +1023,224 @@
             "cta": "Request Free Strategy",
             "trustLine": "Quick response. No commitment. Results-focused."
         }
+    },
+    "TaxServicePage": {
+        "seo": {
+            "title": "Tax Service Marketing | EDDM, Google Ads, Pinterest & Local Advertising",
+            "description": "Attract more clients to your tax office with EDDM, Door Hangers, Google Ads, Pinterest, and Yard Signs. Local strategies for Chicago Northwest Suburbs and surrounding areas.",
+            "keywords": "tax service marketing, tax preparation advertising, ITIN services marketing, tax office leads, tax service Chicago, accountant marketing, EDDM tax services, Google Ads tax preparers"
+        },
+        "hero": {
+            "badge": "Specialized Marketing for Tax Services",
+            "title": "Marketing for Tax Offices and Tax Preparers",
+            "subtitle": "Attract more clients during tax season and keep your business visible year-round with a local marketing system designed specifically for tax services.",
+            "cta_primary": "Request Free Strategy",
+            "cta_secondary": "View Advertising Examples",
+            "trust": {
+                "clients": "Chicago Northwest Suburbs",
+                "results": "Proven Results",
+                "guarantee": "No Long Contracts"
+            }
+        },
+        "problem": {
+            "title": "Why do many tax offices only have clients during season?",
+            "description": "Tax services face a unique challenge: most clients only think about taxes a few months a year. Additionally, competition is high, trust is key, and many businesses rely solely on 'word of mouth,' losing new clients every season.",
+            "challenges_title": "Common challenges:",
+            "challenges": {
+                "challenge1": "High competition during tax season",
+                "challenge2": "Clients searching 'taxes near me' and calling the first one they see",
+                "challenge3": "Lack of differentiation between offices",
+                "challenge4": "Low recognition outside of season",
+                "challenge5": "Distrust without professional and visible presence"
+            },
+            "callout": "Here the client thinks: 'That's happening to me'."
+        },
+        "marketing": {
+            "title": "A local marketing system designed for Tax Services",
+            "subtitle": "At Genes Marketing we combine physical and digital strategies to help you capture new clients, reinforce your credibility, and maintain constant presence in your area.",
+            "eddm": {
+                "title": "🔹 1) EDDM (Direct Mail for Taxes)",
+                "description": "EDDM is ideal for tax services because it reaches directly to homes and small businesses in your area.",
+                "useCases": {
+                    "title": "Works for:",
+                    "item1": "Promoting tax season",
+                    "item2": "Personal and business returns",
+                    "item3": "ITIN services",
+                    "item4": "Deadline reminders",
+                    "item5": "Positioning yourself as 'the trusted local office'"
+                },
+                "whatWeDo": {
+                    "title": "What we do:",
+                    "item1": "Professional and clear design",
+                    "item2": "Message focused on trust and experience",
+                    "item3": "Strategic route selection by city",
+                    "item4": "Printing and mailing coordination"
+                }
+            },
+            "doorHangers": {
+                "title": "🔹 2) Door Hangers (Direct neighborhood presence)",
+                "description": "Door hangers work very well for local offices because they generate recall and closeness.",
+                "useCases": {
+                    "title": "Ideal for:",
+                    "item1": "Tax season",
+                    "item2": "New openings",
+                    "item3": "Services like ITIN or bookkeeping",
+                    "item4": "Neighborhoods near your office"
+                }
+            },
+            "googleAds": {
+                "title": "🔹 3) Google Ads (Clients ready to hire)",
+                "description": "Google Ads is key for tax services because intent is high.",
+                "useCases": {
+                    "title": "Common searches:",
+                    "item1": "tax services near me",
+                    "item2": "income tax preparation",
+                    "item3": "ITIN application help",
+                    "item4": "business tax filing",
+                    "item5": "tax preparer near me"
+                },
+                "whatWeDo": {
+                    "title": "What we do:",
+                    "item1": "Call-focused campaigns",
+                    "item2": "City-based targeting",
+                    "item3": "Clear and trustworthy ads",
+                    "item4": "Seasonal optimization",
+                    "item5": "Simple and clear reports"
+                }
+            },
+            "pinterest": {
+                "title": "🔹 4) Pinterest (Trust + continuous visibility)",
+                "description": "Pinterest helps reinforce credibility and visibility, especially for family audiences and entrepreneurs.",
+                "useCases": {
+                    "title": "Pinterest works for:",
+                    "item1": "Showcasing services (personal, business, ITIN)",
+                    "item2": "Positioning yourself as an expert",
+                    "item3": "Constant traffic to your site",
+                    "item4": "Brand recall before and after tax season"
+                }
+            },
+            "yardSigns": {
+                "title": "🔹 5) Yard Signs (Local social proof)",
+                "description": "A well-placed yard sign near your office or in strategic areas generates immediate trust.",
+                "useCases": {
+                    "title": "Useful for:",
+                    "item1": "Peak season",
+                    "item2": "Local branding",
+                    "item3": "Neighbors and local traffic",
+                    "item4": "Reinforcement of EDDM and Google Ads"
+                }
+            }
+        },
+        "services": {
+            "title": "Services You Can Promote",
+            "subtitle": "Each service can have its own pin, ad, and specific message.",
+            "personal": {
+                "title": "Personal Tax Preparation",
+                "description": "Individual and family returns with personalized attention."
+            },
+            "business": {
+                "title": "Business Taxes",
+                "description": "Corporate returns, LLC, and small business filings."
+            },
+            "itin": {
+                "title": "ITIN Services",
+                "description": "ITIN processing for individuals without SSN."
+            },
+            "bookkeeping": {
+                "title": "Basic Bookkeeping",
+                "description": "Accounting services to keep your finances in order."
+            },
+            "independent": {
+                "title": "Taxes for Independent Contractors",
+                "description": "Returns for contractors and self-employed workers."
+            },
+            "backTaxes": {
+                "title": "Back Tax Returns",
+                "description": "Help with taxes from previous years."
+            },
+            "callout": "Each one can have its own pin, ad, and specific message."
+        },
+        "areas": {
+            "badge": "Local Coverage",
+            "title": "Areas We Serve",
+            "description": "We serve tax offices and tax preparers in Chicago Northwest Suburbs, including Algonquin, Huntley, Elgin, Crystal Lake, Carpentersville, Barrington, Woodstock, McHenry, Schaumburg, and nearby areas in northern Illinois and southern Wisconsin.",
+            "additional": "And nearby areas in northern Illinois and southern Wisconsin"
+        },
+        "pricing": {
+            "title": "Recommended Packages for Tax Services",
+            "subtitle": "Choose the package that best fits your growth goals.",
+            "popular": "Most Popular",
+            "idealFor": "Ideal for:",
+            "starter": {
+                "name": "Local Presence",
+                "subtitle": "Starter",
+                "features": {
+                    "item1": "Flyer / door hanger design",
+                    "item2": "Yard signs",
+                    "item3": "Tax season focused messaging",
+                    "item4": "Basic support"
+                },
+                "idealFor": "New offices or peak season"
+            },
+            "pro": {
+                "name": "Pro Visibility",
+                "subtitle": "Professional",
+                "features": {
+                    "item1": "Google Ads (setup + optimization)",
+                    "item2": "Pinterest (service-specific pins)",
+                    "item3": "Call-focused creatives",
+                    "item4": "Monthly reports",
+                    "item5": "Priority support"
+                },
+                "idealFor": "Consistent client flow during season"
+            },
+            "allin": {
+                "name": "Local Dominance",
+                "subtitle": "All-in",
+                "features": {
+                    "item1": "Monthly EDDM by routes",
+                    "item2": "Google Ads + reports",
+                    "item3": "Pinterest + Featured Directory",
+                    "item4": "Yard signs + door hangers",
+                    "item5": "Dedicated 24/7 support"
+                },
+                "idealFor": "Offices wanting to lead their area each season"
+            }
+        },
+        "faq": {
+            "title": "Frequently Asked Questions",
+            "subtitle": "Answers to the most common questions about tax service marketing.",
+            "q1": {
+                "question": "When is the best time to advertise taxes?",
+                "answer": "Start 2–3 months before tax season to create recall and dominate your area. Ideally, begin in November or December to be present when clients start searching."
+            },
+            "q2": {
+                "question": "Does marketing work outside tax season?",
+                "answer": "Yes. ITIN, bookkeeping, and business taxes allow you to capture clients year-round. Plus, maintaining presence outside season positions you as the first choice when tax season arrives."
+            },
+            "q3": {
+                "question": "Can I focus only on my city?",
+                "answer": "Yes. We recommend dominating your main city first and then expanding. Local marketing works best when you focus on specific areas where you can build recognition and trust."
+            },
+            "q4": {
+                "question": "Do I need a perfect website?",
+                "answer": "Not necessarily. The most important thing is to have visible presence (Google Ads, EDDM, yard signs) and a clear phone number. A basic website helps, but it's not required to start."
+            },
+            "q5": {
+                "question": "What's the best combination for tax services?",
+                "answer": "The most effective combination is EDDM + Google Ads + Yard Signs. EDDM creates local presence, Google Ads captures active searches, and yard signs generate neighborhood trust."
+            }
+        },
+        "finalCTA": {
+            "title": "Ready to attract more clients to your Tax Service?",
+            "subtitle": "If you want to stop depending only on the season and build a visible and trustworthy business, our system is designed for you.",
+            "benefits": {
+                "item1": "No commitment",
+                "item2": "Personalized strategy",
+                "item3": "Real results"
+            },
+            "button": "Request Free Strategy",
+            "smallPrint": "No commitment. Focused on real results."
+        }
     }
 }

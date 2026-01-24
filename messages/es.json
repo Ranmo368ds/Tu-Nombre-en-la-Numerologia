@@ -1038,5 +1038,224 @@
             "cta": "Solicitar Estrategia Gratis",
             "trustLine": "Respuesta rápida. Sin compromiso. Enfocado a resultados."
         }
+    },
+    "TaxServicePage": {
+        "seo": {
+            "title": "Marketing para Tax Services | EDDM, Google Ads, Pinterest y Publicidad Local",
+            "description": "Atrae más clientes para tu oficina de impuestos con EDDM, Door Hangers, Google Ads, Pinterest y Yard Signs. Estrategias locales para Chicago Northwest Suburbs y alrededores.",
+            "keywords": "marketing para tax services, publicidad para preparadores de impuestos, ITIN services marketing, leads para oficinas de taxes, tax service Chicago, marketing para contadores, EDDM tax services, Google Ads preparadores de impuestos"
+        },
+        "hero": {
+            "badge": "Marketing Especializado para Tax Services",
+            "title": "Marketing para Oficinas de Taxes y Preparadores de Impuestos",
+            "subtitle": "Atrae más clientes durante tax season y mantén tu negocio visible todo el año con un sistema de marketing local diseñado específicamente para tax services.",
+            "cta_primary": "Solicitar Estrategia Gratis",
+            "cta_secondary": "Ver Ejemplos de Publicidad",
+            "trust": {
+                "clients": "Chicago Northwest Suburbs",
+                "results": "Resultados Comprobados",
+                "guarantee": "Sin Contratos Largos"
+            }
+        },
+        "problem": {
+            "title": "¿Por qué muchas oficinas de impuestos solo tienen clientes en temporada?",
+            "description": "Los tax services enfrentan un reto único: la mayoría de los clientes solo piensa en impuestos unos meses al año. Además, la competencia es alta, la confianza es clave y muchos negocios dependen únicamente del 'voz a voz', perdiendo clientes nuevos cada temporada.",
+            "challenges_title": "Retos comunes:",
+            "challenges": {
+                "challenge1": "Alta competencia durante tax season",
+                "challenge2": "Clientes que buscan 'taxes near me' y llaman al primero que ven",
+                "challenge3": "Falta de diferenciación entre oficinas",
+                "challenge4": "Poco reconocimiento fuera de temporada",
+                "challenge5": "Desconfianza si no hay presencia profesional y visible"
+            },
+            "callout": "Aquí el cliente piensa: 'Eso me pasa a mí'."
+        },
+        "marketing": {
+            "title": "Un sistema de marketing local diseñado para Tax Services",
+            "subtitle": "En Genes Marketing combinamos estrategias físicas y digitales para ayudarte a captar clientes nuevos, reforzar tu credibilidad y mantener presencia constante en tu área.",
+            "eddm": {
+                "title": "🔹 1) EDDM (Correo Directo para Taxes)",
+                "description": "EDDM es ideal para tax services porque llega directo a hogares y pequeños negocios en tu zona.",
+                "useCases": {
+                    "title": "Funciona para:",
+                    "item1": "Promocionar tax season",
+                    "item2": "Declaraciones personales y de negocios",
+                    "item3": "ITIN services",
+                    "item4": "Recordatorios de fechas límite",
+                    "item5": "Posicionarte como 'la oficina local de confianza'"
+                },
+                "whatWeDo": {
+                    "title": "Qué hacemos:",
+                    "item1": "Diseño profesional y claro",
+                    "item2": "Mensaje enfocado en confianza y experiencia",
+                    "item3": "Selección estratégica de rutas por ciudad",
+                    "item4": "Coordinación de impresión y envío"
+                }
+            },
+            "doorHangers": {
+                "title": "🔹 2) Door Hangers (Presencia directa en el vecindario)",
+                "description": "Los door hangers funcionan muy bien para oficinas locales porque generan recordación y cercanía.",
+                "useCases": {
+                    "title": "Ideales para:",
+                    "item1": "Tax season",
+                    "item2": "Nuevas aperturas",
+                    "item3": "Servicios como ITIN o bookkeeping",
+                    "item4": "Vecindarios cercanos a tu oficina"
+                }
+            },
+            "googleAds": {
+                "title": "🔹 3) Google Ads (Clientes listos para contratar)",
+                "description": "Google Ads es clave para tax services porque la intención es alta.",
+                "useCases": {
+                    "title": "Búsquedas comunes:",
+                    "item1": "tax services near me",
+                    "item2": "income tax preparation",
+                    "item3": "ITIN application help",
+                    "item4": "business tax filing",
+                    "item5": "tax preparer near me"
+                },
+                "whatWeDo": {
+                    "title": "Qué hacemos:",
+                    "item1": "Campañas enfocadas en llamadas",
+                    "item2": "Segmentación por ciudad",
+                    "item3": "Anuncios claros y confiables",
+                    "item4": "Optimización por temporada",
+                    "item5": "Reportes simples y claros"
+                }
+            },
+            "pinterest": {
+                "title": "🔹 4) Pinterest (Confianza + visibilidad continua)",
+                "description": "Pinterest ayuda a reforzar credibilidad y visibilidad, especialmente para audiencias familiares y emprendedores.",
+                "useCases": {
+                    "title": "Pinterest sirve para:",
+                    "item1": "Mostrar servicios (personal, business, ITIN)",
+                    "item2": "Posicionarte como experto",
+                    "item3": "Tráfico constante a tu sitio",
+                    "item4": "Recordación de marca antes y después de tax season"
+                }
+            },
+            "yardSigns": {
+                "title": "🔹 5) Yard Signs (Prueba social local)",
+                "description": "Un yard sign bien colocado cerca de tu oficina o en zonas estratégicas genera confianza inmediata.",
+                "useCases": {
+                    "title": "Útiles para:",
+                    "item1": "Temporada alta",
+                    "item2": "Branding local",
+                    "item3": "Vecinos y tráfico local",
+                    "item4": "Refuerzo de EDDM y Google Ads"
+                }
+            }
+        },
+        "services": {
+            "title": "Servicios que Puedes Promocionar",
+            "subtitle": "Cada servicio puede tener su pin, su anuncio y su mensaje específico.",
+            "personal": {
+                "title": "Preparación de Impuestos Personales",
+                "description": "Declaraciones individuales y familiares con atención personalizada."
+            },
+            "business": {
+                "title": "Impuestos para Negocios",
+                "description": "Declaraciones corporativas, LLC, y pequeños negocios."
+            },
+            "itin": {
+                "title": "ITIN Services",
+                "description": "Tramitación de ITIN para personas sin SSN."
+            },
+            "bookkeeping": {
+                "title": "Bookkeeping Básico",
+                "description": "Servicios de contabilidad para mantener tus finanzas en orden."
+            },
+            "independent": {
+                "title": "Taxes para Independientes",
+                "description": "Declaraciones para contractors y trabajadores por cuenta propia."
+            },
+            "backTaxes": {
+                "title": "Declaraciones Atrasadas",
+                "description": "Ayuda con impuestos de años anteriores."
+            },
+            "callout": "Cada uno puede tener su pin, su anuncio y su mensaje específico."
+        },
+        "areas": {
+            "badge": "Cobertura Local",
+            "title": "Áreas que Atendemos",
+            "description": "Atendemos oficinas de taxes y preparadores de impuestos en Chicago Northwest Suburbs, incluyendo Algonquin, Huntley, Elgin, Crystal Lake, Carpentersville, Barrington, Woodstock, McHenry, Schaumburg y áreas cercanas del norte de Illinois y sur de Wisconsin.",
+            "additional": "Y áreas cercanas del norte de Illinois y sur de Wisconsin"
+        },
+        "pricing": {
+            "title": "Paquetes Recomendados para Tax Services",
+            "subtitle": "Elige el paquete que mejor se adapte a tus objetivos de crecimiento.",
+            "popular": "Más Popular",
+            "idealFor": "Ideal para:",
+            "starter": {
+                "name": "Presencia Local",
+                "subtitle": "Starter",
+                "features": {
+                    "item1": "Diseño de flyers / door hangers",
+                    "item2": "Yard signs",
+                    "item3": "Mensaje enfocado en tax season",
+                    "item4": "Soporte básico"
+                },
+                "idealFor": "Oficinas nuevas o temporada alta"
+            },
+            "pro": {
+                "name": "Visibilidad Pro",
+                "subtitle": "Profesional",
+                "features": {
+                    "item1": "Google Ads (setup + optimización)",
+                    "item2": "Pinterest (pines por servicio)",
+                    "item3": "Creativos enfocados en llamadas",
+                    "item4": "Reportes mensuales",
+                    "item5": "Soporte prioritario"
+                },
+                "idealFor": "Flujo constante de clientes durante temporada"
+            },
+            "allin": {
+                "name": "Dominio Local",
+                "subtitle": "All-in",
+                "features": {
+                    "item1": "EDDM mensual por rutas",
+                    "item2": "Google Ads + reportes",
+                    "item3": "Pinterest + Directorio destacado",
+                    "item4": "Yard signs + door hangers",
+                    "item5": "Soporte dedicado 24/7"
+                },
+                "idealFor": "Oficinas que quieren liderar su zona cada temporada"
+            }
+        },
+        "faq": {
+            "title": "Preguntas Frecuentes",
+            "subtitle": "Respuestas a las dudas más comunes sobre marketing para tax services.",
+            "q1": {
+                "question": "¿Cuándo es el mejor momento para anunciar taxes?",
+                "answer": "Desde 2–3 meses antes de tax season para crear recordación y dominar la zona. Idealmente, comienza en noviembre o diciembre para estar presente cuando los clientes empiecen a buscar."
+            },
+            "q2": {
+                "question": "¿Funciona el marketing fuera de temporada?",
+                "answer": "Sí. ITIN, bookkeeping y business taxes permiten captar clientes todo el año. Además, mantener presencia fuera de temporada te posiciona como la primera opción cuando llegue tax season."
+            },
+            "q3": {
+                "question": "¿Puedo enfocarme solo en mi ciudad?",
+                "answer": "Sí. Recomendamos dominar primero tu ciudad principal y luego expandir. El marketing local funciona mejor cuando te enfocas en áreas específicas donde puedes construir reconocimiento y confianza."
+            },
+            "q4": {
+                "question": "¿Necesito tener un sitio web perfecto?",
+                "answer": "No necesariamente. Lo más importante es tener presencia visible (Google Ads, EDDM, yard signs) y un número de teléfono claro. Un sitio web básico ayuda, pero no es requisito para empezar."
+            },
+            "q5": {
+                "question": "¿Cuál es la mejor combinación para tax services?",
+                "answer": "La combinación más efectiva es EDDM + Google Ads + Yard Signs. EDDM crea presencia local, Google Ads captura búsquedas activas, y los yard signs generan confianza en el vecindario."
+            }
+        },
+        "finalCTA": {
+            "title": "¿Listo para atraer más clientes para tu Tax Service?",
+            "subtitle": "Si quieres dejar de depender solo de la temporada y construir un negocio visible y confiable, nuestro sistema está diseñado para ti.",
+            "benefits": {
+                "item1": "Sin compromiso",
+                "item2": "Estrategia personalizada",
+                "item3": "Resultados reales"
+            },
+            "button": "Solicitar Estrategia Gratis",
+            "smallPrint": "Sin compromiso. Enfocado a resultados reales."
+        }
     }
 }
