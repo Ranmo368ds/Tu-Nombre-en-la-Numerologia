@@ -1257,5 +1257,235 @@
             "button": "Solicitar Estrategia Gratis",
             "smallPrint": "Sin compromiso. Enfocado a resultados reales."
         }
+    },
+    "SealcoatingPage": {
+        "seo": {
+            "title": "Marketing para Sealcoating | EDDM, Door Hangers, Google Ads, Pinterest y Yard Signs",
+            "description": "Genera más clientes para tu empresa de sealcoating con EDDM, door hangers, Google Ads, Pinterest y yard signs. Estrategia local para Chicago Northwest Suburbs y alrededores.",
+            "keywords": "marketing para sealcoating, publicidad asphalt sealing, driveway sealcoating marketing, parking lot sealcoating leads, sealcoating Chicago, EDDM sealcoating, Google Ads asphalt sealing"
+        },
+        "hero": {
+            "badge": "Marketing Especializado para Sealcoating",
+            "title": "Marketing para Empresas de Sealcoating y Asphalt",
+            "subtitle": "Atrae más llamadas, cotizaciones y trabajos en tu zona con un sistema de marketing local diseñado específicamente para sealcoating: publicidad física + presencia digital + confianza visual para dominar tu área.",
+            "cta_primary": "Solicitar Estrategia Gratis",
+            "cta_secondary": "Ver Ejemplos en Pinterest",
+            "trust": {
+                "clients": "Chicago Northwest Suburbs",
+                "results": "Resultados Comprobados",
+                "guarantee": "Sin Contratos Largos"
+            }
+        },
+        "problem": {
+            "title": "¿Por qué muchas compañías de sealcoating batallan por trabajos consistentes?",
+            "description": "El sealcoating es un servicio altamente local, estacional y competitivo. La mayoría de los clientes no 'planea' el servicio hasta que ve grietas, decoloración o presión por mantener la propiedad presentable. Quien gana normalmente es quien está más visible en el vecindario, aparece primero en Google y se ve más profesional.",
+            "challenges_title": "Retos comunes:",
+            "challenges": {
+                "challenge1": "Temporadas cortas y necesidad de llenar agenda rápido",
+                "challenge2": "Competencia fuerte y ofertas 'baratas' sin calidad",
+                "challenge3": "Clientes que comparan por precio porque no hay diferenciación",
+                "challenge4": "Poca presencia visual (antes/después, acabado, brillo)",
+                "challenge5": "Falta de estrategia para propiedades comerciales (parking lots)"
+            },
+            "callout": "Quien gana es quien está más visible, aparece primero en Google y se ve más profesional."
+        },
+        "marketing": {
+            "title": "Un sistema completo para generar trabajos en tu zona",
+            "subtitle": "En Genes Marketing combinamos estrategias físicas y digitales para que tu empresa de sealcoating tenga visibilidad constante, gane confianza y reciba leads listos para cotizar.",
+            "proTipLabel": "Regla PRO",
+            "eddm": {
+                "title": "🔹 1) EDDM (Correo Directo) – perfecto para driveways",
+                "description": "EDDM funciona excelente para sealcoating residencial porque puedes llegar a vecindarios específicos con el mensaje correcto: proteger, mejorar apariencia y extender vida del asfalto.",
+                "useCases": {
+                    "title": "EDDM sirve para:",
+                    "item1": "Campañas por temporada (primavera/verano/otoño)",
+                    "item2": "Promoción de driveway sealcoating",
+                    "item3": "Upsells: crack filling, striping, patching",
+                    "item4": "'Estamos trabajando en tu zona' (prueba social)"
+                },
+                "whatWeDo": {
+                    "title": "Qué hacemos:",
+                    "item1": "Diseño profesional con oferta clara",
+                    "item2": "Selección de rutas por ciudad y tipo de vivienda",
+                    "item3": "Copy enfocado en valor (no solo precio)",
+                    "item4": "Coordinación de impresión + envío"
+                }
+            },
+            "doorHangers": {
+                "title": "🔹 2) Door Hangers – estrategia de vecindario",
+                "description": "El sealcoating gana por cercanía: cuando trabajas en una cuadra, el resto del vecindario se contagia. Door hangers convierten presencia en llamadas.",
+                "useCases": {
+                    "title": "Ideales para:",
+                    "item1": "'Estamos trabajando en tu área'",
+                    "item2": "Descuentos por vecinos / bundles",
+                    "item3": "Programación rápida (llenar agenda)",
+                    "item4": "Campañas de mantenimiento anual"
+                }
+            },
+            "googleAds": {
+                "title": "🔹 3) Google Ads – intención alta ('near me')",
+                "description": "Cuando alguien busca sealcoating, normalmente quiere cotizar pronto. Google Ads te pone frente a personas listas para contratar.",
+                "useCases": {
+                    "title": "Búsquedas que convierten:",
+                    "item1": "sealcoating near me",
+                    "item2": "driveway sealcoating",
+                    "item3": "asphalt sealing company",
+                    "item4": "parking lot sealcoating",
+                    "item5": "asphalt crack filling"
+                },
+                "whatWeDo": {
+                    "title": "Qué hacemos:",
+                    "item1": "Campañas separadas (residencial vs comercial)",
+                    "item2": "Enfoque en llamadas y formularios",
+                    "item3": "Segmentación por ciudades específicas",
+                    "item4": "Optimización continua para reducir costo por lead",
+                    "item5": "Reportes claros (leads, llamadas, costo)"
+                }
+            },
+            "pinterest": {
+                "title": "🔹 4) Pinterest – antes/después que vende solo",
+                "description": "Pinterest es ideal para sealcoating porque el resultado es visual. Un buen 'before/after' genera confianza instantánea y te posiciona como empresa profesional.",
+                "useCases": {
+                    "title": "Pinterest te ayuda a:",
+                    "item1": "Mostrar acabados y trabajos reales",
+                    "item2": "Crear autoridad visual por servicio",
+                    "item3": "Mantener tráfico constante (meses, no horas)",
+                    "item4": "Separar pines por servicio y tipo de trabajo"
+                },
+                "proTip": "Pin de driveway sealcoating → link a página específica de driveway sealcoating. Pin de parking lot → link a página específica de parking lot sealcoating"
+            },
+            "yardSigns": {
+                "title": "🔹 5) Yard Signs – prueba social local inmediata",
+                "description": "Un yard sign en un driveway recién sellado es una máquina de leads: vecinos lo ven, confían y llaman.",
+                "useCases": {
+                    "title": "Funciona para:",
+                    "item1": "Branding en vecindarios correctos",
+                    "item2": "Validación social ('si lo contrató mi vecino, es bueno')",
+                    "item3": "Refuerzo de EDDM + door hangers",
+                    "item4": "Captar clientes sin depender 100% de ads"
+                }
+            }
+        },
+        "services": {
+            "title": "Servicios de Sealcoating que Podemos Promocionar",
+            "subtitle": "Cada servicio puede tener su pin, su anuncio y su mensaje específico.",
+            "driveway": {
+                "title": "Driveway Sealcoating",
+                "description": "Sellado residencial para proteger y mejorar la apariencia del asfalto."
+            },
+            "parkingLot": {
+                "title": "Parking Lot Sealcoating",
+                "description": "Sellado comercial para estacionamientos y propiedades comerciales."
+            },
+            "crackFilling": {
+                "title": "Crack Filling",
+                "description": "Relleno de grietas para prevenir daños mayores en el asfalto."
+            },
+            "asphaltPatching": {
+                "title": "Asphalt Patching",
+                "description": "Reparación de áreas dañadas del asfalto."
+            },
+            "lineStriping": {
+                "title": "Line Striping",
+                "description": "Pintado de líneas para estacionamientos y áreas comerciales."
+            },
+            "potholeRepairs": {
+                "title": "Pothole Repairs",
+                "description": "Reparación de baches para superficies seguras."
+            },
+            "powerWashing": {
+                "title": "Power Washing Pre-Seal",
+                "description": "Lavado a presión antes del sellado para mejores resultados."
+            },
+            "callout": "Cada uno puede tener su pin, su anuncio y su mensaje específico."
+        },
+        "results": {
+            "title": "Resultados Esperados (realistas)",
+            "subtitle": "Cuando combinamos estas estrategias, tu empresa deja de depender solo de 'temporada' y empieza a construir presencia repetible en zonas específicas.",
+            "result1": {
+                "title": "Door hangers + yard signs",
+                "description": "Llamadas rápidas en el vecindario"
+            },
+            "result2": {
+                "title": "Google Ads",
+                "description": "Leads listos para cotizar"
+            },
+            "result3": {
+                "title": "EDDM",
+                "description": "Llenar agenda por temporada y fortalecer marca"
+            },
+            "result4": {
+                "title": "Pinterest",
+                "description": "Confianza visual y tráfico continuo"
+            },
+            "finalMessage": "Cuando combinamos estas estrategias, tu empresa deja de depender solo de 'temporada' y empieza a construir presencia repetible en zonas específicas."
+        },
+        "areas": {
+            "badge": "Cobertura Local",
+            "title": "Áreas que Atendemos",
+            "description": "Trabajamos con empresas de sealcoating y asphalt en Chicago Northwest Suburbs, incluyendo Algonquin, Huntley, Elgin, Crystal Lake, Carpentersville, Barrington, Woodstock, McHenry, Schaumburg y áreas cercanas del norte de Illinois y sur de Wisconsin.",
+            "additional": "Y áreas cercanas del norte de Illinois y sur de Wisconsin"
+        },
+        "pricing": {
+            "title": "Paquetes Recomendados para Sealcoating",
+            "subtitle": "Elige el paquete que mejor se adapte a tus objetivos de crecimiento.",
+            "popular": "Más Popular",
+            "idealFor": "Ideal para:",
+            "starter": {
+                "name": "Presencia Local",
+                "subtitle": "Starter",
+                "features": {
+                    "item1": "Door hangers (diseño + impresión opcional)",
+                    "item2": "Yard signs",
+                    "item3": "Mensaje por vecindario ('Estamos en tu zona')"
+                },
+                "idealFor": "Llenar agenda rápido"
+            },
+            "pro": {
+                "name": "Visibilidad Pro",
+                "subtitle": "Profesional",
+                "features": {
+                    "item1": "Google Ads (setup + optimización)",
+                    "item2": "Pinterest (pines por servicio + organización)",
+                    "item3": "Creativos enfocados en llamadas/cotizaciones",
+                    "item4": "Reportes mensuales"
+                },
+                "idealFor": "Generar leads semanales consistentes"
+            },
+            "allin": {
+                "name": "Dominio Local",
+                "subtitle": "All-in",
+                "features": {
+                    "item1": "EDDM mensual por rutas recomendadas",
+                    "item2": "Google Ads + reportes",
+                    "item3": "Pinterest + Directorio + sección destacada",
+                    "item4": "Yard signs + door hangers coordinados",
+                    "item5": "Soporte dedicado 24/7"
+                },
+                "idealFor": "Dominar una zona y expandir"
+            }
+        },
+        "faq": {
+            "title": "Preguntas Frecuentes",
+            "subtitle": "Respuestas a las dudas más comunes sobre marketing para sealcoating.",
+            "q1": {
+                "question": "¿Cuándo conviene empezar a anunciar sealcoating?",
+                "answer": "Lo ideal es iniciar 4–8 semanas antes de la temporada fuerte para llenar agenda con anticipación. Esto te permite construir presencia antes de que la competencia se active."
+            },
+            "q2": {
+                "question": "¿Qué funciona mejor: residencial o comercial?",
+                "answer": "Depende de tu capacidad. Residencial escala con vecindarios (EDDM, door hangers, yard signs). Comercial escala con credibilidad, portafolio y páginas específicas (Google Ads, Pinterest)."
+            },
+            "q3": {
+                "question": "¿Necesito páginas por servicio en mi sitio web?",
+                "answer": "Es altamente recomendable. Cada pin y anuncio debe apuntar a la página exacta (driveway, parking lot, crack filling) para mejorar conversión y evitar bloqueos en Pinterest."
+            }
+        },
+        "finalCTA": {
+            "title": "¿Listo para llenar tu agenda de sealcoating en tu área?",
+            "subtitle": "Si quieres más llamadas y cotizaciones sin depender solo de recomendaciones, nuestro sistema está diseñado para empresas de sealcoating y asphalt.",
+            "button": "Solicitar Estrategia Gratis",
+            "smallPrint": "Sin compromiso. Enfocado a resultados reales."
+        }
     }
 }
