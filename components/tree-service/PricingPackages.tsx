@@ -74,18 +74,23 @@ export default function PricingPackages() {
                                 {/* Features */}
                                 <ul className="space-y-4 mb-8">
                                     {[1, 2, 3, 4, 5].map((num) => {
-                                        const feature = t(`${id}.features.item${num}`);
-                                        if (!feature || feature === `TreeServicePage.pricing.${id}.features.item${num}`) return null;
-                                        return (
-                                            <li key={num} className="flex items-start gap-3">
-                                                <div className={`flex-shrink-0 w-6 h-6 bg-${color}-100 rounded-full flex items-center justify-center mt-0.5`}>
-                                                    <Check className={`w-4 h-4 text-${color}-700`} />
-                                                </div>
-                                                <span className="text-gray-700 leading-relaxed">
-                                                    {feature}
-                                                </span>
-                                            </li>
-                                        );
+                                        const key = `${id}.features.item${num}`;
+                                        try {
+                                            const feature = t(key);
+                                            if (!feature || feature === `TreeServicePage.pricing.${id}.features.item${num}`) return null;
+                                            return (
+                                                <li key={num} className="flex items-start gap-3">
+                                                    <div className={`flex-shrink-0 w-6 h-6 bg-${color}-100 rounded-full flex items-center justify-center mt-0.5`}>
+                                                        <Check className={`w-4 h-4 text-${color}-700`} />
+                                                    </div>
+                                                    <span className="text-gray-700 leading-relaxed">
+                                                        {feature}
+                                                    </span>
+                                                </li>
+                                            );
+                                        } catch (e) {
+                                            return null;
+                                        }
                                     })}
                                 </ul>
 

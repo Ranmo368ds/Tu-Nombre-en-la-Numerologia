@@ -14,12 +14,14 @@ import FloatingWhatsApp from "@/components/genes-marketing/FloatingWhatsApp";
 import ContactSection from "@/components/genes-marketing/ContactSection";
 import TaxServiceSchema from "@/components/tax-service/TaxServiceSchema";
 
-export async function generateMetadata({ params: { locale } }: { params: { locale: string } }): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+    const { locale } = await params;
     const t = await getTranslations({ locale, namespace: 'TaxServicePage.seo' });
     const baseUrl = 'https://genesmarketing.com';
-    const currentUrl = `${baseUrl}/${locale}/marketing-para-tax-services`;
+    const currentUrl = `${baseUrl}/${locale}/taxservices`;
 
     return {
+        // ... (title, description, etc)
         title: t('title'),
         description: t('description'),
         keywords: t('keywords'),
@@ -40,8 +42,8 @@ export async function generateMetadata({ params: { locale } }: { params: { local
         alternates: {
             canonical: currentUrl,
             languages: {
-                'es': `${baseUrl}/es/marketing-para-tax-services`,
-                'en': `${baseUrl}/en/marketing-para-tax-services`,
+                'es': `${baseUrl}/es/taxservices`,
+                'en': `${baseUrl}/en/taxservices`,
             },
         },
         openGraph: {
@@ -73,7 +75,8 @@ export async function generateMetadata({ params: { locale } }: { params: { local
     };
 }
 
-export default function TaxServicesPage({ params: { locale } }: { params: { locale: string } }) {
+export default async function TaxServicesPage({ params }: { params: Promise<{ locale: string }> }) {
+    const { locale } = await params;
     return (
         <main className="font-sans antialiased text-[#0B1220] bg-white selection:bg-blue-500/10 selection:text-blue-600 relative">
             <TaxServiceSchema locale={locale} />

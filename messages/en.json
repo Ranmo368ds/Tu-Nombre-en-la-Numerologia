@@ -13,6 +13,33 @@
     "HomePage": {
         "title": "Welcome to Instinto Saludable",
         "subtitle": "Your path to holistic wellness",
+        "common": {
+            "cities": [
+                "Wheaton",
+                "Lake in the Hills",
+                "Vernon Hills",
+                "Elk Grove Village",
+                "Bloomingdale",
+                "Carol Stream",
+                "Glen Ellyn",
+                "Bartlett",
+                "Hoffman Estates",
+                "Schaumburg",
+                "Northbrook",
+                "Glenview",
+                "North Aurora",
+                "Naperville",
+                "Lake Forest",
+                "Glencoe",
+                "Lake Geneva, WI",
+                "Beloit, WI",
+                "Williams Bay, WI",
+                "Janesville, WI",
+                "Fontana, WI",
+                "Channel Lake, WI"
+            ],
+            "unlisted_city": "if the city you want to reach is not on the list, call us to locate it"
+        },
         "nav": {
             "home": "Home",
             "shop": "Shop",
@@ -434,6 +461,11 @@
             ],
             "cta_packages": "View Packages",
             "cta_whatsapp": "Chat on WhatsApp",
+            "credibility": "Proven system with real results in Chicago Northwest Suburbs and Southern Wisconsin — ready to scale nationwide.",
+            "cta_microcopy": [
+                "Quick response (Mon–Fri 9am–6pm CST)",
+                "No contracts. One-time payment per package"
+            ],
             "tagline": "Proven system with real results in northwest Chicago suburbs and southern Wisconsin.",
             "reinforcement": "Attract customers who are already looking for your services — without paying monthly ads or depending on social media."
         },

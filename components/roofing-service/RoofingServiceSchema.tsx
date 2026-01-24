@@ -73,7 +73,7 @@ export default async function RoofingServiceSchema({ locale }: RoofingServiceSch
                 '@type': 'ListItem',
                 position: 2,
                 name: 'Roofing & Siding Marketing',
-                item: `${baseUrl}/${locale}/marketing-para-roofing-siding`
+                item: `${baseUrl}/${locale}/roofing`
             }
         ]
     };

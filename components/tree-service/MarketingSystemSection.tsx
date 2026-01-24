@@ -104,12 +104,21 @@ export default function MarketingSystemSection() {
                                             {t(`${id}.worksFor.title`)}
                                         </h4>
                                         <ul className="space-y-2">
-                                            {[1, 2, 3, 4].map((num) => (
-                                                <li key={num} className="flex items-start gap-2 text-gray-700">
-                                                    <span className="text-emerald-600 mt-1">•</span>
-                                                    <span>{t(`${id}.worksFor.item${num}`)}</span>
-                                                </li>
-                                            ))}
+                                            {[1, 2, 3, 4].map((num) => {
+                                                const key = `${id}.worksFor.item${num}`;
+                                                try {
+                                                    const text = t(key);
+                                                    if (!text || text === `TreeServicePage.marketingSystem.${id}.worksFor.item${num}`) return null;
+                                                    return (
+                                                        <li key={num} className="flex items-start gap-2 text-gray-700">
+                                                            <span className="text-emerald-600 mt-1">•</span>
+                                                            <span>{text}</span>
+                                                        </li>
+                                                    );
+                                                } catch (e) {
+                                                    return null;
+                                                }
+                                            })}
                                         </ul>
                                     </div>
 
@@ -119,12 +128,21 @@ export default function MarketingSystemSection() {
                                             {t(`${id}.whatWeDo.title`)}
                                         </h4>
                                         <ul className="space-y-2">
-                                            {[1, 2, 3, 4].map((num) => (
-                                                <li key={num} className="flex items-start gap-2 text-gray-700">
-                                                    <span className={iconColor}>→</span>
-                                                    <span>{t(`${id}.whatWeDo.item${num}`)}</span>
-                                                </li>
-                                            ))}
+                                            {[1, 2, 3, 4].map((num) => {
+                                                const key = `${id}.whatWeDo.item${num}`;
+                                                try {
+                                                    const text = t(key);
+                                                    if (!text || text === `TreeServicePage.marketingSystem.${id}.whatWeDo.item${num}`) return null;
+                                                    return (
+                                                        <li key={num} className="flex items-start gap-2 text-gray-700">
+                                                            <span className={iconColor}>→</span>
+                                                            <span>{text}</span>
+                                                        </li>
+                                                    );
+                                                } catch (e) {
+                                                    return null;
+                                                }
+                                            })}
                                         </ul>
                                     </div>
                                 </div>

@@ -12,7 +12,34 @@
     },
     "HomePage": {
         "title": "Bienvenido a Instinto Saludable",
-        "subtitle": "Tu camino hacia el bienestar integral",
+        "subtitle": "Tu camino hacia el bienestar holístico",
+        "common": {
+            "cities": [
+                "Wheaton",
+                "Lake in the Hills",
+                "Vernon Hills",
+                "Elk Grove Village",
+                "Bloomingdale",
+                "Carol Stream",
+                "Glen Ellyn",
+                "Bartlett",
+                "Hoffman Estates",
+                "Schaumburg",
+                "Northbrook",
+                "Glenview",
+                "North Aurora",
+                "Naperville",
+                "Lake Forest",
+                "Glencoe",
+                "Lake Geneva, WI",
+                "Beloit, WI",
+                "Williams Bay, WI",
+                "Janesville, WI",
+                "Fontana, WI",
+                "Channel Lake, WI"
+            ],
+            "unlisted_city": "si la ciudad que quieres llegar no esta en la lista llamanos para ubicarla"
+        },
         "nav": {
             "home": "Inicio",
             "shop": "Tienda",
@@ -1041,13 +1068,13 @@
     },
     "TaxServicePage": {
         "seo": {
-            "title": "Marketing para Tax Services | EDDM, Google Ads, Pinterest y Publicidad Local",
+            "title": "Tax Service Marketing | EDDM, Google Ads, Pinterest y Publicidad Local",
             "description": "Atrae más clientes para tu oficina de impuestos con EDDM, Door Hangers, Google Ads, Pinterest y Yard Signs. Estrategias locales para Chicago Northwest Suburbs y alrededores.",
             "keywords": "marketing para tax services, publicidad para preparadores de impuestos, ITIN services marketing, leads para oficinas de taxes, tax service Chicago, marketing para contadores, EDDM tax services, Google Ads preparadores de impuestos"
         },
         "hero": {
-            "badge": "Marketing Especializado para Tax Services",
-            "title": "Marketing para Oficinas de Taxes y Preparadores de Impuestos",
+            "badge": "Marketing Especializado para Tax Service",
+            "title": "Tax Service Marketing para Oficinas Locales",
             "subtitle": "Atrae más clientes durante tax season y mantén tu negocio visible todo el año con un sistema de marketing local diseñado específicamente para tax services.",
             "cta_primary": "Solicitar Estrategia Gratis",
             "cta_secondary": "Ver Ejemplos de Publicidad",
@@ -1235,7 +1262,7 @@
                 "answer": "Sí. ITIN, bookkeeping y business taxes permiten captar clientes todo el año. Además, mantener presencia fuera de temporada te posiciona como la primera opción cuando llegue tax season."
             },
             "q3": {
-                "question": "¿Puedo enfocarme solo en mi ciudad?",
+                "question": "¿Pueden enfocarse solo en mi ciudad?",
                 "answer": "Sí. Recomendamos dominar primero tu ciudad principal y luego expandir. El marketing local funciona mejor cuando te enfocas en áreas específicas donde puedes construir reconocimiento y confianza."
             },
             "q4": {
@@ -1261,13 +1288,13 @@
     },
     "SealcoatingPage": {
         "seo": {
-            "title": "Marketing para Sealcoating | EDDM, Door Hangers, Google Ads, Pinterest y Yard Signs",
-            "description": "Genera más clientes para tu empresa de sealcoating con EDDM, door hangers, Google Ads, Pinterest y yard signs. Estrategia local para Chicago Northwest Suburbs y alrededores.",
-            "keywords": "marketing para sealcoating, publicidad asphalt sealing, driveway sealcoating marketing, parking lot sealcoating leads, sealcoating Chicago, EDDM sealcoating, Google Ads asphalt sealing"
+            "title": "Sealcoating Marketing | EDDM, Google Ads, Pinterest y Publicidad Local",
+            "description": "Atrae más clientes de sealcoating y asfalto con EDDM, Door Hangers, Google Ads, Pinterest y Yard Signs. Estrategias especializadas para Chicago Northwest Suburbs.",
+            "keywords": "marketing para sealcoating, publicidad para asfalto, leads de pavimentación, sealcoating ads, Chicago Northwest Suburbs marketing, EDDM sealcoating, Google Ads asfalto"
         },
         "hero": {
-            "badge": "Marketing Especializado para Sealcoating",
-            "title": "Marketing para Empresas de Sealcoating y Asphalt",
+            "badge": "Marketing Especializado para Sealcoating & Asfalto",
+            "title": "Sealcoating and Asphalt Marketing",
             "subtitle": "Atrae más llamadas, cotizaciones y trabajos en tu zona con un sistema de marketing local diseñado específicamente para sealcoating: publicidad física + presencia digital + confianza visual para dominar tu área.",
             "cta_primary": "Solicitar Estrategia Gratis",
             "cta_secondary": "Ver Ejemplos en Pinterest",

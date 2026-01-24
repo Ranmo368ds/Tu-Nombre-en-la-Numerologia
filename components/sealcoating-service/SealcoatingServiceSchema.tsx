@@ -73,7 +73,7 @@ export default async function SealcoatingServiceSchema({ locale }: SealcoatingSe
                 '@type': 'ListItem',
                 position: 2,
                 name: 'Sealcoating Marketing',
-                item: `${baseUrl}/${locale}/marketing-para-sealcoating-services`
+                item: `${baseUrl}/${locale}/sealcoating`
             }
         ]
     };

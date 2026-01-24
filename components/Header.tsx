@@ -24,8 +24,20 @@ export function Header() {
         }
     }, []);
 
-    // Hide global header on the marketing landing page or domain
-    if (pathname === "/genes-marketing" || isMarketingDomain) {
+    // List of marketing-specific paths to hide the global header
+    const marketingPaths = [
+        "/genes-marketing",
+        "/roofing",
+        "/sealcoating",
+        "/treeservice",
+        "/taxservices",
+        "/localmarketing"
+    ];
+
+    const isMarketingPath = marketingPaths.some(path => pathname === path || pathname.endsWith(path));
+
+    // Hide global header on marketing landing pages or domain
+    if (isMarketingPath || isMarketingDomain) {
         return null;
     }
 

@@ -1,6 +1,6 @@
 export default function TreeServiceSchema({ locale }: { locale: string }) {
     const baseUrl = 'https://genesmarketing.com';
-    const currentUrl = `${baseUrl}/${locale}/marketing-para-tree-services`;
+    const currentUrl = `${baseUrl}/${locale}/treeservice`;
 
     const schema = {
         '@context': 'https://schema.org',

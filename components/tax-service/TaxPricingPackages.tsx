@@ -80,14 +80,19 @@ export default function TaxPricingPackages() {
                                 {/* Features */}
                                 <ul className="space-y-4 mb-8">
                                     {[1, 2, 3, 4, 5].map((num) => {
-                                        const feature = t(`${id}.features.item${num}`);
-                                        if (!feature || feature === `TaxServicePage.pricing.${id}.features.item${num}`) return null;
-                                        return (
-                                            <li key={num} className="flex items-start gap-3">
-                                                <Check className="w-6 h-6 text-green-600 flex-shrink-0 mt-0.5" />
-                                                <span className="text-gray-700">{feature}</span>
-                                            </li>
-                                        );
+                                        const key = `${id}.features.item${num}`;
+                                        try {
+                                            const feature = t(key);
+                                            if (!feature || feature === `TaxServicePage.pricing.${id}.features.item${num}`) return null;
+                                            return (
+                                                <li key={num} className="flex items-start gap-3">
+                                                    <Check className="w-6 h-6 text-green-600 flex-shrink-0 mt-0.5" />
+                                                    <span className="text-gray-700">{feature}</span>
+                                                </li>
+                                            );
+                                        } catch (e) {
+                                            return null;
+                                        }
                                     })}
                                 </ul>
 

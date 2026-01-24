@@ -19,9 +19,10 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     const t = await getTranslations({ locale, namespace: 'TreeServicePage.seo' });
 
     const baseUrl = 'https://genesmarketing.com';
-    const currentUrl = `${baseUrl}/${locale}/marketing-para-tree-services`;
+    const currentUrl = `${baseUrl}/${locale}/treeservice`;
 
     return {
+        // ... (previous lines)
         title: t('title'),
         description: t('description'),
         keywords: t('keywords'),
@@ -60,9 +61,9 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
         alternates: {
             canonical: currentUrl,
             languages: {
-                'es': `${baseUrl}/es/marketing-para-tree-services`,
-                'en': `${baseUrl}/en/marketing-para-tree-services`,
-                'x-default': `${baseUrl}/es/marketing-para-tree-services`,
+                'es': `${baseUrl}/es/treeservice`,
+                'en': `${baseUrl}/en/treeservice`,
+                'x-default': `${baseUrl}/es/treeservice`,
             },
         },
 

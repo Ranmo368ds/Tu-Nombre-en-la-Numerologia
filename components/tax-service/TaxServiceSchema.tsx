@@ -73,7 +73,7 @@ export default async function TaxServiceSchema({ locale }: TaxServiceSchemaProps
                 '@type': 'ListItem',
                 position: 2,
                 name: 'Tax Service Marketing',
-                item: `${baseUrl}/${locale}/marketing-para-tax-services`
+                item: `${baseUrl}/${locale}/taxservices`
             }
         ]
     };

@@ -15,12 +15,14 @@ import RoofingServiceFAQ from "@/components/roofing-service/RoofingServiceFAQ";
 import RoofingServiceCTA from "@/components/roofing-service/RoofingServiceCTA";
 import RoofingServiceSchema from "@/components/roofing-service/RoofingServiceSchema";
 
-export async function generateMetadata({ params: { locale } }: { params: { locale: string } }): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+    const { locale } = await params;
     const t = await getTranslations({ locale, namespace: 'RoofingPage.seo' });
     const baseUrl = 'https://genesmarketing.com';
-    const currentUrl = `${baseUrl}/${locale}/marketing-para-roofing-siding`;
+    const currentUrl = `${baseUrl}/${locale}/roofing`;
 
     return {
+        // ... (title, description, etc)
         title: t('title'),
         description: t('description'),
         keywords: t('keywords'),
@@ -41,8 +43,8 @@ export async function generateMetadata({ params: { locale } }: { params: { local
         alternates: {
             canonical: currentUrl,
             languages: {
-                'es': `${baseUrl}/es/marketing-para-roofing-siding`,
-                'en': `${baseUrl}/en/marketing-para-roofing-siding`,
+                'es': `${baseUrl}/es/roofing`,
+                'en': `${baseUrl}/en/roofing`,
             },
         },
         openGraph: {
@@ -74,7 +76,8 @@ export async function generateMetadata({ params: { locale } }: { params: { local
     };
 }
 
-export default function RoofingSidingServicesPage({ params: { locale } }: { params: { locale: string } }) {
+export default async function RoofingSidingServicesPage({ params }: { params: Promise<{ locale: string }> }) {
+    const { locale } = await params;
     return (
         <main className="font-sans antialiased text-[#0B1220] bg-white selection:bg-blue-500/10 selection:text-blue-600 relative">
             <RoofingServiceSchema locale={locale} />

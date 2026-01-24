@@ -5,12 +5,9 @@ import { MapPin } from 'lucide-react';
 
 export default function RoofingServiceAreas() {
     const t = useTranslations('RoofingPage.areas');
+    const ct = useTranslations('HomePage.common');
 
-    const cities = [
-        'Algonquin', 'Huntley', 'Elgin', 'Crystal Lake',
-        'Carpentersville', 'Barrington', 'Woodstock', 'McHenry',
-        'Schaumburg'
-    ];
+    const cities: string[] = ct.raw('cities');
 
     return (
         <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
@@ -35,7 +32,7 @@ export default function RoofingServiceAreas() {
                     </div>
 
                     {/* Cities Grid */}
-                    <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-8">
+                    <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-4">
                         {cities.map((city) => (
                             <div
                                 key={city}
@@ -45,6 +42,10 @@ export default function RoofingServiceAreas() {
                             </div>
                         ))}
                     </div>
+
+                    <p className="text-center text-gray-500 italic mb-12">
+                        {ct('unlisted_city')}
+                    </p>
 
                     {/* Additional Areas */}
                     <p className="text-center text-gray-600 text-lg">

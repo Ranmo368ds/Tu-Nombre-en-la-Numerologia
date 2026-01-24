@@ -15,12 +15,14 @@ import FloatingWhatsApp from "@/components/genes-marketing/FloatingWhatsApp";
 import ContactSection from "@/components/genes-marketing/ContactSection";
 import SealcoatingServiceSchema from "@/components/sealcoating-service/SealcoatingServiceSchema";
 
-export async function generateMetadata({ params: { locale } }: { params: { locale: string } }): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+    const { locale } = await params;
     const t = await getTranslations({ locale, namespace: 'SealcoatingPage.seo' });
     const baseUrl = 'https://genesmarketing.com';
-    const currentUrl = `${baseUrl}/${locale}/marketing-para-sealcoating-services`;
+    const currentUrl = `${baseUrl}/${locale}/sealcoating`;
 
     return {
+        // ... (title, description, etc)
         title: t('title'),
         description: t('description'),
         keywords: t('keywords'),
@@ -41,8 +43,8 @@ export async function generateMetadata({ params: { locale } }: { params: { local
         alternates: {
             canonical: currentUrl,
             languages: {
-                'es': `${baseUrl}/es/marketing-para-sealcoating-services`,
-                'en': `${baseUrl}/en/marketing-para-sealcoating-services`,
+                'es': `${baseUrl}/es/sealcoating`,
+                'en': `${baseUrl}/en/sealcoating`,
             },
         },
         openGraph: {
@@ -74,7 +76,8 @@ export async function generateMetadata({ params: { locale } }: { params: { local
     };
 }
 
-export default function SealcoatingServicesPage({ params: { locale } }: { params: { locale: string } }) {
+export default async function SealcoatingServicesPage({ params }: { params: Promise<{ locale: string }> }) {
+    const { locale } = await params;
     return (
         <main className="font-sans antialiased text-[#0B1220] bg-white selection:bg-orange-500/10 selection:text-orange-600 relative">
             <SealcoatingServiceSchema locale={locale} />

@@ -81,44 +81,68 @@ export default function SealcoatingMarketingSystem() {
                                 <h4 className="font-bold text-gray-900 mb-3">{t(`${id}.useCases.title`)}</h4>
                                 <ul className="space-y-2">
                                     {[1, 2, 3, 4, 5].map((num) => {
-                                        const useCase = t(`${id}.useCases.item${num}`);
-                                        if (!useCase || useCase === `SealcoatingPage.marketing.${id}.useCases.item${num}`) return null;
-                                        return (
-                                            <li key={num} className="flex items-start gap-3">
-                                                <span className="text-orange-600 font-bold mt-1">✓</span>
-                                                <span className="text-gray-700">{useCase}</span>
-                                            </li>
-                                        );
+                                        const key = `${id}.useCases.item${num}`;
+                                        try {
+                                            const useCase = t(key);
+                                            if (!useCase || useCase === `SealcoatingPage.marketing.${id}.useCases.item${num}`) return null;
+                                            return (
+                                                <li key={num} className="flex items-start gap-3">
+                                                    <span className="text-orange-600 font-bold mt-1">✓</span>
+                                                    <span className="text-gray-700">{useCase}</span>
+                                                </li>
+                                            );
+                                        } catch (e) {
+                                            return null;
+                                        }
                                     })}
                                 </ul>
                             </div>
 
                             {/* What We Do (if applicable) */}
-                            {t(`${id}.whatWeDo.title`) !== `SealcoatingPage.marketing.${id}.whatWeDo.title` && (
-                                <div className="bg-white/60 rounded-xl p-6 border border-gray-200">
-                                    <h4 className="font-bold text-gray-900 mb-3">{t(`${id}.whatWeDo.title`)}</h4>
-                                    <ul className="space-y-2">
-                                        {[1, 2, 3, 4, 5].map((num) => {
-                                            const item = t(`${id}.whatWeDo.item${num}`);
-                                            if (!item || item === `SealcoatingPage.marketing.${id}.whatWeDo.item${num}`) return null;
-                                            return (
-                                                <li key={num} className="flex items-start gap-3">
-                                                    <span className="text-green-600 font-bold mt-1">→</span>
-                                                    <span className="text-gray-700">{item}</span>
-                                                </li>
-                                            );
-                                        })}
-                                    </ul>
-                                </div>
-                            )}
+                            {(() => {
+                                try {
+                                    const title = t(`${id}.whatWeDo.title`);
+                                    return title && title !== `SealcoatingPage.marketing.${id}.whatWeDo.title`;
+                                } catch (e) {
+                                    return false;
+                                }
+                            })() && (
+                                    <div className="bg-white/60 rounded-xl p-6 border border-gray-200">
+                                        <h4 className="font-bold text-gray-900 mb-3">{t(`${id}.whatWeDo.title`)}</h4>
+                                        <ul className="space-y-2">
+                                            {[1, 2, 3, 4, 5].map((num) => {
+                                                const key = `${id}.whatWeDo.item${num}`;
+                                                try {
+                                                    const item = t(key);
+                                                    if (!item || item === `SealcoatingPage.marketing.${id}.whatWeDo.item${num}`) return null;
+                                                    return (
+                                                        <li key={num} className="flex items-start gap-3">
+                                                            <span className="text-green-600 font-bold mt-1">→</span>
+                                                            <span className="text-gray-700">{item}</span>
+                                                        </li>
+                                                    );
+                                                } catch (e) {
+                                                    return null;
+                                                }
+                                            })}
+                                        </ul>
+                                    </div>
+                                )}
 
                             {/* Pro Tip (if applicable) */}
-                            {t(`${id}.proTip`) !== `SealcoatingPage.marketing.${id}.proTip` && (
-                                <div className="mt-6 bg-gradient-to-r from-orange-100 to-orange-50 rounded-lg p-4 border-l-4 border-orange-600">
-                                    <p className="text-sm font-semibold text-orange-900 mb-1">📌 {t('proTipLabel')}</p>
-                                    <p className="text-gray-800">{t(`${id}.proTip`)}</p>
-                                </div>
-                            )}
+                            {(() => {
+                                try {
+                                    const tip = t(`${id}.proTip`);
+                                    return tip && tip !== `SealcoatingPage.marketing.${id}.proTip`;
+                                } catch (e) {
+                                    return false;
+                                }
+                            })() && (
+                                    <div className="mt-6 bg-gradient-to-r from-orange-100 to-orange-50 rounded-lg p-4 border-l-4 border-orange-600">
+                                        <p className="text-sm font-semibold text-orange-900 mb-1">📌 {t('proTipLabel')}</p>
+                                        <p className="text-gray-800">{t(`${id}.proTip`)}</p>
+                                    </div>
+                                )}
                         </div>
                     ))}
                 </div>

@@ -5,12 +5,9 @@ import { MapPin, Target } from 'lucide-react';
 
 export default function ServiceAreas() {
     const t = useTranslations('TreeServicePage.serviceAreas');
+    const ct = useTranslations('HomePage.common');
 
-    const cities = [
-        'Algonquin', 'Huntley', 'Elgin', 'Crystal Lake',
-        'Barrington', 'Woodstock', 'McHenry', 'Carpentersville',
-        'South Elgin', 'St. Charles', 'Lake in the Hills', 'Cary'
-    ];
+    const cities: string[] = ct.raw('cities');
 
     return (
         <section className="py-20 bg-white">
@@ -41,6 +38,10 @@ export default function ServiceAreas() {
                         </div>
                     ))}
                 </div>
+
+                <p className="text-center text-gray-500 italic mb-12">
+                    {ct('unlisted_city')}
+                </p>
 
                 {/* Strategy Explanation */}
                 <div className="bg-gray-50 rounded-2xl p-8 md:p-12">

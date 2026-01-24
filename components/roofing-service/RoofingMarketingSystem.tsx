@@ -81,36 +81,53 @@ export default function RoofingMarketingSystem() {
                                 <h4 className="font-bold text-gray-900 mb-3">{t(`${id}.useCases.title`)}</h4>
                                 <ul className="space-y-2">
                                     {[1, 2, 3, 4, 5].map((num) => {
-                                        const useCase = t(`${id}.useCases.item${num}`);
-                                        if (!useCase || useCase === `RoofingPage.marketing.${id}.useCases.item${num}`) return null;
-                                        return (
-                                            <li key={num} className="flex items-start gap-3">
-                                                <span className="text-blue-600 font-bold mt-1">✓</span>
-                                                <span className="text-gray-700">{useCase}</span>
-                                            </li>
-                                        );
+                                        const key = `${id}.useCases.item${num}`;
+                                        try {
+                                            const useCase = t(key);
+                                            if (!useCase || useCase === `RoofingPage.marketing.${id}.useCases.item${num}`) return null;
+                                            return (
+                                                <li key={num} className="flex items-start gap-3">
+                                                    <span className="text-blue-600 font-bold mt-1">✓</span>
+                                                    <span className="text-gray-700">{useCase}</span>
+                                                </li>
+                                            );
+                                        } catch (e) {
+                                            return null;
+                                        }
                                     })}
                                 </ul>
                             </div>
 
                             {/* What We Do (if applicable) */}
-                            {t(`${id}.whatWeDo.title`) !== `RoofingPage.marketing.${id}.whatWeDo.title` && (
-                                <div className="bg-white/60 rounded-xl p-6 border border-gray-200">
-                                    <h4 className="font-bold text-gray-900 mb-3">{t(`${id}.whatWeDo.title`)}</h4>
-                                    <ul className="space-y-2">
-                                        {[1, 2, 3, 4, 5].map((num) => {
-                                            const item = t(`${id}.whatWeDo.item${num}`);
-                                            if (!item || item === `RoofingPage.marketing.${id}.whatWeDo.item${num}`) return null;
-                                            return (
-                                                <li key={num} className="flex items-start gap-3">
-                                                    <span className="text-green-600 font-bold mt-1">→</span>
-                                                    <span className="text-gray-700">{item}</span>
-                                                </li>
-                                            );
-                                        })}
-                                    </ul>
-                                </div>
-                            )}
+                            {(() => {
+                                try {
+                                    const title = t(`${id}.whatWeDo.title`);
+                                    return title && title !== `RoofingPage.marketing.${id}.whatWeDo.title`;
+                                } catch (e) {
+                                    return false;
+                                }
+                            })() && (
+                                    <div className="bg-white/60 rounded-xl p-6 border border-gray-200">
+                                        <h4 className="font-bold text-gray-900 mb-3">{t(`${id}.whatWeDo.title`)}</h4>
+                                        <ul className="space-y-2">
+                                            {[1, 2, 3, 4, 5].map((num) => {
+                                                const key = `${id}.whatWeDo.item${num}`;
+                                                try {
+                                                    const item = t(key);
+                                                    if (!item || item === `RoofingPage.marketing.${id}.whatWeDo.item${num}`) return null;
+                                                    return (
+                                                        <li key={num} className="flex items-start gap-3">
+                                                            <span className="text-green-600 font-bold mt-1">→</span>
+                                                            <span className="text-gray-700">{item}</span>
+                                                        </li>
+                                                    );
+                                                } catch (e) {
+                                                    return null;
+                                                }
+                                            })}
+                                        </ul>
+                                    </div>
+                                )}
                         </div>
                     ))}
                 </div>

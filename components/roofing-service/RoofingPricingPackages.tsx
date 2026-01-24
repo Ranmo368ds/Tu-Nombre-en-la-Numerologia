@@ -80,14 +80,19 @@ export default function RoofingPricingPackages() {
                                 {/* Features */}
                                 <ul className="space-y-4 mb-8">
                                     {[1, 2, 3, 4, 5].map((num) => {
-                                        const feature = t(`${id}.features.item${num}`);
-                                        if (!feature || feature === `RoofingPage.pricing.${id}.features.item${num}`) return null;
-                                        return (
-                                            <li key={num} className="flex items-start gap-3">
-                                                <Check className="w-6 h-6 text-blue-600 flex-shrink-0 mt-0.5" />
-                                                <span className="text-gray-700">{feature}</span>
-                                            </li>
-                                        );
+                                        const key = `${id}.features.item${num}`;
+                                        try {
+                                            const feature = t(key);
+                                            if (!feature || feature === `RoofingPage.pricing.${id}.features.item${num}`) return null;
+                                            return (
+                                                <li key={num} className="flex items-start gap-3">
+                                                    <Check className="w-6 h-6 text-blue-600 flex-shrink-0 mt-0.5" />
+                                                    <span className="text-gray-700">{feature}</span>
+                                                </li>
+                                            );
+                                        } catch (e) {
+                                            return null;
+                                        }
                                     })}
                                 </ul>
 
@@ -119,14 +124,19 @@ export default function RoofingPricingPackages() {
                                 <h4 className="font-bold text-white mb-3">{t('stormAddon.includes_title')}</h4>
                                 <ul className="space-y-2">
                                     {[1, 2, 3, 4, 5, 6].map((num) => {
-                                        const item = t(`stormAddon.includes.item${num}`);
-                                        if (!item || item === `RoofingPage.pricing.stormAddon.includes.item${num}`) return null;
-                                        return (
-                                            <li key={num} className="flex items-start gap-3">
-                                                <Check className="w-5 h-5 text-blue-400 flex-shrink-0 mt-0.5" />
-                                                <span className="text-blue-100">{item}</span>
-                                            </li>
-                                        );
+                                        const key = `stormAddon.includes.item${num}`;
+                                        try {
+                                            const item = t(key);
+                                            if (!item || item === `RoofingPage.pricing.stormAddon.includes.item${num}`) return null;
+                                            return (
+                                                <li key={num} className="flex items-start gap-3">
+                                                    <Check className="w-5 h-5 text-blue-400 flex-shrink-0 mt-0.5" />
+                                                    <span className="text-blue-100">{item}</span>
+                                                </li>
+                                            );
+                                        } catch (e) {
+                                            return null;
+                                        }
                                     })}
                                 </ul>
                             </div>
@@ -134,14 +144,19 @@ export default function RoofingPricingPackages() {
                                 <h4 className="font-bold text-white mb-3">{t('stormAddon.benefits_title')}</h4>
                                 <ul className="space-y-2">
                                     {[1, 2, 3, 4].map((num) => {
-                                        const benefit = t(`stormAddon.benefits.item${num}`);
-                                        if (!benefit || benefit === `RoofingPage.pricing.stormAddon.benefits.item${num}`) return null;
-                                        return (
-                                            <li key={num} className="flex items-start gap-3">
-                                                <span className="text-blue-400 font-bold mt-0.5">→</span>
-                                                <span className="text-blue-100">{benefit}</span>
-                                            </li>
-                                        );
+                                        const key = `stormAddon.benefits.item${num}`;
+                                        try {
+                                            const benefit = t(key);
+                                            if (!benefit || benefit === `RoofingPage.pricing.stormAddon.benefits.item${num}`) return null;
+                                            return (
+                                                <li key={num} className="flex items-start gap-3">
+                                                    <span className="text-blue-400 font-bold mt-0.5">→</span>
+                                                    <span className="text-blue-100">{benefit}</span>
+                                                </li>
+                                            );
+                                        } catch (e) {
+                                            return null;
+                                        }
                                     })}
                                 </ul>
                             </div>

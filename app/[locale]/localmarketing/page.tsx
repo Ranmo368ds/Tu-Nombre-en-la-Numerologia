@@ -13,20 +13,22 @@ import TreeServiceFooter from "@/components/tree-service/TreeServiceFooter";
 import ContactSection from "@/components/genes-marketing/ContactSection";
 import FloatingWhatsApp from "@/components/genes-marketing/FloatingWhatsApp";
 
-export async function generateMetadata({ params: { locale } }: { params: { locale: string } }): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+    const { locale } = await params;
     const t = await getTranslations({ locale, namespace: 'LocalMarketingPage.seo' });
     const baseUrl = 'https://genesmarketing.com';
-    const currentUrl = `${baseUrl}/${locale}/marketing-local-inteligente`;
+    const currentUrl = `${baseUrl}/${locale}/localmarketing`;
 
     return {
+        // ... (title, description, etc)
         title: t('title'),
         description: t('description'),
         keywords: t('keywords'),
         alternates: {
             canonical: currentUrl,
             languages: {
-                'es': `${baseUrl}/es/marketing-local-inteligente`,
-                'en': `${baseUrl}/en/marketing-local-inteligente`,
+                'es': `${baseUrl}/es/localmarketing`,
+                'en': `${baseUrl}/en/localmarketing`,
             },
         },
         openGraph: {
@@ -54,7 +56,8 @@ export async function generateMetadata({ params: { locale } }: { params: { local
     };
 }
 
-export default function LocalMarketingPage({ params: { locale } }: { params: { locale: string } }) {
+export default async function LocalMarketingPage({ params }: { params: Promise<{ locale: string }> }) {
+    const { locale } = await params;
     return (
         <main className="min-h-screen bg-white">
             <LocalMarketingSchema locale={locale} />
