@@ -17,9 +17,10 @@ export default function middleware(request: NextRequest) {
     // 2. Auto-prefix niche paths if locale is missing
     const nichePaths = ['treeservice', 'taxservices', 'sealcoating', 'roofing', 'localmarketing'];
     const pathSegments = pathname.split('/').filter(Boolean);
-    if (pathSegments.length === 1 && nichePaths.includes(pathSegments[0])) {
-        const url = request.nextUrl.clone();
-        url.pathname = `/es/${pathSegments[0]}`;
+
+    // Check if the path is exactly one of the niche paths (case insensitive)
+    if (pathSegments.length === 1 && nichePaths.includes(pathSegments[0].toLowerCase())) {
+        const url = new URL(`/es/${pathSegments[0]}`, request.url);
         return NextResponse.rewrite(url);
     }
 
