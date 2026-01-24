@@ -22,11 +22,9 @@ export default function TreeServiceFooter() {
                                 height={60}
                                 className="h-12 w-auto mb-3"
                             />
-                            <p className="text-sm font-semibold text-emerald-400">Tree Service Marketing</p>
+                            <p className="text-sm font-semibold text-emerald-400">Genes Marketing</p>
                         </div>
-                        <p className="text-gray-400 leading-relaxed">
-                            Specialized marketing solutions for tree service companies. We help you generate more calls, quotes, and jobs through proven local marketing strategies.
-                        </p>
+                        Specialized marketing solutions for local service companies. We help you generate more calls, quotes, and jobs through proven local marketing strategies.
                     </div>
 
                     {/* Contact Info */}
@@ -75,7 +73,7 @@ export default function TreeServiceFooter() {
                 <div className="pt-8 border-t border-emerald-800/30 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500">
                     <p>© {currentYear} Genes Marketing. All rights reserved.</p>
                     <p className="flex items-center gap-2">
-                        Made with <span className="text-emerald-500">❤️</span> for Tree Service Companies
+                        Made with <span className="text-emerald-500">❤️</span> for Local Businesses
                     </p>
                 </div>
             </div>

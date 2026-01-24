@@ -30,7 +30,7 @@ export default function TreeServiceHeader() {
                         priority
                     />
                     <div className="border-l border-gray-300 pl-3">
-                        <p className="text-sm font-semibold text-gray-700">Tree Service Marketing</p>
+                        <p className="text-sm font-semibold text-gray-700">Genes Marketing</p>
                     </div>
                 </div>
 

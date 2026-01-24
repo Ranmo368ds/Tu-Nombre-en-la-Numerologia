@@ -13,7 +13,11 @@ export default function middleware(request: NextRequest) {
         const url = request.nextUrl.clone();
         const { pathname } = url;
 
-        if (pathname.startsWith('/radio-unica') || pathname.startsWith('/_next') || pathname.includes('.')) {
+        if (pathname.startsWith('/radio-unica') ||
+            pathname.includes('marketing-para-') ||
+            pathname.includes('marketing-local-') ||
+            pathname.startsWith('/_next') ||
+            pathname.includes('.')) {
             return NextResponse.next();
         }
 
@@ -36,7 +40,12 @@ export default function middleware(request: NextRequest) {
         const { pathname } = url;
 
         // Allow static files, _next, and avoid loops
-        if (pathname.startsWith('/genes-marketing') || pathname.startsWith('/_next') || pathname.includes('.')) {
+        // Allow static files, _next, niche pages, and avoid loops
+        if (pathname.startsWith('/genes-marketing') ||
+            pathname.includes('marketing-para-') ||
+            pathname.includes('marketing-local-') ||
+            pathname.startsWith('/_next') ||
+            pathname.includes('.')) {
             return NextResponse.next();
         }
 
