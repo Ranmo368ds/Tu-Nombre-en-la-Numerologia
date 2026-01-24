@@ -758,5 +758,270 @@
             "twitter_title": "Genes Marketing | Promote Your Latino Business on Pinterest",
             "twitter_description": "Professional pins + SEO + Curated directory = More customers for your business. No monthly fees."
         }
+    },
+    "TreeServicePage": {
+        "seo": {
+            "title": "Tree Service Marketing | EDDM, Door Hangers, Google Ads & Pinterest",
+            "description": "Attract more calls for your Tree Service with EDDM, Door Hangers, Google Ads, Pinterest, and Yard Signs. Local strategy for Chicago Northwest Suburbs and surrounding areas.",
+            "keywords": "tree service marketing, tree removal marketing, tree trimming advertising, stump grinding leads, eddm tree service, door hangers tree service, google ads tree service, pinterest tree service, yard signs tree service, chicago tree service marketing",
+            "og_title": "Specialized Marketing for Tree Service | Genes Marketing",
+            "og_description": "5-pillar system to generate more calls and jobs: EDDM + Door Hangers + Google Ads + Pinterest + Yard Signs",
+            "og_image_alt": "Tree Service Marketing - Genes Marketing",
+            "twitter_title": "Tree Service Marketing | More Calls and Jobs",
+            "twitter_description": "Proven local strategy for tree removal, trimming, and stump grinding companies"
+        },
+        "hero": {
+            "badge": "Specialized Marketing for Tree Service",
+            "title": "Marketing for Tree Service Companies",
+            "subtitle": "Attract more calls, quotes, and jobs in your area with a local marketing system designed for tree service companies. We combine physical advertising (EDDM, door hangers, yard signs) with digital presence (Google Ads and Pinterest) to keep your business visible, trustworthy, and consistent year-round.",
+            "cta_primary": "Request Free Strategy",
+            "cta_secondary": "View Pinterest Examples",
+            "trust_1": "Chicago Northwest Suburbs",
+            "trust_2": "Proven Results",
+            "trust_3": "No Long Contracts"
+        },
+        "whySpecial": {
+            "title": "Why does Tree Service marketing need a special strategy?",
+            "description": "Tree service doesn't sell like a 'pretty' product; it sells with trust, safety, and local presence. Many homeowners only call when there's a problem (fallen tree, dangerous branches, storms) and at that moment they hire whoever appears first and looks most trustworthy. That's why the right approach is to position yourself in your area with a clear message: safety, experience, professional equipment, and quick response.",
+            "challenges_title": "Common challenges we see in tree service:",
+            "challenge_1": "High competition in the same area and price wars",
+            "challenge_2": "Seasonal work peaks and slow periods",
+            "challenge_3": "Customers searching 'near me' and calling the first one they see",
+            "challenge_4": "Lack of visual presence (no evidence of work)",
+            "challenge_5": "Businesses that depend only on referrals and miss opportunities",
+            "insight_title": "With the right strategy, a single job in a neighborhood can turn into multiple jobs around it.",
+            "insight_description": "When you combine physical presence (door hangers, yard signs) with digital presence (Google Ads, Pinterest), you create a multiplier effect that turns each job into an opportunity to generate more leads in the same area."
+        },
+        "marketingSystem": {
+            "title": "Our local marketing system for Tree Service",
+            "subtitle": "At Genes Marketing we don't do 'generic advertising'. We create an industry-specific system to generate real calls and consistent jobs. Our method combines five pillars:",
+            "eddm": {
+                "title": "EDDM (Direct Mail)",
+                "description": "EDDM (Every Door Direct Mail) works very well for tree removal and tree trimming because it reaches specific neighborhoods directly. In tree service, the key is that the message is clear: problem → solution → call.",
+                "worksFor": {
+                    "title": "EDDM works for:",
+                    "item1": "Promoting preventive maintenance (tree trimming)",
+                    "item2": "Seasonal campaigns (storm season)",
+                    "item3": "Safety services (dangerous branches near houses, cables, roofs)",
+                    "item4": "Areas with high density of trees and single-family homes"
+                },
+                "whatWeDo": {
+                    "title": "What we do:",
+                    "item1": "Design focused on conversions (calls/quotes)",
+                    "item2": "Route selection (by area, density, and housing type)",
+                    "item3": "Message by service (removal, trimming, stump grinding)",
+                    "item4": "Printing + mailing coordination"
+                }
+            },
+            "doorHangers": {
+                "title": "Door Hangers",
+                "description": "Door hangers are ideal when your crews are already working in an area. In tree service, the neighbor sees the work and immediately thinks: 'I need that too'. This tactic converts physical presence into quick calls.",
+                "worksFor": {
+                    "title": "Door hangers work excellent for:",
+                    "item1": "Tree trimming and recurring maintenance",
+                    "item2": "Upsell after a job (stump grinding, cleanup)",
+                    "item3": "Neighborhood campaigns when you're active in the area",
+                    "item4": "Limited promotions ('this week in your area')"
+                },
+                "whatWeDo": {
+                    "title": "What we do:",
+                    "item1": "Eye-catching design with clear offer",
+                    "item2": "Urgency and proximity message",
+                    "item3": "Printing on durable material",
+                    "item4": "Neighborhood distribution strategy"
+                }
+            },
+            "googleAds": {
+                "title": "Google Ads – Capture high-intent customers",
+                "description": "Google Ads in tree service is powerful because the intent is urgent. Someone searching 'tree removal near me' usually wants to hire today or tomorrow. This isn't about 'likes'; it's about being visible when people are ready to call.",
+                "worksFor": {
+                    "title": "Search examples we convert:",
+                    "item1": "tree removal near me",
+                    "item2": "emergency tree service",
+                    "item3": "storm damage tree removal",
+                    "item4": "stump grinding service"
+                },
+                "whatWeDo": {
+                    "title": "What we do:",
+                    "item1": "Setup and structure by services",
+                    "item2": "Ads focused on calls and forms",
+                    "item3": "Segmentation by city/area",
+                    "item4": "Weekly optimization (to reduce cost per lead)"
+                }
+            },
+            "pinterest": {
+                "title": "Pinterest – Visual trust that lasts months",
+                "description": "Pinterest is a visual search engine. For tree service it's perfect because your work is visual: before/after, cleanups, large removals, commercial projects, heavy equipment work. Pinterest helps build trust even before they contact you.",
+                "worksFor": {
+                    "title": "Pinterest helps you:",
+                    "item1": "Show real evidence of your work",
+                    "item2": "Make your brand 'stick' (pins last months)",
+                    "item3": "Attract constant website traffic (without paying ads)",
+                    "item4": "Position yourself by services (removal, trimming, stump grinding)"
+                },
+                "whatWeDo": {
+                    "title": "Important (to make it work):",
+                    "item1": "Each pin must point to a specific service page",
+                    "item2": "SEO optimization by keyword + location",
+                    "item3": "High-quality images of real work",
+                    "item4": "Clear description with call to action"
+                }
+            },
+            "yardSigns": {
+                "title": "Yard Signs – Local social proof",
+                "description": "In local services, social proof rules. A well-placed yard sign, in the right neighborhood, generates direct calls. It's a simple but powerful tool for tree service.",
+                "worksFor": {
+                    "title": "Yard signs work for:",
+                    "item1": "Branding in specific areas",
+                    "item2": "'Perception of presence' in the area",
+                    "item3": "Lead generation from neighbors and local traffic",
+                    "item4": "Reinforcing EDDM and door hanger campaigns"
+                },
+                "whatWeDo": {
+                    "title": "What we do:",
+                    "item1": "Professional and visible design",
+                    "item2": "Weather-resistant material",
+                    "item3": "Clear message with large phone number",
+                    "item4": "Placement strategy by zone"
+                }
+            }
+        },
+        "results": {
+            "title": "What results to expect (realistic)",
+            "subtitle": "Results depend on three things: your operational capacity, your area, and your consistency. But in tree service the pattern is usually clear:",
+            "doorHangers": {
+                "title": "Door Hangers + Yard Signs",
+                "description": "Quick calls in the neighborhood where you're working"
+            },
+            "googleAds": {
+                "title": "Google Ads",
+                "description": "High-intent leads (ready to hire)"
+            },
+            "eddm": {
+                "title": "EDDM",
+                "description": "Seasonal stability + brand recognition"
+            },
+            "pinterest": {
+                "title": "Pinterest",
+                "description": "Visual trust + continuous traffic + reputation"
+            },
+            "combined": {
+                "title": "When these pieces work together",
+                "description": "The business stops depending only on referrals or seasons. You create a constant flow of opportunities you can control and scale according to your capacity."
+            }
+        },
+        "serviceAreas": {
+            "badge": "Local Coverage",
+            "title": "Areas we serve",
+            "description": "We work with companies and contractors in Chicago Northwest Suburbs, including:",
+            "strategy": {
+                "title": "Strategy by zone",
+                "description": "If your company works by city or coverage radius, we adapt the strategy to dominate your main area before expanding. This maximizes ROI and creates a 'dominant presence' effect in your area."
+            }
+        },
+        "serviceTypes": {
+            "title": "Services by type of need",
+            "subtitle": "So customers can quickly identify, we adapt the message according to the service:",
+            "removal": {
+                "title": "Tree Removal",
+                "description": "Ideal for dangerous, fallen, diseased trees or risk to house/structure.",
+                "marketing": {
+                    "title": "Marketing focused on:",
+                    "description": "Safety, insurance, speed, and area cleanup. Urgency and trust messages."
+                }
+            },
+            "trimming": {
+                "title": "Tree Trimming (Pruning / maintenance)",
+                "description": "Perfect for annual maintenance, branch control, aesthetics, and prevention.",
+                "marketing": {
+                    "title": "Marketing based on:",
+                    "description": "Prevention and home care. Recurring maintenance and long-term value messages."
+                }
+            },
+            "stumpGrinding": {
+                "title": "Stump Grinding",
+                "description": "High-conversion complementary service after a removal.",
+                "marketing": {
+                    "title": "Marketing based on:",
+                    "description": "Cleanup, aesthetics, and space use. Perfect for upsell after tree removal."
+                }
+            },
+            "emergency": {
+                "title": "Emergency Tree Service",
+                "description": "Strong peaks after storms.",
+                "marketing": {
+                    "title": "Marketing focused on:",
+                    "description": "Quick response and 24/7 availability. Urgency and immediate response capacity messages."
+                }
+            }
+        },
+        "pricing": {
+            "title": "Recommended packages for Tree Service",
+            "subtitle": "Choose the package that best fits your growth goals",
+            "popular": "Most Popular",
+            "idealFor": "Ideal for:",
+            "cta": "Request Information",
+            "starter": {
+                "name": "Local Presence (Starter)",
+                "tagline": "For companies that want more calls in their immediate area",
+                "features": {
+                    "item1": "Door hangers + print-ready design",
+                    "item2": "Yard signs (quantity according to campaign)",
+                    "item3": "Neighborhood campaign structure",
+                    "item4": "Basic implementation support"
+                },
+                "idealFor": "Companies that want to generate quick calls in their current work area"
+            },
+            "pro": {
+                "name": "Pro Growth (Visibility)",
+                "tagline": "For companies that want consistent weekly leads",
+                "features": {
+                    "item1": "Google Ads (setup + monthly optimization)",
+                    "item2": "Pinterest (pins per service + board structure)",
+                    "item3": "Conversion-focused creatives",
+                    "item4": "Monthly performance reports",
+                    "item5": "Continuous optimization"
+                },
+                "idealFor": "Companies that want a constant flow of qualified leads every week"
+            },
+            "allin": {
+                "name": "Local Dominance (All-in)",
+                "tagline": "For companies that want to 'own' their area",
+                "features": {
+                    "item1": "Monthly EDDM by recommended routes",
+                    "item2": "Google Ads (management + reports)",
+                    "item3": "Pinterest + Directory + featured section",
+                    "item4": "Coordinated yard signs + door hangers",
+                    "item5": "Complete multi-channel strategy"
+                },
+                "idealFor": "Companies that want to dominate their local market and create constant presence"
+            }
+        },
+        "faq": {
+            "title": "Frequently Asked Questions",
+            "subtitle": "We answer your questions about tree service marketing",
+            "timeline": {
+                "question": "How long does it take to see results?",
+                "answer": "It depends on the channel. Google Ads can generate leads quickly. Door hangers and yard signs can generate calls within days. Pinterest and EDDM build visibility and trust with cumulative impact."
+            },
+            "website": {
+                "question": "Do I need to have a perfect website?",
+                "answer": "Not perfect, but clear. If you don't have pages per service, we help you structure them so each pin and ad points to the right page."
+            },
+            "bestCombo": {
+                "question": "What's the best combination for tree service?",
+                "answer": "For quick results: Google Ads + door hangers. To build local dominance: EDDM + yard signs + Pinterest. The ideal is to combine physical with digital presence."
+            },
+            "geographic": {
+                "question": "Can you focus only on my city?",
+                "answer": "Yes. We recommend dominating your main area first (city or coverage radius) and then expanding to nearby cities."
+            }
+        },
+        "finalCTA": {
+            "title": "Ready to generate more calls and Tree Service jobs in your area?",
+            "subtitle": "If you're tired of competing only on price, we help you build local presence, trust, and a constant flow of leads.",
+            "cta": "Request Free Strategy",
+            "trustLine": "Quick response. No commitment. Results-focused."
+        }
     }
 }
