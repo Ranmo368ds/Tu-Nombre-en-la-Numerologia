@@ -40,6 +40,11 @@ export default function middleware(request: NextRequest) {
 
     // 4. Domain Routing for Genes Marketing
     if (hostname && (hostname.includes('genesmarketing.com') || hostname.includes('genes-marketing') || hostname.includes('localhost:3000'))) {
+        // SAFETY: Do not hijack niche marketing paths
+        if (nichePaths.some(path => pathname.includes(path))) {
+            return intlMiddleware(request);
+        }
+
         const isRoot = pathSegments.length === 0;
         const isLocaleRoot = pathSegments.length === 1 && locales.includes(pathSegments[0] as any);
 
