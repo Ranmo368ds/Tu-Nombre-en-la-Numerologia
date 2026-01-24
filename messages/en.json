@@ -1472,5 +1472,269 @@
             "button": "Request Free Strategy",
             "smallPrint": "No commitment. Focused on real results."
         }
+    },
+    "RoofingPage": {
+        "seo": {
+            "title": "Roofing & Siding Marketing | Storm Intelligence + EDDM, Google Ads, Pinterest",
+            "description": "NOAA data-driven marketing for roofing and siding companies. Storm Intelligence Targeting + EDDM, Google Ads, Pinterest, and Yard Signs. Chicago Northwest Suburbs.",
+            "keywords": "roofing marketing, siding marketing, storm damage marketing, NOAA data targeting, roof replacement leads, siding installation marketing, storm intelligence, hail damage marketing"
+        },
+        "hero": {
+            "badge": "Specialized Marketing for Roofing & Siding",
+            "title": "Marketing for Roofing and Siding Companies",
+            "subtitle": "Generate more inspections and projects with Storm Intelligence Targeting based on NOAA data + strategic local marketing designed for roofing and siding.",
+            "cta_primary": "Request Free Strategy",
+            "cta_secondary": "View Examples on Pinterest",
+            "trust": {
+                "clients": "Chicago Northwest Suburbs",
+                "results": "Proven Results",
+                "guarantee": "No Long Contracts"
+            }
+        },
+        "problem": {
+            "title": "Why do many roofing companies depend only on referrals?",
+            "description": "Roofing and siding are high-investment services where trust is key. Most homeowners only think about their roof when there's visible damage, leaks, or after a storm. Who wins is usually who is most visible locally, appears first on Google, and looks most professional.",
+            "challenges_title": "Common challenges:",
+            "challenges": {
+                "challenge1": "Dependence on storm season",
+                "challenge2": "Strong competition and 'cheap' offers without quality",
+                "challenge3": "Clients comparing only by price",
+                "challenge4": "Lack of visual presence (before/after, finishes)",
+                "challenge5": "Not knowing where recent weather damage occurred"
+            },
+            "callout": "Marketing based on real data, not assumptions."
+        },
+        "stormIntelligence": {
+            "badge": "🌩️ Storm Intelligence Targeting",
+            "title": "Storm-Based Targeting (Real Data, No Guesswork)",
+            "subtitle": "We use official NOAA data to identify areas impacted by hail and strong winds in the last 30 to 60 days.",
+            "description": "Instead of advertising 'blindly', we focus advertising on areas with real weather events, increasing the effectiveness of EDDM, Door Hangers, Google Ads, and visual content on Pinterest.",
+            "feature1": {
+                "title": "Official NOAA Data",
+                "description": "Analysis of hail and strong winds by county and city"
+            },
+            "feature2": {
+                "title": "Zone Identification",
+                "description": "Mapping areas with highest probability of roof damage"
+            },
+            "feature3": {
+                "title": "Hyperlocal Campaigns",
+                "description": "EDDM and Google Ads activated only in affected areas"
+            },
+            "feature4": {
+                "title": "Perfect Timing",
+                "description": "Post-storm messages when damage already exists"
+            },
+            "benefits_title": "Benefits for Your Company",
+            "benefit1": {
+                "title": "Higher Intent Leads",
+                "description": "You talk to homeowners who likely have real damage"
+            },
+            "benefit2": {
+                "title": "Less Direct Competition",
+                "description": "Strategic focus vs. generic advertising"
+            },
+            "benefit3": {
+                "title": "More Qualified Inspections",
+                "description": "Reduces curious calls, increases real projects"
+            },
+            "callout": "👉 Marketing based on real data, not assumptions."
+        },
+        "marketing": {
+            "title": "Local Marketing System for Roofing & Siding",
+            "subtitle": "At Genes Marketing we combine Storm Intelligence with physical and digital strategies so your company generates qualified inspections and consistent projects.",
+            "eddm": {
+                "title": "🔹 1) EDDM (Post-Storm Direct Mail)",
+                "description": "EDDM is perfect for roofing when combined with Storm Intelligence: you can reach specific neighborhoods that were impacted by hail or strong winds.",
+                "useCases": {
+                    "title": "EDDM works for:",
+                    "item1": "Post-storm campaigns in affected areas",
+                    "item2": "Roof replacement and siding promotion",
+                    "item3": "Free inspections in areas with probable damage",
+                    "item4": "'We're working in your area' (social proof)"
+                },
+                "whatWeDo": {
+                    "title": "What we do:",
+                    "item1": "Professional design with clear offer",
+                    "item2": "Route selection based on NOAA data",
+                    "item3": "Copy focused on inspection and protection",
+                    "item4": "Printing + mailing coordination"
+                }
+            },
+            "doorHangers": {
+                "title": "🔹 2) Door Hangers – presence in affected neighborhoods",
+                "description": "When you work on a roof, the rest of the neighborhood sees it. Door hangers convert presence into calls, especially after storms.",
+                "useCases": {
+                    "title": "Ideal for:",
+                    "item1": "'We're working in your area'",
+                    "item2": "Free post-storm inspections",
+                    "item3": "Neighbor discounts / bundles",
+                    "item4": "Preventive maintenance campaigns"
+                }
+            },
+            "googleAds": {
+                "title": "🔹 3) Google Ads – high intent ('storm damage near me')",
+                "description": "When someone searches for roofing after a storm, they usually want an inspection soon. Google Ads puts you in front of people ready to hire.",
+                "useCases": {
+                    "title": "Searches that convert:",
+                    "item1": "roof repair near me",
+                    "item2": "storm damage roof",
+                    "item3": "roof replacement",
+                    "item4": "siding installation near me",
+                    "item5": "hail damage roof repair"
+                },
+                "whatWeDo": {
+                    "title": "What we do:",
+                    "item1": "Separate campaigns (storm damage vs. general)",
+                    "item2": "Focus on inspections and calls",
+                    "item3": "Targeting by affected cities",
+                    "item4": "Continuous optimization to reduce cost per lead",
+                    "item5": "Clear reports (leads, calls, cost)"
+                }
+            },
+            "pinterest": {
+                "title": "🔹 4) Pinterest – before/after that builds trust",
+                "description": "Pinterest is ideal for roofing because the result is visual. A good 'before/after' generates instant trust and positions you as a professional company.",
+                "useCases": {
+                    "title": "Pinterest helps you:",
+                    "item1": "Show finishes and real work",
+                    "item2": "Create visual authority by service",
+                    "item3": "Maintain constant traffic (months, not hours)",
+                    "item4": "Separate pins by service (roof, siding, gutters)"
+                }
+            },
+            "yardSigns": {
+                "title": "🔹 5) Yard Signs – immediate local social proof",
+                "description": "A yard sign at a house with a new roof is a lead machine: neighbors see it, trust it, and call.",
+                "useCases": {
+                    "title": "Works for:",
+                    "item1": "Branding in right neighborhoods",
+                    "item2": "Social validation ('if my neighbor hired them, they're good')",
+                    "item3": "Reinforcement of EDDM + door hangers",
+                    "item4": "Capture clients without depending 100% on ads"
+                }
+            }
+        },
+        "services": {
+            "title": "Roofing & Siding Services We Can Promote",
+            "subtitle": "Each service can have its own pin, ad, and specific message.",
+            "roofReplacement": {
+                "title": "Roof Replacement",
+                "description": "Complete replacement of residential and commercial roofs."
+            },
+            "roofRepair": {
+                "title": "Roof Repair",
+                "description": "Repair of leaks and damage to existing roofs."
+            },
+            "sidingInstallation": {
+                "title": "Siding Installation",
+                "description": "Siding installation to improve appearance and protection."
+            },
+            "sidingRepair": {
+                "title": "Siding Repair",
+                "description": "Repair of siding damaged by weather or wear."
+            },
+            "gutterServices": {
+                "title": "Gutter Services",
+                "description": "Installation and repair of gutters and downspouts."
+            },
+            "stormDamage": {
+                "title": "Storm Damage Inspection",
+                "description": "Free post-storm inspections to detect damage."
+            },
+            "callout": "Each one can have its own pin, ad, and specific message."
+        },
+        "areas": {
+            "badge": "Local Coverage",
+            "title": "Areas We Serve",
+            "description": "We work with roofing and siding companies in Chicago Northwest Suburbs, including Algonquin, Huntley, Elgin, Crystal Lake, Carpentersville, Barrington, Woodstock, McHenry, Schaumburg, and nearby areas in northern Illinois and southern Wisconsin.",
+            "additional": "And nearby areas in northern Illinois and southern Wisconsin"
+        },
+        "pricing": {
+            "title": "Recommended Packages for Roofing & Siding",
+            "subtitle": "Choose the package that best fits your growth goals.",
+            "popular": "Most Popular",
+            "idealFor": "Ideal for:",
+            "starter": {
+                "name": "Local Presence",
+                "subtitle": "Starter",
+                "features": {
+                    "item1": "Door hangers (design + optional printing)",
+                    "item2": "Yard signs",
+                    "item3": "Neighborhood messaging ('We're in your area')"
+                },
+                "idealFor": "Generate inspections quickly"
+            },
+            "pro": {
+                "name": "Pro Visibility",
+                "subtitle": "Professional",
+                "features": {
+                    "item1": "Google Ads (setup + optimization)",
+                    "item2": "Pinterest (pins by service + organization)",
+                    "item3": "Creatives focused on inspections/calls",
+                    "item4": "Monthly reports"
+                },
+                "idealFor": "Generate consistent weekly leads"
+            },
+            "allin": {
+                "name": "Local Dominance",
+                "subtitle": "All-in",
+                "features": {
+                    "item1": "Monthly EDDM by recommended routes",
+                    "item2": "Google Ads + reports",
+                    "item3": "Pinterest + Directory + featured section",
+                    "item4": "Coordinated yard signs + door hangers",
+                    "item5": "Dedicated 24/7 support"
+                },
+                "idealFor": "Dominate an area and expand"
+            },
+            "stormAddon": {
+                "title": "🔥 Premium Add-on: Storm Intelligence Targeting",
+                "subtitle": "Only for Local Dominance package clients",
+                "includes_title": "Includes:",
+                "includes": {
+                    "item1": "Monthly NOAA data analysis (hail + wind events)",
+                    "item2": "Identification of affected counties, cities, and areas",
+                    "item3": "EDDM route recommendations by neighborhood",
+                    "item4": "Google Ads campaign adjustments for storm damage",
+                    "item5": "Specific 'post-storm' messaging",
+                    "item6": "Visual coordination (door hangers + yard signs)"
+                },
+                "benefits_title": "Benefits:",
+                "benefits": {
+                    "item1": "Higher intent leads",
+                    "item2": "Less direct competition",
+                    "item3": "More qualified inspections",
+                    "item4": "Better ROI during storm season"
+                },
+                "note": "👉 This service is only offered to active Local Dominance package clients."
+            }
+        },
+        "faq": {
+            "title": "Frequently Asked Questions",
+            "subtitle": "Answers to the most common questions about roofing and siding marketing.",
+            "q1": {
+                "question": "How does Storm Intelligence Targeting work?",
+                "answer": "We use official NOAA data to identify areas that have been impacted by hail and strong winds in the last 30 to 60 days. With that we activate local campaigns only in those areas: direct mail, Google Ads, and visual presence. This means when the homeowner receives your ad, the damage already exists or is very likely."
+            },
+            "q2": {
+                "question": "Do I need service-specific pages on my website?",
+                "answer": "Highly recommended. Each pin and ad should point to the exact page (roof replacement, siding installation, storm damage) to improve conversion and avoid Pinterest blocks."
+            },
+            "q3": {
+                "question": "What works better: post-storm campaigns or general campaigns?",
+                "answer": "Post-storm campaigns based on NOAA data have higher effectiveness because you talk to homeowners who likely have real damage. General campaigns work for preventive maintenance and planned replacements."
+            },
+            "q4": {
+                "question": "Is Storm Intelligence available for all packages?",
+                "answer": "No. Storm Intelligence Targeting is a premium add-on that is only offered to active Local Dominance (All-in) package clients. It requires continuous data analysis and strategic coordination."
+            }
+        },
+        "finalCTA": {
+            "title": "Ready to generate more roofing inspections and projects?",
+            "subtitle": "If you want to stop depending only on referrals and build a marketing system based on real data, our system is designed for you.",
+            "button": "Request Free Strategy",
+            "smallPrint": "No commitment. Focused on real results."
+        }
     }
 }
