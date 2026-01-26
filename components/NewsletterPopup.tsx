@@ -31,7 +31,9 @@ export function NewsletterPopup() {
         e.preventDefault();
         setStatus("submitting");
 
-        const formId = process.env.NEXT_PUBLIC_FORMSPREE_NEWSLETTER_ID || "mqkvznpb"; // Placeholder fallback
+        const formId = process.env.NEXT_PUBLIC_FORMSPREE_NEWSLETTER_ID ||
+            process.env.NEXT_PUBLIC_FORMSPREE_CONTACT_ID ||
+            "xgooeyqd";
 
         try {
             const response = await fetch(`https://formspree.io/f/${formId}`, {

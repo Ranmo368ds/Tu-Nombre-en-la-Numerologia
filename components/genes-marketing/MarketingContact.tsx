@@ -14,7 +14,7 @@ export default function MarketingContact() {
         e.preventDefault();
         setStatus("submitting");
 
-        const formId = process.env.NEXT_PUBLIC_FORMSPREE_CONTACT_ID || "mqkvznpb";
+        const formId = process.env.NEXT_PUBLIC_FORMSPREE_CONTACT_ID || "xgooeyqd";
 
         try {
             const response = await fetch(`https://formspree.io/f/${formId}`, {

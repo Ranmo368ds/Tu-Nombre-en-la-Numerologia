@@ -16,7 +16,7 @@ export default function ContactClient() {
         e.preventDefault();
         setStatus("submitting");
 
-        const formId = process.env.NEXT_PUBLIC_FORMSPREE_CONTACT_ID || "mqkvznpb"; // Placeholder fallback
+        const formId = process.env.NEXT_PUBLIC_FORMSPREE_CONTACT_ID || "xgooeyqd"; // Standardized fallback
 
         try {
             const response = await fetch(`https://formspree.io/f/${formId}`, {
