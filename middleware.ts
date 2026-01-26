@@ -32,8 +32,7 @@ export default function middleware(request: NextRequest) {
         if (isRoot || isLocaleRoot) {
             let lang = pathSegments[0] || 'en';
             const url = request.nextUrl.clone();
-            url.pathname = '/radiounica';
-            url.searchParams.set('lang', lang);
+            url.pathname = `/${lang}/radiounica`;
             return NextResponse.rewrite(url);
         }
     }
