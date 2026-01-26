@@ -38,8 +38,8 @@ export function Header() {
 
     const isHolisticPath = holisticPaths.some(path => pathname === path || pathname.startsWith(path));
 
-    // Hide global header if NOT on a holistic path OR if on marketing domain
-    if (!isHolisticPath || isMarketingDomain) {
+    // Hide global header if NOT on a holistic path OR if on a niche domain
+    if (!isHolisticPath || isNicheDomain) {
         return null;
     }
 

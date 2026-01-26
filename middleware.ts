@@ -30,10 +30,9 @@ export default function middleware(request: NextRequest) {
         const isLocaleRoot = pathSegments.length === 1 && locales.includes(pathSegments[0] as any);
 
         if (isRoot || isLocaleRoot) {
-            let lang = pathSegments[0] || 'en';
-            const url = request.nextUrl.clone();
-            url.pathname = `/${lang}/radiounica`;
-            return NextResponse.rewrite(url);
+            let lang = pathSegments[0] || 'es'; // Default to Spanish for Radio Unica
+            const url = new URL(`/${lang}/radiounica`, request.url);
+            return NextResponse.redirect(url);
         }
     }
 
