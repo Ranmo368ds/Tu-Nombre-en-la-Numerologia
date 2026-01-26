@@ -13,15 +13,17 @@ export function Header() {
     const [isMenuOpen, setIsMenuOpen] = React.useState(false);
     const { toggleCart, totalItems } = useCart();
     const pathname = usePathname();
-    const [isMarketingDomain, setIsMarketingDomain] = React.useState(false);
+    const [isNicheDomain, setIsNicheDomain] = React.useState(false);
 
     React.useEffect(() => {
         if (typeof window !== "undefined") {
             const hostname = window.location.hostname;
-            // Check if we are on Genes Marketing (either production or preview)
-            const isGenes = hostname.includes("genesmarketing") ||
+            // Check if we are on Genes Marketing or Radio Unica (either production or preview)
+            const isNiche = hostname.includes("genesmarketing") ||
+                hostname.includes("radiounica") ||
+                hostname.includes("radio-unica") ||
                 (hostname.includes("tu-nombre-en-la-numerologia") && !hostname.includes("instintosaludable"));
-            setIsMarketingDomain(isGenes);
+            setIsNicheDomain(isNiche);
         }
     }, []);
 
