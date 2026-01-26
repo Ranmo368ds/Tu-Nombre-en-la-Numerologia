@@ -8,8 +8,8 @@ import TaxServiceAreas from "@/components/tax-service/TaxServiceAreas";
 import TaxPricingPackages from "@/components/tax-service/TaxPricingPackages";
 import TaxServiceFAQ from "@/components/tax-service/TaxServiceFAQ";
 import TaxServiceCTA from "@/components/tax-service/TaxServiceCTA";
-import TreeServiceHeader from "@/components/tree-service/TreeServiceHeader";
-import TreeServiceFooter from "@/components/tree-service/TreeServiceFooter";
+import TaxServiceHeader from "@/components/tax-service/TaxServiceHeader";
+import TaxServiceFooter from "@/components/tax-service/TaxServiceFooter";
 import FloatingWhatsApp from "@/components/genes-marketing/FloatingWhatsApp";
 import ContactSection from "@/components/genes-marketing/ContactSection";
 import TaxServiceSchema from "@/components/tax-service/TaxServiceSchema";
@@ -44,6 +44,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
             languages: {
                 'es': `${baseUrl}/es/taxservices`,
                 'en': `${baseUrl}/en/taxservices`,
+                'x-default': `${baseUrl}/en/taxservices`,
             },
         },
         openGraph: {
@@ -80,7 +81,7 @@ export default async function TaxServicesPage({ params }: { params: Promise<{ lo
     return (
         <main className="font-sans antialiased text-[#0B1220] bg-white selection:bg-blue-500/10 selection:text-blue-600 relative">
             <TaxServiceSchema locale={locale} />
-            <TreeServiceHeader />
+            <TaxServiceHeader />
             <TaxServiceHero />
             <WhyTaxServiceSpecial />
             <TaxMarketingSystem />
@@ -90,7 +91,7 @@ export default async function TaxServicesPage({ params }: { params: Promise<{ lo
             <ContactSection />
             <TaxServiceFAQ />
             <TaxServiceCTA />
-            <TreeServiceFooter />
+            <TaxServiceFooter />
             <FloatingWhatsApp />
         </main>
     );

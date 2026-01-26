@@ -21,7 +21,7 @@ export default function PinterestDirectorySection() {
                                     <img loading="lazy" alt="Pinterest Logo" src="/images/pinterest-seeklogo.png"
                                         alt="Pinterest Directory"
                                         className="w-24 h-24 md:w-32 md:h-32 object-contain"
-                                     />
+                                    />
                                 </a>
                             </div>
 
@@ -31,10 +31,10 @@ export default function PinterestDirectorySection() {
                                     {t.rich('text', {
                                         p: (chunks) => (
                                             <span className="inline-flex items-center gap-1">
-                                                <img loading="lazy" alt="Pinterest Logo" src="/images/pinterest-seeklogo.png"
+                                                <img loading="lazy" src="/images/pinterest-seeklogo.png"
                                                     alt="Pinterest"
-                                                    className="h-5 md:h-6 w-auto object-contain"
-                                                 />
+                                                    className="h-7 md:h-8 w-auto object-contain -mb-1"
+                                                />
                                                 {chunks}
                                             </span>
                                         )

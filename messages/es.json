@@ -438,14 +438,14 @@
             "tagline": "Tu refugio digital para la sanación, el autoconocimiento y el bienestar integral.",
             "pages": "Páginas",
             "contact": "Contacto",
-            "email": "instintosaludableusa@gmail.com",
+            "email": "ventas@genesmarketing.com",
             "location": "Chicago, IL",
             "rights": "Todos los derechos reservados"
         }
     },
     "Contact": {
         "title": "Contáctanos",
-        "subtitle": "Estamos aquí para escucharte y guiarte en tu camino.",
+        "subtitle": "Un especialista en marketing se pondrá en contacto contigo para discutir tu estrategia.",
         "form": {
             "name": "Nombre",
             "email": "Correo Electrónico",
@@ -725,7 +725,7 @@
             "rights": "© {year} Genes Marketing. Todos los derechos reservados.",
             "made_with": "Hecho con ❤️ para la comunidad Latina.",
             "phone": "+1 (847) 502-9685",
-            "email": "GetOnBoard@genesmarketing.com"
+            "email": "ventas@genesmarketing.com"
         },
         "popup": {
             "time": {
@@ -772,7 +772,7 @@
             "whatsapp_label": "Envíanos un mensaje",
             "whatsapp_button": "Chat en WhatsApp",
             "email_label": "Escríbenos",
-            "email": "GetOnBoard@genesmarketing.com",
+            "email": "ventas@genesmarketing.com",
             "availability": "Lunes – Viernes, 9am – 6pm CST",
             "form_title": "¿Tienes dudas?",
             "form_subtitle": "Completa el formulario y un especialista te contactará pronto.",
@@ -1644,6 +1644,13 @@
                     "item2": "Crear autoridad visual por servicio",
                     "item3": "Mantener tráfico constante (meses, no horas)",
                     "item4": "Separar pines por servicio (roof, siding, gutters)"
+                },
+                "whatWeDo": {
+                    "title": "Qué hacemos:",
+                    "item1": "Creación de pines de alta conversión",
+                    "item2": "Organización de tableros por tipo de servicio",
+                    "item3": "Descripciones optimizadas para SEO",
+                    "item4": "Tráfico directo a páginas de servicio"
                 }
             },
             "yardSigns": {
@@ -1655,6 +1662,13 @@
                     "item2": "Validación social ('si lo contrató mi vecino, es bueno')",
                     "item3": "Refuerzo de EDDM + door hangers",
                     "item4": "Captar clientes sin depender 100% de ads"
+                },
+                "whatWeDo": {
+                    "title": "Qué hacemos:",
+                    "item1": "Diseño llamativo",
+                    "item2": "Asesoría de ubicación estratégica",
+                    "item3": "Branding consistente",
+                    "item4": "Códigos QR para contacto fácil"
                 }
             }
         },
@@ -1704,7 +1718,9 @@
                 "features": {
                     "item1": "Door hangers (diseño + impresión opcional)",
                     "item2": "Yard signs",
-                    "item3": "Mensaje por vecindario ('Estamos en tu zona')"
+                    "item3": "Mensaje por vecindario ('Estamos en tu zona')",
+                    "item4": "SEO local básico",
+                    "item5": "Reporte mensual por email"
                 },
                 "idealFor": "Generar inspecciones rápido"
             },
@@ -1715,7 +1731,8 @@
                     "item1": "Google Ads (setup + optimización)",
                     "item2": "Pinterest (pines por servicio + organización)",
                     "item3": "Creativos enfocados en inspecciones/llamadas",
-                    "item4": "Reportes mensuales"
+                    "item4": "Reportes mensuales",
+                    "item5": "Soporte prioritario por email"
                 },
                 "idealFor": "Generar leads semanales consistentes"
             },
@@ -1780,92 +1797,1303 @@
             "smallPrint": "Sin compromiso. Enfocado a resultados reales."
         }
     },
-    "LocalMarketingPage": {
+    "PaintingPage": {
         "seo": {
-            "title": "Publicidad Local Inteligente | Flyers EDDM, Digital y Pinterest",
-            "description": "Publicidad local física + digital que genera llamadas reales. Flyers EDDM directos a casas + página digital + Pinterest. Chicago Northwest Suburbs.",
-            "keywords": "publicidad local, marketing local, flyers eddm, pinterest marketing, leads locales, marketing para negocios locales"
+            "title": "Marketing para Pintores | EDDM, Door Hangers, Google Ads y Pinterest",
+            "description": "Atrae más clientes para tu negocio de pintura con EDDM, Door Hangers, Google Ads y Pinterest. Estrategia local para Chicago Northwest Suburbs.",
+            "keywords": "marketing para pintores, leads de pintura, publicidad para pintores, painting contractor marketing, eddm painting, door hangers painting, google ads painting, chicago painting services",
+            "og_title": "Marketing Especializado para Empresas de Pintura",
+            "og_description": "Sistema de marketing local para generar trabajos de pintura residencial y comercial.",
+            "og_image_alt": "Marketing para Pintores - Genes Marketing",
+            "twitter_title": "Marketing para Pintores | Más Trabajos en tu Zona",
+            "twitter_description": "Estrategia probada para pintores residenciales y comerciales."
         },
         "hero": {
-            "badge": "Publicidad Local Inteligente que Sí Funciona",
-            "title": "Publicidad que Sí Genera Llamadas Reales",
-            "subtitle": "Combinamos Flyers EDDM directos a casas + Tu propia Página Digital + Pinterest para crear el ecosistema de marketing local más potente para tu negocio.",
-            "cta": "Quiero aparecer en el próximo flyer"
+            "badge": "Marketing Especializado para Empresas de Pintura",
+            "title": "Marketing para Pintores Residenciales y Comerciales",
+            "subtitle": "Atrae más llamadas, cotizaciones y mejores proyectos con un sistema de marketing local que posiciona tu marca como la opción más confiable y profesional de tu ciudad.",
+            "cta_primary": "Solicitar Estrategia Gratis",
+            "cta_secondary": "Ver Ejemplos en Pinterest",
+            "trust_1": "Chicago Northwest Suburbs",
+            "trust_2": "Resultados Comprobados",
+            "trust_3": "Sin Contratos Largos"
         },
-        "problem": {
-            "title": "¿Por qué la publicidad tradicional falla?",
-            "item1": "Tarjetas que nadie ve o se tiran",
-            "item2": "Reparto manual costoso e ineficiente",
-            "item3": "Publicidad digital sin alcance local real"
+        "whySpecial": {
+            "title": "¿Por qué el marketing de pintura necesita estrategia oficial?",
+            "description": "La pintura es un servicio de confianza. El cliente te deja entrar a su casa o negocio. No basta con decir que 'pintas bien'; tienes que demostrar limpieza, profesionalismo y calidad visual. Nuestra estrategia está diseñada para que el cliente decida contratarte a ti por la confianza que transmites incluso antes de pedir la cotización.",
+            "challenges_title": "Retos comunes en el negocio de pintura:",
+            "challenge_1": "Lidiar con clientes que solo buscan el precio más bajo",
+            "challenge_2": "Falta de evidencias visuales de calidad (antes/después)",
+            "challenge_3": "Depender solo de recomendaciones boca a boca",
+            "challenge_4": "Zonas geográficas dispersas que aumentan costos de transporte",
+            "challenge_5": "Dificultad para cerrar proyectos de alto valor (exterior o comercial)",
+            "insight_title": "La calidad visual y la reputación local son tus mejores herramientas de ventas.",
+            "insight_description": "Al combinar presencia física en los vecindarios donde ya trabajas (door hangers) con una vitrina visual digital (Pinterest), creas un efecto de autoridad que te permite cobrar lo que realmente vale tu trabajo."
         },
-        "solution": {
-            "title": "La Solución: El Ecosistema Físico + Digital",
-            "item1": "Flyer enviado directo a casas (USPS)",
-            "item2": "Página web para los negocios participantes",
-            "item3": "Código QR funcional para trazabilidad",
-            "item4": "Pinterest incluido como refuerzo visual"
-        },
-        "steps": {
-            "title": "Cómo Funciona en 3 Pasos",
-            "step1": {
-                "title": "Te unes al flyer",
-                "description": "Reserva tu espacio en la zona donde quieres trabajar."
+        "marketingSystem": {
+            "title": "Nuestro sistema de marketing local para Pintores",
+            "subtitle": "Combinamos 5 pilares estratégicos para llenar tu agenda con trabajos de calidad.",
+            "eddm": {
+                "title": "EDDM (Correo Directo)",
+                "description": "Llega a miles de hogares en los vecindarios que más te interesan. Ideal para promocionar pintura de exteriores en primavera o interiores en invierno.",
+                "worksFor": {
+                    "title": "EDDM sirve para:",
+                    "item1": "Pintura exterior (campañas por temporada)",
+                    "item2": "Pintura interior y gabinetes",
+                    "item3": "Promociones en vecindarios específicos",
+                    "item4": "Posicionamiento de marca local"
+                },
+                "whatWeDo": {
+                    "title": "Qué hacemos:",
+                    "item1": "Diseño profesional enfocado en el área",
+                    "item2": "Selección estratégica de rutas postales",
+                    "item3": "Coordinación de impresión y logística",
+                    "item4": "Mensaje claro de 'Vecino a Vecino'"
+                }
             },
-            "step2": {
-                "title": "Diseñamos y enviamos",
-                "description": "Creamos tu anuncio y lo enviamos directo a los buzones vía EDDM."
+            "doorHangers": {
+                "title": "Door Hangers (Colgantes)",
+                "description": "La técnica '5-10-5': coloca colgantes en las casas alrededor de donde estás trabajando actualmente. El impacto visual es masivo.",
+                "worksFor": {
+                    "title": "Ideales para:",
+                    "item1": "Generar trabajos en la misma calle",
+                    "item2": "Aprovechar la visibilidad de tu equipo en el área",
+                    "item3": "Ofertas flash de vecindario",
+                    "item4": "Reforzar tu presencia ante vecinos curiosos"
+                },
+                "whatWeDo": {
+                    "title": "Qué hacemos:",
+                    "item1": "Formato llamativo y fácil de leer",
+                    "item2": "Mensaje de proximidad ('Ya estamos en tu zona')",
+                    "item3": "Impresión de alta calidad",
+                    "item4": "Estrategia de distribución táctica"
+                }
             },
-            "step3": {
-                "title": "Recibes resultados",
-                "description": "Empieza a recibir llamadas y tráfico digital constante."
+            "googleAds": {
+                "title": "Google Ads",
+                "description": "Captura al cliente que ya está buscando 'pintores cerca de mí'. Intención pura de compra.",
+                "worksFor": {
+                    "title": "Búsquedas que dominamos:",
+                    "item1": "Pintores residenciales",
+                    "item2": "Pintura de gabinetes de cocina",
+                    "item3": "Exterior house painters",
+                    "item4": "Commercial painting contractors"
+                },
+                "whatWeDo": {
+                    "title": "Qué hacemos:",
+                    "item1": "Campañas optimizadas por ciudad",
+                    "item2": "Anuncios que generan llamadas directas",
+                    "item3": "Optimización semanal de presupuesto",
+                    "item4": "Páginas de aterrizaje de alta conversión"
+                }
+            },
+            "pinterest": {
+                "title": "Pinterest (Tu vitrina 24/7)",
+                "description": "Pinterest es visual. Antes de contratarte, los clientes quieren ver tus acabados, tu limpieza y tu estilo. Los pines duran meses y atraen tráfico gratis.",
+                "worksFor": {
+                    "title": "Pinterest te ayuda a:",
+                    "item1": "Mostrar transformaciones Antes/Después",
+                    "item2": "Inspirar a clientes con paletas de colores",
+                    "item3": "Generar confianza con fotos reales de trabajos",
+                    "item4": "Tener presencia en Google Imágenes gratis"
+                },
+                "whatWeDo": {
+                    "title": "Qué hacemos:",
+                    "item1": "Creación de pines profesionales",
+                    "item2": "Optimización SEO para búsquedas locales",
+                    "item3": "Tableros organizados por servicios",
+                    "item4": "Links directos a tu WhatsApp o sitio"
+                }
+            },
+            "yardSigns": {
+                "title": "Yard Signs",
+                "description": "Firma tu obra maestra. Un cartel en el jardín mientras el dueño está feliz con el resultado es la mejor tarjeta de presentación.",
+                "worksFor": {
+                    "title": "Funcionan para:",
+                    "item1": "Prueba social en el vecindario",
+                    "item2": "Identificar tu marca con calidad",
+                    "item3": "Generar llamadas de paso",
+                    "item4": "Reforzar toda la publicidad offline"
+                },
+                "whatWeDo": {
+                    "title": "Qué hacemos:",
+                    "item1": "Diseño de alto contraste y gran visibilidad",
+                    "item2": "Teléfono y marca legibles a distancia",
+                    "item3": "Material duradero para exteriores",
+                    "item4": "Guía de colocación estratégica"
+                }
             }
         },
-        "pinterest": {
-            "badge": "BONUS EXCLUSIVO",
-            "title": "Potencia Digital con Pinterest",
-            "item1": "Pines profesionales de tus servicios",
-            "item2": "SEO optimizado en Pinterest",
-            "item3": "Inclusión en Directorio Latino Chicago",
-            "item4": "Tráfico constante sin pagar anuncios extra"
+        "results": {
+            "title": "Resultados Realistas para tu Negocio",
+            "subtitle": "Un sistema integrado te da la estabilidad que el boca a boca no puede garantizar.",
+            "doorHangers": {
+                "title": "Efecto Vecindario",
+                "description": "Llamadas de vecinos que ven tu trabajo en vivo."
+            },
+            "googleAds": {
+                "title": "Llamadas Hoy",
+                "description": "Captura al cliente urgente que necesita pintar ahora."
+            },
+            "eddm": {
+                "title": "Autoridad de Zona",
+                "description": "Te conviertes en 'el pintor de confianza' del área."
+            },
+            "pinterest": {
+                "title": "Ventas Visuales",
+                "description": "Clientes que ya vienen convencidos por la calidad de tus fotos."
+            }
+        },
+        "services": {
+            "title": "Servicios que podemos potenciar",
+            "item1": "Pintura Residencial (Interior/Exterior)",
+            "item2": "Pintura Comercial",
+            "item3": "Barnizado de Gabinetes",
+            "item4": "Staining de Decks y Cercas",
+            "item5": "Remoción de Papel Tapiz y Drywall Repair"
+        },
+        "faq": {
+            "title": "Preguntas Frecuentes",
+            "subtitle": "Todo lo que necesitas saber para empezar.",
+            "q1": {
+                "question": "¿Por qué necesito Pinterest si ya tengo Instagram?",
+                "answer": "A diferencia de Instagram donde el contenido muere en 24 horas, en Pinterest el contenido vive meses. Además, Pinterest funciona como buscador, lo que ayuda a que tus fotos aparezcan en Google e impulsen la confianza del cliente de forma constante."
+            },
+            "q2": {
+                "question": "¿Cuál es la mejor zona para EDDM?",
+                "answer": "Recomendamos zonas con casas unifamiliares de más de 10 años, donde la pintura exterior empieza a mostrar desgaste o los dueños quieren renovar interiores. Nosotros te ayudamos a filtrar esas rutas."
+            },
+            "q3": {
+                "question": "¿En cuánto tiempo veré resultados?",
+                "answer": "Google Ads genera llamadas casi inmediato. EDDM y Pinterest construyen una base que rinde frutos constantes a mediano plazo, asegurando que no tengas meses 'vacíos' en tu agenda."
+            }
         },
         "pricing": {
-            "title": "Elige tu Paquete de Crecimiento",
-            "mostPopular": "Más Vendido",
-            "selectPlan": "Reserva tu espacio ahora",
-            "basic": {
-                "name": "BASIC",
+            "title": "Paquetes de Marketing para Pintores",
+            "subtitle": "Elige el plan que mejor se adapte a tus objetivos y presupuesto.",
+            "starter": {
+                "name": "Presencia Local",
+                "tagline": "Ideal para empezar y captar trabajos cercanos.",
                 "features": {
-                    "item1": "Inclusión en flyer EDDM compartido",
-                    "item2": "Página digital básica",
-                    "item3": "Código QR de contacto",
-                    "item4": "1 Pin profesional en Pinterest"
-                }
+                    "item1": "Door hangers estratégicos (técnica 5-10-5)",
+                    "item2": "Yard signs profesionales",
+                    "item3": "Diseño de oferta local",
+                    "item4": "QR directo a tu contacto",
+                    "item5": "Reporte de zona"
+                },
+                "idealFor": "Pintores independientes y equipos pequeños"
             },
             "pro": {
-                "name": "PRO",
+                "name": "Crecimiento Pro",
+                "tagline": "Domina tu zona y genera leads constantes.",
                 "features": {
-                    "item1": "Todo lo incluido en BASIC",
-                    "item2": "Página digital optimizada por industria",
-                    "item3": "3 Pines SEO optimizados",
-                    "item4": "Inclusión destacada en Pinterest",
-                    "item5": "Botones de contacto directos"
-                }
+                    "item1": "Google Ads (campaña especializada)",
+                    "item2": "Pinterest (vitrina de antes/después)",
+                    "item3": "Optimización para pintura de gabinetes",
+                    "item4": "Reporte de llamadas y clics",
+                    "item5": "Soporte prioritario"
+                },
+                "idealFor": "Empresas que quieren agenda llena todo el año"
             },
-            "elite": {
-                "name": "ELITE",
+            "allin": {
+                "name": "Dominio Total",
+                "tagline": "La solución completa para ser el #1 de tu ciudad.",
                 "features": {
-                    "item1": "Posición preferente en el flyer",
-                    "item2": "Página individual dedicada por servicio",
-                    "item3": "5 Pines SEO especializados",
-                    "item4": "Optimización geolocalizada por ciudad",
-                    "item5": "Prioridad en próximos envíos"
-                }
+                    "item1": "EDDM mensual por rutas premium",
+                    "item2": "Google Ads + Pinterest + Yard Signs",
+                    "item3": "Landing page optimizada para conversión",
+                    "item4": "Gestión de reputación local",
+                    "item5": "Soporte dedicado 24/7"
+                },
+                "idealFor": "Empresas de pintura con varios equipos"
             }
         },
         "finalCTA": {
-            "title": "¿Listo para dominar tu mercado local?",
-            "subtitle": "Reserva tu espacio ahora. Cupos limitados por zona para garantizar exclusividad.",
-            "button": "Reserva tu espacio ahora"
+            "title": "¿Listo para pintar tu éxito con más clientes?",
+            "subtitle": "Deja de perseguir trabajos y haz que lleguen a ti. Solicita tu análisis de área hoy mismo.",
+            "button": "Solicitar Estrategia Gratis",
+            "smallPrint": "Sin costos ocultos. Asesoría enfocada en crecimiento local."
+        }
+    },
+    "CleaningPage": {
+        "seo": {
+            "title": "Marketing para Empresas de Limpieza | EDDM, Google Ads y Pinterest",
+            "description": "Consigue más clientes residenciales y comerciales para tu negocio de limpieza con nuestro sistema de marketing local. Estrategia probada en Chicago y Wisconsin.",
+            "keywords": "marketing para limpieza, clientes cleaning, publicidad para cleaners, house cleaning leads, office cleaning marketing, eddm limpieza, google ads cleaning",
+            "og_title": "Marketing Especializado para Negocios de Limpieza",
+            "og_description": "Sistema de marketing local diseñado para llenar tu agenda con trabajos de limpieza de calidad.",
+            "og_image_alt": "Marketing para Limpieza - Genes Marketing",
+            "twitter_title": "Más Clientes para tu Negocio de Limpieza",
+            "twitter_description": "Estrategia de marketing enfocada en empresas de limpieza residenciales y comerciales."
+        },
+        "hero": {
+            "badge": "Marketing Especializado para Empresas de Limpieza",
+            "title": "Marketing para Negocios de Limpieza Residencial y Comercial",
+            "subtitle": "Genera más llamadas, cotizaciones y mejores contratos con un sistema que posiciona tu marca como la opción más confiable y profesional en tu zona.",
+            "cta_primary": "Solicitar Estrategia Gratis",
+            "cta_secondary": "Ver Ejemplos en Pinterest",
+            "trust_1": "Chicago Northwest Suburbs",
+            "trust_2": "Resultados Comprobados",
+            "trust_3": "Sin Contratos Forzosos"
+        },
+        "whySpecial": {
+            "title": "¿Por qué el marketing de limpieza necesita una estrategia oficial?",
+            "description": "La limpieza es un servicio basado en la confianza y el ahorro de tiempo. El cliente te entrega las llaves de su espacio. No basta con decir que 'limpias bien'; tienes que proyectar seguridad, consistencia y profesionalismo. Nuestra estrategia está diseñada para que el cliente sienta que eres la solución que le devolverá la paz y el tiempo libre.",
+            "challenges_title": "Retos comunes en el negocio de limpieza:",
+            "challenge_1": "Lidiar con clientes que cancelan a último minuto",
+            "challenge_2": "Competencia informal que baja los precios excesivamente",
+            "challenge_3": "Dificultad para encontrar contratos comerciales estables",
+            "challenge_4": "Zonas de servicio muy dispersas que afectan la rentabilidad",
+            "challenge_5": "Falta de diferenciación: 'todos ofrecen lo mismo'",
+            "insight_title": "La consistencia visual y la prueba de confianza son tus mejores aliados.",
+            "insight_description": "Al combinar presencia física (door hangers) con una vitrina digital impecable (Pinterest), dejas de ser 'un cleaner más' para convertirte en una empresa profesional que los vecinos recomiendan."
+        },
+        "marketingSystem": {
+            "title": "Nuestro sistema de marketing local para Cleaning",
+            "subtitle": "Combinamos 5 pilares estratégicos para llenar tu agenda con trabajos recurrentes.",
+            "eddm": {
+                "title": "EDDM (Correo Directo)",
+                "description": "Llega a miles de hogares en los vecindarios de mayor valor. Ideal para promocionar limpiezas profundas o Move-in/Move-out.",
+                "worksFor": {
+                    "title": "EDDM sirve para:",
+                    "item1": "Limpieza profunda (Spring cleaning)",
+                    "item2": "Servicios de Move-in / Move-out",
+                    "item3": "Vecindarios residenciales específicos",
+                    "item4": "Lanzamiento de nuevas rutas"
+                },
+                "whatWeDo": {
+                    "title": "Qué hacemos:",
+                    "item1": "Diseño profesional y limpio",
+                    "item2": "Selección de rutas por nivel de ingreso",
+                    "item3": "Gestión completa con el USPS",
+                    "item4": "Mensaje enfocado en 'Tiempo Libre'"
+                }
+            },
+            "doorHangers": {
+                "title": "Door Hangers (Colgantes)",
+                "description": "La técnica del 'Vecino a Vecino'. Deja tu huella en las casas de la misma calle donde ya estás limpiando. La confianza se contagia.",
+                "worksFor": {
+                    "title": "Ideales para:",
+                    "item1": "Optimizar rutas de limpieza",
+                    "item2": "Reducir tiempos de transporte",
+                    "item3": "Crear densidad en un solo vecindario",
+                    "item4": "Promociones 'Vecino-Especial'"
+                },
+                "whatWeDo": {
+                    "title": "Nuestro enfoque:",
+                    "item1": "Diseño que no se puede ignorar",
+                    "item2": "Coordinación de distribución local",
+                    "item3": "Tracking por vecindarios",
+                    "item4": "Llamado a la acción claro"
+                }
+            },
+            "googleAds": {
+                "title": "Google Ads (PPC)",
+                "description": "Aparece justo cuando alguien busca 'cleaning service near me' o 'limpieza de oficinas'. Capturamos la demanda inmediata.",
+                "worksFor": {
+                    "title": "Perfecto para:",
+                    "item1": "Contratos comerciales de limpieza",
+                    "item2": "Urgencias de Move-out",
+                    "item3": "Limpieza de alfombras y ventanas",
+                    "item4": "Nuevos clientes residenciales"
+                },
+                "whatWeDo": {
+                    "title": "Cómo lo hacemos:",
+                    "item1": "Configuración de campañas locales",
+                    "item2": "Optimización de palabras clave",
+                    "item3": "Control de presupuesto diario",
+                    "item4": "Reportes de llamadas directas"
+                }
+            },
+            "pinterest": {
+                "title": "Pinterest Marketing",
+                "description": "La vitrina visual. Mostramos tus resultados de limpieza (antes/después) en la plataforma donde las personas buscan inspiración para el hogar.",
+                "worksFor": {
+                    "title": "Ideal para mostrar:",
+                    "item1": "Resultados de limpieza profunda",
+                    "item2": "Organización de espacios",
+                    "item3": "Limpieza de gabinetes y cocinas",
+                    "item4": "Estándares de calidad visual"
+                },
+                "whatWeDo": {
+                    "title": "Nuestro trabajo:",
+                    "item1": "Creación de pines de alta calidad",
+                    "item2": "Optimización SEO para Pinterest",
+                    "item3": "Tableros por tipo de limpieza",
+                    "item4": "Link directo a tu WhatsApp"
+                }
+            },
+            "yardSigns": {
+                "title": "Yard Signs",
+                "description": "Branding local mientras trabajas. Si los vecinos ven tu letrero afuera de una casa limpia, saben que pueden confiar en ti.",
+                "worksFor": {
+                    "title": "Sirven para:",
+                    "item3": "Presencia visual en la calle",
+                    "item4": "Referencia inmediata"
+                },
+                "whatWeDo": {
+                    "title": "Qué entregamos:",
+                    "item1": "Diseño de alta visibilidad",
+                    "item2": "Mensaje corto y directo",
+                    "item3": "QR para cotización rápida"
+                }
+            }
+        },
+        "results": {
+            "title": "Resultados que puedes esperar",
+            "subtitle": "Cada canal aporta un valor diferente a tu negocio de limpieza.",
+            "doorHangers": {
+                "title": "Densidad de Rutas",
+                "description": "Ayuda a que tus equipos pasen menos tiempo manejando y más tiempo limpiando al concentrar clientes en la misma zona."
+            },
+            "googleAds": {
+                "title": "Leads de Inmediato",
+                "description": "Llamadas de personas que necesitan limpieza HOY o esta semana. Ideal para llenar huecos en el calendario."
+            },
+            "eddm": {
+                "title": "Residencial de Alto Valor",
+                "description": "Posiciona tu negocio en casas grandes y vecindarios premium que pagan mejores tarifas."
+            },
+            "pinterest": {
+                "title": "Autoridad Visual",
+                "description": "Construye una marca que se ve profesional y establecida, permitiéndote subir tus precios."
+            }
+        },
+        "services": {
+            "title": "Estrategias por tipo de Limpieza",
+            "item1": "Limpieza Residencial (Regular)",
+            "item2": "Limpieza Comercial y Oficinas",
+            "item3": "Deep Cleaning (Limpieza Profunda)",
+            "item4": "Move-in / Move-out Services",
+            "item5": "Limpieza de Ventanas y Alfombras"
+        },
+        "pricing": {
+            "title": "Paquetes de Marketing para Cleaning",
+            "subtitle": "Elige el plan que mejor se adapte a tus objetivos y presupuesto.",
+            "starter": {
+                "name": "Presencia Local",
+                "tagline": "Ideal para empezar y captar trabajos cercanos.",
+                "features": {
+                    "item1": "Door hangers estratégicos (técnica Vecino-a-Vecino)",
+                    "item2": "Yard signs de alta visibilidad",
+                    "item3": "Diseño de oferta local irresistible",
+                    "item4": "QR directo a tu WhatsApp",
+                    "item5": "Reporte de zona local"
+                },
+                "idealFor": "Cleaners independientes y negocios nuevos"
+            },
+            "pro": {
+                "name": "Crecimiento Pro",
+                "tagline": "Domina tu zona y genera leads constantes.",
+                "features": {
+                    "item1": "Google Ads (campaña especializada)",
+                    "item2": "Pinterest (vitrina de antes/después)",
+                    "item3": "Creativos enfocados en 'Confianza'",
+                    "item4": "Reporte de llamadas y contratos",
+                    "item5": "Soporte prioritario"
+                },
+                "idealFor": "Empresas que quieren crecer y contratar personal"
+            },
+            "allin": {
+                "name": "Dominio Total",
+                "tagline": "La solución completa para ser el #1 de tu ciudad.",
+                "features": {
+                    "item1": "EDDM mensual por rutas premium",
+                    "item2": "Google Ads + Pinterest + Yard Signs",
+                    "item3": "Landing page optimizada para conversión",
+                    "item4": "Estrategia para contratos comerciales",
+                    "item5": "Soporte dedicado 24/7"
+                },
+                "idealFor": "Empresas de limpieza con varios equipos"
+            }
+        },
+        "faq": {
+            "title": "Preguntas Frecuentes",
+            "subtitle": "Respuestas sobre marketing para negocios de limpieza.",
+            "q1": {
+                "question": "¿Por qué Pinterest funciona para limpieza?",
+                "answer": "Porque la limpieza entra por los ojos. Pinterest es una plataforma visual donde las amas de casa y dueños de negocios buscan orden e higiene. Tus fotos de 'antes y después' viven ahí por años, generando tráfico constante."
+            },
+            "q2": {
+                "question": "¿Cuál es la mejor zona para EDDM?",
+                "answer": "Recomendamos zonas con casas unifamiliares de nivel medio-alto o vecindarios con muchas mudanzas frecuentes. Nosotros te ayudamos a identificar estas rutas en Chicago y Wisconsin."
+            },
+            "q3": {
+                "question": "¿Cómo conseguimos clientes comerciales?",
+                "answer": "A través de Google Ads segmentado para búsqueda de negocios y una landing page que proyecte la escala y profesionalismo necesario para limpiar oficinas corporativas."
+            }
+        },
+        "finalCTA": {
+            "title": "¿Listo para llenar tu agenda con clientes de limpieza?",
+            "subtitle": "Deja de depender solo de referidos. Construye un sistema que trabaje por ti.",
+            "button": "Solicitar Estrategia Gratis",
+            "smallPrint": "Sin costos ocultos. Asesoría enfocada en crecimiento real."
+        }
+    },
+    "FencePage": {
+        "seo": {
+            "title": "Marketing para Empresas de Cercas | EDDM, Google Ads y Pinterest",
+            "description": "Atrae más clientes para instalación y reparación de cercas con nuestro sistema de marketing local. Estrategia probada en Chicago y Wisconsin.",
+            "keywords": "marketing para cercas, leads de fences, publicidad para instaladores de cercas, instalación de cercas chicago, marketing para fences wisconsin, eddm cercas, google ads fences",
+            "og_title": "Marketing Especializado para Empresas de Cercas",
+            "og_description": "Sistema de marketing local diseñado para llenar tu agenda con instalaciones de cercas de calidad.",
+            "og_image_alt": "Marketing para Cercas - Genes Marketing",
+            "twitter_title": "Más Clientes para tu Negocio de Cercas",
+            "twitter_description": "Estrategia de marketing enfocada en empresas de instalación y reparación de fences."
+        },
+        "hero": {
+            "badge": "Marketing Especializado para Empresas de Cercas",
+            "title": "Marketing para Negocios de Instalación y Reparación de Cercas",
+            "subtitle": "Genera más llamadas, cotizaciones de alto valor y mejores contratos con un sistema que proyecta seguridad, durabilidad y profesionalismo en tu zona.",
+            "cta_primary": "Solicitar Estrategia Gratis",
+            "cta_secondary": "Ver Ejemplos en Pinterest",
+            "trust_1": "Chicago Northwest Suburbs",
+            "trust_2": "Resultados Comprobados",
+            "trust_3": "Sin Contratos Forzosos"
+        },
+        "whySpecial": {
+            "title": "¿Por qué el marketing de cercas necesita una estrategia oficial?",
+            "description": "Una cerca es una inversión significativa en seguridad y estética para el hogar. Los clientes no solo compran materiales; compran paz mental y valor para su propiedad. No basta con decir que 'instalas bien'; debes proyectar solidez, cumplimiento y diseño. Nuestra estrategia está diseñada para que el cliente sienta que eres la opción más confiable para proteger su hogar.",
+            "challenges_title": "Retos comunes en el negocio de cercas:",
+            "challenge_1": "Competencia informal que baja los precios sin ofrecer garantías",
+            "challenge_2": "Clientes que solo buscan el precio más bajo sin valorar la calidad",
+            "challenge_3": "Dificultad para mostrar la durabilidad y estética de tus trabajos",
+            "challenge_4": "Lograr densidad en las rutas para optimizar el transporte de materiales",
+            "challenge_5": "Falta de seguimiento a las cotizaciones de alto valor",
+            "insight_title": "La autoridad visual y la prueba de seguridad son tus mejores aliados.",
+            "insight_description": "Al combinar presencia física (yard signs) con una vitrina digital impecable (Pinterest), dejas de ser un 'instalador más' y te conviertes en la empresa experta que los vecinos eligen por seguridad y estilo."
+        },
+        "marketingSystem": {
+            "title": "Nuestro sistema de marketing local para Cercas",
+            "subtitle": "Combinamos 5 pilares estratégicos para llenar tu agenda con instalaciones rentables.",
+            "eddm": {
+                "title": "EDDM (Direct Mail)",
+                "description": "Llega a miles de hogares en vecindarios de alto valor. Ideal para promover nuevas instalaciones en zonas residenciales en crecimiento.",
+                "worksFor": {
+                    "title": "El EDDM funciona para:",
+                    "item1": "Nuevas instalaciones residenciales",
+                    "item2": "Reemplazo de cercas viejas",
+                    "item3": "Vecindarios de alto poder adquisitivo",
+                    "item4": "Lanzamiento de nuevas zonas"
+                },
+                "whatWeDo": {
+                    "title": "Qué hacemos:",
+                    "item1": "Diseño profesional y resistente",
+                    "item2": "Selección de rutas por nivel de ingresos",
+                    "item3": "Gestión completa con USPS",
+                    "item4": "Mensaje enfocado en 'Seguridad y Estilo'"
+                }
+            },
+            "doorHangers": {
+                "title": "Door Hangers",
+                "description": "La técnica del 'Efecto Vecino'. Deja tu huella en las casas de la misma calle donde estás instalando una cerca. La curiosidad es tu mejor vendedora.",
+                "worksFor": {
+                    "title": "Ideal para:",
+                    "item1": "Optimizar rutas de instalación",
+                    "item2": "Reducir costos de logística",
+                    "item3": "Crear dominio en un solo vecindario",
+                    "item4": "Promociones especiales 'Vecino-Especial'"
+                },
+                "whatWeDo": {
+                    "title": "Nuestro enfoque:",
+                    "item1": "Diseño que impacta visualmente",
+                    "item2": "Coordinación de distribución local",
+                    "item3": "Tracking por vecindario",
+                    "item4": "Llamado a la acción claro"
+                }
+            },
+            "googleAds": {
+                "title": "Google Ads (PPC)",
+                "description": "Aparece justo cuando alguien busca 'instalación de cerca cerca de mí' o 'reparación de fence'. Capturamos la demanda inmediata.",
+                "worksFor": {
+                    "title": "Perfecto para:",
+                    "item1": "Cotizaciones urgentes",
+                    "item2": "Instalaciones comerciales",
+                    "item3": "Fences de materiales específicos (Vinyl, Aluminio)",
+                    "item4": "Clientes listos para comprar"
+                },
+                "whatWeDo": {
+                    "title": "Cómo lo hacemos:",
+                    "item1": "Configuración de campañas locales",
+                    "item2": "Optimización de palabras clave",
+                    "item3": "Control de presupuesto diario",
+                    "item4": "Reportes de llamadas directas"
+                }
+            },
+            "pinterest": {
+                "title": "Pinterest Marketing",
+                "description": "Tu catálogo digital. Mostramos la estética y variedad de tus cercas en la plataforma donde los dueños de casa buscan inspiración.",
+                "worksFor": {
+                    "title": "Ideal para mostrar:",
+                    "item1": "Diseños de cercas de madera y vinilo",
+                    "item2": "Detalles de seguridad y acabados",
+                    "item3": "Transformaciones de patios",
+                    "item4": "Catálogo de materiales y colores"
+                },
+                "whatWeDo": {
+                    "title": "Nuestro trabajo:",
+                    "item1": "Creación de pines de alta calidad",
+                    "item2": "Optimización SEO para Pinterest",
+                    "item3": "Tableros por tipo de material",
+                    "item4": "Link directo a tu WhatsApp"
+                }
+            },
+            "yardSigns": {
+                "title": "Yard Signs",
+                "description": "Tu mejor vendedor 24/7. Un cartel profesional frente a una cerca recién instalada genera confianza instantánea en los transeúntes.",
+                "worksFor": {
+                    "title": "Sirven para:",
+                    "item1": "Referencia visual inmediata",
+                    "item2": "Prueba social en tiempo real"
+                },
+                "whatWeDo": {
+                    "title": "Qué entregamos:",
+                    "item1": "Diseño de gran escala y legibilidad",
+                    "item2": "Mensaje enfocado en 'Instalación Premium'",
+                    "item3": "QR para agendar inspección rápida"
+                }
+            }
+        },
+        "results": {
+            "title": "Resultados que puedes esperar",
+            "subtitle": "Cada herramienta aporta un valor clave a tu negocio de cercas.",
+            "doorHangers": {
+                "title": "Dominio del Vecindario",
+                "description": "Hace que los vecinos que ven tu trabajo en curso te contacten de inmediato para el suyo."
+            },
+            "googleAds": {
+                "title": "Clientes Listos",
+                "description": "Llamadas de personas que ya decidieron instalar una cerca y están buscando quién lo haga ahora."
+            },
+            "eddm": {
+                "title": "Contratos Premium",
+                "description": "Te posiciona en zonas residenciales donde los clientes valoran la calidad sobre el precio."
+            },
+            "pinterest": {
+                "title": "Prestigio de Marca",
+                "description": "Crea una imagen de empresa experta y de diseño, permitiéndote cerrar contratos más grandes."
+            }
+        },
+        "services": {
+            "title": "Estrategias por tipo de Cerca",
+            "item1": "Instalación de Cercas de Madera",
+            "item2": "Fences de Vinilo (Vinyl)",
+            "item3": "Cercas de Aluminio y Hierro",
+            "item4": "Cercas de Eslabones (Chain Link)",
+            "item5": "Reparación y Mantenimiento",
+            "item6": "Portones y Automatización"
+        },
+        "pricing": {
+            "title": "Paquetes de Marketing para Cercas",
+            "subtitle": "Elige el plan que mejor se adapte a tus objetivos y presupuesto.",
+            "starter": {
+                "name": "Arranque Local",
+                "tagline": "Ideal para pequeños equipos y captar trabajos locales.",
+                "features": {
+                    "item1": "Door hangers estratégicos (Efecto Vecino)",
+                    "item2": "Yard signs de alta calidad",
+                    "item3": "Diseño de oferta para temporada",
+                    "item4": "QR directo a tu WhatsApp",
+                    "item5": "Reporte de zona local"
+                },
+                "idealFor": "Instaladores independientes y negocios locales"
+            },
+            "pro": {
+                "name": "Crecimiento Estructural",
+                "tagline": "Domina tu ciudad y genera leads de alto valor.",
+                "features": {
+                    "item1": "Google Ads (campaña especializada)",
+                    "item2": "Pinterest (catálogo de diseños)",
+                    "item3": "Creativos enfocados en 'Seguridad'",
+                    "item4": "Reporte de llamadas y cierre",
+                    "item5": "Soporte prioritario"
+                },
+                "idealFor": "Empresas que buscan flujo constante de instalaciones"
+            },
+            "allin": {
+                "name": "Dominio Total",
+                "tagline": "La solución completa para ser el referente en tu estado.",
+                "features": {
+                    "item1": "EDDM mensual por rutas seleccionadas",
+                    "item2": "Google Ads + Pinterest + Yard Signs",
+                    "item3": "Landing page de alta conversión",
+                    "item4": "Estrategia para proyectos comerciales",
+                    "item5": "Soporte dedicado 24/7"
+                },
+                "idealFor": "Empresas de cercas con múltiples cuadrillas"
+            }
+        },
+        "faq": {
+            "title": "Preguntas Frecuentes",
+            "subtitle": "Respuestas sobre marketing para negocios de cercas.",
+            "q1": {
+                "question": "¿Por qué necesito Pinterest si ya tengo Facebook?",
+                "answer": "A diferencia de Facebook donde el contenido es temporal, en Pinterest tus fotos de cercas son buscables y duran meses. Es un buscador visual donde la gente planea sus proyectos de hogar."
+            },
+            "q2": {
+                "question": "¿Cuál es la mejor zona para EDDM de cercas?",
+                "answer": "Vecindarios nuevos donde los dueños quieren privacidad inmediata o zonas con casas de más de 15 años donde las cercas de madera empiezan a fallar."
+            },
+            "q3": {
+                "question": "¿Cómo funcionan los Yard Signs?",
+                "answer": "Los entregamos con diseños que resaltan tu marca y un código QR. Al colocarlos frente a tu obra, invitas a los curiosos a ver tu portafolio digital instantáneamente."
+            }
+        },
+        "finalCTA": {
+            "title": "¿Listo para levantar tu éxito con más instalaciones?",
+            "subtitle": "No dejes que tu competencia se quede con los mejores vecindarios. Construye hoy tu sistema de leads.",
+            "button": "Solicitar Estrategia Gratis",
+            "smallPrint": "Sin costos ocultos. Asesoría enfocada en crecimiento real."
+        }
+    },
+    "LandscapingPage": {
+        "seo": {
+            "title": "Marketing para Paisajismo y Diseño de Jardines | EDDM, Google Ads y Pinterest",
+            "description": "Atrae más clientes para paisajismo, hardscaping y cuidado de césped con nuestro sistema de marketing local. Estrategia probada en Chicago y Wisconsin.",
+            "keywords": "marketing para paisajismo, leads de landscaping, publicidad para jardineros, diseño de jardines chicago, marketing para landscaping wisconsin, eddm paisajismo, google ads landscaping",
+            "og_title": "Marketing Especializado para Empresas de Paisajismo",
+            "og_description": "Sistema de marketing local diseñado para llenar tu agenda con proyectos de paisajismo y hardscaping de calidad.",
+            "og_image_alt": "Marketing para Paisajismo - Genes Marketing",
+            "twitter_title": "Más Clientes para tu Negocio de Paisajismo",
+            "twitter_description": "Estrategia de marketing enfocada en empresas de paisajismo y mantenimiento de jardines."
+        },
+        "hero": {
+            "badge": "Marketing Especializado para Paisajistas",
+            "title": "Marketing para Negocios de Paisajismo, Hardscaping y Jardinería",
+            "subtitle": "Genera más llamadas, proyectos de diseño de alto valor y contratos de mantenimiento con un sistema que proyecta estética, profesionalismo y cuidado en tu zona.",
+            "cta_primary": "Solicitar Estrategia Gratis",
+            "cta_secondary": "Ver Proyectos en Pinterest",
+            "trust_1": "Chicago Northwest Suburbs",
+            "trust_2": "Resultados Comprobados",
+            "trust_3": "Sin Contratos Forzosos"
+        },
+        "whySpecial": {
+            "title": "¿Por qué el marketing de paisajismo necesita una estrategia oficial?",
+            "description": "El paisajismo no es solo cortar césped; es transformar el entorno y aumentar el valor de la propiedad. Los clientes buscan creatividad, confianza y resultados duraderos. No basta con decir que 'haces jardines'; debes mostrar tu visión y dominio técnico. Nuestra estrategia está diseñada para captar la atención de clientes que valoran el diseño y la calidad sobre el precio más bajo.",
+            "challenges_title": "Retos comunes en el negocio del paisajismo:",
+            "challenge_1": "Dependencia excesiva de la estacionalidad sin planificar el flujo anual",
+            "challenge_2": "Competencia informal que ofrece servicios básicos a precios muy bajos",
+            "challenge_3": "Dificultad para mostrar la escala y el detalle de proyectos de hardscaping",
+            "challenge_4": "Lograr una ruta densa de mantenimiento para maximizar la eficiencia",
+            "challenge_5": "Falta de seguimiento a cotizaciones de diseño y construcción de alto valor",
+            "insight_title": "La inspiración visual es el motor de decisión del cliente.",
+            "insight_description": "Al combinar el impacto físico en el vecindario (yard signs) con un catálogo visual aspiracional (Pinterest), dejas de competir por precio y empiezas a atraer a los clientes que sueñan con transformar su hogar."
+        },
+        "marketingSystem": {
+            "title": "Nuestro sistema de marketing local para Paisajismo",
+            "subtitle": "Combinamos 5 pilares estratégicos para llenar tu agenda con proyectos rentables.",
+            "eddm": {
+                "title": "EDDM (Direct Mail)",
+                "description": "Llega a miles de hogares en vecindarios premium justo antes de la temporada alta. Ideal para promover diseños completos de jardín y limpiezas estacionales.",
+                "worksFor": {
+                    "title": "El EDDM funciona para:",
+                    "item1": "Diseño y construcción de jardines",
+                    "item2": "Limpiezas de primavera y otoño",
+                    "item3": "Vecindarios de alto poder adquisitivo",
+                    "item4": "Promoción de paquetes de mantenimiento"
+                },
+                "whatWeDo": {
+                    "title": "Qué hacemos:",
+                    "item1": "Diseño visual de alto impacto",
+                    "item2": "Selección de rutas por zonas residenciales",
+                    "item3": "Gestión completa con USPS",
+                    "item4": "Mensaje enfocado en 'Transformación y Cuidado'"
+                }
+            },
+            "doorHangers": {
+                "title": "Door Hangers",
+                "description": "La técnica del 'Efecto Vecino'. Si estás trabajando en una casa, el resto de la calle querrá ver su jardín igual de bien. Captura ese interés inmediato.",
+                "worksFor": {
+                    "title": "Ideal para:",
+                    "item1": "Concentrar clientes en una sola calle",
+                    "item2": "Reducir tiempos de traslado de maquinaria",
+                    "item3": "Crear presencia visual en el barrio",
+                    "item4": "Ofertas especiales para vecinos contiguos"
+                },
+                "whatWeDo": {
+                    "title": "Nuestro enfoque:",
+                    "item1": "Diseño que resalta el 'Antes y Después'",
+                    "item2": "Coordinación de distribución estratégica",
+                    "item3": "Tracking por zona de trabajo",
+                    "item4": "Llamado a la acción rápido"
+                }
+            },
+            "googleAds": {
+                "title": "Google Ads (PPC)",
+                "description": "Aparece cuando alguien busca 'paisajista cerca de mí' o 'instalación de pavimentos'. Capturamos la demanda de quien ya busca una solución.",
+                "worksFor": {
+                    "title": "Perfecto para:",
+                    "item1": "Cotizaciones inmediatas",
+                    "item2": "Proyectos de hardscaping específicos",
+                    "item3": "Instalación de pasto (sod) o mantillo (mulch)",
+                    "item4": "Servicios urgentes de temporada"
+                },
+                "whatWeDo": {
+                    "title": "Cómo lo hacemos:",
+                    "item1": "Configuración de campañas locales",
+                    "item2": "Optimización por palabras clave de diseño",
+                    "item3": "Control de presupuesto diario",
+                    "item4": "Reportes de llamadas directas"
+                }
+            },
+            "pinterest": {
+                "title": "Pinterest Marketing",
+                "description": "Tu vitrina de inspiración. Mostramos tus mejores trabajos de diseño y construcción donde los dueños de casa planean su jardín ideal.",
+                "worksFor": {
+                    "title": "Ideal para mostrar:",
+                    "item1": "Patios, senderos y muros de contención",
+                    "item2": "Diseños de plantas y flores",
+                    "item3": "Iluminación exterior y fogones",
+                    "item4": "Proyectos de gran escala finalizados"
+                },
+                "whatWeDo": {
+                    "title": "Nuestro trabajo:",
+                    "item1": "Creación de pines de alta calidad",
+                    "item2": "Optimización SEO para Pinterest",
+                    "item3": "Tableros por tipo de proyecto",
+                    "item4": "Link directo a tu WhatsApp"
+                }
+            },
+            "yardSigns": {
+                "title": "Yard Signs",
+                "description": "Tu mejor branding visual. Un letrero profesional frente a un jardín impecable es la recomendación más fuerte que puedes tener.",
+                "worksFor": {
+                    "title": "Sirven para:",
+                    "item1": "Prueba social en tiempo real",
+                    "item2": "Autoridad local inmediata"
+                },
+                "whatWeDo": {
+                    "title": "Qué entregamos:",
+                    "item1": "Diseño limpio y profesional",
+                    "item2": "Mensaje de 'Proyecto en Ejecución'",
+                    "item3": "QR para ver portafolio digital"
+                }
+            }
+        },
+        "results": {
+            "title": "Resultados que puedes esperar",
+            "subtitle": "Cada herramienta aporta un valor clave a tu negocio de paisajismo.",
+            "doorHangers": {
+                "title": "Rutas Optimizadas",
+                "description": "Te ayuda a tener más clientes en menos cuadras, ahorrando combustible y tiempo de traslado."
+            },
+            "googleAds": {
+                "title": "Leads Calificados",
+                "description": "Llamadas de personas interesadas en proyectos específicos que están buscando expertos HOY."
+            },
+            "eddm": {
+                "title": "Posicionamiento de Élite",
+                "description": "Te coloca en la mente de los dueños de casas premium de tu zona incluso antes de que necesiten el servicio."
+            },
+            "pinterest": {
+                "title": "Ventas de Alto Valor",
+                "description": "Al proyectar una imagen de diseño y lujo, puedes cobrar tarifas acorde a tu talento y experiencia."
+            }
+        },
+        "services": {
+            "title": "Estrategias por tipo de Servicio",
+            "item1": "Diseño y Construcción de Paisaje",
+            "item2": "Hardscaping (Patios, Muros, Senderos)",
+            "item3": "Cuidado y Mantenimiento de Césped",
+            "item4": "Instalación de Sistemas de Riego",
+            "item5": "Iluminación Exterior Arquitectónica",
+            "item6": "Limpieza de Primavera y Otoño"
+        },
+        "pricing": {
+            "title": "Paquetes de Marketing para Paisajistas",
+            "subtitle": "Elige el plan que mejor se adapte a tus objetivos y capacidad operativa.",
+            "starter": {
+                "name": "Crecimiento Local",
+                "tagline": "Ideal para equipos pequeños y densificar rutas locales.",
+                "features": {
+                    "item1": "Door hangers estratégicos (Efecto Vecino)",
+                    "item2": "Yard signs de alta visibilidad",
+                    "item3": "Diseño de oferta por temporada",
+                    "item4": "QR directo a tu WhatsApp",
+                    "item5": "Reporte de zona local"
+                },
+                "idealFor": "Jardineros independientes y negocios locales"
+            },
+            "pro": {
+                "name": "Expansión Pro",
+                "tagline": "Domina tu ciudad y atrae proyectos de jardinería integral.",
+                "features": {
+                    "item1": "Google Ads (campaña especializada)",
+                    "item2": "Pinterest (escaparate de diseños)",
+                    "item3": "Creativos enfocados en 'Estética'",
+                    "item4": "Reporte de llamadas y cierre",
+                    "item5": "Soporte prioritario"
+                },
+                "idealFor": "Empresas que buscan flujo constante de diseño y mantenimiento"
+            },
+            "allin": {
+                "name": "Dominio de Mercado",
+                "tagline": "La solución completa para ser el referente en paisajismo de diseño.",
+                "features": {
+                    "item1": "EDDM mensual por rutas premium",
+                    "item2": "Google Ads + Pinterest + Yard Signs",
+                    "item3": "Landing page de alta conversión",
+                    "item4": "Estrategia para proyectos comerciales",
+                    "item5": "Soporte dedicado 24/7"
+                },
+                "idealFor": "Empresas de paisajismo con múltiples cuadrillas"
+            }
+        },
+        "faq": {
+            "title": "Preguntas Frecuentes",
+            "subtitle": "Respuestas sobre marketing para negocios de paisajismo.",
+            "q1": {
+                "question": "¿Cómo ayuda Pinterest al paisajismo?",
+                "answer": "El paisajismo es puramente visual. Pinterest es el lugar #1 donde los dueños de casa buscan ideas para mejorar su patio. Tus proyectos guardados ahí generan confianza en tu talento artístico."
+            },
+            "q2": {
+                "question": "¿Cuál es la mejor época para el EDDM?",
+                "answer": "Recomendamos lanzarlo 3-4 semanas antes del inicio de la primavera (para diseño) o en octubre (para limpiezas de otoño y proyectos de invierno de hardscaping)."
+            },
+            "q3": {
+                "question": "¿Cómo medimos el éxito de los Yard Signs?",
+                "answer": "Incluimos un código QR específico. Cada vez que un vecino interesado lo escanee para ver tu portafolio, sabrás que el letrero físico hizo su trabajo."
+            }
+        },
+        "finalCTA": {
+            "title": "¿Listo para hacer crecer tu éxito junto con tus jardines?",
+            "subtitle": "No dejes que tu agenda se quede vacía. Construye hoy tu sistema de marketing de alto impacto.",
+            "button": "Solicitar Estrategia Gratis",
+            "smallPrint": "Sin costos ocultos. Asesoría enfocada en crecimiento real."
+        }
+    },
+    "LocalMarketingPage": {
+        "seo": {
+            "title": "Sistema Publicidad Local por Zonas | Direct Mail + QR + Pinterest",
+            "description": "Anuncia tu negocio en flyers compartidos por zonas (Chicago/Wisconsin). Direct Mail + QR + Página Digital. Sistema de alto impacto para negocios locales.",
+            "keywords": "publicidad local, direct mail, eddm, chicago, wisconsin, marketing por zonas, flyers compartidos"
+        },
+        "hero": {
+            "badge": "Sistema #1 para llegar a vecindarios por Zonas (Direct Mail + QR)",
+            "title": "Anuncia tu Negocio y Llega Directo a Miles de Casas",
+            "subtitle": "Unimos varios negocios en un solo flyer profesional, lo enviamos a vecindarios específicos y te damos una página con QR para convertir visitas en llamadas, mensajes y leads reales.",
+            "features": {
+                "item1": "Visibilidad real en hogares (no solo “likes”)",
+                "item2": "Tú eliges la zona: por ciudad y vecindario",
+                "item3": "BONUS incluido: Pinterest optimizado"
+            },
+            "ctaPrimary": "Reservar un Espacio",
+            "ctaSecondary": "Ver Zonas Disponibles",
+            "trust": "Sistema probado en Chicago Northwest Suburbs y South Wisconsin — listo para escalar en USA."
+        },
+        "howItWorks": {
+            "title": "Cómo Funciona",
+            "step1": {
+                "title": "Elige tu Zona",
+                "description": "Selecciona las áreas donde quieres que te vean. (Una o varias zonas)."
+            },
+            "step2": {
+                "title": "Sales en el Flyer",
+                "description": "Tu negocio aparece con logo, teléfono y un QR que dirige a tu información."
+            },
+            "step3": {
+                "title": "Recibes Clientes",
+                "description": "Las personas escanean el QR, ven tu oferta y te contactan por llamada o WhatsApp."
+            },
+            "note": "La clave es la constancia: te ponemos “en las manos” del cliente dentro de su casa por medio de el USPS (El Cartero) a las ciudades de las zonas escogidas."
+        },
+        "flyerMockup": {
+            "title": "Así se verá el Flyer (Ejemplo)",
+            "subtitle": "Cada negocio obtiene un espacio visible. El QR lleva a esta página para captar clientes.",
+            "note": "Cupos limitados por zona. Cuando se llena el flyer, se cierra la participación.",
+            "sponsorLabel": "⭐ Destacado (Sponsor)",
+            "yourBusinessHere": "Tu Negocio Aquí",
+            "items": {
+                "0": "Plomería",
+                "1": "Landscaping",
+                "2": "Tree Service",
+                "3": "Sealcoating",
+                "4": "Roofing",
+                "5": "Pintura",
+                "6": "Limpieza",
+                "7": "Aire Acondicionado",
+                "8": "Mudanzas",
+                "9": "Llantera Mobile",
+                "10": "Salón de Belleza",
+                "11": "Restaurante",
+                "12": "Panadería",
+                "13": "Seguros",
+                "14": "Tax Services",
+                "15": "Pizzería",
+                "16": "Supermercado"
+            }
+        },
+        "zones": {
+            "title": "Elige la Zona donde Quieres Llegar",
+            "subtitle": "Selecciona una o varias zonas. Cada zona representa vecindarios objetivo.",
+            "searchPlaceholder": "Buscar ciudad o zona...",
+            "requestZone": "¿No ves tu zona? Escríbela en el formulario y la agregamos.",
+            "map": {
+                "visualize": "¿Quieres ver exactamente dónde se distribuye tu publicidad?",
+                "check": "Ver mi zona en el mapa",
+                "fallbackCheck": "Ver mi zona en el mapa",
+                "support": "Se abrirá Google Maps en una nueva pestaña.",
+                "multiSelectHint": "Selecciona una zona y comprueba el área exacta en el mapa.",
+                "faq": "¿Por qué abrir Google Maps? Para confirmar el área y planear tu ruta. La cobertura final se confirma al reservar."
+            }
+        },
+        "pricing": {
+            "title": "Precio por Zona",
+            "price": "$390",
+            "perZone": "/ por zona",
+            "description": "Incluye diseño del flyer, colocación de tu espacio, QR hacia esta landing y soporte.",
+            "basic": {
+                "name": "Basic",
+                "description": "Ideal para empezar y aparecer en una zona específica.",
+                "features": {
+                    "item1": "1 zona",
+                    "item2": "1 espacio estándar en el flyer",
+                    "item3": "QR a tu landing"
+                },
+                "cta": "Elegir Basic"
+            },
+            "pro": {
+                "name": "Pro",
+                "badge": "Más Popular",
+                "description": "Mejor balance para más alcance y mejor ubicación.",
+                "features": {
+                    "item1": "2 zonas",
+                    "item2": "Espacio mejor ubicado",
+                    "item3": "QR + botón directo a WhatsApp",
+                    "item4": "BONUS Pinterest (3 Pines)"
+                },
+                "cta": "Elegir Pro"
+            },
+            "elite": {
+                "name": "Elite",
+                "description": "Máxima visibilidad para negocios que quieren dominar su zona.",
+                "features": {
+                    "item1": "3 zonas",
+                    "item2": "Espacio Destacado (Sponsor)",
+                    "item3": "QR + landing optimizada",
+                    "item4": "BONUS Pinterest (5 Pines)"
+                },
+                "cta": "Elegir Elite"
+            },
+            "disclaimer": "Los resultados varían según industria, zona, temporada y competencia."
+        },
+        "pinterestBonus": {
+            "title": "BONUS: Pinterest que Trabaja 24/7",
+            "description": "Pinterest funciona como un motor de búsqueda visual. Tus pines pueden seguir apareciendo semanas o meses después de publicar.",
+            "features": {
+                "item1": "Pines profesionales por servicio",
+                "item2": "SEO en Pinterest (títulos, keywords)",
+                "item3": "Tablero por industria + por ciudad",
+                "item4": "Links correctos por servicio"
+            },
+            "cta": "Quiero el Bonus Pinterest"
+        },
+        "form": {
+            "title": "Reserva tu Espacio en el Flyer",
+            "subtitle": "Completa tu información y elige tus zonas. Te contactamos para confirmar disponibilidad.",
+            "labels": {
+                "name": "Nombre completo",
+                "businessName": "Nombre del negocio",
+                "industry": "Industria",
+                "phone": "Teléfono",
+                "email": "Email",
+                "website": "Website (URL)",
+                "city": "Ciudad base",
+                "zones": "Zonas deseadas",
+                "hasLogo": "¿Tienes logo?",
+                "message": "Mensaje / Notas"
+            },
+            "placeholders": {
+                "name": "Escribe tu nombre",
+                "businessName": "Ej: Rodriguez Tree Service Inc.",
+                "industry": "Selecciona tu industria",
+                "phone": "(555) 000-0000",
+                "email": "tu@empresa.com",
+                "website": "https://...",
+                "city": "Ej: Algonquin, IL",
+                "zones": "Selecciona una o más zonas",
+                "message": "¿Qué servicio quieres promover? ¿Hay oferta?"
+            },
+            "options": {
+                "yes": "Sí",
+                "no": "No"
+            },
+            "submit": "Enviar y Reservar Zona",
+            "trust": "No compartimos tu información. Respuesta en 24 horas hábiles.",
+            "success": "✅ Gracias. Tu solicitud fue enviada. En breve te contactamos para confirmar cupo."
+        },
+        "faq": {
+            "title": "Preguntas Frecuentes",
+            "q1": {
+                "question": "¿Esto funciona solo en Chicago?",
+                "answer": "No. Empezamos fuerte local (Chicago suburbs / Wisconsin), pero el sistema se replica en cualquier ciudad de USA."
+            },
+            "q2": {
+                "question": "¿Puedo elegir varias zonas?",
+                "answer": "Sí. Puedes escoger 1, 2 o 3 zonas según el paquete. También podemos armar un plan mensual."
+            },
+            "q3": {
+                "question": "¿Necesito website?",
+                "answer": "No es obligatorio. Podemos enlazar tu QR a WhatsApp, Google Business Profile o una landing simple."
+            },
+            "q4": {
+                "question": "¿Quanto tarda en estar listo?",
+                "answer": "Depende del cupo del flyer y la zona, pero normalmente entre 5–10 días hábiles."
+            },
+            "q5": {
+                "question": "¿Puedo repetir cada mes?",
+                "answer": "Sí. La constancia es lo que convierte este sistema en una “máquina” de llamadas."
+            }
+        }
+    },
+    "PoolPage": {
+        "seo": {
+            "title": "Marketing para Pool Services | EDDM, Google Ads y Pinterest",
+            "description": "Atrae más clientes para mantenimiento, reparación y construcción de piscinas con nuestro sistema de marketing local. Estrategia probada en Chicago y Wisconsin.",
+            "keywords": "marketing para pool service, leads de piscinas, publicidad para albercas, mantenimiento de piscinas chicago, marketing para pool service wisconsin, eddm pool service, google ads pools",
+            "og_title": "Marketing Especializado para Empresas de Pool Service",
+            "og_description": "Sistema de marketing local diseñado para llenar tu agenda con servicios de mantenimiento y reparación de piscinas de calidad.",
+            "og_image_alt": "Marketing para Pool Service - Genes Marketing",
+            "twitter_title": "Más Clientes para tu Negocio de Pool Service",
+            "twitter_description": "Estrategia de marketing enfocada en empresas de mantenimiento y reparación de albercas."
+        },
+        "hero": {
+            "badge": "Marketing Especializado para Pool Pros",
+            "title": "Marketing para Negocios de Mantenimiento y Reparación de Piscinas",
+            "subtitle": "Genera más llamadas, rutas de limpieza recurrentes y proyectos de equipamiento con un sistema que proyecta frescura, higiene y profesionalismo en tu zona.",
+            "cta_primary": "Solicitar Estrategia Gratis",
+            "cta_secondary": "Ver Ejemplos en Pinterest",
+            "trust_1": "Chicago Northwest Suburbs",
+            "trust_2": "Resultados Comprobados",
+            "trust_3": "Sin Contratos Forzosos"
+        },
+        "whySpecial": {
+            "title": "¿Por qué el marketing de piscinas necesita una estrategia oficial?",
+            "description": "Una piscina es el centro de diversión y relajación de un hogar, pero requiere un cuidado meticuloso. Los clientes buscan expertos que garanticen agua cristalina y equipos funcionando al 100%. No basta con decir que 'sabes limpiar'; debes proyectar seguridad, consistencia y conocimiento técnico. Nuestra estrategia está diseñada para que el cliente sienta que eres el guardián de su oasis personal.",
+            "challenges_title": "Retos comunes en el negocio de pool service:",
+            "challenge_1": "Estacionalidad marcada que afecta el flujo de caja en invierno",
+            "challenge_2": "Competencia informal que ofrece precios bajos sin seguros ni químicos adecuados",
+            "challenge_3": "Lograr una ruta densa para minimizar el tiempo de traslado entre piscinas",
+            "challenge_4": "Falta de educación del cliente sobre la importancia del mantenimiento preventivo",
+            "challenge_5": "Dificultad para vender reparaciones de equipos de alto valor",
+            "insight_title": "La transparencia y la higiene visual son tus mejores herramientas de marketing.",
+            "insight_description": "Al combinar presencia local (door hangers) con un catálogo visual impecable de aguas cristalinas (Pinterest), dejas de competir por precio y te conviertes en la empresa de confianza que los dueños de casa recomiendan."
+        },
+        "marketingSystem": {
+            "title": "Nuestro sistema de marketing local para Pool Services",
+            "subtitle": "Combinamos 5 pilares estratégicos para llenar tu agenda con rutas de mantenimiento rentables.",
+            "eddm": {
+                "title": "EDDM (Direct Mail)",
+                "description": "Llega a miles de hogares con piscina en vecindarios seleccionados justo antes de que empiece la temporada de calor. Ideal para aperturas de piscina.",
+                "worksFor": {
+                    "title": "El EDDM funciona para:",
+                    "item1": "Apertura y cierre de temporada",
+                    "item2": "Promoción de paquetes de mantenimiento mensual",
+                    "item3": "Vecindarios premium con alta densidad de piscinas",
+                    "item4": "Ofertas de instalación de nuevos equipos"
+                },
+                "whatWeDo": {
+                    "title": "Qué hacemos:",
+                    "item1": "Diseño refrescante que invita al chapuzón",
+                    "item2": "Selección de rutas con mayor cantidad de piscinas",
+                    "item3": "Gestión completa con el USPS",
+                    "item4": "Mensaje enfocado en 'Agua Perfecta Siempre'"
+                }
+            },
+            "doorHangers": {
+                "title": "Door Hangers",
+                "description": "La técnica del 'Efecto Oasis'. Si estás atendiendo una piscina, deja tu tarjeta en las 5 casas a la redonda. Los vecinos siempre ven quién cuida las piscinas del barrio.",
+                "worksFor": {
+                    "title": "Ideal para:",
+                    "item1": "Optimizar rutas de limpieza semanal",
+                    "item2": "Reducir costos de gasolina y tiempo",
+                    "item3": "Crear dominio en urbanizaciones específicas",
+                    "item4": "Promociones especiales para vecinos"
+                },
+                "whatWeDo": {
+                    "title": "Nuestro enfoque:",
+                    "item1": "Diseño que resalta la limpieza",
+                    "item2": "Coordinación de distribución estratégica",
+                    "item3": "Tracking por zona de trabajo",
+                    "item4": "Llamado a la acción directo"
+                }
+            },
+            "googleAds": {
+                "title": "Google Ads (PPC)",
+                "description": "Aparece cuando alguien busca 'pool repair near me' o 'limpieza de piscinas urgente'. Capturamos al cliente que necesita una solución HOY.",
+                "worksFor": {
+                    "title": "Perfecto para:",
+                    "item1": "Reparaciones urgentes de bombas y filtros",
+                    "item2": "Tratamientos de choque (agua verde)",
+                    "item3": "Detección de fugas y reparaciones estructurales",
+                    "item4": "Nuevos clientes de mantenimiento"
+                },
+                "whatWeDo": {
+                    "title": "Cómo lo hacemos:",
+                    "item1": "Configuración de campañas geolocalizadas",
+                    "item2": "Optimización por palabras clave de alta intención",
+                    "item3": "Control de presupuesto diario",
+                    "item4": "Reportes de llamadas y clics"
+                }
+            },
+            "pinterest": {
+                "title": "Pinterest Marketing",
+                "description": "Tu vitrina de aguas cristalinas. Mostramos tus mejores trabajos de mantenimiento y remodelación donde los dueños de casa buscan inspiración.",
+                "worksFor": {
+                    "title": "Ideal para mostrar:",
+                    "item1": "Aguas cristalinas y piscinas impecables",
+                    "item2": "Remodelaciones de azulejos y cubiertas",
+                    "item3": "Instalación de luces LED y calentadores",
+                    "item4": "Proyectos de transformación (Antes vs Después)"
+                },
+                "whatWeDo": {
+                    "title": "Nuestro trabajo:",
+                    "item1": "Creación de pines de alta resolución",
+                    "item2": "Optimización SEO para Pinterest",
+                    "item3": "Tableros por tipo de servicio técnico",
+                    "item4": "Link directo a tu contacto"
+                }
+            },
+            "yardSigns": {
+                "title": "Yard Signs",
+                "description": "Branding mientras trabajas. Un letrero profesional junto a una piscina perfecta es la mejor prueba social de tu calidad.",
+                "worksFor": {
+                    "title": "Sirven para:",
+                    "item1": "Recomendación visual inmediata",
+                    "item2": "Autoridad local en el vecindario"
+                },
+                "whatWeDo": {
+                    "title": "Qué entregamos:",
+                    "item1": "Diseño de alta visibilidad",
+                    "item2": "Mensaje corto de 'Servicio Profesional'",
+                    "item3": "QR para cotización rápida"
+                }
+            }
+        },
+        "results": {
+            "title": "Resultados que puedes esperar",
+            "subtitle": "Un sistema integrado te da la estabilidad que el boca a boca no puede garantizar en temporada baja.",
+            "doorHangers": {
+                "title": "Rutas Densas",
+                "description": "Te permite pasar más tiempo facturando y menos tiempo manejando entre servicios."
+            },
+            "googleAds": {
+                "title": "Llamadas de Emergencia",
+                "description": "Ideal para captar reparaciones de alto margen que el cliente necesita solucionar rápido."
+            },
+            "eddm": {
+                "title": "Agenda Llena en Temporada",
+                "description": "Asegura tus rutas de mantenimiento mensual mucho antes de que el calor apriete."
+            },
+            "pinterest": {
+                "title": "Ventas de Equipamiento",
+                "description": "Clientes que compran mejoras (luces, sal, calentadores) convencidos por la calidad que ven en tus fotos."
+            }
+        },
+        "services": {
+            "title": "Servicios de Pool Service que podemos promocionar",
+            "subtitle": "Cada servicio puede tener su pin, su anuncio y su mensaje específico.",
+            "maintenance": {
+                "title": "Mantenimiento Semanal",
+                "description": "Limpieza y balanceo químico regular para piscinas residenciales."
+            },
+            "repair": {
+                "title": "Reparación de Equipos",
+                "description": "Arreglo de bombas, filtros, calentadores y sistemas de sal."
+            },
+            "leakDetection": {
+                "title": "Detección de Fugas",
+                "description": "Localización y reparación de fugas en la estructura o tuberías."
+            },
+            "openingClosing": {
+                "title": "Apertura y Cierre",
+                "description": "Preparación de la piscina para el verano o el invierno."
+            },
+            "remodeling": {
+                "title": "Remodelación",
+                "description": "Cambio de azulejos, pintura y mejoras estéticas."
+            },
+            "automation": {
+                "title": "Automatización",
+                "description": "Instalación de sistemas inteligentes para el control de la piscina."
+            },
+            "callout": "Cada uno puede tener su pin, su anuncio y su mensaje específico."
+        },
+        "areas": {
+            "badge": "Cobertura Local",
+            "title": "Áreas que Atendemos",
+            "description": "Trabajamos con empresas de pool service en Chicago Northwest Suburbs, incluyendo Algonquin, Huntley, Elgin, Crystal Lake, Carpentersville, Barrington, Woodstock, McHenry, Schaumburg y áreas cercanas del norte de Illinois y sur de Wisconsin.",
+            "additional": "Y áreas cercanas del norte de Illinois y sur de Wisconsin"
+        },
+        "pricing": {
+            "title": "Paquetes de Marketing para Pool Services",
+            "subtitle": "Elige el plan que mejor se adapte a tus objetivos de crecimiento.",
+            "starter": {
+                "name": "Arranque de Temporada",
+                "subtitle": "Starter",
+                "features": {
+                    "item1": "Door hangers estratégicos (Efecto Oasis)",
+                    "item2": "Yard signs de alta visibilidad",
+                    "item3": "Diseño de oferta para Opening",
+                    "item4": "QR directo a tu WhatsApp",
+                    "item5": "Reporte de zona local"
+                },
+                "idealFor": "Llenar agenda rápido"
+            },
+            "pro": {
+                "name": "Crecimiento Pro",
+                "subtitle": "Profesional",
+                "features": {
+                    "item1": "Google Ads (campaña especializada)",
+                    "item2": "Pinterest (vitrina de aguas cristalinas)",
+                    "item3": "Creativos enfocados en 'Confianza'",
+                    "item4": "Reporte de llamadas y contratos",
+                    "item5": "Soporte prioritario"
+                },
+                "idealFor": "Generar leads semanales consistentes"
+            },
+            "allin": {
+                "name": "Dominio Total",
+                "subtitle": "All-in",
+                "features": {
+                    "item1": "EDDM mensual por rutas premium",
+                    "item2": "Google Ads + Pinterest + Yard Signs",
+                    "item3": "Landing page de alta conversión",
+                    "item4": "Estrategia para servicios comerciales",
+                    "item5": "Soporte dedicado 24/7"
+                },
+                "idealFor": "Dominar una zona y expandir"
+            }
+        },
+        "faq": {
+            "title": "Preguntas Frecuentes",
+            "subtitle": "Todo lo que necesitas saber sobre marketing para piscinas.",
+            "q1": {
+                "question": "¿Por qué Pinterest si ya tengo Facebook?",
+                "answer": "Pinterest es un buscador visual. La gente busca 'diseño de piscinas' o 'mantenimiento de albercas' y tus fotos pueden aparecer ahí por años, generando confianza constante que Facebook no ofrece."
+            },
+            "q2": {
+                "question": "¿Cuál es la mejor zona para EDDM de piscinas?",
+                "answer": "Identificamos vecindarios con patios amplios y alta concentración de piscinas existentes. Esto asegura que tu correo llegue solo a personas que realmente necesitan el servicio."
+            },
+            "q3": {
+                "question": "¿Cómo combatimos la estacionalidad?",
+                "answer": "Usamos la temporada baja para promover reparaciones estructurales, cambio de equipos y cierres preventivos, asegurando que tu negocio no se detenga en invierno."
+            }
+        },
+        "finalCTA": {
+            "title": "¿Listo para que tu negocio de piscinas brille como el cristal?",
+            "subtitle": "No dejes que tu agenda se evapore. Construye hoy tu sistema de marketing de alto impacto.",
+            "button": "Solicitar Estrategia Gratis",
+            "smallPrint": "Sin costos ocultos. Asesoría enfocada en crecimiento real."
+        },
+        "footer": {
+            "direct_contact": "Contacto Directo",
+            "lead_pillars": "Pilares de Captación",
+            "email_sales": "Ventas por Email",
+            "call_us": "Llámanos",
+            "presence": "Presencia",
+            "tagline": "Soluciones de marketing premium para contratistas especializados en servicios de piscinas. Mantenemos tu negocio fluyendo tan claro como tus piscinas."
         }
     }
 }

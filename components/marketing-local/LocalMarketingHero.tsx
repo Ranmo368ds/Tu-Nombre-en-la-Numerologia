@@ -1,62 +1,127 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import { Megaphone, Rocket, Globe, Zap } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { CheckCircle, Star } from 'lucide-react';
 
 export default function LocalMarketingHero() {
     const t = useTranslations('LocalMarketingPage.hero');
 
-    const handleCTA = () => {
-        const contactSection = document.getElementById('contact');
-        if (contactSection) {
-            contactSection.scrollIntoView({ behavior: 'smooth' });
+    const scrollToSection = (id: string) => {
+        const element = document.getElementById(id);
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
         }
     };
 
     return (
-        <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-indigo-900 via-purple-900 to-indigo-900 pt-20">
-            {/* Background Pattern */}
-            <div className="absolute inset-0 opacity-10">
-                <div className="absolute inset-0" style={{
-                    backgroundImage: `radial-gradient(circle at 2px 2px, rgba(255,255,255,0.1) 1px, transparent 0)`,
-                    backgroundSize: '40px 40px'
-                }}></div>
+        <section className="relative overflow-hidden bg-slate-950 py-20 lg:py-32">
+            {/* Background Effects */}
+            <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-0">
+                <div className="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] bg-blue-600/20 rounded-full blur-[100px]" />
+                <div className="absolute bottom-[-10%] left-[-10%] w-[500px] h-[500px] bg-cyan-500/10 rounded-full blur-[100px]" />
+                <div className="absolute top-[20%] left-[20%] w-[300px] h-[300px] bg-slate-800/30 rounded-full blur-[80px]" />
             </div>
 
-            <div className="container mx-auto px-6 relative z-10 text-center">
-                {/* Badge */}
-                <div className="inline-flex items-center gap-2 bg-purple-500/20 backdrop-blur-md border border-purple-400/30 rounded-full px-6 py-2 mb-8 animate-fade-in">
-                    <Megaphone className="w-4 h-4 text-purple-300" />
-                    <span className="text-purple-200 text-sm font-medium tracking-wide uppercase">{t('badge')}</span>
+            {/* Top Navigation Bar */}
+            <div className="absolute top-0 left-0 w-full z-50 p-6">
+                <div className="relative flex items-center justify-center w-full">
+                    {/* Logo - Centered */}
+                    <div className="flex-shrink-0">
+                        <img
+                            src="/images/GENES-MARKETING-COLOR.png"
+                            alt="Genes Marketing"
+                            className="h-16 sm:h-24 w-auto object-contain drop-shadow-xl"
+                        />
+                    </div>
+
+                    {/* Language Switcher - Absolute Right */}
+                    <div className="absolute right-0 top-1/2 -translate-y-1/2 flex items-center gap-3 text-white font-bold tracking-wide text-xs sm:text-base bg-slate-900/80 backdrop-blur-sm px-3 py-2 sm:px-4 rounded-full border border-slate-700/50 shadow-lg">
+                        <a href="/es/localmarketing" className="hover:text-cyan-400 transition-colors">ES</a>
+                        <span className="text-slate-500">|</span>
+                        <a href="/en/localmarketing" className="hover:text-cyan-400 transition-colors">EN</a>
+                    </div>
                 </div>
+            </div>
 
-                {/* Main Heading */}
-                <h1 className="text-5xl md:text-7xl font-extrabold text-white mb-6 leading-tight tracking-tight">
-                    {t('title')}
-                </h1>
+            <div className="container relative z-10 px-4 mx-auto text-center lg:text-left pt-20">
+                <div className="max-w-4xl mx-auto lg:mx-0">
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5 }}
+                        className="inline-flex items-center gap-2 px-4 py-2 mb-6 text-sm font-semibold text-cyan-300 bg-cyan-950/30 border border-cyan-800 rounded-full"
+                    >
+                        <Star className="w-4 h-4 text-yellow-400 fill-yellow-400" />
+                        {t('badge')}
+                    </motion.div>
 
-                {/* Subheadline */}
-                <p className="text-xl md:text-2xl text-purple-100 mb-12 leading-relaxed max-w-3xl mx-auto opacity-90">
-                    {t('subtitle')}
-                </p>
+                    <motion.h1
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, delay: 0.1 }}
+                        className="text-4xl font-extrabold tracking-tight text-white mb-6 lg:text-6xl lg:leading-tight"
+                    >
+                        {t('title')}
+                    </motion.h1>
 
-                {/* CTA Button */}
-                <button
-                    onClick={handleCTA}
-                    className="group relative inline-flex items-center gap-3 px-10 py-5 bg-gradient-to-r from-purple-500 to-indigo-600 text-white text-xl font-bold rounded-2xl shadow-2xl hover:shadow-purple-500/40 hover:scale-105 transition-all duration-300 active:scale-95"
-                >
-                    <Zap className="w-6 h-6 fill-current" />
-                    <span>{t('cta')}</span>
-                    <Rocket className="w-6 h-6 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-                </button>
+                    <motion.p
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, delay: 0.2 }}
+                        className="text-lg text-slate-300 mb-8 max-w-2xl leading-relaxed mx-auto lg:mx-0"
+                    >
+                        {t('subtitle')}
+                    </motion.p>
 
-                {/* Micro Icons */}
-                <div className="mt-16 flex justify-center gap-8 opacity-40">
-                    <Globe className="w-8 h-8 text-white" />
-                    <div className="w-px h-8 bg-white/20"></div>
-                    <Megaphone className="w-8 h-8 text-white" />
-                    <div className="w-px h-8 bg-white/20"></div>
-                    <Zap className="w-8 h-8 text-white" />
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, delay: 0.3 }}
+                        className="flex flex-col gap-4 text-left max-w-lg mx-auto lg:mx-0 mb-10"
+                    >
+                        <div className="flex items-start gap-3">
+                            <CheckCircle className="w-6 h-6 text-green-500 shrink-0 mt-0.5" />
+                            <span className="text-slate-200">{t('features.item1')}</span>
+                        </div>
+                        <div className="flex items-start gap-3">
+                            <CheckCircle className="w-6 h-6 text-green-500 shrink-0 mt-0.5" />
+                            <span className="text-slate-200">{t('features.item2')}</span>
+                        </div>
+                        <div className="flex items-start gap-3">
+                            <CheckCircle className="w-6 h-6 text-green-500 shrink-0 mt-0.5" />
+                            <span className="text-slate-200 font-semibold text-cyan-300">{t('features.item3')}</span>
+                        </div>
+                    </motion.div>
+
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, delay: 0.4 }}
+                        className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
+                    >
+                        <button
+                            onClick={() => scrollToSection('booking-form')}
+                            className="px-8 py-4 text-lg font-bold text-white bg-red-600 rounded-lg hover:bg-red-700 transition-colors shadow-lg hover:shadow-red-900/20"
+                        >
+                            {t('ctaPrimary')}
+                        </button>
+                        <button
+                            onClick={() => scrollToSection('zones-list')}
+                            className="px-8 py-4 text-lg font-semibold text-white bg-slate-800 border border-slate-700 rounded-lg hover:bg-slate-700 transition-all hover:border-slate-500"
+                        >
+                            {t('ctaSecondary')}
+                        </button>
+                    </motion.div>
+
+                    <motion.p
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ duration: 0.5, delay: 0.6 }}
+                        className="mt-8 text-sm text-slate-500 font-medium"
+                    >
+                        {t('trust')}
+                    </motion.p>
                 </div>
             </div>
         </section>

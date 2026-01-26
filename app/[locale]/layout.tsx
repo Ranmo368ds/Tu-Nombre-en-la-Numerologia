@@ -38,25 +38,19 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   return {
     title: seo.title,
     description: seo.description,
-    metadataBase: new URL('https://instintosaludable.com'),
+    metadataBase: new URL('https://genesmarketing.com'),
     alternates: {
-      canonical: `/${locale}`,
       languages: {
         'en': '/en',
         'es': '/es',
-        'fr': '/fr',
-        'pt': '/pt',
-        'it': '/it',
-        'de': '/de',
-        'ru': '/ru',
-        'pl': '/pl',
+        'x-default': '/en',
       },
     },
     openGraph: {
       title: seo.og_title,
       description: seo.og_description,
       url: `https://instintosaludable.com/${locale}`,
-      siteName: 'Instinto Saludable',
+      siteName: 'Genes Marketing',
       locale: locale,
       type: 'website',
       images: [
@@ -72,6 +66,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       title: seo.og_title,
       description: seo.og_description,
       images: ['/instinto-logo.png'],
+      creator: '@genesmarketing',
     },
     icons: {
       icon: '/favicon.ico',
@@ -108,8 +103,8 @@ export default async function RootLayout({
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: 'Instinto Saludable',
-    url: 'https://instintosaludable.com',
+    name: 'Genes Marketing',
+    url: 'https://genesmarketing.com',
     logo: 'https://instintosaludable.com/instinto-logo.png',
     sameAs: [
       'https://www.facebook.com/instintosaludable',
@@ -118,7 +113,7 @@ export default async function RootLayout({
     ],
     contactPoint: {
       '@type': 'ContactPoint',
-      email: 'instintosaludableusa@gmail.com',
+      email: 'ventas@genesmarketing.com',
       contactType: 'customer service'
     }
   };

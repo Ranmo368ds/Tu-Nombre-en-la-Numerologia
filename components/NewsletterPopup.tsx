@@ -144,12 +144,12 @@ export function NewsletterPopup() {
 
                             <p className="text-xs text-stone-400">
                                 Respetamos tu privacidad. Sin spam. <br />
-                                Dudas: instintosaludableusa@gmail.com
+                                Dudas: ventas@genesmarketing.com
                             </p>
 
                             <div className="pt-4 border-t border-emerald-50">
                                 <a
-                                    href="/radio-unica"
+                                    href="/radiounica"
                                     className="text-xs font-bold text-yellow-600 hover:text-yellow-700 flex items-center justify-center gap-2 transition-colors"
                                 >
                                     <span className="w-2 h-2 bg-yellow-500 rounded-full animate-pulse" />

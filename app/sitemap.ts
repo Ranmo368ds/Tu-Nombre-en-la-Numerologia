@@ -4,6 +4,7 @@ const INSTINTO_URL = 'https://instintosaludable.com';
 const GENES_URL = 'https://genesmarketing.com';
 const instintoLocales = ['en', 'es', 'fr', 'pt', 'it', 'de', 'ru', 'pl'];
 const genesLocales = ['es', 'en'];
+const genesNichePaths = ['treeservices', 'taxservices', 'sealcoatingservices', 'roofingservices', 'localmarketing', 'paintingservices', 'cleaningservices', 'fenceservices', 'landscapingservices', 'poolservices'];
 const instintoRoutes = ['', '/shop', '/blog', '/numerology', '/contact', '/tarot'];
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -20,8 +21,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
         },
     }));
 
-    // Genes Marketing routes
-    const genesSitemap = genesLocales.map((locale) => ({
+    // Genes Marketing main routes (maps to /genesmarketing)
+    const genesMainSitemap = genesLocales.map((locale) => ({
         url: `${GENES_URL}/${locale}`,
         lastModified: new Date(),
         changeFrequency: 'weekly' as const,
@@ -35,5 +36,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
         },
     }));
 
-    return [...instintoSitemap, ...genesSitemap];
+    // Genes Marketing Niche Landing Pages
+    const genesNicheSitemap = genesNichePaths.flatMap((path) =>
+        genesLocales.map((locale) => ({
+            url: `${GENES_URL}/${locale}/${path}`,
+            lastModified: new Date(),
+            changeFrequency: 'monthly' as const,
+            priority: 0.7,
+            alternates: {
+                languages: {
+                    'es': `${GENES_URL}/es/${path}`,
+                    'en': `${GENES_URL}/en/${path}`,
+                },
+            },
+        }))
+    );
+
+    return [...instintoSitemap, ...genesMainSitemap, ...genesNicheSitemap];
 }

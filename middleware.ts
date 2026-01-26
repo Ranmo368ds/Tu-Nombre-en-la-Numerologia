@@ -15,24 +15,24 @@ export default function middleware(request: NextRequest) {
     }
 
     // 2. Auto-prefix niche paths if locale is missing
-    const nichePaths = ['treeservice', 'taxservices', 'sealcoating', 'roofing', 'localmarketing'];
+    const nichePaths = ['treeservices', 'taxservices', 'sealcoatingservices', 'roofingservices', 'localmarketing', 'paintingservices', 'cleaningservices', 'fenceservices', 'landscapingservices', 'poolservices', 'radiounica'];
     const pathSegments = pathname.split('/').filter(Boolean);
 
     // Check if the path is exactly one of the niche paths (case insensitive)
     if (pathSegments.length === 1 && nichePaths.includes(pathSegments[0].toLowerCase())) {
-        const url = new URL(`/es/${pathSegments[0]}`, request.url);
+        const url = new URL(`/en/${pathSegments[0].toLowerCase()}`, request.url);
         return NextResponse.rewrite(url);
     }
 
     // 3. Domain Routing for Radio Unica
-    if (hostname && (hostname.includes('radiounica.us') || hostname.includes('radio-unica'))) {
+    if (hostname && (hostname.includes('radiounica.us') || hostname.includes('radio-unica') || hostname.includes('radiounica'))) {
         const isRoot = pathSegments.length === 0;
         const isLocaleRoot = pathSegments.length === 1 && locales.includes(pathSegments[0] as any);
 
         if (isRoot || isLocaleRoot) {
-            let lang = pathSegments[0] || 'es';
+            let lang = pathSegments[0] || 'en';
             const url = request.nextUrl.clone();
-            url.pathname = '/radio-unica';
+            url.pathname = '/radiounica';
             url.searchParams.set('lang', lang);
             return NextResponse.rewrite(url);
         }
@@ -40,8 +40,11 @@ export default function middleware(request: NextRequest) {
 
     // 4. Domain Routing for Genes Marketing
     if (hostname && (hostname.includes('genesmarketing.com') || hostname.includes('genes-marketing') || hostname.includes('localhost:3000'))) {
+
         // SAFETY: Do not hijack niche marketing paths
-        if (nichePaths.some(path => pathname.includes(path))) {
+        const isNichePath = nichePaths.some(path => pathname.toLowerCase().includes(path));
+
+        if (isNichePath) {
             return intlMiddleware(request);
         }
 
@@ -49,9 +52,9 @@ export default function middleware(request: NextRequest) {
         const isLocaleRoot = pathSegments.length === 1 && locales.includes(pathSegments[0] as any);
 
         if (isRoot || isLocaleRoot) {
-            let lang = pathSegments[0] || 'es';
+            let lang = pathSegments[0] || 'en';
             const url = request.nextUrl.clone();
-            url.pathname = `/${lang}/genes-marketing`;
+            url.pathname = `/${lang}/genesmarketing`;
             return NextResponse.rewrite(url);
         }
     }

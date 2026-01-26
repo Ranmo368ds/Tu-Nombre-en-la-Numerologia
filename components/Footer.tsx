@@ -62,7 +62,7 @@ export function Footer() {
                         <li><Link href="/blog" className="hover:text-primary-light transition-colors">{tNav("blog")}</Link></li>
                         <li><Link href="/contact" className="hover:text-primary-light transition-colors">{tNav("contact")}</Link></li>
                         <li className="pt-2 border-t border-stone-800">
-                            <Link href="/radio-unica" className="text-yellow-500 hover:text-yellow-400 transition-colors font-semibold flex items-center gap-2">
+                            <Link href="/radiounica" className="text-yellow-500 hover:text-yellow-400 transition-colors font-semibold flex items-center gap-2">
                                 <span className="w-2 h-2 bg-yellow-500 rounded-full animate-pulse" />
                                 Radio Única (En Vivo)
                             </Link>
@@ -76,7 +76,7 @@ export function Footer() {
                     <ul className="space-y-4 text-sm">
                         <li className="flex items-start gap-2">
                             <svg className="w-5 h-5 text-primary mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
-                            <a href="mailto:instintosaludableusa@gmail.com" className="hover:text-primary-light transition-colors">instintosaludableusa@gmail.com</a>
+                            <a href="mailto:ventas@genesmarketing.com" className="hover:text-primary-light transition-colors">ventas@genesmarketing.com</a>
                         </li>
                         <li className="flex items-start gap-2">
                             <svg className="w-5 h-5 text-primary mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>

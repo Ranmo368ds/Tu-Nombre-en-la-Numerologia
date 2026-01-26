@@ -33,11 +33,11 @@ export default function TreeServiceFooter() {
                         <ul className="space-y-4">
                             <li>
                                 <a
-                                    href="mailto:GetOnBoard@genesmarketing.com"
+                                    href="mailto:ventas@genesmarketing.com"
                                     className="hover:text-emerald-400 transition-colors flex items-start gap-3 group"
                                 >
                                     <Mail className="w-5 h-5 text-emerald-500 group-hover:text-emerald-400 flex-shrink-0 mt-0.5" />
-                                    <span className="break-all">GetOnBoard@genesmarketing.com</span>
+                                    <span className="break-all">ventas@genesmarketing.com</span>
                                 </a>
                             </li>
                             <li>

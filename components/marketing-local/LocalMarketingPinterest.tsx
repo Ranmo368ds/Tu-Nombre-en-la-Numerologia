@@ -24,7 +24,12 @@ export default function LocalMarketingPinterest() {
                                 <Star className="w-4 h-4" />
                                 <span>{t('badge')}</span>
                             </div>
-                            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8 tracking-tight">
+                            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8 tracking-tight flex items-center gap-3">
+                                <img
+                                    src="/images/pinterest-seeklogo.png"
+                                    alt="Pinterest"
+                                    className="h-12 md:h-16 w-auto object-contain -mb-1"
+                                />
                                 {t('title')}
                             </h2>
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">

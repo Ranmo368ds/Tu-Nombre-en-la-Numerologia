@@ -137,7 +137,7 @@ export default function HomePage() {
               </p>
             </div>
 
-            <Link href="/radio-unica" className="inline-flex items-center gap-2 text-emerald-200 group-hover:text-white transition-colors mt-8">
+            <Link href="/radiounica" className="inline-flex items-center gap-2 text-emerald-200 group-hover:text-white transition-colors mt-8">
               <span className="border-b border-emerald-200/30 group-hover:border-white pb-0.5">Listen Live</span>
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Link>

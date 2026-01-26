@@ -25,7 +25,7 @@ export default async function TaxServiceSchema({ locale }: TaxServiceSchemaProps
             '@type': 'ContactPoint',
             telephone: '+1-847-502-9685',
             contactType: 'customer service',
-            email: 'GetOnBoard@genesmarketing.com',
+            email: 'ventas@genesmarketing.com',
             areaServed: ['US'],
             availableLanguage: ['en', 'es']
         }

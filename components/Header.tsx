@@ -18,51 +18,42 @@ export function Header() {
     React.useEffect(() => {
         if (typeof window !== "undefined") {
             const hostname = window.location.hostname;
-            if (hostname.includes("genesmarketing.com") || hostname.includes("genes-marketing")) {
+            if (hostname.includes("genesmarketing.com") || hostname.includes("genesmarketing")) {
                 setIsMarketingDomain(true);
             }
         }
     }, []);
 
-    // List of marketing-specific paths to hide the global header
-    const marketingPaths = [
-        "/genes-marketing",
-        "/roofing",
-        "/sealcoating",
-        "/treeservice",
-        "/taxservices",
-        "/localmarketing"
+    // List of paths where the Instinto Saludable header SHOULD be visible (Legacy/Holistic)
+    const holisticPaths = [
+        "/shop",
+        "/blog",
+        "/numerology",
+        "/radio-unica",
+        "/radiounica"
     ];
 
-    const isMarketingPath = marketingPaths.some(path => pathname === path || pathname.endsWith(path));
+    const isHolisticPath = holisticPaths.some(path => pathname === path || pathname.startsWith(path));
 
-    // Hide global header on marketing landing pages or domain
-    if (isMarketingPath || isMarketingDomain) {
+    // Hide global header if NOT on a holistic path OR if on marketing domain
+    if (!isHolisticPath || isMarketingDomain) {
         return null;
     }
 
     return (
         <nav className="fixed w-full z-50 bg-[#FDFBF7]/90 backdrop-blur-md border-b border-stone-100">
-            <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-                {/* Logo */}
+            <div className="max-w-7xl mx-auto px-6 h-24 relative flex items-center justify-center">
+                {/* Logo - Centered */}
                 <Link href="/" className="flex items-center gap-2 flex-shrink-0">
-                    <img src="/instinto-logo.png" alt="Instinto Saludable" className="h-10 md:h-12 w-auto object-contain" />
+                    <img
+                        src="/instinto-logo.png"
+                        alt="Instinto Saludable"
+                        className="h-12 md:h-16 w-auto object-contain"
+                    />
                 </Link>
 
-                {/* Desktop Navigation */}
-                <div className="hidden lg:flex items-center gap-6 text-sm font-medium tracking-wide text-stone-600">
-                    <Link href="/shop?category=oils" className="hover:text-primary transition-colors uppercase text-[11px] tracking-widest px-2 py-1">{t("nav.oils")}</Link>
-                    <Link href="/shop?category=ebooks" className="hover:text-primary transition-colors uppercase text-[11px] tracking-widest px-2 py-1">{t("nav.ebooks")}</Link>
-                    <Link href="/shop?category=music" className="hover:text-primary transition-colors uppercase text-[11px] tracking-widest px-2 py-1">{t("nav.emusic")}</Link>
-                    <Link href="/shop?category=holistic" className="hover:text-primary transition-colors uppercase text-[11px] tracking-widest px-2 py-1">{t("nav.holistic")}</Link>
-                    <Link href="/blog" className="hover:text-primary transition-colors uppercase text-[11px] tracking-widest px-2 py-1">{t("nav.blog")}</Link>
-                    <Link href="/numerology" className="hover:text-primary transition-colors uppercase text-[11px] tracking-widest px-2 py-1">{t("nav.numerology")}</Link>
-                    <a href="https://tarot-deck-covers.vercel.app" className="hover:text-primary transition-colors uppercase text-[11px] tracking-widest px-2 py-1">{t("nav.tarot")}</a>
-                    <Link href="/contact" className="hover:text-primary transition-colors uppercase text-[11px] tracking-widest px-2 py-1">{t("nav.contact")}</Link>
-                </div>
-
-                {/* Right Side Controls */}
-                <div className="flex items-center gap-2 md:gap-4">
+                {/* Right Side Controls - Absolute Positioning */}
+                <div className="absolute right-6 top-1/2 -translate-y-1/2 flex items-center gap-2 md:gap-4">
                     {/* PC Audio Player */}
                     <div className="hidden lg:block">
                         <GlobalAudioPlayer />
@@ -95,6 +86,14 @@ export function Header() {
                         {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
                     </button>
                 </div>
+            </div>
+
+            {/* Desktop Navigation - Below or floating? Let's put it in a separate bar for luxury feel if needed, or keep it left but absolute left. */}
+            {/* User said "centered logo", I'll put nav absolute left. */}
+            <div className="hidden lg:flex absolute left-6 top-1/2 -translate-y-1/2 items-center gap-4 text-[10px] font-bold tracking-widest text-stone-500 uppercase">
+                <Link href="/shop?category=oils" className="hover:text-primary transition-colors">{t("nav.oils")}</Link>
+                <Link href="/blog" className="hover:text-primary transition-colors">{t("nav.blog")}</Link>
+                <Link href="/numerology" className="hover:text-primary transition-colors">{t("nav.numerology")}</Link>
             </div>
 
             {/* Mobile Menu Overlay */}

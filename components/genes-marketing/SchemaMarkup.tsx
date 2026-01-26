@@ -20,7 +20,7 @@ export default function SchemaMarkup({ locale }: { locale: string }) {
             "@type": "ContactPoint",
             "telephone": "+1-847-502-9685",
             "contactType": "customer service",
-            "email": "GetOnBoard@genesmarketing.com",
+            "email": "ventas@genesmarketing.com",
             "availableLanguage": ["English", "Spanish"]
         },
         "sameAs": [
@@ -35,7 +35,7 @@ export default function SchemaMarkup({ locale }: { locale: string }) {
         "name": "Genes Marketing",
         "image": `${baseUrl}/images/GENES-MARKETING-LOGO.png`,
         "telephone": "+1-847-502-9685",
-        "email": "GetOnBoard@genesmarketing.com",
+        "email": "ventas@genesmarketing.com",
         "address": {
             "@type": "PostalAddress",
             "addressLocality": "Chicago Northwest Suburbs",
@@ -114,7 +114,7 @@ export default function SchemaMarkup({ locale }: { locale: string }) {
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Home",
-                "item": `${baseUrl}/${locale}`
+                "item": `${baseUrl}/${locale}/genesmarketing`
             }
         ]
     };

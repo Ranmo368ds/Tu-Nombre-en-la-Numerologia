@@ -35,7 +35,7 @@ export default function ContactClient() {
             }
         } catch (error) {
             console.error("Formspree error:", error);
-            alert("Vaya, hubo un error enviando tu mensaje. Por favor intenta de nuevo o escríbenos a instintosaludableusa@gmail.com");
+            alert("Vaya, hubo un error enviando tu mensaje. Por favor intenta de nuevo o escríbenos a ventas@genesmarketing.com");
             setStatus("idle");
         }
     };
@@ -74,7 +74,8 @@ export default function ContactClient() {
                                     </div>
                                     <div>
                                         <p className="text-sm text-primary-light uppercase tracking-wider font-semibold mb-1">Email</p>
-                                        <p className="text-lg">instintosaludableusa@gmail.com</p>
+                                        <p className="text-lg">ventas@genesmarketing.com</p>
+                                        <p className="text-xs text-primary-light/60">ventas@genesmarketing.com</p>
                                     </div>
                                 </div>
                                 <div className="flex items-start gap-4">
@@ -105,7 +106,7 @@ export default function ContactClient() {
                                 <h4 className="text-2xl font-black text-stone-900 mb-2">RADIO <span className="text-yellow-600">UNICA</span></h4>
                                 <p className="text-sm text-stone-600 mb-6">Música latina, éxitos mundiales y la mejor vibra para tu día a día.</p>
                                 <Link
-                                    href="/radio-unica"
+                                    href="/radiounica"
                                     className="inline-flex items-center justify-center px-6 py-3 bg-yellow-500 hover:bg-yellow-600 text-black font-bold rounded-xl transition-all shadow-lg shadow-yellow-200"
                                 >
                                     ¡Escuchar En Vivo!

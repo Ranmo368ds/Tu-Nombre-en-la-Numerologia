@@ -25,7 +25,7 @@ export default async function RoofingServiceSchema({ locale }: RoofingServiceSch
             '@type': 'ContactPoint',
             telephone: '+1-847-502-9685',
             contactType: 'customer service',
-            email: 'GetOnBoard@genesmarketing.com',
+            email: 'ventas@genesmarketing.com',
             areaServed: ['US'],
             availableLanguage: ['en', 'es']
         }
@@ -73,7 +73,7 @@ export default async function RoofingServiceSchema({ locale }: RoofingServiceSch
                 '@type': 'ListItem',
                 position: 2,
                 name: 'Roofing & Siding Marketing',
-                item: `${baseUrl}/${locale}/roofing`
+                item: `${baseUrl}/${locale}/roofingservices`
             }
         ]
     };

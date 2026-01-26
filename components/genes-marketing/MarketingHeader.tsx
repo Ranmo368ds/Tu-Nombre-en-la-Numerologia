@@ -7,14 +7,18 @@ import { MarketingLanguagePicker } from "@/components/genes-marketing/MarketingL
 export default function MarketingHeader() {
     return (
         <header className="absolute top-0 left-0 w-full z-50 py-6">
-            <div className="container mx-auto px-4 flex items-center justify-between">
-                {/* Logo / Branding */}
-                <Link href="/genes-marketing" className="flex items-center gap-2">
-                    <img src="/images/GENES-MARKETING-LOGO.png" alt="Genes Marketing" className="h-10 md:h-12 w-auto object-contain" />
+            <div className="container mx-auto px-4 relative flex items-center justify-center">
+                {/* Logo / Branding - Centered */}
+                <Link href="/genesmarketing" className="flex items-center gap-2">
+                    <img
+                        src="/images/GENES-MARKETING-COLOR.png"
+                        alt="Genes Marketing"
+                        className="h-12 md:h-20 w-auto object-contain drop-shadow-lg"
+                    />
                 </Link>
 
-                {/* Right Side */}
-                <div className="flex items-center gap-4">
+                {/* Right Side - Absolute Positioned */}
+                <div className="absolute right-4 top-1/2 -translate-y-1/2 flex items-center gap-4">
                     <MarketingLanguagePicker variant="dark" />
                 </div>
             </div>

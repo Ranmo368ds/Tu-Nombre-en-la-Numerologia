@@ -28,7 +28,7 @@ const nextConfig: NextConfig = {
   poweredByHeader: false,
 
   // Performance optimizations
-  swcMinify: true,
+  // swcMinify: true, (Removed as it is now default/deprecated)
 };
 
 export default withNextIntl(nextConfig);

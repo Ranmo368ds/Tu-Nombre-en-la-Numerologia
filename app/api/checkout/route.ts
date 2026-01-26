@@ -1,9 +1,16 @@
 import { NextResponse } from 'next/server';
 import Stripe from 'stripe';
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY as string, {
-    apiVersion: '2025-01-27.acacia' as any,
-});
+// Initialize Stripe lazily to prevent build-time errors if the key is missing
+const getStripe = () => {
+    if (!process.env.STRIPE_SECRET_KEY) {
+        // This will only throw at runtime when the endpoint is called, not at build time
+        throw new Error('STRIPE_SECRET_KEY is missing');
+    }
+    return new Stripe(process.env.STRIPE_SECRET_KEY, {
+        apiVersion: '2025-01-27.acacia' as any,
+    });
+};
 
 export async function POST(req: Request) {
     try {
@@ -30,6 +37,7 @@ export async function POST(req: Request) {
         }));
 
         // Create Checkout Session
+        const stripe = getStripe();
         const session = await stripe.checkout.sessions.create({
             payment_method_types: ['card'],
             line_items,

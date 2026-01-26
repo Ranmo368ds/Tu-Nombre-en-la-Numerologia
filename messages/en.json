@@ -437,7 +437,7 @@
     },
     "Contact": {
         "title": "Contact Us",
-        "subtitle": "We are here to listen and guide you on your path.",
+        "subtitle": "A marketing specialist will get in touch with you to discuss your strategy.",
         "form": {
             "name": "Name",
             "email": "Email",
@@ -716,7 +716,7 @@
             "rights": "© {year} Genes Marketing. All rights reserved.",
             "made_with": "Made with ❤️ for the Latino community.",
             "phone": "+1 (847) 502-9685",
-            "email": "GetOnBoard@genesmarketing.com"
+            "email": "ventas@genesmarketing.com"
         },
         "popup": {
             "time": {
@@ -763,7 +763,7 @@
             "whatsapp_label": "Send us a message",
             "whatsapp_button": "Chat on WhatsApp",
             "email_label": "Email us",
-            "email": "GetOnBoard@genesmarketing.com",
+            "email": "ventas@genesmarketing.com",
             "availability": "Monday – Friday, 9am – 6pm CST",
             "form_title": "Have questions?",
             "form_subtitle": "Complete the form and a specialist will contact you soon.",
@@ -1635,6 +1635,13 @@
                     "item2": "Create visual authority by service",
                     "item3": "Maintain constant traffic (months, not hours)",
                     "item4": "Separate pins by service (roof, siding, gutters)"
+                },
+                "whatWeDo": {
+                    "title": "What we do:",
+                    "item1": "Create high-converting pins",
+                    "item2": "Organize boards by service type",
+                    "item3": "SEO optimized descriptions",
+                    "item4": "Direct traffic to service pages"
                 }
             },
             "yardSigns": {
@@ -1646,6 +1653,13 @@
                     "item2": "Social validation ('if my neighbor hired them, they're good')",
                     "item3": "Reinforcement of EDDM + door hangers",
                     "item4": "Capture clients without depending 100% on ads"
+                },
+                "whatWeDo": {
+                    "title": "What we do:",
+                    "item1": "Eye-catching design",
+                    "item2": "Strategic placement advice",
+                    "item3": "Consistent branding",
+                    "item4": "QR codes for easy contact"
                 }
             }
         },
@@ -1695,7 +1709,9 @@
                 "features": {
                     "item1": "Door hangers (design + optional printing)",
                     "item2": "Yard signs",
-                    "item3": "Neighborhood messaging ('We're in your area')"
+                    "item3": "Neighborhood messaging ('We're in your area')",
+                    "item4": "Basic localized SEO",
+                    "item5": "Monthly email report"
                 },
                 "idealFor": "Generate inspections quickly"
             },
@@ -1706,7 +1722,8 @@
                     "item1": "Google Ads (setup + optimization)",
                     "item2": "Pinterest (pins by service + organization)",
                     "item3": "Creatives focused on inspections/calls",
-                    "item4": "Monthly reports"
+                    "item4": "Monthly reports",
+                    "item5": "Priority email support"
                 },
                 "idealFor": "Generate consistent weekly leads"
             },
@@ -1771,92 +1788,1303 @@
             "smallPrint": "No commitment. Focused on real results."
         }
     },
-    "LocalMarketingPage": {
+    "PaintingPage": {
         "seo": {
-            "title": "Smart Local Advertising | EDDM Flyers, Digital & Pinterest",
-            "description": "Local physical + digital advertising that generates real calls. EDDM flyers direct to homes + digital page + Pinterest. Chicago Northwest Suburbs.",
-            "keywords": "local advertising, local marketing, eddm flyers, pinterest marketing, local leads, local business marketing"
+            "title": "Marketing for Painters | EDDM, Door Hangers, Google Ads & Pinterest",
+            "description": "Attract more customers for your painting business with EDDM, Door Hangers, Google Ads, and Pinterest. Local strategy for Chicago Northwest Suburbs.",
+            "keywords": "marketing for painters, painting leads, advertising for painters, painting contractor marketing, eddm painting, door hangers painting, google ads painting, chicago painting services",
+            "og_title": "Specialized Marketing for Painting Companies",
+            "og_description": "Local marketing system to generate residential and commercial painting jobs.",
+            "og_image_alt": "Marketing for Painters - Genes Marketing",
+            "twitter_title": "Marketing for Painters | More Jobs in Your Area",
+            "twitter_description": "Proven strategy for residential and commercial painters."
         },
         "hero": {
-            "badge": "Smart Local Advertising That Actually Works",
-            "title": "Advertising That Generates Real Calls",
-            "subtitle": "We combine direct-to-home EDDM Flyers + Your own Digital Page + Pinterest to create the most powerful local marketing ecosystem for your business.",
-            "cta": "I want to be in the next flyer"
+            "badge": "Specialized Marketing for Painting Companies",
+            "title": "Marketing for Residential and Commercial Painters",
+            "subtitle": "Attract more calls, quotes, and better projects with a local marketing system that positions your brand as the most reliable and professional option in your city.",
+            "cta_primary": "Request Free Strategy",
+            "cta_secondary": "View Pinterest Examples",
+            "trust_1": "Chicago Northwest Suburbs",
+            "trust_2": "Proven Results",
+            "trust_3": "No Long Contracts"
         },
-        "problem": {
-            "title": "Why traditional advertising fails?",
-            "item1": "Cards that no one sees or get thrown away",
-            "item2": "Costly and inefficient manual distribution",
-            "item3": "Digital ads without real local reach"
+        "whySpecial": {
+            "title": "Why does painting marketing need an official strategy?",
+            "description": "Painting is a trust-based service. The customer lets you into their home or business. It's not enough to say you 'paint well'; you have to demonstrate cleanliness, professionalism, and visual quality. Our strategy is designed so the customer decides to hire you because of the trust you convey even before asking for a quote.",
+            "challenges_title": "Common challenges in the painting business:",
+            "challenge_1": "Dealing with customers only looking for the lowest price",
+            "challenge_2": "Lack of visual evidence of quality (before/after)",
+            "challenge_3": "Relying only on word-of-mouth recommendations",
+            "challenge_4": "Displaced geographic areas that increase transportation costs",
+            "challenge_5": "Difficulty closing high-value projects (exterior or commercial)",
+            "insight_title": "Visual quality and local reputation are your best sales tools.",
+            "insight_description": "By combining physical presence in the neighborhoods where you already work (door hangers) with a digital visual showcase (Pinterest), you create an authority effect that allows you to charge what your work is really worth."
         },
-        "solution": {
-            "title": "The Solution: Physical + Digital Ecosystem",
-            "item1": "Flyer sent direct to homes (USPS)",
-            "item2": "Landing page for participating businesses",
-            "item3": "Functional QR code for traceability",
-            "item4": "Pinterest included for visual reinforcement"
-        },
-        "steps": {
-            "title": "How It Works in 3 Steps",
-            "step1": {
-                "title": "Join the flyer",
-                "description": "Reserve your spot in the area where you want to work."
+        "marketingSystem": {
+            "title": "Our local marketing system for Painters",
+            "subtitle": "We combine 5 strategic pillars to fill your schedule with quality jobs.",
+            "eddm": {
+                "title": "EDDM (Direct Mail)",
+                "description": "Reach thousands of homes in the neighborhoods you're most interested in. Ideal for promoting exterior painting in Spring or interiors in Winter.",
+                "worksFor": {
+                    "title": "EDDM works for:",
+                    "item1": "Exterior painting (seasonal campaigns)",
+                    "item2": "Interior painting and cabinets",
+                    "item3": "Promotions in specific neighborhoods",
+                    "item4": "Local brand positioning"
+                },
+                "whatWeDo": {
+                    "title": "What we do:",
+                    "item1": "Professional design focused on the area",
+                    "item2": "Strategic USPS route selection",
+                    "item3": "Printing and logistics coordination",
+                    "item4": "Clear 'Neighbor to Neighbor' message"
+                }
             },
-            "step2": {
-                "title": "We design & send",
-                "description": "We create your ad and send it direct to mailboxes via EDDM."
+            "doorHangers": {
+                "title": "Door Hangers",
+                "description": "The '5-10-5' technique: place hangers on the houses around where you're currently working. The visual impact is massive.",
+                "worksFor": {
+                    "title": "Ideal for:",
+                    "item1": "Generating jobs on the same street",
+                    "item2": "Leveraging your team's visibility in the area",
+                    "item3": "Neighborhood flash offers",
+                    "item4": "Reinforcing presence to curious neighbors"
+                },
+                "whatWeDo": {
+                    "title": "What we do:",
+                    "item1": "Eye-catching and easy-to-read format",
+                    "item2": "Proximity message ('We're already in your area')",
+                    "item3": "High-quality printing",
+                    "item4": "Tactical distribution strategy"
+                }
             },
-            "step3": {
-                "title": "Get results",
-                "description": "Start receiving calls and constant digital traffic."
+            "googleAds": {
+                "title": "Google Ads",
+                "description": "Capture the customer already searching for 'painters near me'. Pure buying intent.",
+                "worksFor": {
+                    "title": "Searches we dominate:",
+                    "item1": "Residential painters",
+                    "item2": "Kitchen cabinet painting",
+                    "item3": "Exterior house painters",
+                    "item4": "Commercial painting contractors"
+                },
+                "whatWeDo": {
+                    "title": "What we do:",
+                    "item1": "Campaigns optimized by city",
+                    "item2": "Ads that generate direct calls",
+                    "item3": "Weekly budget optimization",
+                    "item4": "High-conversion landing pages"
+                }
+            },
+            "pinterest": {
+                "title": "Pinterest (Your 24/7 showcase)",
+                "description": "Pinterest is visual. Before hiring you, customers want to see your finishes, cleanliness, and style. Pins last for months and attract free traffic.",
+                "worksFor": {
+                    "title": "Pinterest helps you:",
+                    "item1": "Show Before/After transformations",
+                    "item2": "Inspire customers with color palettes",
+                    "item3": "Build trust with real job photos",
+                    "item4": "Have a presence in Google Images for free"
+                },
+                "whatWeDo": {
+                    "title": "What we do:",
+                    "item1": "Professional pin creation",
+                    "item2": "SEO optimization for local searches",
+                    "item3": "Boards organized by services",
+                    "item4": "Direct links to WhatsApp or site"
+                }
+            },
+            "yardSigns": {
+                "title": "Yard Signs",
+                "description": "Sign your masterpiece. A sign on the lawn while the owner is happy with the result is the best business card.",
+                "worksFor": {
+                    "title": "Work for:",
+                    "item1": "Local social proof in the neighborhood",
+                    "item2": "Identifying your brand with quality",
+                    "item3": "Generating drive-by calls",
+                    "item4": "Reinforcing all offline advertising"
+                },
+                "whatWeDo": {
+                    "title": "What we do:",
+                    "item1": "High-contrast and high-visibility design",
+                    "item2": "Legible phone and brand from a distance",
+                    "item3": "Durable outdoor material",
+                    "item4": "Strategic placement guide"
+                }
             }
         },
-        "pinterest": {
-            "badge": "EXCLUSIVE BONUS",
-            "title": "Digital Power with Pinterest",
-            "item1": "Professional pins of your services",
-            "item2": "Pinterest-optimized SEO",
-            "item3": "Inclusion in Chicago Latino Directory",
-            "item4": "Constant traffic without extra ad spend"
+        "results": {
+            "title": "Realistic Results for Your Business",
+            "subtitle": "An integrated system gives you the stability that word-of-mouth cannot guarantee.",
+            "doorHangers": {
+                "title": "Neighborhood Effect",
+                "description": "Calls from neighbors seeing your work live."
+            },
+            "googleAds": {
+                "title": "Calls Today",
+                "description": "Capture the urgent customer who needs painting now."
+            },
+            "eddm": {
+                "title": "Area Authority",
+                "description": "You become the 'trusted painter' of the area."
+            },
+            "pinterest": {
+                "title": "Visual Sales",
+                "description": "Customers who are already convinced by your photo quality."
+            }
+        },
+        "services": {
+            "title": "Services we can boost",
+            "item1": "Residential Painting (Interior/Exterior)",
+            "item2": "Commercial Painting",
+            "item3": "Cabinet Refinishing",
+            "item4": "Deck and Fence Staining",
+            "item5": "Wallpaper Removal and Drywall Repair"
+        },
+        "faq": {
+            "title": "Frequently Asked Questions",
+            "subtitle": "Everything you need to know to get started.",
+            "q1": {
+                "question": "Why do I need Pinterest if I already have Instagram?",
+                "answer": "Unlike Instagram where content dies in 24 hours, on Pinterest content lives for months. Plus, Pinterest works like a search engine, helping your photos appear on Google and boosting customer trust consistently."
+            },
+            "q2": {
+                "question": "What is the best area for EDDM?",
+                "answer": "We recommend areas with single-family homes over 10 years old, where exterior paint starts to show wear or owners want to refresh interiors. We help you filter those routes."
+            },
+            "q3": {
+                "question": "How long will it take to see results?",
+                "answer": "Google Ads generate calls almost immediately. EDDM and Pinterest build a foundation that yields consistent results in the medium term, ensuring you don't have 'empty' months in your schedule."
+            }
         },
         "pricing": {
-            "title": "Choose Your Growth Package",
-            "mostPopular": "Most Popular",
-            "selectPlan": "Reserve your spot now",
-            "basic": {
-                "name": "BASIC",
+            "title": "Painting Marketing Packages",
+            "subtitle": "Choose the plan that fits your goals and budget.",
+            "starter": {
+                "name": "Local Presence",
+                "tagline": "Perfect for starting and getting nearby jobs.",
                 "features": {
-                    "item1": "Inclusion in shared EDDM flyer",
-                    "item2": "Basic digital page",
-                    "item3": "Contact QR code",
-                    "item4": "1 professional Pinterest Pin"
-                }
+                    "item1": "Strategic door hangers (5-10-5 technique)",
+                    "item2": "Professional yard signs",
+                    "item3": "Local offer design",
+                    "item4": "QR direct to your contact",
+                    "item5": "Area report"
+                },
+                "idealFor": "Independent painters and small crews"
             },
             "pro": {
-                "name": "PRO",
+                "name": "Pro Growth",
+                "tagline": "Dominate your area and generate steady leads.",
                 "features": {
-                    "item1": "Everything in BASIC",
-                    "item2": "Industry-optimized digital page",
-                    "item3": "3 optimized SEO Pins",
-                    "item4": "Featured Pinterest inclusion",
-                    "item5": "Direct contact buttons"
-                }
+                    "item1": "Google Ads (specialized campaign)",
+                    "item2": "Pinterest (before/after showcase)",
+                    "item3": "Optimization for cabinet painting",
+                    "item4": "Call and click report",
+                    "item5": "Priority support"
+                },
+                "idealFor": "Companies wanting a full schedule year-round"
             },
-            "elite": {
-                "name": "ELITE",
+            "allin": {
+                "name": "Total Dominance",
+                "tagline": "The complete solution to be #1 in your city.",
                 "features": {
-                    "item1": "Preferred position on the flyer",
-                    "item2": "Dedicated individual page per service",
-                    "item3": "5 specialized SEO Pins",
-                    "item4": "Geo-localized optimization per city",
-                    "item5": "Priority for future mailings"
-                }
+                    "item1": "Monthly EDDM for premium routes",
+                    "item2": "Google Ads + Pinterest + Yard Signs",
+                    "item3": "Conversion-optimized landing page",
+                    "item4": "Local reputation management",
+                    "item5": "Dedicated 24/7 support"
+                },
+                "idealFor": "Painting companies with multiple crews"
             }
         },
         "finalCTA": {
-            "title": "Ready to dominate your local market?",
-            "subtitle": "Reserve your spot now. Limited spaces per area to guarantee exclusivity.",
-            "button": "Reserve your spot now"
+            "title": "Ready to paint your success with more customers?",
+            "subtitle": "Stop chasing jobs and make them come to you. Request your area analysis today.",
+            "button": "Request Free Strategy",
+            "smallPrint": "No hidden costs. Advisory focused on local growth."
+        }
+    },
+    "CleaningPage": {
+        "seo": {
+            "title": "Marketing for Cleaning Companies | EDDM, Google Ads & Pinterest",
+            "description": "Get more residential and commercial customers for your cleaning business with our local marketing system. Proven strategy in Chicago and Wisconsin.",
+            "keywords": "marketing for cleaning business, cleaning leads, advertising for cleaners, house cleaning leads, office cleaning marketing, eddm cleaning, google ads cleaning",
+            "og_title": "Specialized Marketing for Cleaning Businesses",
+            "og_description": "Local marketing system designed to fill your schedule with quality cleaning jobs.",
+            "og_image_alt": "Marketing for Cleaning - Genes Marketing",
+            "twitter_title": "More Customers for Your Cleaning Business",
+            "twitter_description": "Marketing strategy focused on residential and commercial cleaning companies."
+        },
+        "hero": {
+            "badge": "Specialized Marketing for Cleaning Companies",
+            "title": "Marketing for Residential and Commercial Cleaning Businesses",
+            "subtitle": "Generate more calls, quotes, and better contracts with a system that positions your brand as the most reliable and professional option in your area.",
+            "cta_primary": "Request Free Strategy",
+            "cta_secondary": "View Pinterest Examples",
+            "trust_1": "Chicago Northwest Suburbs",
+            "trust_2": "Proven Results",
+            "trust_3": "No Long Contracts"
+        },
+        "whySpecial": {
+            "title": "Why does cleaning marketing need an official strategy?",
+            "description": "Cleaning is a service based on trust and time savings. The customer hands you the keys to their space. It's not enough to say you 'clean well'; you have to project safety, consistency, and professionalism. Our strategy is designed so the customer feels you are the solution that will give them back their peace and free time.",
+            "challenges_title": "Common challenges in the cleaning business:",
+            "challenge_1": "Dealing with customers who cancel at the last minute",
+            "challenge_2": "Informal competition that drives prices down excessively",
+            "challenge_3": "Difficulty finding stable commercial contracts",
+            "challenge_4": "Service areas that are too dispersed, affecting profitability",
+            "challenge_5": "Lack of differentiation: 'everyone offers the same'",
+            "insight_title": "Visual consistency and proof of trust are your best allies.",
+            "insight_description": "By combining physical presence (door hangers) with an impeccable digital window (Pinterest), you stop being 'just another cleaner' and become a professional company that neighbors recommend."
+        },
+        "marketingSystem": {
+            "title": "Our local marketing system for Cleaning",
+            "subtitle": "We combine 5 strategic pillars to fill your schedule with recurring work.",
+            "eddm": {
+                "title": "EDDM (Direct Mail)",
+                "description": "Reach thousands of homes in high-value neighborhoods. Ideal for promoting deep cleaning or Move-in/Move-out services.",
+                "worksFor": {
+                    "title": "EDDM works for:",
+                    "item1": "Deep cleaning (Spring cleaning)",
+                    "item2": "Move-in / Move-out services",
+                    "item3": "Specific residential neighborhoods",
+                    "item4": "Launching new routes"
+                },
+                "whatWeDo": {
+                    "title": "What we do:",
+                    "item1": "Professional and clean design",
+                    "item2": "Route selection by income level",
+                    "item3": "Full management with USPS",
+                    "item4": "Message focused on 'Free Time'"
+                }
+            },
+            "doorHangers": {
+                "title": "Door Hangers",
+                "description": "The 'Neighbor-to-Neighbor' technique. Leave your mark on the houses of the same street where you are already cleaning. Trust is contagious.",
+                "worksFor": {
+                    "title": "Ideal for:",
+                    "item1": "Optimizing cleaning routes",
+                    "item2": "Reducing transportation times",
+                    "item3": "Creating density in a single neighborhood",
+                    "item4": "Special 'Neighbor-Special' promotions"
+                },
+                "whatWeDo": {
+                    "title": "Our approach:",
+                    "item1": "Design that can't be ignored",
+                    "item2": "Local distribution coordination",
+                    "item3": "Tracking by neighborhood",
+                    "item4": "Clear call to action"
+                }
+            },
+            "googleAds": {
+                "title": "Google Ads (PPC)",
+                "description": "Appear right when someone searches for 'cleaning service near me' or 'office cleaning'. We capture immediate demand.",
+                "worksFor": {
+                    "title": "Perfect for:",
+                    "item1": "Commercial cleaning contracts",
+                    "item2": "Move-out emergencies",
+                    "item3": "Carpet and window cleaning",
+                    "item4": "New residential clients"
+                },
+                "whatWeDo": {
+                    "title": "How we do it:",
+                    "item1": "Local campaign setup",
+                    "item2": "Keyword optimization",
+                    "item3": "Daily budget control",
+                    "item4": "Direct call reporting"
+                }
+            },
+            "pinterest": {
+                "title": "Pinterest Marketing",
+                "description": "The visual showcase. We show your cleaning results (before/after) on the platform where people search for home inspiration.",
+                "worksFor": {
+                    "title": "Ideal for showing:",
+                    "item1": "Deep cleaning results",
+                    "item2": "Space organization",
+                    "item3": "Cabinet and kitchen cleaning",
+                    "item4": "Visual quality standards"
+                },
+                "whatWeDo": {
+                    "title": "Our work:",
+                    "item1": "High-quality pin creation",
+                    "item2": "SEO optimization for Pinterest",
+                    "item3": "Boards by cleaning type",
+                    "item4": "Direct link to your WhatsApp"
+                }
+            },
+            "yardSigns": {
+                "title": "Yard Signs",
+                "description": "Local branding while you work. If neighbors see your sign outside a clean house, they know they can trust you.",
+                "worksFor": {
+                    "title": "They serve for:",
+                    "item1": "Visual street presence",
+                    "item2": "Immediate reference"
+                },
+                "whatWeDo": {
+                    "title": "What we deliver:",
+                    "item1": "High-visibility design",
+                    "item2": "Short and direct message",
+                    "item3": "QR for quick quotes"
+                }
+            }
+        },
+        "results": {
+            "title": "Results you can expect",
+            "subtitle": "Each channel brings a different value to your cleaning business.",
+            "doorHangers": {
+                "title": "Route Density",
+                "description": "Helps your crews spend less time driving and more time cleaning by concentrating clients in the same area."
+            },
+            "googleAds": {
+                "title": "Immediate Leads",
+                "description": "Calls from people who need cleaning TODAY or this week. Ideal for filling gaps in the calendar."
+            },
+            "eddm": {
+                "title": "High-Value Residential",
+                "description": "Positions your business in large homes and premium neighborhoods that pay higher rates."
+            },
+            "pinterest": {
+                "title": "Visual Authority",
+                "description": "Builds a brand that looks professional and established, allowing you to raise your prices."
+            }
+        },
+        "services": {
+            "title": "Strategies by Cleaning type",
+            "item1": "Residential Cleaning (Regular)",
+            "item2": "Commercial & Office Cleaning",
+            "item3": "Deep Cleaning",
+            "item4": "Move-in / Move-out Services",
+            "item5": "Window & Carpet Cleaning"
+        },
+        "pricing": {
+            "title": "Cleaning Marketing Packages",
+            "subtitle": "Choose the plan that fits your goals and budget.",
+            "starter": {
+                "name": "Local Presence",
+                "tagline": "Perfect for starting and getting nearby jobs.",
+                "features": {
+                    "item1": "Strategic door hangers (Neighbor-to-Neighbor technique)",
+                    "item2": "High-visibility yard signs",
+                    "item3": "Irresistible local offer design",
+                    "item4": "QR direct to your WhatsApp",
+                    "item5": "Local area report"
+                },
+                "idealFor": "Independent cleaners and new businesses"
+            },
+            "pro": {
+                "name": "Pro Growth",
+                "tagline": "Dominate your area and generate steady leads.",
+                "features": {
+                    "item1": "Google Ads (specialized campaign)",
+                    "item2": "Pinterest (before/after showcase)",
+                    "item3": "Creatives focused on 'Trust'",
+                    "item4": "Call and contract report",
+                    "item5": "Priority support"
+                },
+                "idealFor": "Companies wanting to grow and hire staff"
+            },
+            "allin": {
+                "name": "Total Dominance",
+                "tagline": "The complete solution to be #1 in your city.",
+                "features": {
+                    "item1": "Monthly EDDM for premium routes",
+                    "item2": "Google Ads + Pinterest + Yard Signs",
+                    "item3": "Conversion-optimized landing page",
+                    "item4": "Strategy for commercial contracts",
+                    "item5": "Dedicated 24/7 support"
+                },
+                "idealFor": "Cleaning companies with multiple crews"
+            }
+        },
+        "faq": {
+            "title": "Frequently Asked Questions",
+            "subtitle": "Answers about marketing for cleaning businesses.",
+            "q1": {
+                "question": "Why does Pinterest work for cleaning?",
+                "answer": "Because cleaning is visual. Pinterest is a visual platform where homeowners and business owners search for order and hygiene. Your 'before and after' photos live there for years, generating constant traffic."
+            },
+            "q2": {
+                "question": "What is the best area for EDDM?",
+                "answer": "We recommend areas with medium-high level single-family homes or neighborhoods with frequent move-ins. We help you identify these routes in Chicago and Wisconsin."
+            },
+            "q3": {
+                "question": "How do we get commercial clients?",
+                "answer": "Through targeted Google Ads for business searches and a landing page that projects the scale and professionalism needed to clean corporate offices."
+            }
+        },
+        "finalCTA": {
+            "title": "Ready to fill your schedule with cleaning clients?",
+            "subtitle": "Stop relying only on referrals. Build a system that works for you.",
+            "button": "Request Free Strategy",
+            "smallPrint": "No hidden costs. Advisory focused on real growth."
+        }
+    },
+    "FencePage": {
+        "seo": {
+            "title": "Marketing for Fence Companies | EDDM, Google Ads & Pinterest",
+            "description": "Attract more clients for fence installation and repair with our local marketing system. Proven strategy in Chicago and Wisconsin.",
+            "keywords": "fence marketing, fence leads, advertising for fence installers, fence installation chicago, fence marketing wisconsin, fence eddm, google ads for fences",
+            "og_title": "Specialized Marketing for Fence Companies",
+            "og_description": "Local marketing system designed to fill your schedule with quality fence installations.",
+            "og_image_alt": "Fence Marketing - Genes Marketing",
+            "twitter_title": "More Clients for Your Fence Business",
+            "twitter_description": "Marketing strategy focused on fence installation and repair companies."
+        },
+        "hero": {
+            "badge": "Specialized Marketing for Fence Companies",
+            "title": "Marketing for Fence Installation and Repair Businesses",
+            "subtitle": "Generate more calls, high-value quotes, and better contracts with a system that projects security, durability, and professionalism in your area.",
+            "cta_primary": "Request Free Strategy",
+            "cta_secondary": "View Pinterest Examples",
+            "trust_1": "Chicago Northwest Suburbs",
+            "trust_2": "Proven Results",
+            "trust_3": "No Long Contracts"
+        },
+        "whySpecial": {
+            "title": "Why Does Fence Marketing Need an Official Strategy?",
+            "description": "A fence is a significant investment in security and curb appeal for a home. Customers aren't just buying materials; they're buying peace of mind and property value. It's not enough to say you 'install well'; you must project strength, compliance, and design. Our strategy is designed so the client feels you are the most reliable option to protect their home.",
+            "challenges_title": "Common challenges in the fence business:",
+            "challenge_1": "Informal competition lowering prices without offering warranties",
+            "challenge_2": "Customers only looking for the lowest price without valuing quality",
+            "challenge_3": "Difficulty showing the durability and aesthetics of your work",
+            "challenge_4": "Achieving route density to optimize material transportation",
+            "challenge_5": "Lack of follow-up on high-value quotes",
+            "insight_title": "Visual Authority and Proof of Security Are Your Best Allies.",
+            "insight_description": "By combining physical presence (yard signs) with an impeccable digital showroom (Pinterest), you stop being 'just another installer' and become the expert company neighbors choose for security and style."
+        },
+        "marketingSystem": {
+            "title": "Our Local Marketing System for Fences",
+            "subtitle": "We combine 5 strategic pillars to fill your schedule with profitable installations.",
+            "eddm": {
+                "title": "EDDM (Direct Mail)",
+                "description": "Reach thousands of homes in high-value neighborhoods. Ideal for promoting new installations in growing residential areas.",
+                "worksFor": {
+                    "title": "EDDM works for:",
+                    "item1": "New residential installations",
+                    "item2": "Old fence replacement",
+                    "item3": "High-income neighborhoods",
+                    "item4": "Launching in new areas"
+                },
+                "whatWeDo": {
+                    "title": "What we do:",
+                    "item1": "Professional and durable design",
+                    "item2": "Route selection by income level",
+                    "item3": "Full management with USPS",
+                    "item4": "Message focused on 'Security and Style'"
+                }
+            },
+            "doorHangers": {
+                "title": "Door Hangers",
+                "description": "The 'Neighbor Effect' technique. Leave your mark on houses on the same street where you are installing a fence. Curiosity is your best salesperson.",
+                "worksFor": {
+                    "title": "Ideal for:",
+                    "item1": "Optimizing installation routes",
+                    "item2": "Reducing logistics costs",
+                    "item3": "Creating dominance in a single neighborhood",
+                    "item4": "'Neighbor-Special' promotions"
+                },
+                "whatWeDo": {
+                    "title": "Our approach:",
+                    "item1": "Visually impactful design",
+                    "item2": "Local distribution coordination",
+                    "item3": "Tracking by neighborhood",
+                    "item4": "Clear call to action"
+                }
+            },
+            "googleAds": {
+                "title": "Google Ads (PPC)",
+                "description": "Appear right when someone searches for 'fence installation near me' or 'fence repair'. We capture immediate demand.",
+                "worksFor": {
+                    "title": "Perfect for:",
+                    "item1": "Urgent quotes",
+                    "item2": "Commercial installations",
+                    "item3": "Specific material fences (Vinyl, Aluminum)",
+                    "item4": "Ready-to-buy customers"
+                },
+                "whatWeDo": {
+                    "title": "How we do it:",
+                    "item1": "Local campaign setup",
+                    "item2": "Keyword optimization",
+                    "item3": "Daily budget control",
+                    "item4": "Direct call tracking"
+                }
+            },
+            "pinterest": {
+                "title": "Pinterest Marketing",
+                "description": "Your digital catalog. We showcase the aesthetics and variety of your fences on the platform where homeowners search for inspiration.",
+                "worksFor": {
+                    "title": "Ideal for showing:",
+                    "item1": "Wood and vinyl fence designs",
+                    "item2": "Security details and finishes",
+                    "item3": "Backyard transformations",
+                    "item4": "Material and color catalog"
+                },
+                "whatWeDo": {
+                    "title": "Our work:",
+                    "item1": "High-quality pin creation",
+                    "item2": "SEO optimization for Pinterest",
+                    "item3": "Boards by material type",
+                    "item4": "Direct link to your WhatsApp"
+                }
+            },
+            "yardSigns": {
+                "title": "Yard Signs",
+                "description": "Your best 24/7 salesperson. A professional sign in front of a newly installed fence generates instant trust in passers-by.",
+                "worksFor": {
+                    "title": "They serve for:",
+                    "item1": "Immediate visual reference",
+                    "item2": "Real-time social proof"
+                },
+                "whatWeDo": {
+                    "title": "What we deliver:",
+                    "item1": "Large scale and high legibility design",
+                    "item2": "Message focused on 'Premium Installation'",
+                    "item3": "QR Code for quick inspection scheduling"
+                }
+            }
+        },
+        "results": {
+            "title": "Results You Can Expect",
+            "subtitle": "Each tool brings a key value to your fence business.",
+            "doorHangers": {
+                "title": "Neighborhood Dominance",
+                "description": "Makes neighbors who see your work in progress contact you immediately for theirs."
+            },
+            "googleAds": {
+                "title": "Ready Clients",
+                "description": "Calls from people who have already decided to install a fence and are looking for who to do it now."
+            },
+            "eddm": {
+                "title": "Premium Contracts",
+                "description": "Positions you in residential areas where customers value quality over price."
+            },
+            "pinterest": {
+                "title": "Brand Prestige",
+                "description": "Creates an expert and design-oriented company image, allowing you to close larger contracts."
+            }
+        },
+        "services": {
+            "title": "Strategies by Fence Type",
+            "item1": "Wood Fence Installation",
+            "item2": "Vinyl (PVC) Fences",
+            "item3": "Aluminum and Iron Fencing",
+            "item4": "Chain Link Fencing",
+            "item5": "Repair and Maintenance",
+            "item6": "Gates and Automation"
+        },
+        "pricing": {
+            "title": "Marketing Packages for Fences",
+            "subtitle": "Choose the plan that best fits your goals and budget.",
+            "starter": {
+                "name": "Local Kickstart",
+                "tagline": "Ideal for small crews and capturing local jobs.",
+                "features": {
+                    "item1": "Strategic door hangers (Neighbor Effect)",
+                    "item2": "High-quality yard signs",
+                    "item3": "Seasonal offer design",
+                    "item4": "Direct QR to your WhatsApp",
+                    "item5": "Local area report"
+                },
+                "idealFor": "Independent installers and local businesses"
+            },
+            "pro": {
+                "name": "Structural Growth",
+                "tagline": "Dominate your city and generate high-value leads.",
+                "features": {
+                    "item1": "Google Ads (specialized campaign)",
+                    "item2": "Pinterest (design catalog)",
+                    "item3": "Creatives focused on 'Security'",
+                    "item4": "Call and closing report",
+                    "item5": "Priority support"
+                },
+                "idealFor": "Companies seeking constant installation flow"
+            },
+            "allin": {
+                "name": "Total Dominance",
+                "tagline": "The complete solution to be the leader in your state.",
+                "features": {
+                    "item1": "Monthly EDDM by selected routes",
+                    "item2": "Google Ads + Pinterest + Yard Signs",
+                    "item3": "High-conversion landing page",
+                    "item4": "Strategy for commercial projects",
+                    "item5": "24/7 dedicated support"
+                },
+                "idealFor": "Fence companies with multiple crews"
+            }
+        },
+        "faq": {
+            "title": "Frequently Asked Questions",
+            "subtitle": "Answers about marketing for fence businesses.",
+            "q1": {
+                "question": "Why do I need Pinterest if I already have Facebook?",
+                "answer": "Unlike Facebook where content is temporary, on Pinterest your fence photos are searchable and last for months. It's a visual search engine where people plan their home projects."
+            },
+            "q2": {
+                "question": "What's the best area for a fence EDDM?",
+                "answer": "New neighborhoods where owners want immediate privacy or areas with 15+ year old homes where wood fences are starting to fail."
+            },
+            "q3": {
+                "question": "How do Yard Signs work?",
+                "answer": "We deliver them with designs that highlight your brand and a QR code. By placing them in front of your job site, you invite curious neighbors to view your digital portfolio instantly."
+            }
+        },
+        "finalCTA": {
+            "title": "Ready to Build Your Success with More Installations?",
+            "subtitle": "Don't let your competition take the best neighborhoods. Build your lead system today.",
+            "button": "Request Free Strategy",
+            "smallPrint": "No hidden costs. Advisory focused on real growth."
+        }
+    },
+    "LandscapingPage": {
+        "seo": {
+            "title": "Marketing for Landscaping and Garden Design | EDDM, Google Ads & Pinterest",
+            "description": "Attract more clients for landscaping, hardscaping, and lawn care with our local marketing system. Proven strategy in Chicago and Wisconsin.",
+            "keywords": "landscaping marketing, landscaping leads, advertising for landscapers, garden design chicago, landscaping marketing wisconsin, landscaping eddm, google ads for landscaping",
+            "og_title": "Specialized Marketing for Landscaping Companies",
+            "og_description": "Local marketing system designed to fill your schedule with quality landscaping and hardscaping projects.",
+            "og_image_alt": "Landscaping Marketing - Genes Marketing",
+            "twitter_title": "More Clients for Your Landscaping Business",
+            "twitter_description": "Marketing strategy focused on landscaping and garden maintenance companies."
+        },
+        "hero": {
+            "badge": "Specialized Marketing for Landscapers",
+            "title": "Marketing for Landscaping, Hardscaping, and Lawn Care Businesses",
+            "subtitle": "Generate more calls, high-value design projects, and maintenance contracts with a system that projects aesthetics, professionalism, and care in your area.",
+            "cta_primary": "Request Free Strategy",
+            "cta_secondary": "View Pinterest Projects",
+            "trust_1": "Chicago Northwest Suburbs",
+            "trust_2": "Proven Results",
+            "trust_3": "No Long Contracts"
+        },
+        "whySpecial": {
+            "title": "Why Does Landscaping Marketing Need an Official Strategy?",
+            "description": "Landscaping isn't just cutting grass; it's transforming environments and increasing property value. Customers are looking for creativity, trust, and long-lasting results. It's not enough to say you 'do gardens'; you must show your vision and technical mastery. Our strategy is designed to capture the attention of clients who value design and quality over the lowest price.",
+            "challenges_title": "Common challenges in the landscaping business:",
+            "challenge_1": "Heavy reliance on seasonality without planning annual flow",
+            "challenge_2": "Informal competition offering basic services at very low prices",
+            "challenge_3": "Difficulty showing the scale and detail of hardscaping projects",
+            "challenge_4": "Achieving a dense maintenance route to maximize efficiency",
+            "challenge_5": "Lack of follow-up on high-value design and build quotes",
+            "insight_title": "Visual Inspiration Is the Driver of Customer Decision.",
+            "insight_description": "By combining physical impact in the neighborhood (yard signs) with an aspirational visual catalog (Pinterest), you stop competing on price and start attracting clients who dream of transforming their homes."
+        },
+        "marketingSystem": {
+            "title": "Our Local Marketing System for Landscaping",
+            "subtitle": "We combine 5 strategic pillars to fill your schedule with profitable projects.",
+            "eddm": {
+                "title": "EDDM (Direct Mail)",
+                "description": "Reach thousands of homes in premium neighborhoods just before peak season. Ideal for promoting full garden designs and seasonal cleanups.",
+                "worksFor": {
+                    "title": "EDDM works for:",
+                    "item1": "Landscape design and build",
+                    "item2": "Spring and fall cleanups",
+                    "item3": "High-income neighborhoods",
+                    "item4": "Promoting maintenance packages"
+                },
+                "whatWeDo": {
+                    "title": "What we do:",
+                    "item1": "High-impact visual design",
+                    "item2": "Route selection by residential area",
+                    "item3": "Full management with USPS",
+                    "item4": "Message focused on 'Transformation and Care'"
+                }
+            },
+            "doorHangers": {
+                "title": "Door Hangers",
+                "description": "The 'Neighbor Effect' technique. If you're working on a house, the rest of the street will want their garden looking just as good. Capture that immediate interest.",
+                "worksFor": {
+                    "title": "Ideal for:",
+                    "item1": "Concentrating clients on a single street",
+                    "item2": "Reducing machinery transport times",
+                    "item3": "Creating visual presence in the neighborhood",
+                    "item4": "Special offers for adjacent neighbors"
+                },
+                "whatWeDo": {
+                    "title": "Our approach:",
+                    "item1": "Design highlighting 'Before and After'",
+                    "item2": "Strategic distribution coordination",
+                    "item3": "Tracking by work zone",
+                    "item4": "Quick call to action"
+                }
+            },
+            "googleAds": {
+                "title": "Google Ads (PPC)",
+                "description": "Appear when someone searches for 'landscaper near me' or 'paver installation'. We capture demand from those already looking for a solution.",
+                "worksFor": {
+                    "title": "Perfect for:",
+                    "item1": "Immediate quotes",
+                    "item2": "Specific hardscaping projects",
+                    "item3": "Sod or mulch installation",
+                    "item4": "Urgent seasonal services"
+                },
+                "whatWeDo": {
+                    "title": "How we do it:",
+                    "item1": "Local campaign setup",
+                    "item2": "Optimization by design keywords",
+                    "item3": "Daily budget control",
+                    "item4": "Direct call tracking"
+                }
+            },
+            "pinterest": {
+                "title": "Pinterest Marketing",
+                "description": "Your inspiration showcase. We display your best design and build work where homeowners plan their ideal garden.",
+                "worksFor": {
+                    "title": "Ideal for showing:",
+                    "item1": "Patios, paths, and retaining walls",
+                    "item2": "Plant and flower designs",
+                    "item3": "Outdoor lighting and fire pits",
+                    "item4": "Completed large-scale projects"
+                },
+                "whatWeDo": {
+                    "title": "Our work:",
+                    "item1": "High-quality pin creation",
+                    "item2": "SEO optimization for Pinterest",
+                    "item3": "Boards by project type",
+                    "item4": "Direct link to your WhatsApp"
+                }
+            },
+            "yardSigns": {
+                "title": "Yard Signs",
+                "description": "Your best visual branding. A professional sign in front of an impeccable garden is the strongest recommendation you can have.",
+                "worksFor": {
+                    "title": "They serve for:",
+                    "item1": "Real-time social proof",
+                    "item2": "Immediate local authority"
+                },
+                "whatWeDo": {
+                    "title": "What we deliver:",
+                    "item1": "Clean and professional design",
+                    "item2": "'Project in Progress' message",
+                    "item3": "QR Code to view digital portfolio"
+                }
+            }
+        },
+        "results": {
+            "title": "Results You Can Expect",
+            "subtitle": "Each tool brings key value to your landscaping business.",
+            "doorHangers": {
+                "title": "Optimized Routes",
+                "description": "Helps you have more clients in fewer blocks, saving fuel and travel time."
+            },
+            "googleAds": {
+                "title": "Qualified Leads",
+                "description": "Calls from people interested in specific projects who are looking for experts TODAY."
+            },
+            "eddm": {
+                "title": "Elite Positioning",
+                "description": "Places you in the minds of premium homeowners in your area even before they need the service."
+            },
+            "pinterest": {
+                "title": "High-Value Sales",
+                "description": "By projecting a design and luxury image, you can charge rates according to your talent and experience."
+            }
+        },
+        "services": {
+            "title": "Strategies by Service Type",
+            "item1": "Landscape Design and Build",
+            "item2": "Hardscaping (Patios, Walls, Paths)",
+            "item3": "Lawn Care and Maintenance",
+            "item4": "Irrigation System Installation",
+            "item5": "Architectural Outdoor Lighting",
+            "item6": "Spring and Fall Cleanup"
+        },
+        "pricing": {
+            "title": "Marketing Packages for Landscapers",
+            "subtitle": "Choose the plan that best fits your goals and operational capacity.",
+            "starter": {
+                "name": "Local Growth",
+                "tagline": "Ideal for small crews and densifying local routes.",
+                "features": {
+                    "item1": "Strategic door hangers (Neighbor Effect)",
+                    "item2": "High-visibility yard signs",
+                    "item3": "Seasonal offer design",
+                    "item4": "Direct QR to your WhatsApp",
+                    "item5": "Local area report"
+                },
+                "idealFor": "Independent gardeners and local businesses"
+            },
+            "pro": {
+                "name": "Pro Expansion",
+                "tagline": "Dominate your city and attract comprehensive landscaping projects.",
+                "features": {
+                    "item1": "Google Ads (specialized campaign)",
+                    "item2": "Pinterest (design showcase)",
+                    "item3": "Creatives focused on 'Aesthetics'",
+                    "item4": "Call and closing report",
+                    "item5": "Priority support"
+                },
+                "idealFor": "Companies seeking constant flow of design and maintenance"
+            },
+            "allin": {
+                "name": "Market Dominance",
+                "tagline": "The complete solution to be the leader in design landscaping.",
+                "features": {
+                    "item1": "Monthly EDDM by premium routes",
+                    "item2": "Google Ads + Pinterest + Yard Signs",
+                    "item3": "High-conversion landing page",
+                    "item4": "Strategy for commercial projects",
+                    "item5": "24/7 dedicated support"
+                },
+                "idealFor": "Landscaping companies with multiple crews"
+            }
+        },
+        "faq": {
+            "title": "Frequently Asked Questions",
+            "subtitle": "Answers about marketing for landscaping businesses.",
+            "q1": {
+                "question": "How does Pinterest help landscaping?",
+                "answer": "Landscaping is purely visual. Pinterest is the #1 place where homeowners look for ideas to improve their patio. Your projects saved there build trust in your artistic talent."
+            },
+            "q2": {
+                "question": "What's the best time for EDDM?",
+                "answer": "We recommend launching it 3-4 weeks before the start of spring (for design) or in October (for fall cleanups and winter hardscaping projects)."
+            },
+            "q3": {
+                "question": "How do we measure Yard Sign success?",
+                "answer": "We include a specific QR code. Every time an interested neighbor scans it to see your portfolio, you'll know the physical sign did its job."
+            }
+        },
+        "finalCTA": {
+            "title": "Ready to Grow Your Success Along with Your Gardens?",
+            "subtitle": "Don't let your schedule stay empty. Build your high-impact marketing system today.",
+            "button": "Request Free Strategy",
+            "smallPrint": "No hidden costs. Advisory focused on real growth."
+        }
+    },
+    "LocalMarketingPage": {
+        "seo": {
+            "title": "Smart Local Zone Advertising | Direct Mail + QR + Pinterest",
+            "description": "Advertise your business in shared flyers by zone (Chicago/Wisconsin). Direct Mail + QR + Digital Page. High impact system for local businesses.",
+            "keywords": "local advertising, direct mail, eddm, chicago, wisconsin, zone marketing, shared flyers"
+        },
+        "hero": {
+            "badge": "System #1 to reach neighborhoods by Zones (Direct Mail + QR)",
+            "title": "Advertise Your Business and Reach Thousands of Homes Directly",
+            "subtitle": "We join several businesses in a single professional flyer, send it to specific neighborhoods, and give you a QR page to convert visits into calls, messages, and real leads.",
+            "features": {
+                "item1": "Real visibility in homes (not just 'likes')",
+                "item2": "You choose the zone: by city and neighborhood",
+                "item3": "BONUS included: Optimized Pinterest"
+            },
+            "ctaPrimary": "Reserve a Spot",
+            "ctaSecondary": "View Available Zones",
+            "trust": "System proven in Chicago Northwest Suburbs and South Wisconsin — ready to scale in USA."
+        },
+        "howItWorks": {
+            "title": "How It Works",
+            "step1": {
+                "title": "Choose Your Zone",
+                "description": "Select the areas where you want to be seen. (One or multiple zones)."
+            },
+            "step2": {
+                "title": "Appear on the Flyer",
+                "description": "Your business appears with logo, phone, and a QR directing to your info."
+            },
+            "step3": {
+                "title": "Get Customers",
+                "description": "People scan the QR, see your offer, and contact you via call or WhatsApp."
+            },
+            "note": "The key is consistency: we put you “in the hands” of the customer inside their home via USPS to the cities in the chosen zones."
+        },
+        "flyerMockup": {
+            "title": "This is what the Flyer will look like (Example)",
+            "subtitle": "Each business gets a visible space. The QR leads to this page to capture clients.",
+            "note": "Limited spots per zone. When the flyer fills up, participation closes.",
+            "sponsorLabel": "⭐ Featured (Sponsor)",
+            "yourBusinessHere": "Your Business Here",
+            "items": {
+                "0": "Plumbing Services",
+                "1": "Landscaping Services",
+                "2": "Tree Services",
+                "3": "Sealcoating",
+                "4": "Roofing Services",
+                "5": "Painting Services",
+                "6": "Cleaning Services",
+                "7": "HVAC Services",
+                "8": "Moving Services",
+                "9": "Tire Services",
+                "10": "Hair Salon",
+                "11": "Restaurant",
+                "12": "Bakery",
+                "13": "Insurance",
+                "14": "Tax Services",
+                "15": "Pizzeria",
+                "16": "Grocery Store"
+            }
+        },
+        "zones": {
+            "title": "Choose the Zone You Want to Reach",
+            "subtitle": "Select one or multiple zones. Each zone represents target neighborhoods.",
+            "searchPlaceholder": "Search city or zone...",
+            "requestZone": "Don't see your zone? Write it in the form and we'll add it.",
+            "map": {
+                "visualize": "Want to see exactly where your advertising is distributed?",
+                "check": "View my zone on the map",
+                "fallbackCheck": "View my zone on the map",
+                "support": "Google Maps will open in a new tab.",
+                "multiSelectHint": "Select a zone and check the exact area on the map.",
+                "faq": "Why open Google Maps? To confirm the area and plan your route. Final coverage is confirmed when you reserve."
+            }
+        },
+        "pricing": {
+            "title": "Price per Zone",
+            "price": "$390",
+            "perZone": "/ per zone",
+            "description": "Includes flyer design, space placement, QR to this landing, and support.",
+            "basic": {
+                "name": "Basic",
+                "description": "Ideal to start and appear in a specific zone.",
+                "features": {
+                    "item1": "1 zone",
+                    "item2": "1 standard space on the flyer",
+                    "item3": "QR to your landing"
+                },
+                "cta": "Choose Basic"
+            },
+            "pro": {
+                "name": "Pro",
+                "badge": "Most Popular",
+                "description": "Best balance for more reach and better location.",
+                "features": {
+                    "item1": "2 zones",
+                    "item2": "Better positioned space",
+                    "item3": "QR + direct WhatsApp button",
+                    "item4": "BONUS Pinterest (3 Pins)"
+                },
+                "cta": "Choose Pro"
+            },
+            "elite": {
+                "name": "Elite",
+                "description": "Maximum visibility for businesses that want to dominate their zone.",
+                "features": {
+                    "item1": "3 zones",
+                    "item2": "Featured Space (Sponsor)",
+                    "item3": "QR + optimized landing",
+                    "item4": "BONUS Pinterest (5 Pins)"
+                },
+                "cta": "Choose Elite"
+            },
+            "disclaimer": "Results vary by industry, zone, season, and competition."
+        },
+        "pinterestBonus": {
+            "title": "BONUS: Pinterest Working 24/7",
+            "description": "Pinterest works like a visual search engine. Your pins can keep appearing weeks or months after posting.",
+            "features": {
+                "item1": "Professional pins by service",
+                "item2": "SEO on Pinterest (titles, keywords)",
+                "item3": "Board by industry + by city",
+                "item4": "Correct links by service"
+            },
+            "cta": "I Want the Pinterest Bonus"
+        },
+        "form": {
+            "title": "Reserve Your Spot on the Flyer",
+            "subtitle": "Complete your information and choose your zones. We will contact you to confirm availability.",
+            "labels": {
+                "name": "Full Name",
+                "businessName": "Business Name",
+                "industry": "Industry",
+                "phone": "Phone",
+                "email": "Email",
+                "website": "Website (URL)",
+                "city": "Base City",
+                "zones": "Desired Zones",
+                "hasLogo": "Do you have a logo?",
+                "message": "Message / Notes"
+            },
+            "placeholders": {
+                "name": "Write your name",
+                "businessName": "Ex: Rodriguez Tree Service Inc.",
+                "industry": "Select your industry",
+                "phone": "(555) 000-0000",
+                "email": "you@business.com",
+                "website": "https://...",
+                "city": "Ex: Algonquin, IL",
+                "zones": "Select one or more zones",
+                "message": "What service do you want to promote? Is there an offer?"
+            },
+            "options": {
+                "yes": "Yes",
+                "no": "No"
+            },
+            "submit": "Submit and Reserve Zone",
+            "trust": "We do not share your information. Response in 24 business hours.",
+            "success": "✅ Thank you. Your request was sent. We will contact you shortly to confirm your spot."
+        },
+        "faq": {
+            "title": "Frequently Asked Questions",
+            "q1": {
+                "question": "Does this work only in Chicago?",
+                "answer": "No. We started strong locally (Chicago suburbs / Wisconsin), but the system replicates in any US city."
+            },
+            "q2": {
+                "question": "Can I choose multiple zones?",
+                "answer": "Yes. You can choose 1, 2, or 3 zones depending on the package. We can also build a monthly plan."
+            },
+            "q3": {
+                "question": "Do I need a website?",
+                "answer": "Not mandatory. We can link your QR to WhatsApp, Google Business Profile, or a simple landing page."
+            },
+            "q4": {
+                "question": "How long does it take to be ready?",
+                "answer": "Depends on the flyer capacity and zone, but usually between 5–10 business days."
+            },
+            "q5": {
+                "question": "Can I repeat every month?",
+                "answer": "Yes. Consistency is what turns this system into a call 'machine'."
+            }
+        }
+    },
+    "PoolPage": {
+        "seo": {
+            "title": "Marketing for Pool Services | EDDM, Google Ads & Pinterest",
+            "description": "Attract more customers for pool maintenance, repair, and construction with our local marketing system. Proven strategy in Chicago and Wisconsin.",
+            "keywords": "pool service marketing, pool leads, swimming pool advertising, pool maintenance chicago, pool service marketing wisconsin, eddm pool service, google ads pools",
+            "og_title": "Specialized Marketing for Pool Service Companies",
+            "og_description": "Local marketing system designed to fill your schedule with quality pool maintenance and repair services.",
+            "og_image_alt": "Pool Service Marketing - Genes Marketing",
+            "twitter_title": "More Customers for Your Pool Service Business",
+            "twitter_description": "Marketing strategy focused on pool maintenance and repair companies."
+        },
+        "hero": {
+            "badge": "Specialized Marketing for Pool Pros",
+            "title": "Marketing for Pool Maintenance and Repair Businesses",
+            "subtitle": "Generate more calls, recurring cleaning routes, and equipment projects with a system that projects freshness, hygiene, and professionalism in your area.",
+            "cta_primary": "Request Free Strategy",
+            "cta_secondary": "View Pinterest Examples",
+            "trust_1": "Chicago Northwest Suburbs",
+            "trust_2": "Proven Results",
+            "trust_3": "No Long Contracts"
+        },
+        "whySpecial": {
+            "title": "Why does pool marketing need an official strategy?",
+            "description": "A pool is the center of fun and relaxation for a home, but it requires meticulous care. Customers look for experts who guarantee crystal clear water and 100% functional equipment. It's not enough to say you 'know how to clean'; you have to project safety, consistency, and technical knowledge. Our strategy is designed so the customer feels you are the guardian of their personal oasis.",
+            "challenges_title": "Common challenges in the pool service business:",
+            "challenge_1": "Marked seasonality affecting winter cash flow",
+            "challenge_2": "Informal competition offering low prices without insurance or proper chemicals",
+            "challenge_3": "Achieving route density to minimize travel time between pools",
+            "challenge_4": "Lack of customer education on the importance of preventive maintenance",
+            "challenge_5": "Difficulty selling high-value equipment repairs",
+            "insight_title": "Transparency and visual hygiene are your best marketing tools.",
+            "insight_description": "By combining local presence (door hangers) with an impeccable visual catalog of crystal clear waters (Pinterest), you stop competing on price and become the trusted company that homeowners recommend."
+        },
+        "marketingSystem": {
+            "title": "Our local marketing system for Pool Services",
+            "subtitle": "We combine 5 strategic pillars to fill your schedule with profitable maintenance routes.",
+            "eddm": {
+                "title": "EDDM (Direct Mail)",
+                "description": "Reach thousands of homes with pools in selected neighborhoods just before the heat season starts. Ideal for pool openings.",
+                "worksFor": {
+                    "title": "EDDM works for:",
+                    "item1": "Season opening and closing",
+                    "item2": "Promoting monthly maintenance packages",
+                    "item3": "Premium neighborhoods with high pool density",
+                    "item4": "New equipment installation offers"
+                },
+                "whatWeDo": {
+                    "title": "What we do:",
+                    "item1": "Refreshing design that invites a dip",
+                    "item2": "Route selection with the highest pool count",
+                    "item3": "Full management with USPS",
+                    "item4": "Message focused on 'Always Perfect Water'"
+                }
+            },
+            "doorHangers": {
+                "title": "Door Hangers",
+                "description": "The 'Oasis Effect' technique. If you're servicing a pool, leave your card at the 5 surrounding houses. Neighbors always see who takes care of the neighborhood pools.",
+                "worksFor": {
+                    "title": "Ideal for:",
+                    "item1": "Optimizing weekly cleaning routes",
+                    "item2": "Reducing gas costs and time",
+                    "item3": "Creating dominance in specific subdivisions",
+                    "item4": "Special neighbor-only promotions"
+                },
+                "whatWeDo": {
+                    "title": "Our approach:",
+                    "item1": "Design highlighting cleanliness",
+                    "item2": "Strategic distribution coordination",
+                    "item3": "Tracking by work zone",
+                    "item4": "Direct call to action"
+                }
+            },
+            "googleAds": {
+                "title": "Google Ads (PPC)",
+                "description": "Appear right when someone searches for 'pool repair near me' or 'urgent pool cleaning'. We capture the customer who needs a solution TODAY.",
+                "worksFor": {
+                    "title": "Perfect for:",
+                    "item1": "Urgent pump and filter repairs",
+                    "item2": "Shock treatments (green water)",
+                    "item3": "Leak detection and structural repairs",
+                    "item4": "New maintenance clients"
+                },
+                "whatWeDo": {
+                    "title": "How we do it:",
+                    "item1": "Geolocated campaign setup",
+                    "item2": "Optimization for high-intent keywords",
+                    "item3": "Daily budget control",
+                    "item4": "Call and click reporting"
+                }
+            },
+            "pinterest": {
+                "title": "Pinterest Marketing",
+                "description": "Your crystal clear water showcase. We show your best maintenance and remodeling work where homeowners search for inspiration.",
+                "worksFor": {
+                    "title": "Ideal for showing:",
+                    "item1": "Crystal clear water and spotless pools",
+                    "item2": "Tile and deck remodeling",
+                    "item3": "LED light and heater installation",
+                    "item4": "Transformation projects (Before vs After)"
+                },
+                "whatWeDo": {
+                    "title": "Our work:",
+                    "item1": "High-quality pin creation",
+                    "item2": "SEO optimization for Pinterest",
+                    "item3": "Boards by technical service type",
+                    "item4": "Direct link to your contact"
+                }
+            },
+            "yardSigns": {
+                "title": "Yard Signs",
+                "description": "Branding while you work. A professional sign next to a perfect pool is the best social proof of your quality.",
+                "worksFor": {
+                    "title": "They serve for:",
+                    "item1": "Immediate visual recommendation",
+                    "item2": "Local neighborhood authority"
+                },
+                "whatWeDo": {
+                    "title": "What we deliver:",
+                    "item1": "High-visibility design",
+                    "item2": "Short 'Professional Service' message",
+                    "item3": "QR for quick quotes"
+                }
+            }
+        },
+        "results": {
+            "title": "Results You Can Expect",
+            "subtitle": "An integrated system gives you the stability that word-of-mouth cannot guarantee in the off-season.",
+            "doorHangers": {
+                "title": "Dense Routes",
+                "description": "Allows you to spend more time billing and less time driving between services."
+            },
+            "googleAds": {
+                "title": "Emergency Calls",
+                "description": "Ideal for capturing high-margin repairs that the customer needs solved fast."
+            },
+            "eddm": {
+                "title": "Full Schedule in Season",
+                "description": "Secure your monthly maintenance routes long before the heat hits."
+            },
+            "pinterest": {
+                "title": "Equipment Sales",
+                "description": "Customers who buy upgrades (lights, salt, heaters) convinced by the quality they see in your photos."
+            }
+        },
+        "services": {
+            "title": "Pool Services we can boost",
+            "subtitle": "Each service can have its own pin, its announcement and its specific message.",
+            "maintenance": {
+                "title": "Weekly Maintenance",
+                "description": "Cleaning and regular chemical balancing for residential pools."
+            },
+            "repair": {
+                "title": "Equipment Repair",
+                "description": "Repair of pumps, filters, heaters and salt systems."
+            },
+            "leakDetection": {
+                "title": "Leak Detection",
+                "description": "Location and repair of leaks in the structure or pipes."
+            },
+            "openingClosing": {
+                "title": "Opening and Closing",
+                "description": "Preparation of the pool for summer or winter."
+            },
+            "remodeling": {
+                "title": "Remodeling",
+                "description": "Change of tiles, painting and aesthetic improvements."
+            },
+            "automation": {
+                "title": "Automation",
+                "description": "Installation of smart systems for pool control."
+            },
+            "callout": "Each one can have its own pin, its own announcement and its own specific message."
+        },
+        "areas": {
+            "badge": "Local Coverage",
+            "title": "Areas We Serve",
+            "description": "We work with pool service companies in the Chicago Northwest Suburbs, including Algonquin, Huntley, Elgin, Crystal Lake, Carpentersville, Barrington, Woodstock, McHenry, Schaumburg, and nearby areas of Northern Illinois and Southern Wisconsin.",
+            "additional": "And nearby areas of Northern Illinois and Southern Wisconsin"
+        },
+        "pricing": {
+            "title": "Pool Services Marketing Packages",
+            "subtitle": "Choose the package that best fits your growth goals.",
+            "starter": {
+                "name": "Season Kickstart",
+                "subtitle": "Starter",
+                "features": {
+                    "item1": "Strategic door hangers (Oasis Effect)",
+                    "item2": "High-visibility yard signs",
+                    "item3": "Opening seasonal offer design",
+                    "item4": "Direct QR to your WhatsApp",
+                    "item5": "Local area report"
+                },
+                "idealFor": "Fill schedule fast"
+            },
+            "pro": {
+                "name": "Pro Growth",
+                "subtitle": "Professional",
+                "features": {
+                    "item1": "Google Ads (specialized campaign)",
+                    "item2": "Pinterest (crystal clear water showcase)",
+                    "item3": "Creatives focused on 'Trust'",
+                    "item4": "Call and contract report",
+                    "item5": "Priority support"
+                },
+                "idealFor": "Generate consistent weekly leads"
+            },
+            "allin": {
+                "name": "Total Dominance",
+                "subtitle": "All-in",
+                "features": {
+                    "item1": "Monthly EDDM for premium routes",
+                    "item2": "Google Ads + Pinterest + Yard Signs",
+                    "item3": "High-conversion landing page",
+                    "item4": "Strategy for commercial services",
+                    "item5": "24/7 dedicated support"
+                },
+                "idealFor": "Dominate an area and expand"
+            }
+        },
+        "faq": {
+            "title": "Frequently Asked Questions",
+            "subtitle": "Answers to the most common questions about pool marketing.",
+            "q1": {
+                "question": "Why Pinterest if I already have Facebook?",
+                "answer": "Pinterest is a visual search engine. People search for 'pool design' or 'pool maintenance' and your photos can appear there for years, generating constant trust that Facebook doesn't offer."
+            },
+            "q2": {
+                "question": "What's the best area for pool service EDDM?",
+                "answer": "We identify neighborhoods with large backyards and a high concentration of existing pools. This ensures your mail reaches only people who actually need the service."
+            },
+            "q3": {
+                "question": "How do we fight seasonality?",
+                "answer": "We use the off-season to promote structural repairs, equipment changes, and preventive closures, ensuring your business doesn't stop in winter."
+            }
+        },
+        "finalCTA": {
+            "title": "Ready for your pool business to sparkle like glass?",
+            "subtitle": "Don't let your schedule evaporate. Build your high-impact marketing system today.",
+            "button": "Request Free Strategy",
+            "smallPrint": "No hidden costs. Strategy-focused on real growth."
+        },
+        "footer": {
+            "direct_contact": "Direct Contact",
+            "lead_pillars": "Lead Pillars",
+            "email_sales": "Email Sales",
+            "call_us": "Call Us",
+            "presence": "Presence",
+            "tagline": "Premium marketing solutions for specialized pool service contractors. We keep your business flowing as crystal clear as your pools."
         }
     }
 }

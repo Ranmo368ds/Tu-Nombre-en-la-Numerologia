@@ -1,0 +1,94 @@
+'use client';
+
+import { useTranslations } from 'next-intl';
+import { ShieldAlert, CheckCircle2, Sparkles, Construction } from 'lucide-react';
+
+export default function WhyFenceSpecial() {
+    const t = useTranslations('FencePage.whySpecial');
+
+    const challenges = [
+        t('challenge_1'),
+        t('challenge_2'),
+        t('challenge_3'),
+        t('challenge_4'),
+        t('challenge_5'),
+    ];
+
+    return (
+        <section className="py-24 bg-white overflow-hidden">
+            <div className="max-w-7xl mx-auto px-6">
+                <div className="grid lg:grid-cols-2 gap-20 items-center">
+                    {/* Visual Content Side */}
+                    <div className="relative order-2 lg:order-1">
+                        {/* Decorative background circle */}
+                        <div className="absolute -top-20 -left-20 w-[120%] h-[120%] bg-[#dee2e6]/50 rounded-full blur-[100px] pointer-events-none opacity-40"></div>
+
+                        <div className="relative bg-[#212529] rounded-[3rem] shadow-2xl p-10 md:p-14 overflow-hidden border border-[#495057]">
+                            {/* Accent Pattern */}
+                            <div className="absolute top-0 right-0 p-8">
+                                <Construction className="w-32 h-32 text-white/5 rotate-12" />
+                            </div>
+
+                            <h3 className="text-3xl font-black text-white mb-10 flex items-center gap-4">
+                                <ShieldAlert className="text-[#28a745] w-8 h-8" />
+                                {t('challenges_title')}
+                            </h3>
+
+                            <ul className="space-y-8 relative z-10">
+                                {challenges.map((challenge, index) => (
+                                    <li key={index} className="flex items-start gap-6 group">
+                                        <div className="flex-shrink-0 w-10 h-10 bg-[#28a745] text-white rounded-xl flex items-center justify-center font-black text-lg group-hover:scale-110 transition-transform duration-300 shadow-[0_5px_15px_rgba(40,167,69,0.3)]">
+                                            {index + 1}
+                                        </div>
+                                        <p className="text-[#dee2e6] text-lg font-medium leading-relaxed group-hover:text-white transition-colors duration-300">
+                                            {challenge}
+                                        </p>
+                                    </li>
+                                ))}
+                            </ul>
+
+                            <div className="mt-14 pt-10 border-t border-white/10">
+                                <div className="bg-[#28a745]/10 rounded-2xl p-8 border border-[#28a745]/20 backdrop-blur-sm group hover:bg-[#28a745]/20 transition-all duration-500">
+                                    <p className="text-[#28a745] font-black text-lg mb-4 flex items-center gap-3">
+                                        <Sparkles className="w-6 h-6 animate-pulse" />
+                                        {t('insight_title')}
+                                    </p>
+                                    <p className="text-[#dee2e6] leading-relaxed font-light italic text-lg">
+                                        "{t('insight_description')}"
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Content Description Side */}
+                    <div className="lg:pl-8 order-1 lg:order-2">
+                        <div className="inline-flex items-center gap-3 bg-[#dee2e6] text-[#212529] font-black px-5 py-2 rounded-full text-xs uppercase tracking-[0.2em] mb-8 border border-gray-300 shadow-sm">
+                            <span className="w-2 h-2 bg-[#28a745] rounded-full animate-ping"></span>
+                            Quality & Security First
+                        </div>
+                        <h2 className="text-5xl md:text-6xl font-black text-[#212529] mb-10 leading-tight tracking-tight">
+                            {t('title')}
+                        </h2>
+                        <div className="space-y-8">
+                            <p className="text-xl text-[#495057] leading-relaxed font-light first-letter:text-5xl first-letter:font-black first-letter:text-[#28a745] first-letter:mr-3 first-letter:float-left">
+                                {t('description')}
+                            </p>
+
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-10">
+                                <div className="p-8 bg-[#dee2e6]/30 rounded-3xl border border-gray-100 hover:border-[#28a745]/30 hover:bg-white transition-all duration-300 group shadow-sm hover:shadow-xl">
+                                    <div className="text-[#28a745] font-black text-4xl mb-2 group-hover:scale-110 transition-transform origin-left">100%</div>
+                                    <div className="text-[#495057] text-xs font-black uppercase tracking-widest opacity-60">Visual Authority</div>
+                                </div>
+                                <div className="p-8 bg-[#dee2e6]/30 rounded-3xl border border-gray-100 hover:border-[#28a745]/30 hover:bg-white transition-all duration-300 group shadow-sm hover:shadow-xl">
+                                    <div className="text-[#212529] font-black text-4xl mb-2 group-hover:scale-110 transition-transform origin-left">No-Fail</div>
+                                    <div className="text-[#495057] text-xs font-black uppercase tracking-widest opacity-60">Lead System</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    );
+}
