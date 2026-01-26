@@ -16,7 +16,12 @@ export default function ContactClient() {
         e.preventDefault();
         setStatus("submitting");
 
-        const formId = process.env.NEXT_PUBLIC_FORMSPREE_CONTACT_ID || "xgooeyqd"; // Standardized fallback
+        // Check domain to choose the correct inbox
+        const isGenes = typeof window !== 'undefined' && window.location.hostname.includes('genesmarketing');
+
+        const formId = isGenes
+            ? (process.env.NEXT_PUBLIC_FORMSPREE_GENES_ID || "xaqobdna")
+            : (process.env.NEXT_PUBLIC_FORMSPREE_INSTINTO_ID || "xgooeyqd");
 
         try {
             const response = await fetch(`https://formspree.io/f/${formId}`, {

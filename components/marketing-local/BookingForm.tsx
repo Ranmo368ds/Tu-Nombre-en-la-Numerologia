@@ -33,7 +33,7 @@ export default function BookingForm() {
         formData.set('hasLogo', hasLogo);
         formData.set('_subject', 'Nueva Reserva - Flyer Local (Antigravity)');
 
-        const formId = process.env.NEXT_PUBLIC_FORMSPREE_CONTACT_ID || 'xgooeyqd'; // Standardized fallback
+        const formId = process.env.NEXT_PUBLIC_FORMSPREE_GENES_ID || 'xaqobdna';
 
         try {
             const response = await fetch(`https://formspree.io/f/${formId}`, {

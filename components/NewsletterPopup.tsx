@@ -31,9 +31,16 @@ export function NewsletterPopup() {
         e.preventDefault();
         setStatus("submitting");
 
-        const formId = process.env.NEXT_PUBLIC_FORMSPREE_NEWSLETTER_ID ||
-            process.env.NEXT_PUBLIC_FORMSPREE_CONTACT_ID ||
-            "xgooeyqd";
+        // Determine ID based on context
+        const isGenesContext = typeof window !== 'undefined' && (
+            window.location.hostname.includes('genesmarketing') ||
+            window.location.pathname.includes('services') ||
+            window.location.pathname.includes('marketing')
+        );
+
+        const formId = isGenesContext
+            ? (process.env.NEXT_PUBLIC_FORMSPREE_GENES_ID || "xaqobdna")
+            : (process.env.NEXT_PUBLIC_FORMSPREE_INSTINTO_ID || "xgooeyqd");
 
         try {
             const response = await fetch(`https://formspree.io/f/${formId}`, {

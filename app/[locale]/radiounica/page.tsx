@@ -70,7 +70,7 @@ function RadioUnicaContent() {
         const formData = new FormData(e.currentTarget);
         const data = Object.fromEntries(formData);
 
-        const formId = process.env.NEXT_PUBLIC_FORMSPREE_CONTACT_ID || "xgooeyqd";
+        const formId = process.env.NEXT_PUBLIC_FORMSPREE_GENES_ID || "xaqobdna";
 
         try {
             const response = await fetch(`https://formspree.io/f/${formId}`, {
