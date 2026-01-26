@@ -34,6 +34,7 @@ export function NewsletterPopup() {
         // Determine ID based on context
         const isGenesContext = typeof window !== 'undefined' && (
             window.location.hostname.includes('genesmarketing') ||
+            (window.location.hostname.includes('tu-nombre-en-la-numerologia') && !window.location.hostname.includes('instintosaludable')) ||
             window.location.pathname.includes('services') ||
             window.location.pathname.includes('marketing')
         );

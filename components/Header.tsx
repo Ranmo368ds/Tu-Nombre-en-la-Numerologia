@@ -18,19 +18,22 @@ export function Header() {
     React.useEffect(() => {
         if (typeof window !== "undefined") {
             const hostname = window.location.hostname;
-            if (hostname.includes("genesmarketing.com") || hostname.includes("genesmarketing")) {
-                setIsMarketingDomain(true);
-            }
+            // Check if we are on Genes Marketing (either production or preview)
+            const isGenes = hostname.includes("genesmarketing") ||
+                (hostname.includes("tu-nombre-en-la-numerologia") && !hostname.includes("instintosaludable"));
+            setIsMarketingDomain(isGenes);
         }
     }, []);
 
     // List of paths where the Instinto Saludable header SHOULD be visible (Legacy/Holistic)
     const holisticPaths = [
+        "/",
         "/shop",
         "/blog",
         "/numerology",
         "/radio-unica",
-        "/radiounica"
+        "/radiounica",
+        "/contact"
     ];
 
     const isHolisticPath = holisticPaths.some(path => pathname === path || pathname.startsWith(path));

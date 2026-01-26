@@ -17,7 +17,12 @@ export default function ContactClient() {
         setStatus("submitting");
 
         // Check domain to choose the correct inbox
-        const isGenes = typeof window !== 'undefined' && window.location.hostname.includes('genesmarketing');
+        const isGenes = typeof window !== 'undefined' && (
+            window.location.hostname.includes('genesmarketing') ||
+            (window.location.hostname.includes('tu-nombre-en-la-numerologia') && !window.location.hostname.includes('instintosaludable'))
+        );
+
+        const businessEmail = isGenes ? "ventas@genesmarketing.com" : "dithergenes@gmail.com"; // placeholder for Instinto
 
         const formId = isGenes
             ? (process.env.NEXT_PUBLIC_FORMSPREE_GENES_ID || "xaqobdna")
@@ -40,7 +45,10 @@ export default function ContactClient() {
             }
         } catch (error) {
             console.error("Formspree error:", error);
-            alert("Vaya, hubo un error enviando tu mensaje. Por favor intenta de nuevo o escríbenos a ventas@genesmarketing.com");
+            const contactEmail = typeof window !== 'undefined' && (window.location.hostname.includes('genesmarketing') || !window.location.hostname.includes('instintosaludable'))
+                ? "ventas@genesmarketing.com"
+                : "dithergenes@gmail.com";
+            alert(`Vaya, hubo un error enviando tu mensaje. Por favor intenta de nuevo o escríbenos a ${contactEmail}`);
             setStatus("idle");
         }
     };
@@ -79,8 +87,8 @@ export default function ContactClient() {
                                     </div>
                                     <div>
                                         <p className="text-sm text-primary-light uppercase tracking-wider font-semibold mb-1">Email</p>
-                                        <p className="text-lg">ventas@genesmarketing.com</p>
-                                        <p className="text-xs text-primary-light/60">ventas@genesmarketing.com</p>
+                                        <p className="text-lg">{typeof window !== 'undefined' && window.location.hostname.includes('genesmarketing') ? 'ventas@genesmarketing.com' : 'dithergenes@gmail.com'}</p>
+                                        <p className="text-xs text-primary-light/60">{typeof window !== 'undefined' && window.location.hostname.includes('genesmarketing') ? 'ventas@genesmarketing.com' : 'dithergenes@gmail.com'}</p>
                                     </div>
                                 </div>
                                 <div className="flex items-start gap-4">
