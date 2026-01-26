@@ -95,10 +95,14 @@ export function Header() {
 
             {/* Desktop Navigation - Below or floating? Let's put it in a separate bar for luxury feel if needed, or keep it left but absolute left. */}
             {/* User said "centered logo", I'll put nav absolute left. */}
-            <div className="hidden lg:flex absolute left-6 top-1/2 -translate-y-1/2 items-center gap-4 text-[10px] font-bold tracking-widest text-stone-500 uppercase">
+            <div className="hidden lg:flex absolute left-6 top-1/2 -translate-y-1/2 items-center gap-x-4 text-[9px] font-black tracking-[0.15em] text-stone-500 uppercase">
                 <Link href="/shop?category=oils" className="hover:text-primary transition-colors">{t("nav.oils")}</Link>
+                <Link href="/shop?category=ebooks" className="hover:text-primary transition-colors">{t("nav.ebooks")}</Link>
+                <Link href="/shop?category=music" className="hover:text-primary transition-colors">{t("nav.emusic")}</Link>
+                <Link href="/shop?category=holistic" className="hover:text-primary transition-colors">{t("nav.holistic")}</Link>
                 <Link href="/blog" className="hover:text-primary transition-colors">{t("nav.blog")}</Link>
                 <Link href="/numerology" className="hover:text-primary transition-colors">{t("nav.numerology")}</Link>
+                <Link href="/contact" className="hover:text-primary transition-colors">{t("nav.contact")}</Link>
             </div>
 
             {/* Mobile Menu Overlay */}
