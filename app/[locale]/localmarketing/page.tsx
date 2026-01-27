@@ -72,7 +72,6 @@ export default async function LocalMarketingPage({ params }: { params: Promise<{
             <ZonesList />
             <PricingPackages />
             <PinterestBonus />
-            <BookingForm />
             <FAQSection />
             <LocalFooter />
         </main>

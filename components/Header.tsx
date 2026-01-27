@@ -38,7 +38,9 @@ export function Header() {
         "/contact"
     ];
 
-    const isHolisticPath = holisticPaths.some(path => pathname === path || pathname.startsWith(path));
+    const isHolisticPath = holisticPaths.some(path =>
+        path === "/" ? pathname === "/" : pathname.startsWith(path)
+    );
 
     // Hide global header if NOT on a holistic path OR if on a niche domain
     if (!isHolisticPath || isNicheDomain) {

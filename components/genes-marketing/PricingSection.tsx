@@ -1,64 +1,65 @@
+'use client';
 import { Check, Star } from "lucide-react";
 import { useTranslations } from "next-intl";
 
 export default function PricingSection() {
     const t = useTranslations("MarketingPage.pricing");
 
-    const PACKAGES = [
+    const packagesInfo = [
         {
             id: 'basic',
-            name: t('packages_list.basic.name'),
+            nameKey: 'packages_list.basic.name',
             price: 59,
-            description: t('packages_list.basic.desc'),
-            ideal: t('packages_list.basic.ideal'),
+            descriptionKey: 'packages_list.basic.desc',
+            idealKey: 'packages_list.basic.ideal',
             features: [
-                t('common_features.0'),
-                t('common_features.1'),
-                t('common_features.2'),
-                t('common_features.3'),
-                t('common_features.4'),
+                'common_features.0',
+                'common_features.1',
+                'common_features.2',
+                'common_features.3',
+                'common_features.4',
             ],
-            delivery: t('packages_list.basic.delivery'),
+            deliveryKey: 'packages_list.basic.delivery',
             highlight: false,
-            cta: t('packages_list.basic.cta'),
+            ctaKey: 'packages_list.basic.cta',
             color: "border-white/5",
         },
         {
             id: 'pro',
-            name: t('packages_list.pro.name'),
+            nameKey: 'packages_list.pro.name',
             price: 119,
-            description: t('packages_list.pro.desc'),
-            ideal: t('packages_list.pro.ideal'),
+            descriptionKey: 'packages_list.pro.desc',
+            idealKey: 'packages_list.pro.ideal',
             features: [
-                t('common_features.0'),
-                t('common_features.1'),
-                t('common_features.4'),
-                t('common_features.2'),
-                t('common_features.3'),
-                t('common_features.5'),
+                'common_features.0',
+                'common_features.1',
+                'common_features.4',
+                'common_features.2',
+                'common_features.3',
+                'common_features.5',
             ],
-            delivery: t('packages_list.pro.delivery'),
+            deliveryKey: 'packages_list.pro.delivery',
             highlight: true,
-            cta: t('packages_list.pro.cta'),
+            ctaKey: 'packages_list.pro.cta',
             color: "border-[#F59E0B]",
         },
         {
             id: 'elite',
-            name: t('packages_list.elite.name'),
+            nameKey: 'packages_list.elite.name',
             price: 199,
-            description: t('packages_list.elite.desc'),
-            ideal: t('packages_list.elite.ideal'),
+            descriptionKey: 'packages_list.elite.desc',
+            idealKey: 'packages_list.elite.ideal',
             features: [
-                t('common_features.0'),
-                t('common_features.1'),
-                t('common_features.5'),
-                t('common_features.4'),
-                t('common_features.3'),
-                t('common_features.6'),
+                'common_features.0',
+                'common_features.1',
+                'common_features.5',
+                'common_features.4',
+                'common_features.3',
+                'common_features.6',
             ],
-            delivery: t('packages_list.elite.delivery'),
+            deliveryKey: 'packages_list.elite.delivery',
             highlight: false,
-            cta: t('packages_list.elite.cta'),
+            ctaKey: 'packages_list.elite.cta',
             color: "border-white/5",
         },
     ];
@@ -74,15 +75,19 @@ export default function PricingSection() {
             <div className="container mx-auto px-4 relative z-10">
                 <div className="text-center max-w-3xl mx-auto mb-16">
                     <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                        {t('title')}
+                        {t.rich('title', {
+                            p: (chunks) => <span>{chunks}</span>
+                        })}
                     </h2>
                     <p className="text-lg text-[#B8C1D1]">
-                        {t('subtitle')}
+                        {t.rich('subtitle', {
+                            p: (chunks) => <span className="text-white font-bold">{chunks}</span>
+                        })}
                     </p>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto items-center">
-                    {PACKAGES.map((pkg, index) => (
+                    {packagesInfo.map((pkg, index) => (
                         <div
                             key={index}
                             className={`relative bg-[#111A2E] rounded-2xl p-8 border-2 ${pkg.color} ${pkg.highlight ? 'md:-mt-8 md:mb-8 shadow-2xl shadow-[#F59E0B]/10 z-10' : 'shadow-xl'}`}
@@ -94,7 +99,7 @@ export default function PricingSection() {
                                 </div>
                             )}
 
-                            <h3 className="text-2xl font-bold mb-2">{pkg.name}</h3>
+                            <h3 className="text-2xl font-bold mb-2">{t(pkg.nameKey as any)}</h3>
                             {pkg.id === 'pro' && (
                                 <p className="text-amber-400 text-sm font-bold mb-4 italic flex items-start gap-1">
                                     {t('pro_social_proof')}
@@ -105,19 +110,23 @@ export default function PricingSection() {
                                 <span className="text-[#B8C1D1] ml-2">{t('payment_suffix')}</span>
                             </div>
                             <div className="text-sm text-[#B8C1D1] mb-8 pb-8 border-b border-white/5 min-h-[160px]">
-                                <p className="mb-4 font-semibold text-white">{pkg.description}</p>
-                                <p><span className="text-[#B8C1D1]/50 uppercase text-[10px] font-bold block mb-1">{t('ideal_label')}</span> {pkg.ideal}</p>
+                                <div className="mb-4 font-semibold text-white">
+                                    {t.rich(pkg.descriptionKey as any, {
+                                        p: (chunks) => <span className="text-amber-400">{chunks}</span>
+                                    })}
+                                </div>
+                                <p><span className="text-[#B8C1D1]/50 uppercase text-[10px] font-bold block mb-1">{t('ideal_label')}</span> {t(pkg.idealKey as any)}</p>
                             </div>
 
                             <ul className="space-y-4 mb-8">
-                                {pkg.features.map((feature, i) => (
+                                {pkg.features.map((featureKey, i) => (
                                     <li key={i} className="flex items-start gap-3 text-sm text-[#B8C1D1]">
                                         <Check className={`w-5 h-5 shrink-0 ${pkg.highlight ? 'text-[#F59E0B]' : 'text-slate-500'}`} />
-                                        {feature}
+                                        {t(featureKey as any)}
                                     </li>
                                 ))}
                                 <li className="flex items-start gap-3 text-sm font-semibold text-white mt-6 pt-6 border-t border-white/5">
-                                    <span className="text-[#B8C1D1]/50 uppercase text-[10px] font-bold block">{t('delivery_label')}</span> {pkg.delivery}
+                                    <span className="text-[#B8C1D1]/50 uppercase text-[10px] font-bold block">{t('delivery_label')}</span> {t(pkg.deliveryKey as any)}
                                 </li>
                             </ul>
 
@@ -125,7 +134,7 @@ export default function PricingSection() {
                                 ? 'bg-[#E11D2E] hover:bg-[#B81422] text-white shadow-lg shadow-[#E11D2E]/20'
                                 : 'bg-white/10 hover:bg-white/20 text-white'
                                 }`}>
-                                {pkg.cta}
+                                {t(pkg.ctaKey as any)}
                             </button>
                         </div>
                     ))}

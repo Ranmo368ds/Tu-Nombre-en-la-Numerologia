@@ -146,6 +146,7 @@
 .font-mystic {
   font-family: var(--font-cinzel), serif;
 }
+
 /* Tarot Card Specific Utilities */
 .tarot-card-glow {
   box-shadow: 0 0 15px rgba(139, 92, 246, 0.3), 0 0 30px rgba(79, 70, 229, 0.2);
@@ -172,8 +173,34 @@
   transform: rotateY(180deg);
 }
 
+@keyframes whatsapp-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.4);
+  }
+
+  70% {
+    box-shadow: 0 0 0 20px rgba(37, 211, 102, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
+
+.animate-whatsapp-pulse {
+  animation: whatsapp-pulse 2s infinite;
+}
+
 @keyframes border-rotate {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }
