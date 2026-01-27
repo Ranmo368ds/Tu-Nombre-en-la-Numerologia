@@ -2659,6 +2659,12 @@
             "title": "Advertise Your Business and Reach Thousands of Homes Directly",
             "subtitle": "We join several businesses in a single professional flyer, send it to specific neighborhoods, and give you a QR page to convert visits into calls, messages, and real leads.",
             "volaPrice": "10,000 FLYERS FOR $390",
+            "volaPriceParts": {
+                "count": "10,000",
+                "label": "FLYERS",
+                "connector": "FOR",
+                "price": "$390"
+            },
             "subHeadline": "Shared flyer + QR to your own page — built to generate calls and messages in your target zone.",
             "volaSub": "$390 / Your Business in 10,000 Mailboxes (This Month)",
             "whatsapp_cta": "Contact via WhatsApp",
@@ -2690,6 +2696,7 @@
         "flyerMockup": {
             "title": "This is what the Flyer will look like (Example)",
             "subtitle": "Each business gets a visible space. The QR leads to this page to capture clients.",
+            "designInstructions": "Just send us your business card and logo to start the design",
             "note": "Limited spots per zone. When the flyer fills up, participation closes.",
             "sponsorLabel": "⭐ Featured (Sponsor)",
             "yourBusinessHere": "Your Business Here",
@@ -2716,7 +2723,9 @@
         "zones": {
             "title": "Choose the Zone You Want to Reach",
             "subtitle": "Select one or multiple zones. Each zone represents target neighborhoods.",
+            "zoneLabel": "Zone",
             "searchPlaceholder": "Search city or zone...",
+            "noResults": "No zones found matching your search.",
             "requestZone": "Don't see your zone? Write it in the form and we'll add it.",
             "map": {
                 "visualize": "Want to see exactly where your advertising is distributed?",
@@ -2810,7 +2819,21 @@
             },
             "submit": "Submit and Reserve Zone",
             "trust": "We do not share your information. Response in 24 business hours.",
-            "success": "✅ Thank you. Your request was sent. We will contact you shortly to confirm your spot."
+            "success": "✅ Thank you. Your request was sent. We will contact you shortly to confirm your spot.",
+            "industries": {
+                "tree_service": "Tree Service",
+                "roofing": "Roofing",
+                "tax_services": "Income Tax",
+                "sealcoating": "Sealcoating",
+                "painting": "Painting",
+                "hvac": "HVAC",
+                "landscaping": "Landscaping",
+                "cleaning": "Cleaning",
+                "real_estate": "Real Estate",
+                "beauty": "Hair Salon",
+                "restaurant": "Restaurant",
+                "other": "Other"
+            }
         },
         "faq": {
             "title": "Frequently Asked Questions",

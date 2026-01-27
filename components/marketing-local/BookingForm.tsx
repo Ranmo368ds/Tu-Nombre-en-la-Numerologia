@@ -60,7 +60,10 @@ export default function BookingForm() {
     const industries = [
         "Tree Service", "Roofing", "Tax Services", "Sealcoating", "Painting",
         "HVAC", "Landscaping", "Cleaning", "Real Estate", "Beauty", "Restaurant", "Other"
-    ];
+    ].map(ind => ({
+        value: ind,
+        label: t(`industries.${ind.toLowerCase().replace(/\s+/g, '_')}`, { defaultValue: ind })
+    }));
 
     if (isSuccess) {
         return (
@@ -106,7 +109,7 @@ export default function BookingForm() {
                     <select required name="industry" className="w-full bg-slate-950 border border-slate-700 rounded-lg px-4 py-3 text-white focus:ring-2 focus:ring-cyan-500 outline-none appearance-none">
                         <option value="">{t('placeholders.industry')}</option>
                         {industries.map(ind => (
-                            <option key={ind} value={ind}>{ind}</option>
+                            <option key={ind.value} value={ind.value}>{ind.label}</option>
                         ))}
                     </select>
                 </div>
@@ -151,7 +154,7 @@ export default function BookingForm() {
                             <div className={`w-4 h-4 rounded border flex items-center justify-center ${selectedZones.includes(opt.value) ? 'bg-cyan-500 border-cyan-500' : 'border-slate-600'}`}>
                                 {selectedZones.includes(opt.value) && <CheckCircle className="w-3 h-3 text-white" />}
                             </div>
-                            <span className="truncate">{opt.label}</span>
+                            <span className="truncate">{useTranslations('LocalMarketingPage.zones')('zoneLabel')} {opt.label.split(' ')[1]}</span>
                         </label>
                     ))}
                 </div>

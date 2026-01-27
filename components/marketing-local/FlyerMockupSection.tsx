@@ -73,9 +73,12 @@ export default function FlyerMockupSection() {
                     </motion.div>
                 </div>
 
-                <div className="text-center mt-8">
+                <div className="text-center mt-8 space-y-4">
                     <p className="inline-block bg-red-900/30 border border-red-900/50 text-red-200 px-4 py-2 rounded-full text-sm font-medium">
                         ⚠️ {t('note')}
+                    </p>
+                    <p className="text-xl lg:text-2xl font-bold text-white max-w-2xl mx-auto leading-tight">
+                        {t('designInstructions')}
                     </p>
                 </div>
             </div>

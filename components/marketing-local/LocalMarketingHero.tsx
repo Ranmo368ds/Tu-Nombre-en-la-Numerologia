@@ -136,16 +136,16 @@ export default function LocalMarketingHero() {
                         >
                             <div className="text-yellow-400 font-black leading-tight uppercase select-none">
                                 <div className="text-6xl sm:text-7xl lg:text-8xl filter drop-shadow-[0_0_30px_rgba(250,204,21,0.3)]">
-                                    10,000
+                                    {t('volaPriceParts.count')}
                                 </div>
                                 <div className="text-4xl sm:text-5xl lg:text-7xl">
-                                    VOLANTES
+                                    {t('volaPriceParts.label')}
                                 </div>
                                 <div className="text-3xl sm:text-4xl lg:text-6xl mt-2 text-white">
-                                    POR
+                                    {t('volaPriceParts.connector')}
                                 </div>
                                 <div className="text-7xl sm:text-8xl lg:text-[10rem] text-red-600 font-black mt-[-10px] filter drop-shadow-[0_0_40px_rgba(220,38,38,0.4)]">
-                                    $390
+                                    {t('volaPriceParts.price')}
                                 </div>
                             </div>
 

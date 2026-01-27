@@ -2668,8 +2668,14 @@
             "title": "Anuncia tu Negocio y Llega Directo a Miles de Casas",
             "subtitle": "Unimos varios negocios en un solo flyer profesional, lo enviamos a vecindarios específicos y te damos una página con QR para convertir visitas en llamadas, mensajes y leads reales.",
             "volaPrice": "10,000 VOLANTES POR $390",
-            "subHeadline": "Shared flyer + QR to your own page — built to generate calls and messages in your target zone.",
-            "volaSub": "$390 / Your Business in 10,000 Mailboxes (This Month)",
+            "volaPriceParts": {
+                "count": "10,000",
+                "label": "VOLANTES",
+                "connector": "POR",
+                "price": "$390"
+            },
+            "subHeadline": "Flyer compartido + QR a tu propia página — diseñado para generar llamadas y mensajes en tu zona objetivo.",
+            "volaSub": "$390 / Tu Negocio en 10,000 Buzones (Este Mes)",
             "whatsapp_cta": "Contactar por WhatsApp",
             "features": {
                 "item1": "Visibilidad real en hogares (no solo “likes”)",
@@ -2699,6 +2705,7 @@
         "flyerMockup": {
             "title": "Así se verá el Flyer (Ejemplo)",
             "subtitle": "Cada negocio obtiene un espacio visible. El QR lleva a esta página para captar clientes.",
+            "designInstructions": "Solamente Mandanos tu business card y logo para comenzar el diseño",
             "note": "Cupos limitados por zona. Cuando se llena el flyer, se cierra la participación.",
             "sponsorLabel": "⭐ Destacado (Sponsor)",
             "yourBusinessHere": "Tu Negocio Aquí",
@@ -2725,7 +2732,9 @@
         "zones": {
             "title": "Elige la Zona donde Quieres Llegar",
             "subtitle": "Selecciona una o varias zonas. Cada zona representa vecindarios objetivo.",
+            "zoneLabel": "Zona",
             "searchPlaceholder": "Buscar ciudad o zona...",
+            "noResults": "No se encontraron zonas que coincidan con tu búsqueda.",
             "requestZone": "¿No ves tu zona? Escríbela en el formulario y la agregamos.",
             "map": {
                 "visualize": "¿Quieres ver exactamente dónde se distribuye tu publicidad?",
@@ -2819,7 +2828,21 @@
             },
             "submit": "Enviar y Reservar Zona",
             "trust": "No compartimos tu información. Respuesta en 24 horas hábiles.",
-            "success": "✅ Gracias. Tu solicitud fue enviada. En breve te contactamos para confirmar cupo."
+            "success": "✅ Gracias. Tu solicitud fue enviada. En breve te contactamos para confirmar cupo.",
+            "industries": {
+                "tree_service": "Tree Service",
+                "roofing": "Roofing",
+                "tax_services": "Income Tax",
+                "sealcoating": "Sealcoating",
+                "painting": "Pintura",
+                "hvac": "Aire Acondicionado",
+                "landscaping": "Landscaping",
+                "cleaning": "Limpieza",
+                "real_estate": "Real Estate",
+                "beauty": "Salón de Belleza",
+                "restaurant": "Restaurante",
+                "other": "Otro"
+            }
         },
         "faq": {
             "title": "Preguntas Frecuentes",

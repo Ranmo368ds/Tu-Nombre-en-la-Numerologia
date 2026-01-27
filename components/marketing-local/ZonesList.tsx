@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { Search, MapPin } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import Script from 'next/script';
 
 const ZONES_DATA = [
     { id: 1, cities: ["Belvidere", "Hampshire", "Marengo"] },
@@ -104,7 +105,7 @@ export default function ZonesList() {
                                 `}
                             >
                                 <div className={`text-[10px] font-black uppercase tracking-tighter mb-1 ${selectedZoneIds.includes(zone.id) ? 'text-cyan-400' : 'text-slate-500'}`}>
-                                    Zona {zone.id}
+                                    {t('zoneLabel')} {zone.id}
                                 </div>
                                 <p className="text-[11px] leading-tight font-medium">
                                     {zone.cities[0]}<br />
@@ -116,45 +117,15 @@ export default function ZonesList() {
                 </div>
 
                 {filteredZones.length === 0 && (
-                    <div className="text-center py-12 text-slate-500">
-                        No zones found for "{searchTerm}"
+                    <div className="col-span-full text-center py-10 bg-slate-900/50 rounded-2xl border border-slate-800">
+                        <p className="text-slate-400">{t('noResults')}</p>
                     </div>
                 )}
 
-                {/* Map Section - Integrated PRO features */}
-                <div className="max-w-2xl mx-auto bg-slate-950/50 border border-slate-800 rounded-2xl p-8 text-center shadow-2xl">
-                    <p className="text-slate-300 font-medium mb-4">
-                        {t('map.visualize')}
-                    </p>
-
-                    <a
-                        href={getMapLink()}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label={selectedZoneIds.length > 0 ? t('map.check') : t('map.fallbackCheck')}
-                        className="inline-flex flex-col items-center gap-2 group"
-                    >
-                        <div className="bg-cyan-600 hover:bg-cyan-500 text-white font-bold py-4 px-10 rounded-xl transition-all shadow-lg shadow-cyan-900/40 flex items-center gap-3 active:scale-95">
-                            <MapPin className="w-5 h-5 group-hover:animate-bounce" />
-                            {selectedZoneIds.length > 0 ? t('map.check') : t('map.fallbackCheck')}
-                        </div>
-                    </a>
-
-                    {selectedZoneIds.length > 1 && (
-                        <p className="mt-4 text-xs text-amber-500 italic">
-                            {t('map.multiSelectHint')}
-                        </p>
-                    )}
-
-                    <p className="mt-4 text-xs text-slate-500">
-                        {t('map.support')}
-                    </p>
-
-                    <div className="mt-8 pt-6 border-t border-slate-900 text-left">
-                        <p className="text-xs text-slate-500 leading-relaxed italic">
-                            <strong>FAQ:</strong> {t('map.faq')}
-                        </p>
-                    </div>
+                {/* Elfsight Store Locator Map */}
+                <div className="max-w-5xl mx-auto mt-12">
+                    <Script src="https://elfsightcdn.com/platform.js" async />
+                    <div className="elfsight-app-3fb2054a-7374-4070-a239-8d674f4d9d57" data-elfsight-app-lazy></div>
                 </div>
 
                 <div className="text-center mt-12">
