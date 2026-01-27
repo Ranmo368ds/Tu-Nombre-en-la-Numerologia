@@ -88,10 +88,8 @@ export function Footer() {
                             <span>Chicago, Illinois - Central Time</span>
                         </li>
                     </ul>
-                    <p className="text-xs mt-8 opacity-60">
-                        As an Amazon Associate I earn from qualifying purchases.
-                    </p>
                 </div>
+
             </div>
             <div className="max-w-7xl mx-auto pt-8 mt-8 border-t border-stone-800 text-center text-sm">
                 © {new Date().getFullYear()} Instinto Saludable. {t("footer.rights")}.

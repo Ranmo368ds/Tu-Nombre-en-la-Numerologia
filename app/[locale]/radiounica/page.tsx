@@ -4,6 +4,7 @@
 // For now, I'll update internal references if any.
 
 import React, { useState, useEffect } from 'react';
+import { submitToFormspree } from '@/lib/formspree';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
     Play,
@@ -70,27 +71,10 @@ function RadioUnicaContent() {
         const formData = new FormData(e.currentTarget);
         const data = Object.fromEntries(formData);
 
-        const formId = process.env.NEXT_PUBLIC_FORMSPREE_GENES_ID || "xaqobdna";
-
         try {
-            const response = await fetch(`https://formspree.io/f/${formId}`, {
-                method: "POST",
-                headers: {
-                    'Accept': 'application/json',
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(data)
-            });
-
-            if (response.ok) {
-                setFormStatus('success');
-                (e.target as HTMLFormElement).reset();
-            } else {
-                // If error, just reset to idle for now or keep submitting state? 
-                // Let's just log it.
-                console.error("Form submission failed");
-                setFormStatus('error');
-            }
+            await submitToFormspree(data);
+            setFormStatus('success');
+            (e.target as HTMLFormElement).reset();
         } catch (error) {
             console.error("Form submission error", error);
             setFormStatus('error');
@@ -153,9 +137,11 @@ function RadioUnicaContent() {
                             <a href="#tienda" className="text-sm font-medium hover:text-yellow-500 transition-colors">{t('title')}</a>
                             <a href="#contacto" className="text-sm font-medium hover:text-yellow-500 transition-colors">CONTACTO</a>
                             <Button
-                                className="bg-yellow-500 hover:bg-yellow-600 text-black font-bold rounded-full px-6"
+                                onClick={togglePlay}
+                                className={`${isPlaying ? 'bg-red-500 hover:bg-red-600 animate-pulse' : 'bg-yellow-500 hover:bg-yellow-600'} text-black font-bold rounded-full px-6 transition-colors flex items-center gap-2`}
                             >
-                                EN VIVO
+                                {isPlaying && <span className="w-2 h-2 bg-white rounded-full" />}
+                                {isPlaying ? 'DETENER' : 'EN VIVO'}
                             </Button>
                         </div>
 
@@ -225,11 +211,28 @@ function RadioUnicaContent() {
                         </p>
 
                         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                            <audio
+                                ref={audioRef}
+                                src={STREAM_URL}
+                                preload="auto"
+                                crossOrigin="anonymous"
+                            />
                             <Button
                                 size="lg"
-                                className="w-full sm:w-auto bg-white text-black hover:bg-gray-200 rounded-full h-14 px-8 text-lg font-bold shadow-[0_0_20px_rgba(255,255,255,0.3)] transition-all hover:scale-105"
+                                onClick={togglePlay}
+                                className="w-full sm:w-auto bg-white text-black hover:bg-gray-200 rounded-full h-14 px-8 text-lg font-bold shadow-[0_0_20px_rgba(255,255,255,0.3)] transition-all hover:scale-105 flex items-center gap-2"
                             >
-                                ESCUCHAR AHORA
+                                {isPlaying ? (
+                                    <>
+                                        <Pause className="w-6 h-6 fill-current" />
+                                        DETENER
+                                    </>
+                                ) : (
+                                    <>
+                                        <Play className="w-6 h-6 fill-current" />
+                                        ESCUCHAR AHORA
+                                    </>
+                                )}
                             </Button>
                             <Button
                                 asChild
@@ -495,21 +498,8 @@ function RadioUnicaContent() {
                             </div>
                         </div>
 
-                        {/* Amazon Picks - Full Width on Mobile, Col span 2 on Desktop if needed, or just regular card */}
-                        <div className="col-span-2 md:col-span-3 lg:col-span-5 bg-gradient-to-r from-yellow-500/20 to-purple-500/20 border border-white/10 rounded-2xl p-6 flex flex-col md:flex-row items-center justify-between gap-6 relative overflow-hidden group">
-                            <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors" />
-                            <h3 className="text-2xl font-black text-white relative z-10 mb-2">{t('amazon_picks.title')}</h3>
-                            <p className="text-yellow-100 relative z-10 mb-6 max-w-sm">{t('amazon_picks.desc')}</p>
-                            <Button
-                                asChild
-                                className="relative z-10 rounded-full bg-black text-white hover:bg-zinc-900 border border-yellow-500/50"
-                            >
-                                <a href="https://amzn.to/4bFtbUt" target="_blank" rel="noopener noreferrer">
-                                    {t('amazon_picks.btn')} <ExternalLink className="ml-2 w-4 h-4" />
-                                </a>
-                            </Button>
-                        </div>
                     </div>
+
 
                     {/* Promo Banner */}
                     <div className="rounded-3xl bg-zinc-900 border border-white/10 p-8 md:p-12 relative overflow-hidden text-center md:text-left flex flex-col md:flex-row items-center justify-between gap-8">

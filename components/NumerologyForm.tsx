@@ -12,6 +12,11 @@ import {
 } from "@/components/ui/tooltip";
 import { parseDate } from "@/utils/date";
 import { useTranslations } from "next-intl";
+import { submitToFormspree } from "@/lib/formspree";
+
+const validateEmail = (email: string) => {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+};
 
 interface NumerologyFormProps {
     onCalculate: (name: string, birthDate: string) => void;
@@ -26,14 +31,6 @@ export function NumerologyForm({ onCalculate, onClear }: NumerologyFormProps) {
     const [email, setEmail] = useState("");
     const [errors, setErrors] = useState<{ date?: string, email?: string }>({});
     const [isSubmitting, setIsSubmitting] = useState(false);
-
-    // Unified Formspree ID system
-    const formId = process.env.NEXT_PUBLIC_FORMSPREE_NUMEROLOGY_ID || "xgooeyqd";
-    const FORMSPREE_ENDPOINT = `https://formspree.io/f/${formId}`;
-
-    const validateEmail = (email: string) => {
-        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-    };
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
@@ -59,41 +56,20 @@ export function NumerologyForm({ onCalculate, onClear }: NumerologyFormProps) {
         setIsSubmitting(true);
 
         try {
-            // Send to Formspree
-            const response = await fetch(FORMSPREE_ENDPOINT, {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                    "Accept": "application/json"
-                },
-                body: JSON.stringify({
-                    email: email,
-                    _replyto: email, // Reply to the user
-                    _subject: "Nuevo lead de Numerología App",
-                    nombre: name,
-                    fecha_nacimiento: parsedDate,
-                    message: `Nueva lectura generada para ${name} (${parsedDate})`
-                })
+            await submitToFormspree({
+                email: email,
+                _replyto: email, // Reply to the user
+                _subject: "Nuevo lead de Numerología App",
+                nombre: name,
+                fecha_nacimiento: parsedDate,
+                message: `Nueva lectura generada para ${name} (${parsedDate})`
             });
 
-            if (response.ok) {
-                // Success
-                alert("¡Gracias! Tu lectura está lista. Te llegará un email con más detalles (revisa spam).");
-                onCalculate(name, parsedDate!);
-            } else {
-                // Determine if it's a 404 (wrong endpoint) or other error
-                if (response.status === 404) {
-                    alert("⚠️ Error: El formulario no está conectado. Por favor configura el ID de Formspree en el código.");
-                    // Allow proceed anyway for testing if in dev mode? No, enforce connection.
-                    // But for the sake of the user seeing the app work if they mess up:
-                    console.error("Formspree 404: Check your form ID.");
-                } else {
-                    alert("Hubo un problema al enviar tus datos. Por favor intenta de nuevo.");
-                }
-            }
+            alert("¡Gracias! Tu lectura está lista. Te llegará un email con más detalles (revisa spam).");
+            onCalculate(name, parsedDate!);
         } catch (error) {
             console.error("Submission error:", error);
-            alert("Error de conexión. Intenta de nuevo.");
+            alert("Hubo un problema al enviar tus datos. Por favor intenta de nuevo.");
         } finally {
             setIsSubmitting(false);
         }

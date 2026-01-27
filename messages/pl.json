@@ -369,11 +369,6 @@
         "select_size_color": "Selecione TAMANHO e COR no pagamento",
         "shipping_safe": "Envio seguro para todo os EUA",
         "adjustable": "Tamanho Único Ajustável",
-        "amazon_picks": {
-            "title": "ESCOLHAS AMAZON",
-            "desc": "Nossa seleção de equipamentos de áudio e música.",
-            "btn": "Ver Lista Completa"
-        },
         "products": {
             "mug": "Caneca Oficial",
             "crewneck": "Crewneck Clássico",

@@ -3,6 +3,7 @@
 import { useTranslations } from "next-intl";
 import { Link } from "@/src/i18n/routing";
 import { useState } from "react";
+import { submitToFormspree } from "@/lib/formspree";
 import { motion } from "framer-motion";
 import { Footer } from "@/components/Footer";
 import { Send, Mail, MapPin, Phone, ShoppingBag } from "lucide-react";
@@ -16,33 +17,10 @@ export default function ContactClient() {
         e.preventDefault();
         setStatus("submitting");
 
-        // Check domain to choose the correct inbox
-        const isGenes = typeof window !== 'undefined' && (
-            window.location.hostname.includes('genesmarketing') ||
-            (window.location.hostname.includes('tu-nombre-en-la-numerologia') && !window.location.hostname.includes('instintosaludable'))
-        );
-
-        const businessEmail = isGenes ? "ventas@genesmarketing.com" : "dithergenes@gmail.com"; // placeholder for Instinto
-
-        const formId = isGenes
-            ? (process.env.NEXT_PUBLIC_FORMSPREE_GENES_ID || "xaqobdna")
-            : (process.env.NEXT_PUBLIC_FORMSPREE_INSTINTO_ID || "xgooeyqd");
-
         try {
-            const response = await fetch(`https://formspree.io/f/${formId}`, {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify(formState),
-            });
-
-            if (response.ok) {
-                setStatus("success");
-                setFormState({ name: "", email: "", message: "" });
-            } else {
-                throw new Error("Failed to submit");
-            }
+            await submitToFormspree(formState);
+            setStatus("success");
+            setFormState({ name: "", email: "", message: "" });
         } catch (error) {
             console.error("Formspree error:", error);
             const contactEmail = typeof window !== 'undefined' && (window.location.hostname.includes('genesmarketing') || !window.location.hostname.includes('instintosaludable'))

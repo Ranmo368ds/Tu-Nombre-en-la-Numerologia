@@ -4,6 +4,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { X } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
+import { submitToFormspree } from "@/lib/formspree";
 
 export default function Popup() {
     const t = useTranslations("MarketingPage.popup");
@@ -40,13 +41,21 @@ export default function Popup() {
         setHasExitedInfo(true);
     };
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         setSubmitted(true);
-        setTimeout(() => {
-            closeAll();
+
+        try {
+            await submitToFormspree({ email, type: showTimePopup ? "time_based_popup" : "exit_intent_popup" });
+            setTimeout(() => {
+                closeAll();
+                setSubmitted(false);
+            }, 2000);
+        } catch (error) {
+            console.error("Formspree error:", error);
             setSubmitted(false);
-        }, 2000);
+            alert("Hubo un error. Por favor intenta de nuevo.");
+        }
     };
 
     return (

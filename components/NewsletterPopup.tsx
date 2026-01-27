@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { X, Mail, Sparkles } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { submitToFormspree } from "@/lib/formspree";
 
 export function NewsletterPopup() {
     const [isOpen, setIsOpen] = useState(false);
@@ -31,35 +32,12 @@ export function NewsletterPopup() {
         e.preventDefault();
         setStatus("submitting");
 
-        // Determine ID based on context
-        const isGenesContext = typeof window !== 'undefined' && (
-            window.location.hostname.includes('genesmarketing') ||
-            (window.location.hostname.includes('tu-nombre-en-la-numerologia') && !window.location.hostname.includes('instintosaludable')) ||
-            window.location.pathname.includes('services') ||
-            window.location.pathname.includes('marketing')
-        );
-
-        const formId = isGenesContext
-            ? (process.env.NEXT_PUBLIC_FORMSPREE_GENES_ID || "xaqobdna")
-            : (process.env.NEXT_PUBLIC_FORMSPREE_INSTINTO_ID || "xgooeyqd");
-
         try {
-            const response = await fetch(`https://formspree.io/f/${formId}`, {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify(formState),
-            });
-
-            if (response.ok) {
-                setStatus("success");
-                setTimeout(() => {
-                    handleClose();
-                }, 3000);
-            } else {
-                throw new Error("Failed to subscribe");
-            }
+            await submitToFormspree(formState);
+            setStatus("success");
+            setTimeout(() => {
+                handleClose();
+            }, 3000);
         } catch (error) {
             console.error("Newsletter error:", error);
             alert("No pudimos procesar tu suscripción. Por favor intenta de nuevo.");

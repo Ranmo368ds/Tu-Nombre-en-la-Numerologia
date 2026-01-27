@@ -4,6 +4,7 @@ import { useTranslations } from "next-intl";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Send, Mail, MapPin } from "lucide-react";
+import { submitToFormspree } from "@/lib/formspree";
 
 export default function MarketingContact() {
     const t = useTranslations("Contact");
@@ -14,26 +15,14 @@ export default function MarketingContact() {
         e.preventDefault();
         setStatus("submitting");
 
-        const formId = process.env.NEXT_PUBLIC_FORMSPREE_GENES_ID || "xaqobdna";
-
         try {
-            const response = await fetch(`https://formspree.io/f/${formId}`, {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify(formState),
-            });
-
-            if (response.ok) {
-                setStatus("success");
-                setFormState({ name: "", email: "", message: "" });
-            } else {
-                throw new Error("Failed to submit");
-            }
+            await submitToFormspree(formState);
+            setStatus("success");
+            setFormState({ name: "", email: "", message: "" });
         } catch (error) {
             console.error("Formspree error:", error);
             setStatus("idle");
+            alert("Vaya, hubo un error enviando tu mensaje. Por favor intenta de nuevo.");
         }
     };
 

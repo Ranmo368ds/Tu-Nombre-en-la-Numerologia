@@ -401,11 +401,6 @@
         "select_size_color": "Select your SIZE and COLOR at checkout",
         "shipping_safe": "Secure shipping to all USA",
         "adjustable": "Adjustable One Size",
-        "amazon_picks": {
-            "title": "AMAZON PICKS",
-            "desc": "Our selection of audio and music gear.",
-            "btn": "View Full List"
-        },
         "products": {
             "mug": "Official Mug",
             "crewneck": "Classic Crewneck",
