@@ -779,7 +779,9 @@
             "form_email_placeholder": "tu@empresa.com",
             "form_message": "Mensaje",
             "form_message_placeholder": "¿En qué podemos ayudarte?",
-            "form_submit": "Enviar Mensaje"
+            "form_submit": "Enviar Mensaje",
+            "form_success_title": "¡Mensaje Enviado!",
+            "form_success_message": "Gracias por contactarnos. Un especialista de Genes se pondrá en contacto contigo muy pronto."
         },
         "floating_whatsapp": {
             "text": "¿Tienes preguntas?",
