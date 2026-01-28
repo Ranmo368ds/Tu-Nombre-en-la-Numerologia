@@ -86,47 +86,83 @@ export default function ZonesList() {
                     </div>
                 </div>
 
-                {/* Updated Grid layout: 7-7-5 on large screens */}
-                <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-3 mb-12">
-                    <AnimatePresence>
-                        {filteredZones.map((zone) => (
-                            <motion.div
-                                key={zone.id}
-                                layout
-                                initial={{ opacity: 0, scale: 0.9 }}
-                                animate={{ opacity: 1, scale: 1 }}
-                                exit={{ opacity: 0, scale: 0.9 }}
-                                onClick={() => toggleSelection(zone.id)}
-                                className={`
-                                    p-3 rounded-lg border transition-all cursor-pointer group text-center
-                                    ${selectedZoneIds.includes(zone.id)
-                                        ? 'bg-cyan-950/40 border-cyan-500 text-cyan-100'
-                                        : 'bg-slate-800/40 border-slate-700 text-slate-400 hover:border-slate-500'}
-                                `}
-                            >
-                                <div className={`text-[10px] font-black uppercase tracking-tighter mb-1 ${selectedZoneIds.includes(zone.id) ? 'text-cyan-400' : 'text-slate-500'}`}>
-                                    {t('zoneLabel')} {zone.id}
-                                </div>
-                                <p className="text-[11px] leading-tight font-medium">
-                                    {zone.cities[0]}<br />
-                                    <span className="opacity-60 text-[9px]">{zone.cities[1]} / {zone.cities[2]}</span>
-                                </p>
-                            </motion.div>
-                        ))}
-                    </AnimatePresence>
+                {/* Layout Container: Left (1-10) | Map | Right (11-19) */}
+                <div className="flex flex-col lg:flex-row gap-6 lg:gap-8 items-start">
+
+                    {/* Left Column (Zones 1-10) */}
+                    <div className="w-full lg:w-1/4">
+                        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-2 gap-2">
+                            <AnimatePresence>
+                                {filteredZones.filter(z => z.id <= 10).map((zone) => (
+                                    <motion.div
+                                        key={zone.id}
+                                        layout
+                                        initial={{ opacity: 0, scale: 0.9 }}
+                                        animate={{ opacity: 1, scale: 1 }}
+                                        exit={{ opacity: 0, scale: 0.9 }}
+                                        onClick={() => toggleSelection(zone.id)}
+                                        className={`
+                                            p-2 rounded-lg border transition-all cursor-pointer group text-center
+                                            ${selectedZoneIds.includes(zone.id)
+                                                ? 'bg-cyan-950/40 border-cyan-500 text-cyan-100'
+                                                : 'bg-slate-800/40 border-slate-700 text-slate-400 hover:border-slate-500'}
+                                        `}
+                                    >
+                                        <div className={`text-[9px] font-black uppercase tracking-tighter mb-0.5 ${selectedZoneIds.includes(zone.id) ? 'text-cyan-400' : 'text-slate-500'}`}>
+                                            {t('zoneLabel')} {zone.id}
+                                        </div>
+                                        <p className="text-[10px] leading-tight font-medium truncate">
+                                            {zone.cities[0]}
+                                        </p>
+                                    </motion.div>
+                                ))}
+                            </AnimatePresence>
+                        </div>
+                    </div>
+
+                    {/* Center Column: Elfsight Store Locator Map */}
+                    <div className="w-full lg:w-1/2 bg-slate-950/50 border border-slate-800 rounded-2xl p-4 shadow-2xl overflow-hidden min-h-[500px]">
+                        <Script src="https://elfsightcdn.com/platform.js" async />
+                        <div className="elfsight-app-3fb2054a-7374-4070-a239-8d674f4d9d57" data-elfsight-app-lazy></div>
+                    </div>
+
+                    {/* Right Column (Zones 11-19) */}
+                    <div className="w-full lg:w-1/4">
+                        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-2 gap-2">
+                            <AnimatePresence>
+                                {filteredZones.filter(z => z.id > 10).map((zone) => (
+                                    <motion.div
+                                        key={zone.id}
+                                        layout
+                                        initial={{ opacity: 0, scale: 0.9 }}
+                                        animate={{ opacity: 1, scale: 1 }}
+                                        exit={{ opacity: 0, scale: 0.9 }}
+                                        onClick={() => toggleSelection(zone.id)}
+                                        className={`
+                                            p-2 rounded-lg border transition-all cursor-pointer group text-center
+                                            ${selectedZoneIds.includes(zone.id)
+                                                ? 'bg-cyan-950/40 border-cyan-500 text-cyan-100'
+                                                : 'bg-slate-800/40 border-slate-700 text-slate-400 hover:border-slate-500'}
+                                        `}
+                                    >
+                                        <div className={`text-[9px] font-black uppercase tracking-tighter mb-0.5 ${selectedZoneIds.includes(zone.id) ? 'text-cyan-400' : 'text-slate-500'}`}>
+                                            {t('zoneLabel')} {zone.id}
+                                        </div>
+                                        <p className="text-[10px] leading-tight font-medium truncate">
+                                            {zone.cities[0]}
+                                        </p>
+                                    </motion.div>
+                                ))}
+                            </AnimatePresence>
+                        </div>
+                    </div>
                 </div>
 
                 {filteredZones.length === 0 && (
-                    <div className="col-span-full text-center py-10 bg-slate-900/50 rounded-2xl border border-slate-800">
+                    <div className="w-full text-center py-10 bg-slate-900/50 rounded-2xl border border-slate-800 mt-8">
                         <p className="text-slate-400">{t('noResults')}</p>
                     </div>
                 )}
-
-                {/* Elfsight Store Locator Map */}
-                <div className="max-w-5xl mx-auto mt-12">
-                    <Script src="https://elfsightcdn.com/platform.js" async />
-                    <div className="elfsight-app-3fb2054a-7374-4070-a239-8d674f4d9d57" data-elfsight-app-lazy></div>
-                </div>
 
                 <div className="text-center mt-12">
                     <p className="text-slate-500 text-sm">
