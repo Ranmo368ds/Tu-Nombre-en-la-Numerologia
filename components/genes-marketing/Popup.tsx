@@ -46,15 +46,16 @@ export default function Popup() {
         setSubmitted(true);
 
         try {
-            await submitToFormspree({ email, type: showTimePopup ? "time_based_popup" : "exit_intent_popup" });
+            const result = await submitToFormspree({ email, type: showTimePopup ? "time_based_popup" : "exit_intent_popup" });
+            console.log("Newsletter submission success:", result);
             setTimeout(() => {
                 closeAll();
                 setSubmitted(false);
             }, 2000);
-        } catch (error) {
-            console.error("Formspree error:", error);
+        } catch (error: any) {
+            console.error("Popup form error:", error);
             setSubmitted(false);
-            alert("Hubo un error. Por favor intenta de nuevo.");
+            alert(`Error al enviar: ${error.message || "Por favor intenta de nuevo."}`);
         }
     };
 
