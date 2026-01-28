@@ -40,11 +40,12 @@ export default function BookingForm() {
         data._subject = 'Nueva Reserva - Flyer Local (Antigravity)';
 
         try {
-            await submitToFormspree(data);
+            const response = await submitToFormspree(data);
+            console.log("Form submission success:", response);
             setIsSuccess(true);
-        } catch (error) {
-            console.error(error);
-            alert('Something went wrong. Please try again or email us.');
+        } catch (error: any) {
+            console.error("Form submission error:", error);
+            alert(`Error al enviar: ${error.message || "Something went wrong. Please try again or email us."}`);
         } finally {
             setIsLoading(false);
         }
