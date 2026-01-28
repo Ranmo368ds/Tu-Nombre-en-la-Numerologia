@@ -22,10 +22,10 @@ export default function ContactClient() {
             setStatus("success");
             setFormState({ name: "", email: "", message: "" });
         } catch (error) {
-            console.error("Formspree error:", error);
+            console.error("Submission error:", error);
             const contactEmail = typeof window !== 'undefined' && (window.location.hostname.includes('genesmarketing') || !window.location.hostname.includes('instintosaludable'))
                 ? "ventas@genesmarketing.com"
-                : "dithergenes@gmail.com";
+                : "instintosaludable@gmail.com";
             alert(`Vaya, hubo un error enviando tu mensaje. Por favor intenta de nuevo o escríbenos a ${contactEmail}`);
             setStatus("idle");
         }
@@ -65,8 +65,8 @@ export default function ContactClient() {
                                     </div>
                                     <div>
                                         <p className="text-sm text-primary-light uppercase tracking-wider font-semibold mb-1">Email</p>
-                                        <p className="text-lg">{typeof window !== 'undefined' && window.location.hostname.includes('genesmarketing') ? 'ventas@genesmarketing.com' : 'dithergenes@gmail.com'}</p>
-                                        <p className="text-xs text-primary-light/60">{typeof window !== 'undefined' && window.location.hostname.includes('genesmarketing') ? 'ventas@genesmarketing.com' : 'dithergenes@gmail.com'}</p>
+                                        <p className="text-lg">{typeof window !== 'undefined' && window.location.hostname.includes('genesmarketing') ? 'ventas@genesmarketing.com' : 'instintosaludable@gmail.com'}</p>
+                                        <p className="text-xs text-primary-light/60">{typeof window !== 'undefined' && window.location.hostname.includes('genesmarketing') ? 'ventas@genesmarketing.com' : 'instintosaludable@gmail.com'}</p>
                                     </div>
                                 </div>
                                 <div className="flex items-start gap-4">

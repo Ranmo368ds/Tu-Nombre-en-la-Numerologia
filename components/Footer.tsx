@@ -77,10 +77,10 @@ export function Footer() {
                         <li className="flex items-start gap-2">
                             <svg className="w-5 h-5 text-primary mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
                             <a
-                                href={`mailto:${typeof window !== 'undefined' && window.location.hostname.includes('genesmarketing') ? 'ventas@genesmarketing.com' : 'dithergenes@gmail.com'}`}
+                                href={`mailto:${typeof window !== 'undefined' && window.location.hostname.includes('genesmarketing') ? 'ventas@genesmarketing.com' : 'instintosaludable@gmail.com'}`}
                                 className="hover:text-primary-light transition-colors"
                             >
-                                {typeof window !== 'undefined' && window.location.hostname.includes('genesmarketing') ? 'ventas@genesmarketing.com' : 'dithergenes@gmail.com'}
+                                {typeof window !== 'undefined' && window.location.hostname.includes('genesmarketing') ? 'ventas@genesmarketing.com' : 'instintosaludable@gmail.com'}
                             </a>
                         </li>
                         <li className="flex items-start gap-2">

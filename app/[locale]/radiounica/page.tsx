@@ -641,7 +641,7 @@ function RadioUnicaContent() {
                         <div className="mt-8 text-gray-400">
                             <h4 className="text-xl font-bold mb-2 text-white">CONTACTO</h4>
                             <p className="mb-1">Chicago, Illinois - Central Time</p>
-                            <p className="text-yellow-500">ventas@genesmarketing.com</p>
+                            <p className="text-yellow-500">ventas@radiounica.com</p>
                         </div>
                     </div>
                 </div>
