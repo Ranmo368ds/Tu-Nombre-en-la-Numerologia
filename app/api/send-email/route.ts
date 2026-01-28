@@ -11,12 +11,13 @@ export async function POST(request: Request) {
         const data = await request.json();
         const { to, subject, content, customer_email, customer_name, brand } = data;
 
-        const brevoKey = process.env.BREVO_API_KEY;
+        const brevoKey = (process.env.BREVO_API_KEY || '').trim();
 
         if (!brevoKey) {
             console.error('BREVO_API_KEY is not set');
-            return NextResponse.json({ error: 'Mail service not configured' }, { status: 500 });
+            return NextResponse.json({ error: 'Mail service not configured (API Key is empty)' }, { status: 500 });
         }
+        console.log(`Debug: API Key found (starts with ${brevoKey.substring(0, 8)}...)`);
 
         // 1. SEND NOTIFICATION TO THE BUSINESS OWNER (LEAD ALERT)
         // We use the verified 'Instinto' email as the technical sender for system alerts 

@@ -20,13 +20,15 @@ export default function ContactSection() {
         setStatus("submitting");
 
         try {
-            await submitToFormspree(formState);
+            const response = await submitToFormspree(formState);
+            console.log("Form submission response:", response);
             setStatus("success");
             setFormState({ name: "", phone: "", email: "", message: "" });
-        } catch (error) {
-            console.error("Formspree error:", error);
+        } catch (error: any) {
+            console.error("Form submission error:", error);
             setStatus("idle");
-            alert("Hubo un error al enviar el mensaje. Por favor intenta de nuevo.");
+            // Show the actual error message to help debugging
+            alert(`Error al enviar: ${error.message || "Por favor intenta de nuevo"}`);
         }
     };
 
