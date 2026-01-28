@@ -2727,6 +2727,7 @@
             "searchPlaceholder": "Search city or zone...",
             "noResults": "No zones found matching your search.",
             "requestZone": "Don't see your zone? Write it in the form and we'll add it.",
+            "mapDescription": "Detailed map of the distribution zone",
             "map": {
                 "visualize": "Want to see exactly where your advertising is distributed?",
                 "check": "View my zone on the map",
