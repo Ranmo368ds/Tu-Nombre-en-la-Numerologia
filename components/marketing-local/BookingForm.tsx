@@ -9,6 +9,7 @@ import { submitToFormspree } from '@/lib/formspree';
 
 export default function BookingForm() {
     const t = useTranslations('LocalMarketingPage.form');
+    const tZones = useTranslations('LocalMarketingPage.zones');
     const [isLoading, setIsLoading] = useState(false);
     const [isSuccess, setIsSuccess] = useState(false);
 
@@ -148,7 +149,7 @@ export default function BookingForm() {
                             <div className={`w-4 h-4 rounded border flex items-center justify-center ${selectedZones.includes(opt.value) ? 'bg-cyan-500 border-cyan-500' : 'border-slate-600'}`}>
                                 {selectedZones.includes(opt.value) && <CheckCircle className="w-3 h-3 text-white" />}
                             </div>
-                            <span className="truncate">{useTranslations('LocalMarketingPage.zones')('zoneLabel')} {opt.label.split(' ')[1]}</span>
+                            <span className="truncate">{tZones('zoneLabel')} {opt.label.split(' ')[1]}</span>
                         </label>
                     ))}
                 </div>
