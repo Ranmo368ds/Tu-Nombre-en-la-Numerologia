@@ -43,11 +43,11 @@ export default function Popup() {
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        setSubmitted(true);
 
         try {
             const result = await submitToFormspree({ email, type: showTimePopup ? "time_based_popup" : "exit_intent_popup" });
             console.log("Newsletter submission success:", result);
+            setSubmitted(true);
             setTimeout(() => {
                 closeAll();
                 setSubmitted(false);
