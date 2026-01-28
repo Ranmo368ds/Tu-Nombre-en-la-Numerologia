@@ -19,7 +19,11 @@ export async function POST(request: Request) {
         }
 
         // 1. SEND NOTIFICATION TO THE BUSINESS OWNER (LEAD ALERT)
+        // We use the verified 'Instinto' email as the technical sender for system alerts 
+        // to ensure the lead is delivered even if 'ventas@genesmarketing.com' isn't verified in Brevo yet.
+        const technicalSender = "instintosaludableusa@gmail.com";
         console.log(`Sending lead notification to ${to} for brand: ${brand}`);
+
         const leadResponse = await fetch('https://api.brevo.com/v3/smtp/email', {
             method: 'POST',
             headers: {
@@ -27,9 +31,9 @@ export async function POST(request: Request) {
                 'api-key': brevoKey,
             },
             body: JSON.stringify({
-                sender: { name: "Web Leads", email: "ventas@genesmarketing.com" },
+                sender: { name: `Web Leads [${brand.toUpperCase()}]`, email: technicalSender },
                 to: [{ email: to }],
-                subject: subject || 'Nueva consulta desde la web',
+                subject: subject || `Nueva consulta: ${brand}`,
                 htmlContent: content,
                 replyTo: customer_email ? { email: customer_email, name: customer_name } : undefined
             }),
