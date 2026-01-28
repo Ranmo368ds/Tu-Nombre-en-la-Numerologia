@@ -19,6 +19,7 @@ export async function POST(request: Request) {
         }
 
         // 1. SEND NOTIFICATION TO THE BUSINESS OWNER (LEAD ALERT)
+        console.log(`Sending lead notification to ${to} for brand: ${brand}`);
         const leadResponse = await fetch('https://api.brevo.com/v3/smtp/email', {
             method: 'POST',
             headers: {
@@ -34,16 +35,19 @@ export async function POST(request: Request) {
             }),
         });
 
+        const leadResult = await leadResponse.json();
         if (!leadResponse.ok) {
-            const error = await leadResponse.json();
-            throw new Error(`Lead notification failed: ${error.message || 'Unknown error'}`);
+            console.error('Brevo Lead Error:', leadResult);
+            throw new Error(`Lead notification failed: ${leadResult.message || 'Unknown error'}`);
         }
+        console.log('Lead notification sent successfully:', leadResult.messageId);
 
         // 2. SEND AUTORESPONDER TO THE CUSTOMER (IF EMAIL PROVIDED)
         if (customer_email) {
             const branding = getBranding(brand, to);
+            console.log(`Sending autoresponder to ${customer_email} using brand: ${branding.name}`);
 
-            await fetch('https://api.brevo.com/v3/smtp/email', {
+            const autoResponse = await fetch('https://api.brevo.com/v3/smtp/email', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -74,11 +78,19 @@ export async function POST(request: Request) {
                     `,
                 }),
             });
+
+            const autoResult = await autoResponse.json();
+            if (!autoResponse.ok) {
+                console.error('Brevo Autoresponder Error:', autoResult);
+                // We don't throw here to avoid failing the whole request if only the customer email fails
+            } else {
+                console.log('Autoresponder sent successfully:', autoResult.messageId);
+            }
         }
 
         return NextResponse.json({ success: true });
     } catch (error: any) {
-        console.error('Brevo API Error:', error);
+        console.error('Critical Mailer Error:', error);
         return NextResponse.json({ error: error.message }, { status: 500 });
     }
 }

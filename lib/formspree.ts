@@ -47,11 +47,17 @@ export async function submitToFormspree(data: Record<string, any>, _ignoredId?: 
     const customer_email = data.email || data.correo || data._replyto;
     const customer_name = data.name || data.nombre || data.contact_name;
 
-    // Determine brand based on path for precise autoresponder branding
+    // Determine brand based on path or hostname for precise autoresponder branding
     let brand = 'instinto';
     if (typeof window !== 'undefined') {
-        if (window.location.pathname.includes('radiounica')) brand = 'unica';
-        else if (window.location.pathname.includes('marketing')) brand = 'genes';
+        const hostname = window.location.hostname;
+        const pathname = window.location.pathname;
+
+        if (hostname.includes('radiounica') || pathname.includes('radiounica')) {
+            brand = 'unica';
+        } else if (hostname.includes('genesmarketing') || pathname.includes('marketing')) {
+            brand = 'genes';
+        }
     }
 
     const htmlContent = `
