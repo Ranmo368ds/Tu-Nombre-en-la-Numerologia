@@ -5,6 +5,7 @@ import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
 import { Loader2, CheckCircle, Upload } from 'lucide-react';
 import { ZONES_OPTIONS } from './ZonesList';
+import { submitToFormspree } from '@/lib/formspree';
 
 export default function BookingForm() {
     const t = useTranslations('LocalMarketingPage.form');
@@ -28,30 +29,22 @@ export default function BookingForm() {
         setIsLoading(true);
 
         const formData = new FormData(e.currentTarget);
-        // Add custom fields
-        formData.set('zones', selectedZones.join(', '));
-        formData.set('hasLogo', hasLogo);
-        formData.set('_subject', 'Nueva Reserva - Flyer Local (Antigravity)');
+        const data: Record<string, any> = {};
+        formData.forEach((value, key) => {
+            data[key] = value;
+        });
 
-        const formId = process.env.NEXT_PUBLIC_FORMSPREE_GENES_ID || 'xaqobdna';
+        // Add custom fields
+        data.zones = selectedZones.join(', ');
+        data.hasLogo = hasLogo;
+        data._subject = 'Nueva Reserva - Flyer Local (Antigravity)';
 
         try {
-            const response = await fetch(`https://formspree.io/f/${formId}`, {
-                method: 'POST',
-                body: formData,
-                headers: {
-                    'Accept': 'application/json'
-                }
-            });
-
-            if (response.ok) {
-                setIsSuccess(true);
-            } else {
-                alert('Something went wrong. Please try again.');
-            }
+            await submitToFormspree(data);
+            setIsSuccess(true);
         } catch (error) {
             console.error(error);
-            alert('Connection error.');
+            alert('Something went wrong. Please try again or email us.');
         } finally {
             setIsLoading(false);
         }

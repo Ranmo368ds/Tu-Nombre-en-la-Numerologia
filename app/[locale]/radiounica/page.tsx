@@ -592,6 +592,16 @@ function RadioUnicaContent() {
                                 />
                             </div>
                             <div>
+                                <label className="block text-sm font-medium text-gray-400 mb-1">Tu Email</label>
+                                <input
+                                    type="email"
+                                    name="email"
+                                    required
+                                    className="w-full bg-black/50 border border-white/10 rounded-lg px-4 py-3 focus:border-yellow-500 focus:outline-none transition-colors"
+                                    placeholder="tu@email.com"
+                                />
+                            </div>
+                            <div>
                                 <label className="block text-sm font-medium text-gray-400 mb-1">Canción / Artista</label>
                                 <input
                                     type="text"
