@@ -123,7 +123,7 @@ function getBranding(brand: string, targetEmail: string) {
     // Default to Instinto Saludable
     return {
         name: "Instinto Saludable",
-        email: "instintosaludable@gmail.com",
+        email: "instintosaludableusa@gmail.com",
         color: "#059669",
         subject: "¡Confirmación de mensaje recibido! - Instinto Saludable",
         url: "https://genesmarketing.com"

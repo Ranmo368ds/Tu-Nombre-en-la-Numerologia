@@ -4,7 +4,7 @@
  */
 
 export const TARGET_EMAILS = {
-    INSTINTO: "instintosaludable@gmail.com",
+    INSTINTO: "instintosaludableusa@gmail.com",
     RADIO_UNICA: "ventas@radiounica.com",
     GENES: "ventas@genesmarketing.com",
 };
