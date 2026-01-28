@@ -87,11 +87,11 @@ export default function ZonesList() {
                 </div>
 
                 {/* Layout Container: Left (1-10) | Map | Right (11-19) */}
-                <div className="flex flex-col lg:flex-row gap-6 lg:gap-8 items-start">
+                <div className="flex flex-col lg:flex-row gap-8 items-start justify-center">
 
                     {/* Left Column (Zones 1-10) */}
-                    <div className="w-full lg:w-1/4">
-                        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-2 gap-2">
+                    <div className="w-full lg:w-auto lg:min-w-[180px]">
+                        <div className="grid grid-cols-2 sm:grid-cols-5 lg:flex lg:flex-col gap-2">
                             <AnimatePresence>
                                 {filteredZones.filter(z => z.id <= 10).map((zone) => (
                                     <motion.div
@@ -102,16 +102,16 @@ export default function ZonesList() {
                                         exit={{ opacity: 0, scale: 0.9 }}
                                         onClick={() => toggleSelection(zone.id)}
                                         className={`
-                                            p-2 rounded-lg border transition-all cursor-pointer group text-center
+                                            p-2 rounded-lg border transition-all cursor-pointer group text-center lg:text-left
                                             ${selectedZoneIds.includes(zone.id)
                                                 ? 'bg-cyan-950/40 border-cyan-500 text-cyan-100'
                                                 : 'bg-slate-800/40 border-slate-700 text-slate-400 hover:border-slate-500'}
                                         `}
                                     >
-                                        <div className={`text-[9px] font-black uppercase tracking-tighter mb-0.5 ${selectedZoneIds.includes(zone.id) ? 'text-cyan-400' : 'text-slate-500'}`}>
+                                        <div className={`text-[10px] font-black uppercase tracking-tighter mb-0.5 ${selectedZoneIds.includes(zone.id) ? 'text-cyan-400' : 'text-slate-500'}`}>
                                             {t('zoneLabel')} {zone.id}
                                         </div>
-                                        <p className="text-[10px] leading-tight font-medium truncate">
+                                        <p className="text-xs leading-tight font-medium truncate">
                                             {zone.cities[0]}
                                         </p>
                                     </motion.div>
@@ -121,14 +121,14 @@ export default function ZonesList() {
                     </div>
 
                     {/* Center Column: Elfsight Store Locator Map */}
-                    <div className="w-full lg:w-1/2 bg-slate-950/50 border border-slate-800 rounded-2xl p-4 shadow-2xl overflow-hidden min-h-[500px]">
+                    <div className="flex-1 w-full bg-slate-950/50 border border-slate-800 rounded-2xl p-4 shadow-2xl overflow-hidden min-h-[600px] lg:max-w-4xl">
                         <Script src="https://elfsightcdn.com/platform.js" async />
                         <div className="elfsight-app-3fb2054a-7374-4070-a239-8d674f4d9d57" data-elfsight-app-lazy></div>
                     </div>
 
                     {/* Right Column (Zones 11-19) */}
-                    <div className="w-full lg:w-1/4">
-                        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-2 gap-2">
+                    <div className="w-full lg:w-auto lg:min-w-[180px]">
+                        <div className="grid grid-cols-2 sm:grid-cols-5 lg:flex lg:flex-col gap-2">
                             <AnimatePresence>
                                 {filteredZones.filter(z => z.id > 10).map((zone) => (
                                     <motion.div
@@ -139,16 +139,16 @@ export default function ZonesList() {
                                         exit={{ opacity: 0, scale: 0.9 }}
                                         onClick={() => toggleSelection(zone.id)}
                                         className={`
-                                            p-2 rounded-lg border transition-all cursor-pointer group text-center
+                                            p-2 rounded-lg border transition-all cursor-pointer group text-center lg:text-left
                                             ${selectedZoneIds.includes(zone.id)
                                                 ? 'bg-cyan-950/40 border-cyan-500 text-cyan-100'
                                                 : 'bg-slate-800/40 border-slate-700 text-slate-400 hover:border-slate-500'}
                                         `}
                                     >
-                                        <div className={`text-[9px] font-black uppercase tracking-tighter mb-0.5 ${selectedZoneIds.includes(zone.id) ? 'text-cyan-400' : 'text-slate-500'}`}>
+                                        <div className={`text-[10px] font-black uppercase tracking-tighter mb-0.5 ${selectedZoneIds.includes(zone.id) ? 'text-cyan-400' : 'text-slate-500'}`}>
                                             {t('zoneLabel')} {zone.id}
                                         </div>
-                                        <p className="text-[10px] leading-tight font-medium truncate">
+                                        <p className="text-xs leading-tight font-medium truncate">
                                             {zone.cities[0]}
                                         </p>
                                     </motion.div>
