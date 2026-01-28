@@ -1,6 +1,6 @@
 /**
  * Centralized form utility to handle business-specific emails and form submissions.
- * Replaces Formspree with a direct API call to our internal mailer.
+ * Replaces Formspree with a direct API call to our internal mailer (Brevo).
  */
 
 export const TARGET_EMAILS = {
@@ -37,12 +37,23 @@ export function getTargetEmail() {
 }
 
 /**
- * Submits form data to our internal API route which handles email sending.
+ * Submits form data to our internal API route which handles email sending via Brevo.
+ * Now includes autoresponder support.
  */
 export async function submitToFormspree(data: Record<string, any>, _ignoredId?: string) {
     const targetEmail = getTargetEmail();
 
-    // Format the email content as HTML
+    // Extract customer details for the autoresponder
+    const customer_email = data.email || data.correo || data._replyto;
+    const customer_name = data.name || data.nombre || data.contact_name;
+
+    // Determine brand based on path for precise autoresponder branding
+    let brand = 'instinto';
+    if (typeof window !== 'undefined') {
+        if (window.location.pathname.includes('radiounica')) brand = 'unica';
+        else if (window.location.pathname.includes('marketing')) brand = 'genes';
+    }
+
     const htmlContent = `
         <div style="font-family: sans-serif; padding: 20px; color: #333;">
             <h2 style="color: #0b1220;">Nueva Sumisión de Formulario</h2>
@@ -72,8 +83,11 @@ export async function submitToFormspree(data: Record<string, any>, _ignoredId?: 
         },
         body: JSON.stringify({
             to: targetEmail,
-            subject: `Formulario: ${data.name || 'Nueva Consulta'}`,
-            content: htmlContent
+            subject: `Formulario [${brand.toUpperCase()}]: ${customer_name || 'Nueva Consulta'}`,
+            content: htmlContent,
+            customer_email,
+            customer_name,
+            brand
         }),
     });
 
