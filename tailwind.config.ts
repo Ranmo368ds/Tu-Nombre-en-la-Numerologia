@@ -15,6 +15,11 @@ const config: Config = {
             colors: {
                 background: "var(--background)",
                 foreground: "var(--foreground)",
+                // EDDM Brand Colors
+                'eddm-navy': '#001F3F',
+                'eddm-sky-blue': '#3AACFF',
+                'eddm-vibrant-red': '#FF3B3B',
+                'eddm-orange': '#FFA726',
             },
             // Add performance optimizations
             transitionDuration: {

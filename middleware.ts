@@ -14,6 +14,11 @@ export default function middleware(request: NextRequest) {
         return NextResponse.next();
     }
 
+    // 2. EDDM Routes - bypass intl middleware (no locale prefix needed)
+    if (pathname.startsWith('/eddm')) {
+        return NextResponse.next();
+    }
+
     // 2. Auto-prefix niche paths if locale is missing
     const nichePaths = ['treeservices', 'taxservices', 'sealcoatingservices', 'roofingservices', 'localmarketing', 'paintingservices', 'cleaningservices', 'fenceservices', 'landscapingservices', 'poolservices', 'radiounica'];
     const pathSegments = pathname.split('/').filter(Boolean);
