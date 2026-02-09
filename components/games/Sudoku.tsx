@@ -152,15 +152,15 @@ export default function Sudoku({ difficulty = 'medium' }: SudokuProps) {
         const sameValue = selectedCell && value !== null && grid[selectedCell.row][selectedCell.col] === value;
 
         let bgColor = 'bg-white';
-        if (isSelected) bgColor = 'bg-eddm-sky-blue/30';
-        else if (sameValue) bgColor = 'bg-eddm-orange/20';
-        else if (inSameRow || inSameCol || inSameBox) bgColor = 'bg-gray-100';
+        if (isSelected) bgColor = 'bg-eddm-sky-blue/40';
+        else if (sameValue) bgColor = 'bg-eddm-orange/30';
+        else if (inSameRow || inSameCol || inSameBox) bgColor = 'bg-gray-200';
 
-        let textColor = isInitial ? 'font-bold text-eddm-navy' : 'text-gray-600';
-        if (!isCorrect && !isInitial) textColor = 'text-red-500 font-bold';
+        let textColor = isInitial ? 'font-black text-eddm-navy' : 'text-gray-900 font-bold';
+        if (!isCorrect && !isInitial) textColor = 'text-red-600 font-black';
 
-        const borderRight = (col + 1) % 3 === 0 && col !== 8 ? 'border-r-2 border-eddm-navy' : 'border-r border-gray-200';
-        const borderBottom = (row + 1) % 3 === 0 && row !== 8 ? 'border-b-2 border-eddm-navy' : 'border-b border-gray-200';
+        const borderRight = (col + 1) % 3 === 0 && col !== 8 ? 'border-r-2 border-eddm-navy' : 'border-r border-gray-400';
+        const borderBottom = (row + 1) % 3 === 0 && row !== 8 ? 'border-b-2 border-eddm-navy' : 'border-b border-gray-400';
 
         return `
             w-10 h-10 md:w-14 md:h-14 flex items-center justify-center cursor-pointer transition-colors

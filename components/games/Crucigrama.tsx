@@ -217,13 +217,13 @@ export default function Crucigrama({ difficulty = 'easy' }: CrucigramaProps) {
                                     `}
                                 >
                                     {number && (
-                                        <span className="absolute top-0.5 left-0.5 text-[8px] sm:text-[10px] font-black text-eddm-navy leading-none">
+                                        <span className="absolute top-0.5 left-0.5 text-[8px] sm:text-[10px] font-black text-black leading-none z-10">
                                             {number}
                                         </span>
                                     )}
                                     <div className={`
                                         w-full h-full flex items-center justify-center font-black text-sm sm:text-lg md:text-xl
-                                        ${userGrid[r][c] !== cell && userGrid[r][c] !== '' ? 'text-red-500' : 'text-eddm-navy'}
+                                        ${userGrid[r][c] !== cell && userGrid[r][c] !== '' ? 'text-red-600' : 'text-gray-950'}
                                     `}>
                                         {userGrid[r][c]}
                                     </div>
@@ -249,10 +249,10 @@ export default function Crucigrama({ difficulty = 'easy' }: CrucigramaProps) {
                             <div
                                 key={clue.number}
                                 onClick={() => { setSelectedCell({ row: clue.row, col: clue.col }); setSelectedDirection('across'); }}
-                                className={`p-4 rounded-2xl cursor-pointer transition-all ${selectedCell?.row === clue.row && selectedDirection === 'across' ? 'bg-eddm-sky-blue/10 border-l-4 border-eddm-sky-blue' : 'bg-gray-50 hover:bg-gray-100'}`}
+                                className={`p-4 rounded-2xl cursor-pointer transition-all border-2 ${selectedCell?.row === clue.row && selectedDirection === 'across' ? 'bg-eddm-sky-blue/20 border-eddm-sky-blue' : 'bg-gray-100 border-transparent hover:bg-gray-200'}`}
                             >
-                                <span className="font-black text-eddm-sky-blue mr-2">#{clue.number}</span>
-                                <span className="font-bold text-eddm-navy text-sm leading-tight">{clue.clue}</span>
+                                <span className="font-black text-eddm-navy mr-2">#{clue.number}</span>
+                                <span className="font-black text-black text-sm leading-tight">{clue.clue}</span>
                             </div>
                         ))}
                     </div>
@@ -265,10 +265,10 @@ export default function Crucigrama({ difficulty = 'easy' }: CrucigramaProps) {
                             <div
                                 key={clue.number}
                                 onClick={() => { setSelectedCell({ row: clue.row, col: clue.col }); setSelectedDirection('down'); }}
-                                className={`p-4 rounded-2xl cursor-pointer transition-all ${selectedCell?.col === clue.col && selectedDirection === 'down' ? 'bg-eddm-orange/10 border-l-4 border-eddm-orange' : 'bg-gray-50 hover:bg-gray-100'}`}
+                                className={`p-4 rounded-2xl cursor-pointer transition-all border-2 ${selectedCell?.col === clue.col && selectedDirection === 'down' ? 'bg-eddm-orange/20 border-eddm-orange' : 'bg-gray-100 border-transparent hover:bg-gray-200'}`}
                             >
-                                <span className="font-black text-eddm-orange mr-2">#{clue.number}</span>
-                                <span className="font-bold text-eddm-navy text-sm leading-tight">{clue.clue}</span>
+                                <span className="font-black text-eddm-navy mr-2">#{clue.number}</span>
+                                <span className="font-black text-black text-sm leading-tight">{clue.clue}</span>
                             </div>
                         ))}
                     </div>

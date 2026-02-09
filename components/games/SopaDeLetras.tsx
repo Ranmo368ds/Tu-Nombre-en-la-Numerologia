@@ -224,9 +224,9 @@ export default function SopaDeLetras({ difficulty = 'easy' }: SopaDeLetrasProps)
                                     className={`
                                         w-8 h-8 md:w-11 md:h-11 flex items-center justify-center 
                                         text-lg font-black rounded-lg cursor-pointer transition-all duration-150
-                                        ${found ? 'bg-green-500 text-white shadow-sm scale-95' :
+                                        ${found ? 'bg-green-600 text-white shadow-sm scale-95' :
                                             selected ? 'bg-eddm-sky-blue text-white scale-105 shadow-lg' :
-                                                'bg-white text-eddm-navy hover:bg-gray-100'}
+                                                'bg-white text-gray-950 hover:bg-gray-200 border border-gray-200'}
                                     `}
                                 >
                                     {letter}
@@ -253,10 +253,10 @@ export default function SopaDeLetras({ difficulty = 'easy' }: SopaDeLetrasProps)
                         <div
                             key={i}
                             className={`
-                                px-4 py-2 rounded-xl transition-all font-bold tracking-tight
+                                px-4 py-2 rounded-xl transition-all font-black tracking-tight border
                                 ${pw.found ?
-                                    'bg-green-100 text-green-500 line-through opacity-70' :
-                                    'bg-gray-50 text-eddm-navy'}
+                                    'bg-green-50 text-green-700 line-through opacity-60 border-green-200' :
+                                    'bg-gray-100 text-eddm-navy border-gray-200'}
                             `}
                         >
                             {pw.found ? '✓ ' : '• '} {pw.word}

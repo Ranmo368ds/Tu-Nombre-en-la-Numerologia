@@ -140,13 +140,14 @@ export default function Tetris() {
         } else {
             // Place piece
             const newGrid = [...grid.map(row => [...row])];
+            let isGameOverReached = false;
+
             activePiece.shape.forEach((row, y) => {
                 row.forEach((value, x) => {
                     if (value !== 0) {
                         const gridY = activePiece.pos.y + y;
                         if (gridY < 0) {
-                            setGameOver(true);
-                            updateHighScore(score);
+                            isGameOverReached = true;
                         } else {
                             newGrid[gridY][activePiece.pos.x + x] = {
                                 color: activePiece.color,
@@ -157,6 +158,13 @@ export default function Tetris() {
                     }
                 });
             });
+
+            if (isGameOverReached) {
+                setGameOver(true);
+                updateHighScore(score);
+                setActivePiece(null);
+                return;
+            }
 
             // Check for completed lines
             let linesThisDrop = 0;
@@ -182,9 +190,17 @@ export default function Tetris() {
                 });
             }
 
-            setGrid(finalGrid);
-            setActivePiece(nextPiece);
-            setNextPiece(getRandomPiece());
+            // Check if next piece can be spawned
+            if (checkCollision(nextPiece, 0, 0, undefined)) {
+                setGameOver(true);
+                updateHighScore(score + ([0, 100, 300, 500, 800][linesThisDrop] * level)); // Add final points
+                setGrid(finalGrid);
+                setActivePiece(null);
+            } else {
+                setGrid(finalGrid);
+                setActivePiece(nextPiece);
+                setNextPiece(getRandomPiece());
+            }
         }
     }, [activePiece, grid, isPaused, gameOver, nextPiece, level, score, updateHighScore]);
 
