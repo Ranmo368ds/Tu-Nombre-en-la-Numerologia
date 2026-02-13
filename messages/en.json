@@ -1,9 +1,9 @@
 {
     "SEO": {
-        "title": "Healthy Instinct | Holistic Well-being & Numerology",
-        "description": "Explore your path to integral well-being with essential oils, Pythagorean numerology, and ancestral wisdom. Awaken your instinct today.",
-        "og_title": "Awaken your Healthy Instinct",
-        "og_description": "We accompany your healing and self-knowledge process with high-vibration holistic tools."
+        "title": "Juan & Sons Lawncare and Hardscape LLC | Landscaping Services in Chicago Northwest Suburbs",
+        "description": "Expert landscaping and hardscaping in the Chicago area. We offer lawn services, fence installation, brick paving, and snow removal.",
+        "og_title": "Juan & Sons Lawncare and Hardscape LLC",
+        "og_description": "We transform your outdoor space with quality and professionalism. Contact us today!"
     },
     "TarotPage": {
         "title": "Mystic Tarot",
@@ -3110,6 +3110,230 @@
             "call_us": "Call Us",
             "presence": "Presence",
             "tagline": "Premium marketing solutions for specialized pool service contractors. We keep your business flowing as crystal clear as your pools."
+        }
+    },
+    "JuansonsLandscaping": {
+        "topBar": {
+            "tagline": "Providing Exceptional Landscaping Services in the Chicago northwest Suburbs",
+            "phone1": "(815) 403-9271",
+            "phone2": "(815) 236-0269",
+            "email": "info@juansonslawncare.com"
+        },
+        "nav": {
+            "home": "Home",
+            "about": "About Us",
+            "services": "Services",
+            "services_dropdown": {
+                "lawn": "Lawn Services",
+                "brick": "Brick Paving",
+                "fence": "Fence Services",
+                "snow": "Snow Removal"
+            },
+            "gallery": "Gallery",
+            "contact": "Contact Us"
+        },
+        "hero": {
+            "slides": [
+                {
+                    "subtitle": "LANDSCAPING PROFESSIONALS",
+                    "title": "We Design the Garden of Your Dreams",
+                    "cta1": "Our Services",
+                    "cta2": "Request a Quote"
+                }
+            ]
+        },
+        "services": {
+            "title": "Our Premium Services",
+            "subtitle": "Excellence in every detail for your outdoor space.",
+            "items": {
+                "lawn": {
+                    "title": "Lawn Services",
+                    "desc": "Professional maintenance, fertilization, and expert care for an impeccable green."
+                },
+                "brick": {
+                    "title": "Brick Paving",
+                    "desc": "Design and installation of patios, walkways, and driveways with high-quality finishes."
+                },
+                "fence": {
+                    "title": "Fence Services",
+                    "desc": "Residential fence installation and repair for privacy and security."
+                },
+                "snow": {
+                    "title": "Snow Removal",
+                    "desc": "Fast and reliable service during winter to keep your access points clear."
+                }
+            }
+        },
+        "about": {
+            "title": "About JUAN & SONS LAWNCARE AND HARDSCAPE LLC",
+            "subtitle": "Over 10 years transforming outdoor spaces in the Chicago suburbs.",
+            "text": "We are dedicated to providing exceptional landscaping services with a focus on quality, integrity, and customer satisfaction. Our team of experts works tirelessly to ensure that every project reflects our clients' vision.",
+            "stats": {
+                "years": "Years of Experience",
+                "projects": "Projects Completed",
+                "clients": "Happy Clients"
+            }
+        },
+        "contact": {
+            "title": "Request a Free Quote",
+            "subtitle": "We are ready to transform your space. Contact us today.",
+            "name": "Name",
+            "email": "Email",
+            "phone": "Phone",
+            "message": "Message",
+            "services": "Services Interested In",
+            "submit": "Send Message",
+            "items": {
+                "lawn": {
+                    "title": "Lawn Maintenance"
+                },
+                "brick": {
+                    "title": "Brick Paving / Hardscape"
+                },
+                "fence": {
+                    "title": "Fence Installation"
+                },
+                "snow": {
+                    "title": "Snow Removal"
+                },
+                "other": {
+                    "title": "Other / Full Landscaping"
+                }
+            },
+            "info": {
+                "title": "Contact Information",
+                "schedule": "Working Hours from 7am to 5 pm Mon. thru Sat"
+            }
+        },
+        "footer": {
+            "tagline": "Providing exceptional landscaping services in the Chicago northwest suburbs.",
+            "rights": "All rights reserved."
+        },
+        "pages": {
+            "about": {
+                "title": "About Juan & Son’s Lawncare and Hardscape LLC",
+                "text1": "At Juan & Son’s Lawncare and Hardscape LLC, we believe a well-cared-for outdoor space changes the way you feel about your home. A clean lawn, a solid patio, a beautiful walkway, or a safe winter entrance isn’t just “nice to have”—it’s peace of mind, pride, and comfort for your family and guests. That’s why we approach every job with the same mindset: do it right, treat people fairly, and deliver results you’ll be proud of.",
+                "text2": "We are a family-owned business with over 15 years of experience serving the Northwest Suburbs of Chicago. Over the years, we’ve built long-term relationships by staying consistent, communicating clearly, and showing up ready to work. Our team takes the time to understand what you want, recommends practical options that fit your budget, and completes the job with attention to detail—from clean edges on a lawn to the final finishing touches on a hardscape project.",
+                "text3": "Supporting these communities is important to us—because we live and work here too. If you’re looking for a team that values quality, respects your property, and stands behind the work, Juan & Son’s is ready to help."
+            },
+            "landscaping": {
+                "title": "Landscaping Services (Spring to Fall)",
+                "intro": "At Juan & Son’s Lawncare and Hardscape LLC, our landscaping services are built around what homeowners need most from spring through fall: clean curb appeal, healthy growth, and outdoor spaces that stay sharp all season. Whether you want routine upkeep or a one-time refresh, we deliver professional results with reliable scheduling and attention to detail.",
+                "list_title": "Our Most Common Spring–Fall Landscaping Services",
+                "items": [
+                    "Spring Cleanups (debris removal, bed reset, first seasonal trim)",
+                    "Mulch Installation (fresh mulch for a clean look + moisture control)",
+                    "Edging & Bed Redefinition (crisp borders around beds, trees, walkways)",
+                    "Bush & Shrub Trimming (shape, health, and controlled growth)",
+                    "Weeding & Bed Maintenance (weed removal + ongoing bed upkeep)",
+                    "Planting Services (flowers, shrubs, small trees—seasonal installs)",
+                    "Landscape Bed Design & Refresh (simple upgrades for better curb appeal)",
+                    "Lawn Mowing & Routine Maintenance (scheduled cutting, trimming, cleanup)",
+                    "Fall Cleanups (leaf removal, final trims, winter prep)",
+                    "Leaf Removal & Haul Away (quick removal to keep lawns healthy)",
+                    "Gutter/Downspout Discharge Cleanup Around Beds (keeping drainage areas clear)",
+                    "Small Property Touch-Ups (re-leveling edges, minor fixes, tidy finishes)"
+                ],
+                "outro": "From the first spring cleanup to fall leaf removal, we help your yard stay clean, inviting, and easy to enjoy. If you’re ready for a landscape that looks professionally maintained all season long, we’d love to help."
+            },
+            "brick_paving": {
+                "title": "Brick Paver & Hardscape Services",
+                "text1": "Hardscaping is one of the fastest ways to upgrade your outdoor space and add long-term value to your home. At Juan & Son’s Lawncare and Hardscape LLC, we specialize in brick paver and hardscape installation that improves both the function and beauty of your property. Whether you’re dreaming of a new patio for entertaining, a clean walkway to your front door, or a stronger, more attractive entryway, our team delivers workmanship you can trust.",
+                "text2": "We build paver patios, walkways, pathways, and entrance areas with a focus on durability and clean design. Proper installation is everything—so we take the time to prep the base correctly, level the surface carefully, and ensure proper support and drainage. That’s what helps prevent common issues like sinking, shifting, or uneven surfaces over time—especially in Illinois weather.",
+                "text3": "From classic patterns to modern layouts, we help you choose a style that fits your home and complements your landscaping. Pavers are a great investment because they look premium, are easy to maintain, and create a polished, professional finish around your property.",
+                "text4": "Whether you want a fresh outdoor living area or simply want to replace a worn path with something stronger and cleaner, our goal is the same: a finished hardscape that looks great and lasts."
+            },
+            "fence": {
+                "title": "Fence Installation & Repair",
+                "text1": "A quality fence does more than mark a property line—it adds privacy, improves security, and gives your home a clean, finished look. At Juan & Son’s Lawncare and Hardscape LLC, we provide residential fence installation and fence repair services with a focus on straight lines, strong support, and a professional finish that lasts.",
+                "text2": "We install and service multiple fence types so you can choose what best fits your needs and style, including:",
+                "types": [
+                    "Wood Fences",
+                    "Vinyl Fences",
+                    "Aluminum Fences",
+                    "Chain Link Fences"
+                ],
+                "text3": "Wood fencing is a classic choice for warmth, privacy, and curb appeal. Vinyl fencing offers a clean, low-maintenance option that holds up well over time. Aluminum fencing provides an elegant look with strength—great for visibility and a more open feel. Chain link fencing is a cost-effective, practical solution for securing areas while keeping things simple and functional.",
+                "text4": "If you already have a fence, repairs can often restore both its appearance and performance without a full replacement. We can replace damaged boards or panels, reinforce weak sections, correct leaning areas when possible, and help address common issues caused by wind, age, and seasonal ground movement.",
+                "text5": "Every job starts with proper planning—accurate measurements, clean alignment, and strong post installation—because that’s what determines how long a fence lasts. We keep your work area organized and treat your property with respect from start to finish."
+            },
+            "snow": {
+                "title": "Snow Removal Services",
+                "text1": "Winter in Illinois can be unpredictable—and snow can quickly turn driveways and sidewalks into a safety risk. At Juan & Son’s Lawncare and Hardscape LLC, our Snow Removal Services are built around one priority: keeping your property safe, accessible, and clear when it matters most.",
+                "text2": "We provide dependable snow clearing for driveways, sidewalks, walkways, and key access points so you and your family can get in and out without the stress. Whether you need service after a storm or ongoing seasonal support, we respond quickly and work efficiently to help prevent buildup that can freeze into ice. A clean entrance isn’t just convenient—it reduces slip hazards and helps protect your property from winter-related damage.",
+                "text3": "Snow removal is especially important for busy homeowners, families, and anyone who wants peace of mind during heavy snowfall. Instead of struggling with a shovel or risking injury, you can count on our team to handle the work while you stay warm and safe indoors. We show up with a plan, clear the areas that matter, and make sure your access is restored as quickly as possible.",
+                "text4": "We take pride in being reliable in winter—because when you need snow service, timing is everything. Our goal is to be the crew you can count on when conditions get rough."
+            },
+            "common": {
+                "areas_served_title": "Projects Areas",
+                "areas_served_text": "We proudly serve homeowners and local businesses throughout:",
+                "locations": "Algonquin, IL, McHenry, IL, Woodstock, IL, Barrington, IL, South Barrington, IL, North Barrington, IL, Lake Barrington, IL, Lake Zurich, IL, Lake in the Hills, IL, and Crystal Lake, IL.",
+                "cta": "Contact Juan & Son’s today for a free estimate and let’s get your outdoor space looking its best.",
+                "quote_request_title": "Request a Free Quote",
+                "quote_request_subtitle": "Fill out the form below and we'll get back to you within 24 hours.",
+                "benefit_licensed": {
+                    "title": "Licensed & Insured",
+                    "desc": "Full protection for your property and peace of mind."
+                },
+                "benefit_experience": {
+                    "title": "10+ Years Experience",
+                    "desc": "Expert craftsmanship and reliable local service."
+                },
+                "benefit_quality": {
+                    "title": "Quality Guarantee",
+                    "desc": "We stand behind every project we build and maintain."
+                }
+            },
+            "gallery": {
+                "title": "Project Gallery",
+                "subtitle": "Explore our complete portfolio of high-quality landscaping and hardscaping projects. From custom patios to complete garden transformations, we take pride in every detail."
+            }
+        },
+        "seo": {
+            "home": {
+                "title": "Juanson's Lawncare & Hardscape | Landscaping Services in Algonquin, McHenry & Barrington",
+                "description": "Premium landscaping and hardscaping in Chicago's NW Suburbs. Expert lawn maintenance, brick paving, fence installation, and snow removal in Algonquin, Barrington, Crystal Lake & nearby areas.",
+                "keywords": "landscaping Algonquin, lawn maintenance McHenry, brick paving Barrington, fence installation Crystal Lake, snow removal Lake in the Hills, hardscaping Woodstock, Juanson's Lawncare",
+                "og_title": "Juanson's Lawncare & Hardscape - Local Landscaping Experts",
+                "og_description": "Transforming outdoor spaces across Algonquin, Barrington, and the NW Chicago Suburbs for over 10 years."
+            },
+            "about": {
+                "title": "About Juanson's Lawncare | 15+ Years of Landscaping Excellence",
+                "description": "Learn about our family-owned business serving Algonquin, McHenry, and surrounding suburbs. Over 15 years of quality landscaping and hardscape services.",
+                "og_title": "About Juanson's Lawncare - Experience & Quality",
+                "og_description": "A legacy of quality and integrity in landscaping for the Chicago Northwest Suburbs."
+            },
+            "landscaping": {
+                "title": "Lawn Maintenance & Yard Cleanup Services | Juanson's Lawncare",
+                "description": "Expert lawn care, spring/fall cleanup, mowing, and fertilization in Algonquin, McHenry, and Barrington. Keep your yard healthy all season long.",
+                "og_title": "Professional Lawn Care & Landscaping Services",
+                "og_description": "Reliable lawn maintenance and seasonal cleanups for a pristine outdoor space."
+            },
+            "brick": {
+                "title": "Brick Paving, Patios & Walkways | Juanson's Hardscape & Paving",
+                "description": "Custom brick paving, walkways, and patios designed with precision. Serving Algonquin, Barrington, and Crystal Lake with durable hardscape solutions.",
+                "og_title": "Premium Brick Paving & Hardscape Design",
+                "og_description": "Upgrade your home's exterior with our expert brick paving and patio installations."
+            },
+            "fence": {
+                "title": "Fence Installation & Repair | Wood, Vinyl & Aluminum | Juanson's",
+                "description": "Quality residential fence installation and repair for privacy and security. Wood, vinyl, and aluminum fences in the Chicago NW Suburbs.",
+                "og_title": "Expert Fence Installation - Privacy & Security",
+                "og_description": "Durable and aesthetic fencing solutions tailored to your property needs."
+            },
+            "snow": {
+                "title": "Residential Snow Removal | Algonquin, McHenry & Crystal Lake",
+                "description": "Fast and reliable snow clearing for driveways and sidewalks. Stay safe and accessible this winter with Juanson's snow removal services.",
+                "og_title": "Reliable Snow Removal - Chicago Northwest Suburbs",
+                "og_description": "Professional snow clearing services to keep your property safe when it matters most."
+            },
+            "gallery": {
+                "title": "Gallery of Projects | Landscaping & Hardscaping Transformations",
+                "description": "Browse our portfolio of completed projects in Algonquin, Barrington, and beyond. See our patios, lawns, and fence installations.",
+                "og_title": "Juanson's Project Gallery - See Our Work",
+                "og_description": "A showcase of our premium landscaping and paving transformations."
+            },
+            "og_image_alt": "JUAN & SONS LAWNCARE AND HARDSCAPE LLC - Outdoor Excellence"
         }
     }
 }

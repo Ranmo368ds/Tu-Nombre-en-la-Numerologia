@@ -1,9 +1,9 @@
 {
     "SEO": {
-        "title": "Instinto Saludable | Bienestar Holístico y Numerología",
-        "description": "Explora tu camino hacia el bienestar integral con aceites esenciales, numerología pitagórica y sabiduría ancestral. Despierta tu instinto hoy.",
-        "og_title": "Despierta tu Instinto Saludable",
-        "og_description": "Acompañamos tu proceso de sanación y autoconocimiento con herramientas holísticas de alta vibración."
+        "title": "Juan & Sons Lawncare and Hardscape LLC | Servicios de Paisajismo en Chicago Northwest Suburbs",
+        "description": "Expertos en paisajes y hardscapes en el área de Chicago. Ofrecemos servicios de césped, instalación de cercas, pavimentación con ladrillos y remoción de nieve.",
+        "og_title": "Juan & Sons Lawncare and Hardscape LLC",
+        "og_description": "Transformamos tu espacio exterior con calidad y profesionalismo. ¡Contáctanos hoy!"
     },
     "TarotPage": {
         "title": "Tarot Místico",
@@ -3119,6 +3119,230 @@
             "call_us": "Llámanos",
             "presence": "Presencia",
             "tagline": "Soluciones de marketing premium para contratistas especializados en servicios de piscinas. Mantenemos tu negocio fluyendo tan claro como tus piscinas."
+        }
+    },
+    "JuansonsLandscaping": {
+        "topBar": {
+            "tagline": "Providing Exceptional Landscaping Services in the Chicago northwest Suburbs",
+            "phone1": "(815) 403-9271",
+            "phone2": "(815) 236-0269",
+            "email": "info@juansonslawncare.com"
+        },
+        "nav": {
+            "home": "Inicio",
+            "about": "Nosotros",
+            "services": "Servicios",
+            "services_dropdown": {
+                "lawn": "Servicios de Césped",
+                "brick": "Pavimento de Ladrillo",
+                "fence": "Servicios de Cercas",
+                "snow": "Remoción de Nieve"
+            },
+            "gallery": "Galería",
+            "contact": "Contáctanos"
+        },
+        "hero": {
+            "slides": [
+                {
+                    "subtitle": "PROFESIONALES EN PAISAJISMO",
+                    "title": "Diseñamos el Jardín de tus Sueños",
+                    "cta1": "Nuestros Servicios",
+                    "cta2": "Solicitar Presupuesto"
+                }
+            ]
+        },
+        "services": {
+            "title": "Nuestros Servicios Premium",
+            "subtitle": "Excelencia en cada detalle para tu espacio exterior.",
+            "items": {
+                "lawn": {
+                    "title": "Servicios de Césped",
+                    "desc": "Mantenimiento profesional, fertilización y cuidado experto para un verde impecable."
+                },
+                "brick": {
+                    "title": "Pavimento de Ladrillo",
+                    "desc": "Diseño e instalación de patios, caminos y entradas con acabados de alta calidad."
+                },
+                "fence": {
+                    "title": "Servicios de Cercas",
+                    "desc": "Instalación y reparación de cercas residenciales para privacidad y seguridad."
+                },
+                "snow": {
+                    "title": "Remoción de Nieve",
+                    "desc": "Servicio rápido y confiable durante el invierno para mantener tus accesos libres."
+                }
+            }
+        },
+        "about": {
+            "title": "Sobre JUAN & SONS LAWNCARE AND HARDSCAPE LLC",
+            "subtitle": "Más de 10 años transformando espacios exteriores en los suburbios de Chicago.",
+            "text": "Nos dedicamos a proporcionar servicios de paisajismo excepcionales con un enfoque en la calidad, la integridad y la satisfacción del cliente. Nuestro equipo de expertos trabaja incansablemente para asegurar que cada proyecto refleje la visión de nuestros clientes.",
+            "stats": {
+                "years": "Años de Experiencia",
+                "projects": "Proyectos Completados",
+                "clients": "Clientes Satisfechos"
+            }
+        },
+        "contact": {
+            "title": "Solicitar Presupuesto Gratis",
+            "subtitle": "Estamos listos para transformar tu espacio. Contáctanos hoy mismo.",
+            "name": "Nombre",
+            "email": "Correo Electrónico",
+            "phone": "Teléfono",
+            "message": "Mensaje",
+            "services": "Servicios de Interés",
+            "submit": "Enviar Mensaje",
+            "items": {
+                "lawn": {
+                    "title": "Mantenimiento de Césped"
+                },
+                "brick": {
+                    "title": "Adoquines / Hardscape"
+                },
+                "fence": {
+                    "title": "Instalación de Cercas"
+                },
+                "snow": {
+                    "title": "Remoción de Nieve"
+                },
+                "other": {
+                    "title": "Otro / Paisajismo Completo"
+                }
+            },
+            "info": {
+                "title": "Información de Contacto",
+                "schedule": "Working Hours from 7am to 5 pm Mon. thru Sat"
+            }
+        },
+        "footer": {
+            "tagline": "Proporcionando servicios de paisajismo excepcionales en los suburbios del noroeste de Chicago.",
+            "rights": "Todos los derechos reservados."
+        },
+        "pages": {
+            "about": {
+                "title": "Sobre Juan & Son’s Lawncare and Hardscape LLC",
+                "text1": "En Juan & Son’s Lawncare and Hardscape LLC, creemos que un espacio exterior bien cuidado cambia la forma en que te sientes en tu hogar. Un césped limpio, un patio sólido, un hermoso camino o una entrada segura en invierno no es solo algo \"agradable de tener\": es tranquilidad, orgullo y comodidad para tu familia e invitados. Por eso abordamos cada trabajo con la misma mentalidad: hacerlo bien, tratar a las personas con justicia y entregar resultados de los que te sientas orgulloso.",
+                "text2": "Somos una empresa familiar con más de 15 años de experiencia sirviendo a los suburbios del noroeste de Chicago. A lo largo de los años, hemos construido relaciones a largo plazo manteniéndonos consistentes, comunicándonos claramente y presentándonos listos para trabajar. Nuestro equipo se toma el tiempo para entender lo que deseas, recomienda opciones prácticas que se ajusten a tu presupuesto y completa el trabajo con atención al detalle, desde bordes limpios en un césped hasta los toques finales en un proyecto de hardscape.",
+                "text3": "Apoyar a estas comunidades es importante para nosotros, porque también vivimos y trabajamos aquí. Si estás buscando un equipo que valore la calidad, respete tu propiedad y respalde su trabajo, Juan & Son’s está listo para ayudar."
+            },
+            "landscaping": {
+                "title": "Servicios de Paisajismo (Primavera a Otoño)",
+                "intro": "En Juan & Son’s Lawncare and Hardscape LLC, nuestros servicios de paisajismo se centran en lo que más necesitan los propietarios desde la primavera hasta el otoño: un atractivo exterior impecable, un crecimiento saludable y espacios al aire libre que se mantengan espectaculares toda la temporada. Ya sea que busques mantenimiento rutinario o una renovación completa, entregamos resultados profesionales con una programación confiable y atención al detalle.",
+                "list_title": "Nuestros Servicios de Paisajismo más Comunes de Primavera-Otoño",
+                "items": [
+                    "Limpiezas de Primavera (eliminación de escombros, reajuste de arriates, primer recorte estacional)",
+                    "Instalación de Mantillo/Mulch (mantillo fresco para una apariencia limpia + control de humedad)",
+                    "Bordeado y Redefinición de Arriates (bordes nítidos alrededor de camas, árboles y caminos)",
+                    "Recorte de Arbustos y Matorrales (forma, salud y crecimiento controlado)",
+                    "Deshierbe y Mantenimiento de Arriates (eliminación de maleza + mantenimiento continuo)",
+                    "Servicios de Plantación (flores, arbustos, árboles pequeños—instalaciones estacionales)",
+                    "Diseño y Renovación de Arriates (mejoras simples para un mejor atractivo exterior)",
+                    "Corte de Césped y Mantenimiento Rutinario (corte programado, recorte y limpieza)",
+                    "Limpiezas de Otoño (eliminación de hojas, recortes finales, preparación para el invierno)",
+                    "Eliminación y Retirada de Hojas (eliminación rápida para mantener el césped saludable)",
+                    "Limpieza de Desagües y Bajantes en Arriates (manteniendo las áreas de drenaje despejadas)",
+                    "Retoques Menores en la Propiedad (renivelación de bordes, arreglos menores, acabados limpios)"
+                ],
+                "outro": "Desde la primera limpieza de primavera hasta la retirada de hojas en otoño, ayudamos a que tu jardín se mantenga limpio, acogedor y fácil de disfrutar. Si estás listo para un paisaje que luzca mantenido profesionalmente toda la temporada, nos encantaría ayudar."
+            },
+            "brick_paving": {
+                "title": "Servicios de Adoquines y Hardscape",
+                "text1": "El hardscaping es una de las formas más rápidas de mejorar tu espacio exterior y agregar valor a largo plazo a tu hogar. En Juan & Son’s Lawncare and Hardscape LLC, nos especializamos en la instalación de adoquines de ladrillo y hardscape que mejora tanto la función como la belleza de tu propiedad. Ya sea que sueñes con un nuevo patio para invitados, un camino limpio hacia tu puerta principal o una entrada más fuerte y atractiva, nuestro equipo entrega una mano de obra en la que puedes confiar.",
+                "text2": "Construimos patios de adoquines, caminos, senderos y áreas de entrada con un enfoque en la durabilidad y el diseño limpio. La instalación correcta lo es todo, por lo que nos tomamos el tiempo para preparar la base correctamente, nivelar la superficie con cuidado y asegurar el soporte y drenaje adecuados. Eso es lo que ayuda a prevenir problemas comunes como el hundimiento, desplazamiento o superficies irregulares con el tiempo, especialmente con el clima de Illinois.",
+                "text3": "Desde patrones clásicos hasta diseños modernos, te ayudamos a elegir un estilo que se adapte a tu hogar y complemente tu paisajismo. Los adoquines son una gran inversión porque lucen premium, son fáciles de mantener y crean un acabado pulido y profesional en toda tu propiedad.",
+                "text4": "Ya sea que desees una nueva área de estar al aire libre o simplemente quieras reemplazar un camino desgastado por algo más fuerte y limpio, nuestro objetivo es el mismo: un hardscape terminado que luzca genial y dure."
+            },
+            "fence": {
+                "title": "Instalación y Reparación de Cercas",
+                "text1": "Una cerca de calidad hace más que marcar una línea de propiedad: agrega privacidad, mejora la seguridad y le da a tu hogar un aspecto limpio y terminado. En Juan & Son’s Lawncare and Hardscape LLC, ofrecemos servicios de instalación y reparación de cercas residenciales con un enfoque en líneas rectas, soporte sólido y un acabado profesional duradero.",
+                "text2": "Instalamos y damos servicio a múltiples tipos de cercas para que puedas elegir la que mejor se adapte a tus necesidades y estilo, incluyendo:",
+                "types": [
+                    "Cercas de Madera",
+                    "Cercas de Vinilo",
+                    "Cercas de Aluminio",
+                    "Cercas de Eslabón de Cadena (Chain Link)"
+                ],
+                "text3": "La cerca de madera es una opción clásica por su calidez, privacidad y atractivo exterior. La cerca de vinilo ofrece una opción limpia y de bajo mantenimiento que aguanta bien el paso del tiempo. La cerca de aluminio proporciona un aspecto elegante con resistencia, ideal para la visibilidad y una sensación más abierta. La cerca de eslabón de cadena es una solución práctica y económica para asegurar áreas manteniendo la funcionalidad.",
+                "text4": "Si ya tienes una cerca, las reparaciones a menudo pueden restaurar tanto su apariencia como su rendimiento sin necesidad de un reemplazo completo. Podemos reemplazar tablas o paneles dañados, reforzar secciones débiles, corregir áreas inclinadas cuando sea posible y ayudar a resolver problemas comunes causados por el viento, la edad y el movimiento estacional del suelo.",
+                "text5": "Cada trabajo comienza con una planificación adecuada: mediciones precisas, alineación limpia e instalación sólida de postes, porque eso es lo que determina cuánto dura una cerca. Mantenemos tu área de trabajo organizada y tratamos tu propiedad con respeto de principio a fin."
+            },
+            "snow": {
+                "title": "Servicios de Remoción de Nieve",
+                "text1": "El invierno en Illinois puede ser impredecible, y la nieve puede convertir rápidamente las entradas y aceras en un riesgo de seguridad. En Juan & Son’s Lawncare and Hardscape LLC, nuestros servicios de remoción de nieve se basan en una prioridad: mantener tu propiedad segura, accesible y despejada cuando más importa.",
+                "text2": "Ofrecemos una limpieza de nieve confiable para entradas de vehículos, aceras, caminos y puntos de acceso clave para que tú y tu familia puedan entrar y salir sin estrés. Ya sea que necesites servicio después de una tormenta o apoyo estacional continuo, respondemos rápidamente y trabajamos de manera eficiente para ayudar a prevenir la acumulación que puede congelarse en hielo. Una entrada limpia no es solo conveniente: reduce los riesgos de resbalones y ayuda a proteger tu propiedad de los daños relacionados con el invierno.",
+                "text3": "La remoción de nieve es especialmente importante para propietarios ocupados, familias y cualquier persona que desee tranquilidad durante las fuertes nevadas. En lugar de luchar con una pala o arriesgarse a sufrir una lesión, puedes contar con nuestro equipo para manejar el trabajo mientras te mantienes caliente y seguro en el interior. Nos presentamos con un plan, despejamos las áreas que importan y nos aseguramos de que tu acceso se restaure lo más rápido posible.",
+                "text4": "Nos enorgullecemos de ser confiables en invierno, porque cuando necesitas un servicio de nieve, el tiempo lo es todo. Nuestro objetivo es ser el equipo en el que puedas confiar cuando las condiciones se vuelven difíciles."
+            },
+            "common": {
+                "areas_served_title": "Áreas de Proyectos",
+                "areas_served_text": "Orgullosamente servimos a propietarios y negocios locales en:",
+                "locations": "Algonquin, IL, McHenry, IL, Woodstock, IL, Barrington, IL, South Barrington, IL, North Barrington, IL, Lake Barrington, IL, Lake Zurich, IL, Lake in the Hills, IL y Crystal Lake, IL.",
+                "cta": "Contacta a Juan & Son’s hoy para un presupuesto gratuito y logremos que tu espacio exterior luzca lo mejor posible.",
+                "quote_request_title": "Solicita un Presupuesto Gratuito",
+                "quote_request_subtitle": "Completa el formulario a continuación y nos pondremos en contacto contigo en menos de 24 horas.",
+                "benefit_licensed": {
+                    "title": "Licenciado y Asegurado",
+                    "desc": "Protección total para tu propiedad y tranquilidad."
+                },
+                "benefit_experience": {
+                    "title": "10+ Años de Experiencia",
+                    "desc": "Artesanía experta y servicio local confiable."
+                },
+                "benefit_quality": {
+                    "title": "Garantía de Calidad",
+                    "desc": "Respaldamos cada proyecto que construimos y mantenemos."
+                }
+            },
+            "gallery": {
+                "title": "Galería de Proyectos",
+                "subtitle": "Explora nuestro portafolio completo de proyectos de paisajismo y hardscape de alta calidad. Desde patios personalizados hasta transformaciones completas de jardines, nos enorgullecemos de cada detalle."
+            }
+        },
+        "seo": {
+            "home": {
+                "title": "Juanson's Lawncare & Hardscape | Servicios de Paisajismo en Algonquin, McHenry y Barrington",
+                "description": "Paisajismo y hardscaping de primera calidad en los suburbios del noroeste de Chicago. Mantenimiento de césped, adoquines, cercas y remoción de nieve en Algonquin, Crystal Lake y alrededores.",
+                "keywords": "paisajismo Algonquin, mantenimiento de césped McHenry, adoquines Barrington, instalación de cercas Crystal Lake, remoción de nieve Lake in the Hills, hardscaping Woodstock, Juanson's Lawncare",
+                "og_title": "Juanson's Lawncare & Hardscape - Expertos Locales en Paisajismo",
+                "og_description": "Transformamos espacios exteriores en Algonquin, Barrington y los suburbios del noroeste de Chicago por más de 10 años."
+            },
+            "about": {
+                "title": "Sobre Juanson's Lawncare | Más de 15 Años de Excelencia en Paisajismo",
+                "description": "Conozca nuestra empresa familiar que sirve a Algonquin, McHenry y suburbios circundantes. Más de 15 años de servicios de paisajismo y hardscape de calidad.",
+                "og_title": "Sobre Juanson's Lawncare - Experiencia y Calidad",
+                "og_description": "Un legado de calidad e integridad en paisajismo para los suburbios del noroeste de Chicago."
+            },
+            "landscaping": {
+                "title": "Mantenimiento de Césped y Limpieza de Jardines | Juanson's Lawncare",
+                "description": "Cuidado experto del césped, limpieza de primavera/otoño, corte y fertilización en Algonquin, McHenry y Barrington. Mantenga su jardín saludable toda la temporada.",
+                "og_title": "Servicios Profesionales de Cuidado de Césped y Paisajismo",
+                "og_description": "Mantenimiento confiable del césped y limpiezas estacionales para un espacio exterior impecable."
+            },
+            "brick": {
+                "title": "Adoquines, Patios y Caminos | Juanson's Hardscape & Paving",
+                "description": "Adoquines personalizados, caminos y patios diseñados con precisión. Sirviendo a Algonquin, Barrington y Crystal Lake con soluciones duraderas de hardscape.",
+                "og_title": "Diseño de Adoquines y Hardscape de Primera Clase",
+                "og_description": "Mejore el exterior de su hogar con nuestras instalaciones expertas de adoquines y patios."
+            },
+            "fence": {
+                "title": "Instalación y Reparación de Cercas | Madera, Vinilo y Aluminio | Juanson's",
+                "description": "Instalación y reparación de cercas residenciales de calidad para privacidad y seguridad. Cercas de madera, vinilo y aluminio en los suburbios de Chicago.",
+                "og_title": "Instalación Experta de Cercas - Privacidad y Seguridad",
+                "og_description": "Soluciones de cercado duraderas y estéticas adaptadas a las necesidades de su propiedad."
+            },
+            "snow": {
+                "title": "Remoción de Nieve Residencial | Algonquin, McHenry y Crystal Lake",
+                "description": "Limpieza de nieve rápida y confiable para entradas y aceras. Manténgase seguro y accesible este invierno con los servicios de remoción de nieve de Juanson's.",
+                "og_title": "Remoción de Nieve Confiable - Suburbios del Noroeste de Chicago",
+                "og_description": "Servicios profesionales de limpieza de nieve para mantener su propiedad segura cuando más importa."
+            },
+            "gallery": {
+                "title": "Galería de Proyectos | Transformaciones de Paisajismo y Hardscaping",
+                "description": "Explore nuestro portafolio de proyectos terminados en Algonquin, Barrington y más allá. Vea nuestros patios, céspedes e instalaciones de cercas.",
+                "og_title": "Galería de Proyectos de Juanson's - Vea Nuestro Trabajo",
+                "og_description": "Una muestra de nuestras transformaciones de paisajismo y pavimentación de primera calidad."
+            },
+            "og_image_alt": "JUAN & SONS LAWNCARE AND HARDSCAPE LLC - Excelencia en Exteriores"
         }
     }
 }

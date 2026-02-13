@@ -19,9 +19,51 @@ export default function middleware(request: NextRequest) {
         return NextResponse.next();
     }
 
-    // 2. Auto-prefix niche paths if locale is missing
-    const nichePaths = ['treeservices', 'taxservices', 'sealcoatingservices', 'roofingservices', 'localmarketing', 'paintingservices', 'cleaningservices', 'fenceservices', 'landscapingservices', 'poolservices', 'radiounica'];
     const pathSegments = pathname.split('/').filter(Boolean);
+
+    // 2. Domain Routing for Juanson's Lawncare (MOVE EARLY to avoid niche conflicts)
+    if (hostname && (hostname.includes('juansonslawncare.com') || hostname.includes('juansonlawncare.com') || hostname.includes('localhost'))) {
+        // If the URL already contains the prefix, redirect to the clean version
+        if (pathname.includes('/juansons-landscaping')) {
+            const cleanPath = pathname.replace('/juansons-landscaping', '');
+            return NextResponse.redirect(new URL(cleanPath || '/', request.url));
+        }
+
+        const isStatic = pathname.startsWith('/images') || pathname.startsWith('/favicon');
+        if (isStatic) return NextResponse.next();
+
+        // Specific PascalCase Mapping for Juanson's Domain (as per user request)
+        const pathMap: Record<string, string> = {
+            '/home': '/',
+            '/about-us': '/nosotros',
+            '/lawn-services': '/landscaping',
+            '/brick-paving': '/brick-paving',
+            '/fence-services': '/fence',
+            '/snow-removal': '/snow',
+            '/gallery': '/galeria',
+            '/contact-us': '/'
+        };
+
+        // Normalize pathname for mapping (remove trailing slash if any)
+        const normalizedPath = pathname.endsWith('/') ? pathname.slice(0, -1) : pathname;
+        const mappedPath = pathMap[normalizedPath] || normalizedPath;
+
+        // Rewrite all other paths to include the prefix internally
+        const lang = pathSegments[0] === 'es' ? 'es' : 'en';
+
+        // Remove locale prefix if present for inner path calculation
+        let innerPath = mappedPath;
+        if (innerPath.startsWith('/es') || innerPath.startsWith('/en')) {
+            innerPath = innerPath.slice(3) || '/';
+        }
+
+        const url = request.nextUrl.clone();
+        url.pathname = `/${lang}/juansons-landscaping${innerPath ? (innerPath.startsWith('/') ? innerPath : `/${innerPath}`) : ''}`;
+        return NextResponse.rewrite(url);
+    }
+
+    // 3. Auto-prefix niche paths if locale is missing
+    const nichePaths = ['treeservices', 'taxservices', 'sealcoatingservices', 'roofingservices', 'localmarketing', 'paintingservices', 'cleaningservices', 'fenceservices', 'landscapingservices', 'poolservices', 'radiounica'];
 
     // Check if the path is exactly one of the niche paths (case insensitive)
     if (pathSegments.length === 1 && nichePaths.includes(pathSegments[0].toLowerCase())) {
@@ -29,7 +71,7 @@ export default function middleware(request: NextRequest) {
         return NextResponse.rewrite(url);
     }
 
-    // 3. Domain Routing for Radio Unica
+    // 4. Domain Routing for Radio Unica
     if (hostname && (hostname.includes('radiounica.us') || hostname.includes('radio-unica') || hostname.includes('radiounica'))) {
         const isRoot = pathSegments.length === 0;
         const isLocaleRoot = pathSegments.length === 1 && locales.includes(pathSegments[0] as any);
@@ -42,8 +84,8 @@ export default function middleware(request: NextRequest) {
         }
     }
 
-    // 4. Domain Routing for Genes Marketing
-    if (hostname && (hostname.includes('genesmarketing.com') || hostname.includes('genes-marketing') || hostname.includes('localhost:3000'))) {
+    // 5. Domain Routing for Genes Marketing
+    if (hostname && (hostname.includes('genesmarketing.com') || hostname.includes('genes-marketing'))) {
 
         // SAFETY: Do not hijack niche marketing paths
         const isNichePath = nichePaths.some(path => pathname.toLowerCase().includes(path));
@@ -63,7 +105,7 @@ export default function middleware(request: NextRequest) {
         }
     }
 
-    // 5. Default Fallback - handle internationalization for all other paths
+    // 6. Default Fallback - handle internationalization for all other paths
     return intlMiddleware(request);
 }
 

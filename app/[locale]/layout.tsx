@@ -30,6 +30,13 @@ import { Header } from '@/components/Header';
 import { CartProvider } from '@/context/CartContext';
 import { CartDrawer } from '@/components/CartDrawer';
 
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+};
+
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const messages: any = await getMessages({ locale });
@@ -119,7 +126,7 @@ export default async function RootLayout({
   };
 
   return (
-    <html lang={locale} className="dark">
+    <html lang={locale} className="dark overflow-x-hidden">
       <head>
         <script
           type="application/ld+json"
@@ -127,12 +134,14 @@ export default async function RootLayout({
         />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${cinzel.variable} ${playfair.variable} antialiased bg-slate-950 text-slate-100 min-h-screen relative`}
+        className={`${geistSans.variable} ${geistMono.variable} ${cinzel.variable} ${playfair.variable} antialiased bg-slate-950 text-slate-100 min-h-screen relative overflow-x-hidden`}
       >
         <NextIntlClientProvider messages={messages}>
           <CartProvider>
             <Header />
-            {children}
+            <main className="overflow-x-clip w-full relative">
+              {children}
+            </main>
             <CartDrawer />
           </CartProvider>
         </NextIntlClientProvider>

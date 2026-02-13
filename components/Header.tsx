@@ -22,6 +22,8 @@ export function Header() {
             const isNiche = hostname.includes("genesmarketing") ||
                 hostname.includes("radiounica") ||
                 hostname.includes("radio-unica") ||
+                hostname.includes("juansonslawncare") ||
+                hostname.includes("juansonlawncare") ||
                 (hostname.includes("tu-nombre-en-la-numerologia") && !hostname.includes("instintosaludable"));
             setIsNicheDomain(isNiche);
         }

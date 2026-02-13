@@ -26,9 +26,6 @@ const nextConfig: NextConfig = {
 
   // Remove X-Powered-By header
   poweredByHeader: false,
-
-  // Performance optimizations
-  // swcMinify: true, (Removed as it is now default/deprecated)
 };
 
 export default withNextIntl(nextConfig);
