@@ -3,19 +3,19 @@ import { setRequestLocale } from "next-intl/server";
 import { getTranslations } from "next-intl/server";
 import { Metadata } from "next";
 
-import PoolHeader from "@/components/pool-service/PoolHeader";
-import PoolHero from "@/components/pool-service/PoolHero";
-import WhyPoolSpecial from "@/components/pool-service/WhyPoolSpecial";
-import PoolMarketingSystem from "@/components/pool-service/PoolMarketingSystem";
-import PoolServiceTypes from "@/components/pool-service/PoolServiceTypes";
-import PoolResults from "@/components/pool-service/PoolResults";
-import PoolServiceAreas from "@/components/pool-service/PoolServiceAreas";
-import PoolPricing from "@/components/pool-service/PoolPricing";
-import PoolFAQ from "@/components/pool-service/PoolFAQ";
-import PoolCTA from "@/components/pool-service/PoolCTA";
-import MarketingContact from "@/components/genes-marketing/MarketingContact";
-import PoolFooter from "@/components/pool-service/PoolFooter";
-import PoolSchema from "@/components/pool-service/PoolSchema";
+import PoolHeader from "@/components/marketing/pool-service/PoolHeader";
+import PoolHero from "@/components/marketing/pool-service/PoolHero";
+import WhyPoolSpecial from "@/components/marketing/pool-service/WhyPoolSpecial";
+import PoolMarketingSystem from "@/components/marketing/pool-service/PoolMarketingSystem";
+import PoolServiceTypes from "@/components/marketing/pool-service/PoolServiceTypes";
+import PoolResults from "@/components/marketing/pool-service/PoolResults";
+import PoolServiceAreas from "@/components/marketing/pool-service/PoolServiceAreas";
+import PoolPricing from "@/components/marketing/pool-service/PoolPricing";
+import PoolFAQ from "@/components/marketing/pool-service/PoolFAQ";
+import PoolCTA from "@/components/marketing/pool-service/PoolCTA";
+import MarketingContact from "@/components/marketing/genes-marketing/MarketingContact";
+import PoolFooter from "@/components/marketing/pool-service/PoolFooter";
+import PoolSchema from "@/components/marketing/pool-service/PoolSchema";
 
 export async function generateStaticParams() {
     return routing.locales.map((locale) => ({ locale }));

@@ -1,17 +1,17 @@
-import TreeServiceHero from "@/components/tree-service/TreeServiceHero";
-import WhySpecialStrategy from "@/components/tree-service/WhySpecialStrategy";
-import MarketingSystemSection from "@/components/tree-service/MarketingSystemSection";
-import ExpectedResults from "@/components/tree-service/ExpectedResults";
-import ServiceAreas from "@/components/tree-service/ServiceAreas";
-import ServiceTypes from "@/components/tree-service/ServiceTypes";
-import PricingPackages from "@/components/tree-service/PricingPackages";
-import TreeServiceFAQ from "@/components/tree-service/TreeServiceFAQ";
-import TreeServiceCTA from "@/components/tree-service/TreeServiceCTA";
-import TreeServiceHeader from "@/components/tree-service/TreeServiceHeader";
-import TreeServiceFooter from "@/components/tree-service/TreeServiceFooter";
-import FloatingWhatsApp from "@/components/genes-marketing/FloatingWhatsApp";
-import ContactSection from "@/components/genes-marketing/ContactSection";
-import TreeServiceSchema from "@/components/tree-service/TreeServiceSchema";
+import TreeServiceHero from "@/components/marketing/tree-service/TreeServiceHero";
+import WhySpecialStrategy from "@/components/marketing/tree-service/WhySpecialStrategy";
+import MarketingSystemSection from "@/components/marketing/tree-service/MarketingSystemSection";
+import ExpectedResults from "@/components/marketing/tree-service/ExpectedResults";
+import ServiceAreas from "@/components/marketing/tree-service/ServiceAreas";
+import ServiceTypes from "@/components/marketing/tree-service/ServiceTypes";
+import PricingPackages from "@/components/marketing/tree-service/PricingPackages";
+import TreeServiceFAQ from "@/components/marketing/tree-service/TreeServiceFAQ";
+import TreeServiceCTA from "@/components/marketing/tree-service/TreeServiceCTA";
+import TreeServiceHeader from "@/components/marketing/tree-service/TreeServiceHeader";
+import TreeServiceFooter from "@/components/marketing/tree-service/TreeServiceFooter";
+import FloatingWhatsApp from "@/components/marketing/genes-marketing/FloatingWhatsApp";
+import ContactSection from "@/components/marketing/genes-marketing/ContactSection";
+import TreeServiceSchema from "@/components/marketing/tree-service/TreeServiceSchema";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {

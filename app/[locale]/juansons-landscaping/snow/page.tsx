@@ -20,6 +20,11 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
             description: t("og_description"),
             url: "https://www.juansonslawncare.com/snow-removal",
         },
+        icons: {
+            icon: "/favicon-juansons.png",
+            shortcut: "/favicon-juansons.png",
+            apple: "/favicon-juansons.png",
+        },
     };
 }
 

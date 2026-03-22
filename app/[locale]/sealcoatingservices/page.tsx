@@ -1,19 +1,19 @@
 import { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
-import SealcoatingServiceHero from "@/components/sealcoating-service/SealcoatingServiceHero";
-import WhySealcoatingSpecial from "@/components/sealcoating-service/WhySealcoatingSpecial";
-import SealcoatingMarketingSystem from "@/components/sealcoating-service/SealcoatingMarketingSystem";
-import SealcoatingServiceTypes from "@/components/sealcoating-service/SealcoatingServiceTypes";
-import SealcoatingExpectedResults from "@/components/sealcoating-service/SealcoatingExpectedResults";
-import SealcoatingServiceAreas from "@/components/sealcoating-service/SealcoatingServiceAreas";
-import SealcoatingPricingPackages from "@/components/sealcoating-service/SealcoatingPricingPackages";
-import SealcoatingServiceFAQ from "@/components/sealcoating-service/SealcoatingServiceFAQ";
-import SealcoatingServiceCTA from "@/components/sealcoating-service/SealcoatingServiceCTA";
-import SealcoatingHeader from "@/components/sealcoating-service/SealcoatingHeader";
-import SealcoatingFooter from "@/components/sealcoating-service/SealcoatingFooter";
-import FloatingWhatsApp from "@/components/genes-marketing/FloatingWhatsApp";
-import ContactSection from "@/components/genes-marketing/ContactSection";
-import SealcoatingServiceSchema from "@/components/sealcoating-service/SealcoatingServiceSchema";
+import SealcoatingServiceHero from "@/components/marketing/sealcoating-service/SealcoatingServiceHero";
+import WhySealcoatingSpecial from "@/components/marketing/sealcoating-service/WhySealcoatingSpecial";
+import SealcoatingMarketingSystem from "@/components/marketing/sealcoating-service/SealcoatingMarketingSystem";
+import SealcoatingServiceTypes from "@/components/marketing/sealcoating-service/SealcoatingServiceTypes";
+import SealcoatingExpectedResults from "@/components/marketing/sealcoating-service/SealcoatingExpectedResults";
+import SealcoatingServiceAreas from "@/components/marketing/sealcoating-service/SealcoatingServiceAreas";
+import SealcoatingPricingPackages from "@/components/marketing/sealcoating-service/SealcoatingPricingPackages";
+import SealcoatingServiceFAQ from "@/components/marketing/sealcoating-service/SealcoatingServiceFAQ";
+import SealcoatingServiceCTA from "@/components/marketing/sealcoating-service/SealcoatingServiceCTA";
+import SealcoatingHeader from "@/components/marketing/sealcoating-service/SealcoatingHeader";
+import SealcoatingFooter from "@/components/marketing/sealcoating-service/SealcoatingFooter";
+import FloatingWhatsApp from "@/components/marketing/genes-marketing/FloatingWhatsApp";
+import ContactSection from "@/components/marketing/genes-marketing/ContactSection";
+import SealcoatingServiceSchema from "@/components/marketing/sealcoating-service/SealcoatingServiceSchema";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
     const { locale } = await params;

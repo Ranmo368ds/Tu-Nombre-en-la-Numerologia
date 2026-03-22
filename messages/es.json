@@ -3344,5 +3344,13 @@
             },
             "og_image_alt": "JUAN & SONS LAWNCARE AND HARDSCAPE LLC - Excelencia en Exteriores"
         }
+    },
+    "HVACPage": {
+        "title": "Domina Tu Mercado Local de HVAC",
+        "subtitle": "Generación de leads de alta intención y sistemas automatizados de citas diseñados exclusivamente para contratistas de HVAC que escalan a $1M+.",
+        "cta_button": "Empieza a Escalar Ahora",
+        "pricing_plan_1": "Base Local",
+        "pricing_plan_2": "Acelerador de Crecimiento",
+        "pricing_plan_3": "Dominación del Mercado"
     }
 }

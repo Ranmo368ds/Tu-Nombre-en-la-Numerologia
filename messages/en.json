@@ -3335,5 +3335,13 @@
             },
             "og_image_alt": "JUAN & SONS LAWNCARE AND HARDSCAPE LLC - Outdoor Excellence"
         }
+    },
+    "HVACPage": {
+        "title": "Dominate Your Local HVAC Market",
+        "subtitle": "High-intent lead generation and automated appointment systems designed exclusively for HVAC contractors scaling to $1M+.",
+        "cta_button": "Start Scaling Now",
+        "pricing_plan_1": "Local Foundation",
+        "pricing_plan_2": "Growth Accelerator",
+        "pricing_plan_3": "Market Domination"
     }
 }

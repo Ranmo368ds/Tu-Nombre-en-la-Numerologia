@@ -1,17 +1,17 @@
-import FenceHero from "@/components/fence-service/FenceHero";
-import WhyFenceSpecial from "@/components/fence-service/WhyFenceSpecial";
-import FenceMarketingSystem from "@/components/fence-service/FenceMarketingSystem";
-import ExpectedFenceResults from "@/components/fence-service/ExpectedFenceResults";
-import FenceServiceAreas from "@/components/fence-service/FenceServiceAreas";
-import FenceServiceTypes from "@/components/fence-service/FenceServiceTypes";
-import FencePricing from "@/components/fence-service/FencePricing";
-import FenceFAQ from "@/components/fence-service/FenceFAQ";
-import FenceCTA from "@/components/fence-service/FenceCTA";
-import FenceHeader from "@/components/fence-service/FenceHeader";
-import FenceFooter from "@/components/fence-service/FenceFooter";
-import FloatingWhatsApp from "@/components/genes-marketing/FloatingWhatsApp";
-import ContactSection from "@/components/genes-marketing/ContactSection";
-import FenceSchema from "@/components/fence-service/FenceSchema";
+import FenceHero from "@/components/marketing/fence-service/FenceHero";
+import WhyFenceSpecial from "@/components/marketing/fence-service/WhyFenceSpecial";
+import FenceMarketingSystem from "@/components/marketing/fence-service/FenceMarketingSystem";
+import ExpectedFenceResults from "@/components/marketing/fence-service/ExpectedFenceResults";
+import FenceServiceAreas from "@/components/marketing/fence-service/FenceServiceAreas";
+import FenceServiceTypes from "@/components/marketing/fence-service/FenceServiceTypes";
+import FencePricing from "@/components/marketing/fence-service/FencePricing";
+import FenceFAQ from "@/components/marketing/fence-service/FenceFAQ";
+import FenceCTA from "@/components/marketing/fence-service/FenceCTA";
+import FenceHeader from "@/components/marketing/fence-service/FenceHeader";
+import FenceFooter from "@/components/marketing/fence-service/FenceFooter";
+import FloatingWhatsApp from "@/components/marketing/genes-marketing/FloatingWhatsApp";
+import ContactSection from "@/components/marketing/genes-marketing/ContactSection";
+import FenceSchema from "@/components/marketing/fence-service/FenceSchema";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {

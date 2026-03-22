@@ -1,7 +1,7 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import { TrendingUp, Clock, Target, Zap } from 'lucide-react';
+import { DoorOpen, Search, Mail, Image, Zap } from 'lucide-react';
 
 export default function ExpectedResults() {
     const t = useTranslations('TreeServicePage.results');
@@ -70,6 +70,3 @@ export default function ExpectedResults() {
         </section>
     );
 }
-
-// Import icons at top
-import { DoorOpen, Search, Mail, Image } from 'lucide-react';

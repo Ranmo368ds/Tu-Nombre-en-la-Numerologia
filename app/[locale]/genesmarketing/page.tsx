@@ -1,18 +1,18 @@
-import BenefitsSection from "@/components/genes-marketing/BenefitsSection";
-import IndustriesSection from "@/components/genes-marketing/IndustriesSection";
-import ContactSection from "@/components/genes-marketing/ContactSection";
-import FAQSection from "@/components/genes-marketing/FAQSection";
-import FinalCTASection from "@/components/genes-marketing/FinalCTASection";
-import FooterSection from "@/components/genes-marketing/FooterSection";
-import HeroSection from "@/components/genes-marketing/HeroSection";
-import HowItWorksSection from "@/components/genes-marketing/HowItWorksSection";
-import PinterestDirectorySection from "@/components/genes-marketing/PinterestDirectorySection";
-import MarketingHeader from "@/components/genes-marketing/MarketingHeader";
-import Popup from "@/components/genes-marketing/Popup";
-import PricingSection from "@/components/genes-marketing/PricingSection";
-import TestimonialsSection from "@/components/genes-marketing/TestimonialsSection";
-import FloatingWhatsApp from "@/components/genes-marketing/FloatingWhatsApp";
-import SchemaMarkup from "@/components/genes-marketing/SchemaMarkup";
+import BenefitsSection from "@/components/marketing/genes-marketing/BenefitsSection";
+import IndustriesSection from "@/components/marketing/genes-marketing/IndustriesSection";
+import ContactSection from "@/components/marketing/genes-marketing/ContactSection";
+import FAQSection from "@/components/marketing/genes-marketing/FAQSection";
+import FinalCTASection from "@/components/marketing/genes-marketing/FinalCTASection";
+import FooterSection from "@/components/marketing/genes-marketing/FooterSection";
+import HeroSection from "@/components/marketing/genes-marketing/HeroSection";
+import HowItWorksSection from "@/components/marketing/genes-marketing/HowItWorksSection";
+import PinterestDirectorySection from "@/components/marketing/genes-marketing/PinterestDirectorySection";
+import MarketingHeader from "@/components/marketing/genes-marketing/MarketingHeader";
+import Popup from "@/components/marketing/genes-marketing/Popup";
+import PricingSection from "@/components/marketing/genes-marketing/PricingSection";
+import TestimonialsSection from "@/components/marketing/genes-marketing/TestimonialsSection";
+import FloatingWhatsApp from "@/components/marketing/genes-marketing/FloatingWhatsApp";
+import SchemaMarkup from "@/components/marketing/genes-marketing/SchemaMarkup";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {

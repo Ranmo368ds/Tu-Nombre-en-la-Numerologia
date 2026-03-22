@@ -8,6 +8,7 @@ const locales = routing.locales;
 export default function middleware(request: NextRequest) {
     const hostname = request.headers.get('x-forwarded-host') || request.headers.get('host');
     const { pathname } = request.nextUrl;
+    const nichePaths = ['hvacservices', 'treeservices', 'taxservices', 'sealcoatingservices', 'roofingservices', 'localmarketing', 'paintingservices', 'cleaningservices', 'fenceservices', 'landscapingservices', 'poolservices', 'radiounica'];
 
     // 1. Static and Internal Paths - proceed without intl
     if (pathname.startsWith('/_next') || pathname.startsWith('/_static') || pathname.includes('.')) {
@@ -22,7 +23,7 @@ export default function middleware(request: NextRequest) {
     const pathSegments = pathname.split('/').filter(Boolean);
 
     // 2. Domain Routing for Juanson's Lawncare (MOVE EARLY to avoid niche conflicts)
-    if (hostname && (hostname.includes('juansonslawncare.com') || hostname.includes('juansonlawncare.com') || hostname.includes('localhost'))) {
+    if (hostname && (hostname.includes('juansonslawncare.com') || hostname.includes('juansonlawncare.com') || (hostname.includes('localhost') && !nichePaths.some(p => pathname.toLowerCase().includes(p.toLowerCase()))))) {
         // If the URL already contains the prefix, redirect to the clean version
         if (pathname.includes('/juansons-landscaping')) {
             const cleanPath = pathname.replace('/juansons-landscaping', '');
@@ -62,14 +63,8 @@ export default function middleware(request: NextRequest) {
         return NextResponse.rewrite(url);
     }
 
-    // 3. Auto-prefix niche paths if locale is missing
-    const nichePaths = ['treeservices', 'taxservices', 'sealcoatingservices', 'roofingservices', 'localmarketing', 'paintingservices', 'cleaningservices', 'fenceservices', 'landscapingservices', 'poolservices', 'radiounica'];
+    // 3. Auto-prefix niche paths - Let next-intl handle as-needed prefix
 
-    // Check if the path is exactly one of the niche paths (case insensitive)
-    if (pathSegments.length === 1 && nichePaths.includes(pathSegments[0].toLowerCase())) {
-        const url = new URL(`/en/${pathSegments[0].toLowerCase()}`, request.url);
-        return NextResponse.rewrite(url);
-    }
 
     // 4. Domain Routing for Radio Unica
     if (hostname && (hostname.includes('radiounica.us') || hostname.includes('radio-unica') || hostname.includes('radiounica'))) {
@@ -91,6 +86,14 @@ export default function middleware(request: NextRequest) {
         const isNichePath = nichePaths.some(path => pathname.toLowerCase().includes(path));
 
         if (isNichePath) {
+            // Check if the path already has a locale prefix
+            const hasLocalePrefix = locales.some(locale => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`);
+            if (!hasLocalePrefix) {
+                // Rewrite directly to default locale to avoid intlMiddleware 404
+                const url = request.nextUrl.clone();
+                url.pathname = `/en${pathname}`;
+                return NextResponse.rewrite(url);
+            }
             return intlMiddleware(request);
         }
 

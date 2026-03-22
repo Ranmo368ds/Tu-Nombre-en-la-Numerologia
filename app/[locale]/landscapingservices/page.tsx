@@ -1,17 +1,17 @@
-import LandscapingHero from "@/components/landscaping-service/LandscapingHero";
-import WhyLandscapingSpecial from "@/components/landscaping-service/WhyLandscapingSpecial";
-import LandscapingMarketingSystem from "@/components/landscaping-service/LandscapingMarketingSystem";
-import ExpectedLandscapingResults from "@/components/landscaping-service/ExpectedLandscapingResults";
-import LandscapingServiceAreas from "@/components/landscaping-service/LandscapingServiceAreas";
-import LandscapingServiceTypes from "@/components/landscaping-service/LandscapingServiceTypes";
-import LandscapingPricing from "@/components/landscaping-service/LandscapingPricing";
-import LandscapingFAQ from "@/components/landscaping-service/LandscapingFAQ";
-import LandscapingCTA from "@/components/landscaping-service/LandscapingCTA";
-import LandscapingHeader from "@/components/landscaping-service/LandscapingHeader";
-import LandscapingFooter from "@/components/landscaping-service/LandscapingFooter";
-import FloatingWhatsApp from "@/components/genes-marketing/FloatingWhatsApp";
-import ContactSection from "@/components/genes-marketing/ContactSection";
-import LandscapingSchema from "@/components/landscaping-service/LandscapingSchema";
+import LandscapingHero from "@/components/marketing/landscaping-service/LandscapingHero";
+import WhyLandscapingSpecial from "@/components/marketing/landscaping-service/WhyLandscapingSpecial";
+import LandscapingMarketingSystem from "@/components/marketing/landscaping-service/LandscapingMarketingSystem";
+import ExpectedLandscapingResults from "@/components/marketing/landscaping-service/ExpectedLandscapingResults";
+import LandscapingServiceAreas from "@/components/marketing/landscaping-service/LandscapingServiceAreas";
+import LandscapingServiceTypes from "@/components/marketing/landscaping-service/LandscapingServiceTypes";
+import LandscapingPricing from "@/components/marketing/landscaping-service/LandscapingPricing";
+import LandscapingFAQ from "@/components/marketing/landscaping-service/LandscapingFAQ";
+import LandscapingCTA from "@/components/marketing/landscaping-service/LandscapingCTA";
+import LandscapingHeader from "@/components/marketing/landscaping-service/LandscapingHeader";
+import LandscapingFooter from "@/components/marketing/landscaping-service/LandscapingFooter";
+import FloatingWhatsApp from "@/components/marketing/genes-marketing/FloatingWhatsApp";
+import ContactSection from "@/components/marketing/genes-marketing/ContactSection";
+import LandscapingSchema from "@/components/marketing/landscaping-service/LandscapingSchema";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {

@@ -1,18 +1,18 @@
 import { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
-import TaxServiceHero from "@/components/tax-service/TaxServiceHero";
-import WhyTaxServiceSpecial from "@/components/tax-service/WhyTaxServiceSpecial";
-import TaxMarketingSystem from "@/components/tax-service/TaxMarketingSystem";
-import TaxServiceTypes from "@/components/tax-service/TaxServiceTypes";
-import TaxServiceAreas from "@/components/tax-service/TaxServiceAreas";
-import TaxPricingPackages from "@/components/tax-service/TaxPricingPackages";
-import TaxServiceFAQ from "@/components/tax-service/TaxServiceFAQ";
-import TaxServiceCTA from "@/components/tax-service/TaxServiceCTA";
-import TaxServiceHeader from "@/components/tax-service/TaxServiceHeader";
-import TaxServiceFooter from "@/components/tax-service/TaxServiceFooter";
-import FloatingWhatsApp from "@/components/genes-marketing/FloatingWhatsApp";
-import ContactSection from "@/components/genes-marketing/ContactSection";
-import TaxServiceSchema from "@/components/tax-service/TaxServiceSchema";
+import TaxServiceHero from "@/components/marketing/tax-service/TaxServiceHero";
+import WhyTaxServiceSpecial from "@/components/marketing/tax-service/WhyTaxServiceSpecial";
+import TaxMarketingSystem from "@/components/marketing/tax-service/TaxMarketingSystem";
+import TaxServiceTypes from "@/components/marketing/tax-service/TaxServiceTypes";
+import TaxServiceAreas from "@/components/marketing/tax-service/TaxServiceAreas";
+import TaxPricingPackages from "@/components/marketing/tax-service/TaxPricingPackages";
+import TaxServiceFAQ from "@/components/marketing/tax-service/TaxServiceFAQ";
+import TaxServiceCTA from "@/components/marketing/tax-service/TaxServiceCTA";
+import TaxServiceHeader from "@/components/marketing/tax-service/TaxServiceHeader";
+import TaxServiceFooter from "@/components/marketing/tax-service/TaxServiceFooter";
+import FloatingWhatsApp from "@/components/marketing/genes-marketing/FloatingWhatsApp";
+import ContactSection from "@/components/marketing/genes-marketing/ContactSection";
+import TaxServiceSchema from "@/components/marketing/tax-service/TaxServiceSchema";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
     const { locale } = await params;

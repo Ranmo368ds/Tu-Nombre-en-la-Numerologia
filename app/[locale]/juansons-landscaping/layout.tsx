@@ -2,7 +2,18 @@ import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import JuansonsHeader from "@/components/juansons-landscaping/JuansonsHeader";
 import JuansonsFooter from "@/components/juansons-landscaping/JuansonsFooter";
+import { Metadata } from "next";
 import Script from "next/script";
+
+export async function generateMetadata(): Promise<Metadata> {
+    return {
+        icons: {
+            icon: "/favicon-juansons.png",
+            shortcut: "/favicon-juansons.png",
+            apple: "/favicon-juansons.png",
+        },
+    };
+}
 
 export default async function JuansonsLayout({
     children,

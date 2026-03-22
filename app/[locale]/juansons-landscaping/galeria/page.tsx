@@ -19,6 +19,11 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
             description: t("og_description"),
             url: "https://www.juansonslawncare.com/gallery",
         },
+        icons: {
+            icon: "/favicon-juansons.png",
+            shortcut: "/favicon-juansons.png",
+            apple: "/favicon-juansons.png",
+        },
     };
 }
 

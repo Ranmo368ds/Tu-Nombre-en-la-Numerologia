@@ -42,8 +42,8 @@ export default function CleaningFAQ() {
                             <div
                                 key={id}
                                 className={`group bg-white border rounded-[2rem] transition-all duration-500 overflow-hidden ${isOpen
-                                        ? 'border-blue-600 shadow-2xl shadow-blue-500/10 scale-[1.02]'
-                                        : 'border-slate-100 shadow-sm hover:border-blue-200'
+                                    ? 'border-blue-600 shadow-2xl shadow-blue-500/10 scale-[1.02]'
+                                    : 'border-slate-100 shadow-sm hover:border-blue-200'
                                     }`}
                             >
                                 <button

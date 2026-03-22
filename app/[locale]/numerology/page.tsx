@@ -1,5 +1,5 @@
 import { Suspense } from "react";
-import NumerologyClient from "@/components/NumerologyClient";
+import NumerologyClient from "@/components/numerology/NumerologyClient";
 import { getMessages } from "next-intl/server";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {

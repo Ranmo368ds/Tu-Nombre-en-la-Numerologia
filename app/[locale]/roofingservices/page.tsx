@@ -1,19 +1,19 @@
 import { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
-import RoofingServiceHero from "@/components/roofing-service/RoofingServiceHero";
-import WhyRoofingSpecial from "@/components/roofing-service/WhyRoofingSpecial";
-import StormIntelligenceFeature from "@/components/roofing-service/StormIntelligenceFeature";
-import RoofingMarketingSystem from "@/components/roofing-service/RoofingMarketingSystem";
-import RoofingServiceTypes from "@/components/roofing-service/RoofingServiceTypes";
-import RoofingServiceAreas from "@/components/roofing-service/RoofingServiceAreas";
-import RoofingPricingPackages from "@/components/roofing-service/RoofingPricingPackages";
-import RoofingHeader from "@/components/roofing-service/RoofingHeader";
-import RoofingFooter from "@/components/roofing-service/RoofingFooter";
-import FloatingWhatsApp from "@/components/genes-marketing/FloatingWhatsApp";
-import ContactSection from "@/components/genes-marketing/ContactSection";
-import RoofingServiceFAQ from "@/components/roofing-service/RoofingServiceFAQ";
-import RoofingServiceCTA from "@/components/roofing-service/RoofingServiceCTA";
-import RoofingServiceSchema from "@/components/roofing-service/RoofingServiceSchema";
+import RoofingServiceHero from "@/components/marketing/roofing-service/RoofingServiceHero";
+import WhyRoofingSpecial from "@/components/marketing/roofing-service/WhyRoofingSpecial";
+import StormIntelligenceFeature from "@/components/marketing/roofing-service/StormIntelligenceFeature";
+import RoofingMarketingSystem from "@/components/marketing/roofing-service/RoofingMarketingSystem";
+import RoofingServiceTypes from "@/components/marketing/roofing-service/RoofingServiceTypes";
+import RoofingServiceAreas from "@/components/marketing/roofing-service/RoofingServiceAreas";
+import RoofingPricingPackages from "@/components/marketing/roofing-service/RoofingPricingPackages";
+import RoofingHeader from "@/components/marketing/roofing-service/RoofingHeader";
+import RoofingFooter from "@/components/marketing/roofing-service/RoofingFooter";
+import FloatingWhatsApp from "@/components/marketing/genes-marketing/FloatingWhatsApp";
+import ContactSection from "@/components/marketing/genes-marketing/ContactSection";
+import RoofingServiceFAQ from "@/components/marketing/roofing-service/RoofingServiceFAQ";
+import RoofingServiceCTA from "@/components/marketing/roofing-service/RoofingServiceCTA";
+import RoofingServiceSchema from "@/components/marketing/roofing-service/RoofingServiceSchema";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
     const { locale } = await params;

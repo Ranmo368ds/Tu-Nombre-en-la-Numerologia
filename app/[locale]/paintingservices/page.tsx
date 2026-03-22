@@ -1,17 +1,17 @@
-import PaintingHero from "@/components/painting-service/PaintingHero";
-import WhyPaintingSpecial from "@/components/painting-service/WhyPaintingSpecial";
-import PaintingMarketingSystem from "@/components/painting-service/PaintingMarketingSystem";
-import ExpectedPaintingResults from "@/components/painting-service/ExpectedPaintingResults";
-import PaintingServiceAreas from "@/components/painting-service/PaintingServiceAreas";
-import PaintingServiceTypes from "@/components/painting-service/PaintingServiceTypes";
-import PaintingPricing from "@/components/painting-service/PaintingPricing";
-import PaintingFAQ from "@/components/painting-service/PaintingFAQ";
-import PaintingCTA from "@/components/painting-service/PaintingCTA";
-import PaintingHeader from "@/components/painting-service/PaintingHeader";
-import PaintingFooter from "@/components/painting-service/PaintingFooter";
-import FloatingWhatsApp from "@/components/genes-marketing/FloatingWhatsApp";
-import ContactSection from "@/components/genes-marketing/ContactSection";
-import PaintingSchema from "@/components/painting-service/PaintingSchema";
+import PaintingHero from "@/components/marketing/painting-service/PaintingHero";
+import WhyPaintingSpecial from "@/components/marketing/painting-service/WhyPaintingSpecial";
+import PaintingMarketingSystem from "@/components/marketing/painting-service/PaintingMarketingSystem";
+import ExpectedPaintingResults from "@/components/marketing/painting-service/ExpectedPaintingResults";
+import PaintingServiceAreas from "@/components/marketing/painting-service/PaintingServiceAreas";
+import PaintingServiceTypes from "@/components/marketing/painting-service/PaintingServiceTypes";
+import PaintingPricing from "@/components/marketing/painting-service/PaintingPricing";
+import PaintingFAQ from "@/components/marketing/painting-service/PaintingFAQ";
+import PaintingCTA from "@/components/marketing/painting-service/PaintingCTA";
+import PaintingHeader from "@/components/marketing/painting-service/PaintingHeader";
+import PaintingFooter from "@/components/marketing/painting-service/PaintingFooter";
+import FloatingWhatsApp from "@/components/marketing/genes-marketing/FloatingWhatsApp";
+import ContactSection from "@/components/marketing/genes-marketing/ContactSection";
+import PaintingSchema from "@/components/marketing/painting-service/PaintingSchema";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {

@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation';
-import EDDMHeader from '@/components/eddm/EDDMHeader';
-import MasonryGrid from '@/components/eddm/MasonryGrid';
+import EDDMHeader from '@/components/marketing/eddm/EDDMHeader';
+import MasonryGrid from '@/components/marketing/eddm/MasonryGrid';
 import { getMonthlyData } from '@/lib/eddm/monthlyData';
 
 interface EDDMPageProps {

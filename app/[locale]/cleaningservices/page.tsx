@@ -1,17 +1,17 @@
-import CleaningHero from "@/components/cleaning-service/CleaningHero";
-import WhyCleaningSpecial from "@/components/cleaning-service/WhyCleaningSpecial";
-import CleaningMarketingSystem from "@/components/cleaning-service/CleaningMarketingSystem";
-import ExpectedCleaningResults from "@/components/cleaning-service/ExpectedCleaningResults";
-import CleaningServiceAreas from "@/components/cleaning-service/CleaningServiceAreas";
-import CleaningServiceTypes from "@/components/cleaning-service/CleaningServiceTypes";
-import CleaningPricing from "@/components/cleaning-service/CleaningPricing";
-import CleaningFAQ from "@/components/cleaning-service/CleaningFAQ";
-import CleaningCTA from "@/components/cleaning-service/CleaningCTA";
-import CleaningHeader from "@/components/cleaning-service/CleaningHeader";
-import CleaningFooter from "@/components/cleaning-service/CleaningFooter";
-import FloatingWhatsApp from "@/components/genes-marketing/FloatingWhatsApp";
-import ContactSection from "@/components/genes-marketing/ContactSection";
-import CleaningSchema from "@/components/cleaning-service/CleaningSchema";
+import CleaningHero from "@/components/marketing/cleaning-service/CleaningHero";
+import WhyCleaningSpecial from "@/components/marketing/cleaning-service/WhyCleaningSpecial";
+import CleaningMarketingSystem from "@/components/marketing/cleaning-service/CleaningMarketingSystem";
+import ExpectedCleaningResults from "@/components/marketing/cleaning-service/ExpectedCleaningResults";
+import CleaningServiceAreas from "@/components/marketing/cleaning-service/CleaningServiceAreas";
+import CleaningServiceTypes from "@/components/marketing/cleaning-service/CleaningServiceTypes";
+import CleaningPricing from "@/components/marketing/cleaning-service/CleaningPricing";
+import CleaningFAQ from "@/components/marketing/cleaning-service/CleaningFAQ";
+import CleaningCTA from "@/components/marketing/cleaning-service/CleaningCTA";
+import CleaningHeader from "@/components/marketing/cleaning-service/CleaningHeader";
+import CleaningFooter from "@/components/marketing/cleaning-service/CleaningFooter";
+import FloatingWhatsApp from "@/components/marketing/genes-marketing/FloatingWhatsApp";
+import ContactSection from "@/components/marketing/genes-marketing/ContactSection";
+import CleaningSchema from "@/components/marketing/cleaning-service/CleaningSchema";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {

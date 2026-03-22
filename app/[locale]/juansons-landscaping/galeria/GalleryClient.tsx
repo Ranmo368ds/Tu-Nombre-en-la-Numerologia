@@ -18,11 +18,11 @@ export default function GalleryClient() {
         );
     }, []);
 
-    // Generate all artboard paths from 1 to 48
+    // Generate all artboard paths from 1 to 48, excluding Artboard-32 (invoice)
     const images = Array.from({ length: 48 }, (_, i) => ({
         src: `/images/juansons/pics/Artboard-${i + 1}.png`,
         alt: `Project Artboard ${i + 1}`
-    }));
+    })).filter(img => !img.src.includes("Artboard-32.png"));
 
     return (
         <div className="pt-24 md:pt-32 bg-white">

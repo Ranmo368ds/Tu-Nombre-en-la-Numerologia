@@ -1,14 +1,14 @@
 import { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
-import LocalMarketingHero from "@/components/marketing-local/LocalMarketingHero";
-import HowItWorks from "@/components/marketing-local/HowItWorks";
-import FlyerMockupSection from "@/components/marketing-local/FlyerMockupSection";
-import ZonesList from "@/components/marketing-local/ZonesList";
-import PricingPackages from "@/components/marketing-local/PricingPackages";
-import PinterestBonus from "@/components/marketing-local/PinterestBonus";
-import BookingForm from "@/components/marketing-local/BookingForm";
-import FAQSection from "@/components/marketing-local/FAQSection";
-import LocalFooter from "@/components/marketing-local/LocalFooter";
+import LocalMarketingHero from "@/components/marketing/marketing-local/LocalMarketingHero";
+import HowItWorks from "@/components/marketing/marketing-local/HowItWorks";
+import FlyerMockupSection from "@/components/marketing/marketing-local/FlyerMockupSection";
+import ZonesList from "@/components/marketing/marketing-local/ZonesList";
+import PricingPackages from "@/components/marketing/marketing-local/PricingPackages";
+import PinterestBonus from "@/components/marketing/marketing-local/PinterestBonus";
+import BookingForm from "@/components/marketing/marketing-local/BookingForm";
+import FAQSection from "@/components/marketing/marketing-local/FAQSection";
+import LocalFooter from "@/components/marketing/marketing-local/LocalFooter";
 
 // Force dynamic rendering if we rely on headers, otherwise static is fine. 
 // Standard for Next.js app router pages is typically automatic or forced dynamic if cookies/headers used.
