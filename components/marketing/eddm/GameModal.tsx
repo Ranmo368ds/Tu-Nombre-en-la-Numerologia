@@ -1,9 +1,9 @@
 'use client';
 
 import { GameConfig } from '@/lib/eddm/types';
-import Sudoku from '../games/Sudoku';
-import Crucigrama from '../games/Crucigrama';
-import SopaDeLetras from '../games/SopaDeLetras';
+import Sudoku from '../../games/Sudoku';
+import Crucigrama from '../../games/Crucigrama';
+import SopaDeLetras from '../../games/SopaDeLetras';
 
 interface GameModalProps {
     game: GameConfig;

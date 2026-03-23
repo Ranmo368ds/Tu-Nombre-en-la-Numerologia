@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import PaintingHero from "@/components/painting-service/PaintingHero";
+import PaintingHero from "@/components/marketing/painting-service/PaintingHero";
 import { Link } from "@/src/i18n/routing";
 import { ArrowRight, CheckCircle2, Search, Target, Layout } from "lucide-react";
 import { motion } from "framer-motion";
