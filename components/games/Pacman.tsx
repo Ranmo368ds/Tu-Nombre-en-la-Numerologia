@@ -332,48 +332,70 @@ export default function Pacman() {
                     {/* Game Over Overlay */}
                     {gameOver && (
                         <div className="absolute inset-0 z-50 flex items-center justify-center p-4 bg-[#0a0a0c]/80 backdrop-blur-md">
-                            <div className="bg-[#121216] border border-white/10 rounded-2xl p-6 w-full max-w-[280px] shadow-2xl">
+                            <div className="bg-[#121216] border border-white/10 rounded-3xl p-6 w-full max-w-[320px] shadow-2xl animate-in zoom-in-95 duration-300">
                                 <div className="flex flex-col items-center text-center">
-                                    <h2 className="text-2xl font-black italic uppercase tracking-tighter text-red-500 mb-1">¡FIN DEL JUEGO!</h2>
-                                    <p className="text-white/40 text-xs mb-4">Puntos: <span className="text-white font-bold">{score.toLocaleString()}</span></p>
+                                    <div className="w-16 h-16 rounded-2xl bg-yellow-400/20 flex items-center justify-center mb-4">
+                                        <Ghost className="w-8 h-8 text-yellow-400" />
+                                    </div>
+                                    <h2 className="text-2xl font-black italic uppercase tracking-tighter text-yellow-400 mb-1">¡FIN DEL JUEGO!</h2>
+                                    <p className="text-white/40 text-sm mb-6">Puntuación Final: <span className="text-white font-bold">{score.toLocaleString()}</span></p>
 
                                     {!isSubmitted ? (
-                                        <form onSubmit={handleEmailSubmit} className="w-full space-y-3">
-                                            <input 
-                                                type="email"
-                                                required
-                                                placeholder="Tu email"
-                                                value={email}
-                                                onChange={(e) => setEmail(e.target.value)}
-                                                className="w-full bg-white/5 border border-white/10 rounded-lg py-2 px-3 text-sm focus:outline-none focus:border-yellow-400 transition-colors"
-                                            />
-                                            <p className="text-[8px] text-white/40 leading-tight text-left">
-                                                Al registrarte aceptas recibir correos de nuestra parte. Puedes darte de baja cuando quieras.
+                                        <form onSubmit={handleEmailSubmit} className="w-full space-y-4">
+                                            <div className="text-left">
+                                                <h3 className="text-[10px] font-bold uppercase tracking-widest text-yellow-400 mb-2">Registra tu puntuación</h3>
+                                                <div className="relative">
+                                                    <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-white/40" />
+                                                    <input 
+                                                        type="email"
+                                                        required
+                                                        placeholder="Tu correo electrónico"
+                                                        value={email}
+                                                        onChange={(e) => setEmail(e.target.value)}
+                                                        className="w-full bg-white/5 border border-white/10 rounded-xl py-3 pl-10 pr-4 text-sm focus:outline-none focus:border-yellow-400 transition-colors"
+                                                    />
+                                                </div>
+                                            </div>
+
+                                            <p className="text-[9px] text-white/40 leading-relaxed text-left bg-white/5 p-3 rounded-xl border border-white/5">
+                                                Al registrarte y enviar tu puntuación, das tu consentimiento para el uso de tu información para registrar y mostrar tu puntuación, y para recibir correos promocionales, anuncios y comunicaciones relacionadas de nuestra parte. Puedes darte de baja de las comunicaciones de marketing en cualquier momento.
                                             </p>
+
                                             <button 
                                                 type="submit"
                                                 disabled={isSubmitting}
-                                                className="w-full bg-yellow-400 hover:bg-yellow-500 disabled:bg-yellow-400/50 text-black font-bold py-2 rounded-lg text-sm flex items-center justify-center gap-2"
+                                                className="w-full bg-yellow-400 hover:bg-yellow-500 disabled:bg-yellow-400/50 text-black font-bold py-3 rounded-xl flex items-center justify-center gap-2 transition-all active:scale-95 shadow-lg shadow-yellow-400/20"
                                             >
-                                                {isSubmitting ? "..." : "Registrar score"}
+                                                {isSubmitting ? (
+                                                    <div className="w-5 h-5 border-2 border-black/30 border-t-black rounded-full animate-spin" />
+                                                ) : (
+                                                    <>
+                                                        <Send className="w-4 h-4" />
+                                                        Enviar Puntuación
+                                                    </>
+                                                )}
                                             </button>
+                                            
                                             <button 
                                                 type="button"
                                                 onClick={resetGame}
-                                                className="w-full bg-white/5 text-xs text-white/40 py-1"
+                                                className="w-full bg-white/5 hover:bg-white/10 text-white/60 font-bold py-3 rounded-xl transition-all text-xs"
                                             >
                                                 Jugar otra vez
                                             </button>
                                         </form>
                                     ) : (
-                                        <div className="text-center">
-                                            <CheckCircle2 className="w-10 h-10 text-green-500 mx-auto mb-2" />
-                                            <p className="text-sm font-bold">¡Registrado!</p>
+                                        <div className="w-full py-8 text-center animate-in fade-in zoom-in-95 duration-500">
+                                            <div className="w-16 h-16 rounded-full bg-green-500/20 flex items-center justify-center mx-auto mb-4">
+                                                <CheckCircle2 className="w-8 h-8 text-green-500" />
+                                            </div>
+                                            <h3 className="text-xl font-bold mb-2">¡Puntuación Registrada!</h3>
+                                            <p className="text-white/40 text-sm mb-8">Tu score ha sido guardado exitosamente.</p>
                                             <button 
                                                 onClick={resetGame}
-                                                className="mt-4 bg-yellow-400 text-black px-6 py-2 rounded-lg font-bold"
+                                                className="w-full bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-3 rounded-xl transition-all shadow-lg shadow-yellow-400/20"
                                             >
-                                                Reiniciar
+                                                Jugar de nuevo
                                             </button>
                                         </div>
                                     )}
