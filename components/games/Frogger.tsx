@@ -81,13 +81,13 @@ export default function Frogger() {
         // Row 3: River Lane 4 (Turtles)
         // Row 2: River Lane 5 (Log Med)
 
-        // Road
-        const roadSpeeds = [1.5, -1, 2.5, -2, 1.2];
+        // Road - speeds reduced ~40% for better playability
+        const roadSpeeds = [0.8, -0.6, 1.4, -1.1, 0.7];
         for (let i = 0; i < 5; i++) {
             const laneY = (12 - i) * GRID_SIZE;
-            const speed = roadSpeeds[i] * (1 + (level - 1) * 0.1);
+            const speed = roadSpeeds[i] * (1 + (level - 1) * 0.08); // slower level scaling too
             const count = i === 1 ? 2 : 3;
-            const width = i === 1 ? 64 : 32;
+            const width = i === 1 ? 72 : 32; // bus slightly wider
             const color = i === 1 ? '#FFD700' : (i === 3 ? '#FF4500' : '#4169E1');
             
             for (let j = 0; j < count; j++) {
@@ -105,33 +105,36 @@ export default function Frogger() {
             }
         }
 
-        // River
-        const riverSpeeds = [-1.2, 1.8, 2.8, -1.5, 1.4];
+        // River - slower speeds and wider logs for easier crossing
+        const riverSpeeds = [-0.7, 1.0, 1.5, -0.9, 0.8];
         for (let i = 0; i < 5; i++) {
             const laneY = (6 - i) * GRID_SIZE;
-            const speed = riverSpeeds[i] * (1 + (level - 1) * 0.1);
+            const speed = riverSpeeds[i] * (1 + (level - 1) * 0.08);
             const isTurtles = i === 0 || i === 3;
             
             if (isTurtles) {
                 const count = 4;
                 for (let j = 0; j < count; j++) {
+                    // Diving turtles only appear from level 4+
+                    const isDiver = i === 3 && level >= 4;
                     newEntities.push({
                         id: id++,
                         x: j * (CANVAS_WIDTH / count),
                         y: laneY,
-                        width: 32,
+                        width: 36, // wider turtle
                         height: 28,
                         speed: Math.abs(speed),
                         direction: speed > 0 ? 1 : -1,
-                        type: i === 3 ? EntityType.DIVING_TURTLE : EntityType.TURTLE,
+                        type: isDiver ? EntityType.DIVING_TURTLE : EntityType.TURTLE,
                         color: '#228B22',
-                        diveTimer: i === 3 ? Math.random() * 200 : undefined,
+                        diveTimer: isDiver ? Math.random() * 300 : undefined,
                         isSubmerged: false
                     });
                 }
             } else {
                 const count = 3;
-                const width = i === 2 ? 128 : (i === 4 ? 96 : 64);
+                // Much wider logs so there's always somewhere to land
+                const width = i === 2 ? 160 : (i === 4 ? 128 : 96);
                 for (let j = 0; j < count; j++) {
                     newEntities.push({
                         id: id++,
@@ -246,11 +249,14 @@ export default function Frogger() {
                 entity.x = CANVAS_WIDTH;
             }
 
-            // Diving Logic
-            if (entity.type === EntityType.DIVING_TURTLE) {
+            // Diving Logic - only after level 4, and stay visible longer (500 frames up, 150 down)
+            if (entity.type === EntityType.DIVING_TURTLE && level >= 4) {
                 entity.diveTimer!++;
-                if (entity.diveTimer! > 180) { // Toggle every 3 seconds approx
-                    entity.isSubmerged = !entity.isSubmerged;
+                if (entity.isSubmerged && entity.diveTimer! > 150) {
+                    entity.isSubmerged = false;
+                    entity.diveTimer = 0;
+                } else if (!entity.isSubmerged && entity.diveTimer! > 500) {
+                    entity.isSubmerged = true;
                     entity.diveTimer = 0;
                 }
             }
@@ -272,10 +278,11 @@ export default function Frogger() {
         if (isOnRoad) {
             entities.current.forEach(entity => {
                 if (entity.type === EntityType.CAR || entity.type === EntityType.TRUCK) {
-                    if (frogX < entity.x + entity.width - 4 &&
-                        frogX + frogSize > entity.x + 4 &&
-                        frogY < entity.y + entity.height &&
-                        frogY + frogSize > entity.y) {
+                    // More forgiving hitbox (8px padding instead of 4px)
+                    if (frogX < entity.x + entity.width - 8 &&
+                        frogX + frogSize > entity.x + 8 &&
+                        frogY < entity.y + entity.height - 4 &&
+                        frogY + frogSize > entity.y + 4) {
                         collision = true;
                     }
                 }
