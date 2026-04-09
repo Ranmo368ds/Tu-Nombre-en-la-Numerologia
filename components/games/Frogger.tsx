@@ -60,8 +60,16 @@ export default function Frogger() {
     const currentPlatformSpeed = useRef(0);
 
     // Joystick State
-    const [joystick, setJoystick] = useState({ active: false, x: 0, y: 0 });
-    const joystickRef = useRef({ active: false, x: 0, y: 0 });
+    const [joystickOffset, setJoystickOffset] = useState({ x: 0, y: 0 });
+    const joystickOrigin = useRef({ x: 0, y: 0 });
+    const joystickActive = useRef(false);
+
+    // Refs for mutable game state (avoids stale closures in game loop)
+    const livesRef = useRef(3);
+    const gameStateRef = useRef<'START' | 'PLAYING' | 'GAMEOVER'>('START');
+    const scoreRef = useRef(0);
+    const highScoreRef = useRef(0);
+    const levelRef = useRef(1);
 
     const initEntities = useCallback(() => {
         const newEntities: Entity[] = [];
@@ -161,23 +169,29 @@ export default function Frogger() {
     }, []);
 
     const startGame = () => {
-        setGameState('PLAYING');
+        livesRef.current = 3;
+        scoreRef.current = 0;
+        levelRef.current = 1;
+        gameStateRef.current = 'PLAYING';
         setScore(0);
         setLives(3);
         setLevel(1);
+        setGameState('PLAYING');
         goals.current = [false, false, false, false, false];
         initEntities();
         resetFrog();
     };
 
-    const handleGameOver = () => {
+    const handleGameOver = useCallback(() => {
+        gameStateRef.current = 'GAMEOVER';
         setGameState('GAMEOVER');
         setShowLeadForm(true);
-        if (score > highScore) {
-            setHighScore(score);
-            localStorage.setItem('frogger-high-score', score.toString());
+        if (scoreRef.current > highScoreRef.current) {
+            highScoreRef.current = scoreRef.current;
+            setHighScore(scoreRef.current);
+            localStorage.setItem('frogger-high-score', scoreRef.current.toString());
         }
-    };
+    }, []);
 
     const submitLead = async (e: React.FormEvent) => {
         e.preventDefault();
@@ -188,8 +202,8 @@ export default function Frogger() {
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ 
                     email, 
-                    score, 
-                    level, 
+                    score: scoreRef.current, 
+                    level: levelRef.current, 
                     game: 'frogger',
                     source: 'Frogger Game'
                 }),
@@ -204,10 +218,10 @@ export default function Frogger() {
     };
 
     const moveFrog = useCallback((dx: number, dy: number) => {
-        if (gameState !== 'PLAYING') return;
+        if (gameStateRef.current !== 'PLAYING') return;
         
         const now = Date.now();
-        if (now - lastMoveTime.current < 150) return; // Debounce
+        if (now - lastMoveTime.current < 160) return; // Debounce
         
         const newX = frogPos.current.x + dx * GRID_SIZE;
         const newY = frogPos.current.y + dy * GRID_SIZE;
@@ -217,9 +231,12 @@ export default function Frogger() {
             frogPos.current.y = newY;
             lastMoveTime.current = now;
             
-            if (dy < 0) setScore(prev => prev + 10);
+            if (dy < 0) {
+                scoreRef.current += 10;
+                setScore(scoreRef.current);
+            }
         }
-    }, [gameState]);
+    }, []);
 
     // Input Handling
     useEffect(() => {
@@ -278,7 +295,6 @@ export default function Frogger() {
         if (isOnRoad) {
             entities.current.forEach(entity => {
                 if (entity.type === EntityType.CAR || entity.type === EntityType.TRUCK) {
-                    // More forgiving hitbox (8px padding instead of 4px)
                     if (frogX < entity.x + entity.width - 8 &&
                         frogX + frogSize > entity.x + 8 &&
                         frogY < entity.y + entity.height - 4 &&
@@ -296,7 +312,7 @@ export default function Frogger() {
                         frogY + frogSize > entity.y) {
                         
                         if (entity.type === EntityType.DIVING_TURTLE && entity.isSubmerged) {
-                            return; // No platform if submerged
+                            return;
                         }
                         
                         platformFound = true;
@@ -307,7 +323,6 @@ export default function Frogger() {
 
             if (!platformFound) collision = true;
             
-            // Wall check for river drift
             if (frogPos.current.x < 0 || frogPos.current.x > CANVAS_WIDTH - frogSize) {
                 collision = true;
             }
@@ -315,13 +330,16 @@ export default function Frogger() {
             const goalIndex = Math.floor((frogX + GRID_SIZE/2) / (CANVAS_WIDTH / 5));
             if (goalIndex >= 0 && goalIndex < 5 && !goals.current[goalIndex]) {
                 goals.current[goalIndex] = true;
-                setScore(prev => prev + 500);
+                scoreRef.current += 500;
+                setScore(scoreRef.current);
                 resetFrog();
                 
-                // Check level clear
                 if (goals.current.every(g => g)) {
-                    setLevel(prev => prev + 1);
-                    setScore(prev => prev + 1000);
+                    const newLevel = levelRef.current + 1;
+                    levelRef.current = newLevel;
+                    scoreRef.current += 1000;
+                    setLevel(newLevel);
+                    setScore(scoreRef.current);
                     goals.current = [false, false, false, false, false];
                     initEntities();
                 }
@@ -331,12 +349,14 @@ export default function Frogger() {
         }
 
         if (collision) {
-            setLives(prev => {
-                const next = prev - 1;
-                if (next <= 0) handleGameOver();
-                else resetFrog();
-                return next;
-            });
+            const nextLives = livesRef.current - 1;
+            livesRef.current = nextLives;
+            setLives(nextLives);
+            if (nextLives <= 0) {
+                handleGameOver();
+            } else {
+                resetFrog();
+            }
         }
 
         // DRAW
@@ -430,56 +450,58 @@ export default function Frogger() {
         ctx.fillRect(frogPos.current.x + 17, frogPos.current.y + 5, 2, 2);
 
         requestRef.current = requestAnimationFrame(update);
-    }, [gameState, level, resetFrog, initEntities]);
+    }, [gameState, resetFrog, initEntities, handleGameOver]);
 
     useEffect(() => {
         requestRef.current = requestAnimationFrame(update);
         return () => cancelAnimationFrame(requestRef.current);
     }, [update]);
 
-    // Touch Handling (Joystick and click-to-move)
-    const handleTouchStart = (e: React.TouchEvent) => {
-        const touch = e.touches[0];
-        const rect = canvasRef.current?.getBoundingClientRect();
-        if (!rect) return;
-
-        const x = touch.clientX - rect.left;
-        const y = touch.clientY - rect.top;
-
-        // Visual Joystick on bottom-left half
-        if (x < rect.width / 2 && y > rect.height / 2) {
-            setJoystick({ active: true, x, y });
-            joystickRef.current = { active: true, x, y };
-        } else if (y > rect.height / 2) {
-            // Tap right half can fire or wait, but Frogger is 4-way move
-        }
+    // Touch Handling - Canvas only detects taps for starting
+    const handleCanvasTap = (e: React.TouchEvent) => {
+        e.preventDefault();
+        if (gameState === 'START') startGame();
     };
 
-    const handleTouchMove = (e: React.TouchEvent) => {
-        if (!joystickRef.current.active) return;
+    // Joystick - dedicated touch handlers on the joystick element
+    const handleJoystickStart = (e: React.TouchEvent) => {
+        e.preventDefault();
+        e.stopPropagation();
         const touch = e.touches[0];
-        const rect = canvasRef.current?.getBoundingClientRect();
-        if (!rect) return;
+        joystickOrigin.current = { x: touch.clientX, y: touch.clientY };
+        joystickActive.current = true;
+        setJoystickOffset({ x: 0, y: 0 });
+    };
 
-        const x = touch.clientX - rect.left;
-        const y = touch.clientY - rect.top;
+    const handleJoystickMove = (e: React.TouchEvent) => {
+        e.preventDefault();
+        e.stopPropagation();
+        if (!joystickActive.current) return;
+        const touch = e.touches[0];
+        const dx = touch.clientX - joystickOrigin.current.x;
+        const dy = touch.clientY - joystickOrigin.current.y;
 
-        const dx = x - joystickRef.current.x;
-        const dy = y - joystickRef.current.y;
+        // Clamp visual offset
+        const maxR = 28;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+        const scale = dist > maxR ? maxR / dist : 1;
+        setJoystickOffset({ x: dx * scale, y: dy * scale });
 
-        const threshold = 15;
+        // Trigger move when dragged enough
+        const threshold = 18;
         if (Math.abs(dx) > Math.abs(dy)) {
-            if (dx > threshold) { moveFrog(1, 0); joystickRef.current = { active: true, x, y }; }
-            else if (dx < -threshold) { moveFrog(-1, 0); joystickRef.current = { active: true, x, y }; }
+            if (dx > threshold) { moveFrog(1, 0); joystickOrigin.current = { x: touch.clientX, y: touch.clientY }; }
+            else if (dx < -threshold) { moveFrog(-1, 0); joystickOrigin.current = { x: touch.clientX, y: touch.clientY }; }
         } else {
-            if (dy > threshold) { moveFrog(0, 1); joystickRef.current = { active: true, x, y }; }
-            else if (dy < -threshold) { moveFrog(0, -1); joystickRef.current = { active: true, x, y }; }
+            if (dy > threshold) { moveFrog(0, 1); joystickOrigin.current = { x: touch.clientX, y: touch.clientY }; }
+            else if (dy < -threshold) { moveFrog(0, -1); joystickOrigin.current = { x: touch.clientX, y: touch.clientY }; }
         }
     };
 
-    const handleTouchEnd = () => {
-        setJoystick({ active: false, x: 0, y: 0 });
-        joystickRef.current = { active: false, x: 0, y: 0 };
+    const handleJoystickEnd = (e: React.TouchEvent) => {
+        e.preventDefault();
+        joystickActive.current = false;
+        setJoystickOffset({ x: 0, y: 0 });
     };
 
     return (
@@ -507,9 +529,7 @@ export default function Frogger() {
                     width={CANVAS_WIDTH}
                     height={CANVAS_HEIGHT}
                     className="max-w-full h-auto cursor-none shadow-inner"
-                    onTouchStart={handleTouchStart}
-                    onTouchMove={handleTouchMove}
-                    onTouchEnd={handleTouchEnd}
+                    onTouchStart={handleCanvasTap}
                 />
 
                 {/* Overlays */}
@@ -600,21 +620,26 @@ export default function Frogger() {
 
                 {/* Touch Controls Helper */}
                 <div className="flex-1 flex justify-center items-center h-full relative px-4">
-                    {/* Visual Joystick */}
-                    <div className="w-24 h-24 rounded-full border-4 border-gray-800/50 relative bg-gray-900/30 backdrop-blur-sm">
+                    {/* Joystick - handles its own touch events */}
+                    <div 
+                        className="w-28 h-28 rounded-full border-4 border-gray-700 relative bg-gray-900/60 backdrop-blur-sm select-none"
+                        onTouchStart={handleJoystickStart}
+                        onTouchMove={handleJoystickMove}
+                        onTouchEnd={handleJoystickEnd}
+                        style={{ touchAction: 'none' }}
+                    >
+                        {/* Crosshair guides */}
+                        <div className="absolute top-2 left-1/2 -translate-x-1/2 w-0.5 h-3 bg-gray-600 rounded" />
+                        <div className="absolute bottom-2 left-1/2 -translate-x-1/2 w-0.5 h-3 bg-gray-600 rounded" />
+                        <div className="absolute left-2 top-1/2 -translate-y-1/2 h-0.5 w-3 bg-gray-600 rounded" />
+                        <div className="absolute right-2 top-1/2 -translate-y-1/2 h-0.5 w-3 bg-gray-600 rounded" />
+                        {/* Thumb */}
                         <div 
-                            className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-red-600 border-4 border-red-800 shadow-xl transition-transform duration-75 ${joystick.active ? 'scale-90 opacity-100' : 'opacity-40 scale-100'}`}
-                            style={{
-                                transform: joystick.active ? 
-                                    `translate(calc(-50% + ${Math.max(-20, Math.min(20, (joystick.x - (canvasRef.current?.getBoundingClientRect().left ?? 0)) - 60))}px), calc(-50% + ${Math.max(-20, Math.min(20, (joystick.y - (canvasRef.current?.getBoundingClientRect().top ?? 0)) - 420))}px))` : 
-                                    'translate(-50%, -50%)'
+                            className="absolute top-1/2 left-1/2 w-10 h-10 rounded-full bg-gradient-to-br from-red-500 to-red-700 border-4 border-red-900 shadow-xl transition-none"
+                            style={{ 
+                                transform: `translate(calc(-50% + ${joystickOffset.x}px), calc(-50% + ${joystickOffset.y}px))`
                             }}
                         />
-                        {/* Direction indicators */}
-                        <div className="absolute top-1 w-0.5 h-2 bg-gray-700 left-1/2 -translate-x-1/2" />
-                        <div className="absolute bottom-1 w-0.5 h-2 bg-gray-700 left-1/2 -translate-x-1/2" />
-                        <div className="absolute left-1 h-0.5 w-2 bg-gray-700 top-1/2 -translate-y-1/2" />
-                        <div className="absolute right-1 h-0.5 w-2 bg-gray-700 top-1/2 -translate-y-1/2" />
                     </div>
                 </div>
 
