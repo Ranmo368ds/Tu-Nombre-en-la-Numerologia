@@ -10,6 +10,7 @@ const Sudoku = dynamic(() => import('@/components/games/Sudoku'), { ssr: false }
 const SopaDeLetras = dynamic(() => import('@/components/games/SopaDeLetras'), { ssr: false });
 const Crucigrama = dynamic(() => import('@/components/games/Crucigrama'), { ssr: false });
 const Pacman = dynamic(() => import('@/components/games/Pacman'), { ssr: false });
+const Galaga = dynamic(() => import('@/components/games/Galaga'), { ssr: false });
 
 export default function GameEmbedPage({ params }: { params: Promise<{ game: string }> }) {
     const { game } = use(params);
@@ -21,6 +22,7 @@ export default function GameEmbedPage({ params }: { params: Promise<{ game: stri
             case 'sopa': return <SopaDeLetras />;
             case 'crucigrama': return <Crucigrama />;
             case 'pacman': return <Pacman />;
+            case 'galaga': return <Galaga />;
             default: notFound();
         }
     };

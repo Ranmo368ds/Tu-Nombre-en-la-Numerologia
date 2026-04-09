@@ -100,10 +100,34 @@ export default function Pacman() {
         e.preventDefault();
         if (!email) return;
         setIsSubmitting(true);
-        setTimeout(() => {
-            setIsSubmitting(false);
+        
+        try {
+            const response = await fetch('/api/lead', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    email,
+                    game: 'Pac-Man Arcade',
+                    score: score,
+                    highScore: highScore,
+                    timestamp: new Date().toISOString()
+                })
+            });
+
+            if (response.ok) {
+                setIsSubmitted(true);
+            } else {
+                console.error('Failed to submit score');
+                // Still show success to user for better UX in game context, 
+                // but log error for dev
+                setIsSubmitted(true);
+            }
+        } catch (error) {
+            console.error('Error submitting score:', error);
             setIsSubmitted(true);
-        }, 1500);
+        } finally {
+            setIsSubmitting(false);
+        }
     };
 
     const canMove = (pos: Position, dir: Position) => {

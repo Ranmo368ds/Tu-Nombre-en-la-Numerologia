@@ -6,6 +6,7 @@ import Crucigrama from '../../games/Crucigrama';
 import SopaDeLetras from '../../games/SopaDeLetras';
 import Tetris from '../../games/Tetris';
 import Pacman from '../../games/Pacman';
+import Galaga from '../../games/Galaga';
 
 interface GameModalProps {
     game: GameConfig;
@@ -13,7 +14,7 @@ interface GameModalProps {
 }
 
 export default function GameModal({ game, onClose }: GameModalProps) {
-    const isArcade = game.type === 'tetris' || game.type === 'pacman';
+    const isArcade = game.type === 'tetris' || game.type === 'pacman' || game.type === 'galaga';
     const isTetris = game.type === 'tetris';
 
     return (
@@ -43,6 +44,7 @@ export default function GameModal({ game, onClose }: GameModalProps) {
                     {game.type === 'wordsearch' && <SopaDeLetras difficulty={game.difficulty} />}
                     {game.type === 'tetris' && <Tetris />}
                     {game.type === 'pacman' && <Pacman />}
+                    {game.type === 'galaga' && <Galaga />}
                 </div>
             </div>
         </div>
