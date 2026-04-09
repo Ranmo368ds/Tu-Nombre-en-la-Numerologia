@@ -8,6 +8,7 @@ import Tetris from '../../games/Tetris';
 import Pacman from '../../games/Pacman';
 import Galaga from '../../games/Galaga';
 import Frogger from '../../games/Frogger';
+import Asteroids from '../../games/Asteroids';
 
 interface GameModalProps {
     game: GameConfig;
@@ -15,7 +16,7 @@ interface GameModalProps {
 }
 
 export default function GameModal({ game, onClose }: GameModalProps) {
-    const isArcade = game.type === 'tetris' || game.type === 'pacman' || game.type === 'galaga' || game.type === 'frogger';
+    const isArcade = game.type === 'tetris' || game.type === 'pacman' || game.type === 'galaga' || game.type === 'frogger' || game.type === 'asteroids';
     const isTetris = game.type === 'tetris';
 
     return (
@@ -47,6 +48,7 @@ export default function GameModal({ game, onClose }: GameModalProps) {
                     {game.type === 'pacman' && <Pacman />}
                     {game.type === 'galaga' && <Galaga />}
                     {game.type === 'frogger' && <Frogger />}
+                    {game.type === 'asteroids' && <Asteroids />}
                 </div>
             </div>
         </div>

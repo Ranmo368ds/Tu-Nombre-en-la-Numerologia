@@ -12,6 +12,7 @@ const Crucigrama = dynamic(() => import('@/components/games/Crucigrama'), { ssr:
 const Pacman = dynamic(() => import('@/components/games/Pacman'), { ssr: false });
 const Galaga = dynamic(() => import('@/components/games/Galaga'), { ssr: false });
 const Frogger = dynamic(() => import('@/components/games/Frogger'), { ssr: false });
+const Asteroids = dynamic(() => import('@/components/games/Asteroids'), { ssr: false });
 
 export default function GameEmbedPage({ params }: { params: Promise<{ game: string }> }) {
     const { game } = use(params);
@@ -25,6 +26,7 @@ export default function GameEmbedPage({ params }: { params: Promise<{ game: stri
             case 'pacman': return <Pacman />;
             case 'galaga': return <Galaga />;
             case 'frogger': return <Frogger />;
+            case 'asteroids': return <Asteroids />;
             default: notFound();
         }
     };
