@@ -24,7 +24,7 @@ export interface EducationalPost {
 }
 
 export interface GameConfig {
-    type: 'sudoku' | 'crossword' | 'wordsearch';
+    type: 'sudoku' | 'crossword' | 'wordsearch' | 'tetris';
     title: string;
     difficulty?: 'easy' | 'medium' | 'hard';
 }
