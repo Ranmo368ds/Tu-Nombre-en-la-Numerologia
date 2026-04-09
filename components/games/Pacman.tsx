@@ -5,8 +5,12 @@ import { Trophy, Play, Pause, RotateCcw, ChevronLeft, ChevronRight, ChevronUp, C
 
 const GRID_SIZE = 20;
 const CELL_SIZE = 18; // Smaller for mobile
-const PACMAN_SPEED = 0.15;
+const PACMAN_SPEED = 0.125; // 1/8 divisor for grid alignment
 const GHOST_SPEED = 0.1;
+
+const isValid = (val: number) => {
+    return Math.abs(val - Math.round(val)) < 0.01;
+};
 
 const MAZE = [
     [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
@@ -114,8 +118,11 @@ export default function Pacman() {
 
         // Update Pacman Direction if next direction is clear
         if (nextDir.current.x !== 0 || nextDir.current.y !== 0) {
-            if (Number.isInteger(pacmanPos.current.x) && Number.isInteger(pacmanPos.current.y)) {
+            if (isValid(pacmanPos.current.x) && isValid(pacmanPos.current.y)) {
                 if (canMove(pacmanPos.current, nextDir.current)) {
+                    // Snap to grid
+                    pacmanPos.current.x = Math.round(pacmanPos.current.x);
+                    pacmanPos.current.y = Math.round(pacmanPos.current.y);
                     pacmanDir.current = nextDir.current;
                 }
             }
@@ -129,6 +136,10 @@ export default function Pacman() {
             // Handle Wrap Around
             if (pacmanPos.current.x < -0.5) pacmanPos.current.x = MAZE[0].length - 0.5;
             if (pacmanPos.current.x > MAZE[0].length - 0.5) pacmanPos.current.x = -0.5;
+        } else {
+            // Snap to grid if hit a wall
+            pacmanPos.current.x = Math.round(pacmanPos.current.x);
+            pacmanPos.current.y = Math.round(pacmanPos.current.y);
         }
 
         // Grid Position for collision
@@ -143,13 +154,16 @@ export default function Pacman() {
             } else if (dots.current[gridY][gridX] === 2) {
                 dots.current[gridY][gridX] = 3;
                 setScore(s => s + 50);
-                // Scared ghosts logic could go here
             }
         }
 
         // Move Ghosts
         ghosts.current.forEach(ghost => {
-            if (Number.isInteger(ghost.pos.x) && Number.isInteger(ghost.pos.y)) {
+            if (isValid(ghost.pos.x) && isValid(ghost.pos.y)) {
+                // Snap to grid
+                ghost.pos.x = Math.round(ghost.pos.x);
+                ghost.pos.y = Math.round(ghost.pos.y);
+
                 // Try to change direction at intersections
                 const possibleDirs = [
                     { x: 1, y: 0 }, { x: -1, y: 0 }, { x: 0, y: 1 }, { x: 0, y: -1 }
