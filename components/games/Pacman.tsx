@@ -1,15 +1,15 @@
 'use client';
 
 import React, { useState, useEffect, useCallback, useRef } from 'react';
-import { Trophy, Play, Pause, RotateCcw, ChevronLeft, ChevronRight, ChevronUp, ChevronDown, Mail, Send, CheckCircle2, Ghost } from 'lucide-react';
+import { Trophy, Play, Pause, RotateCcw, ChevronLeft, ChevronRight, ChevronUp, ChevronDown, Mail, Send, CheckCircle2, Ghost, Circle } from 'lucide-react';
 
 const GRID_SIZE = 20;
-const CELL_SIZE = 18; // Smaller for mobile
-const PACMAN_SPEED = 0.125; // 1/8 divisor for grid alignment
-const GHOST_SPEED = 0.1;
+const CELL_SIZE = 16; // Slightly smaller to fit better on all devices
+const PACMAN_SPEED = 0.125;
+const GHOST_SPEED = 0.125; // Slower and consistent with grid
 
 const isValid = (val: number) => {
-    return Math.abs(val - Math.round(val)) < 0.01;
+    return Math.abs(val - Math.round(val)) < 0.1; // More forgiving tolerance
 };
 
 const MAZE = [
@@ -50,6 +50,7 @@ interface GhostState {
 
 export default function Pacman() {
     const canvasRef = useRef<HTMLCanvasElement>(null);
+    const joystickHandleRef = useRef<HTMLDivElement>(null);
     const [score, setScore] = useState(0);
     const [highScore, setHighScore] = useState(0);
     const [gameOver, setGameOver] = useState(false);
@@ -107,8 +108,11 @@ export default function Pacman() {
         const nextX = Math.round(pos.x + dir.x);
         const nextY = Math.round(pos.y + dir.y);
         
-        // Wrap around logic
+        // Horizontal Wrap around logic
         if (nextX < 0 || nextX >= MAZE[0].length) return true;
+        
+        // Safety check for Y
+        if (nextY < 0 || nextY >= MAZE.length) return false;
         
         return MAZE[nextY][nextX] !== 1;
     };
@@ -116,68 +120,78 @@ export default function Pacman() {
     const update = useCallback(() => {
         if (paused || gameOver) return;
 
-        // Update Pacman Direction if next direction is clear
+        // --- Move Pacman ---
+        // Check if we can change to nextDir
         if (nextDir.current.x !== 0 || nextDir.current.y !== 0) {
             if (isValid(pacmanPos.current.x) && isValid(pacmanPos.current.y)) {
                 if (canMove(pacmanPos.current, nextDir.current)) {
-                    // Snap to grid
                     pacmanPos.current.x = Math.round(pacmanPos.current.x);
                     pacmanPos.current.y = Math.round(pacmanPos.current.y);
-                    pacmanDir.current = nextDir.current;
+                    pacmanDir.current = { ...nextDir.current };
                 }
             }
         }
 
-        // Move Pacman
+        // Try to move in current direction
         if (canMove(pacmanPos.current, pacmanDir.current)) {
             pacmanPos.current.x += pacmanDir.current.x * PACMAN_SPEED;
             pacmanPos.current.y += pacmanDir.current.y * PACMAN_SPEED;
 
-            // Handle Wrap Around
+            // Handle Wrap Around X
             if (pacmanPos.current.x < -0.5) pacmanPos.current.x = MAZE[0].length - 0.5;
             if (pacmanPos.current.x > MAZE[0].length - 0.5) pacmanPos.current.x = -0.5;
         } else {
-            // Snap to grid if hit a wall
+            // Snap to center of grid when blocked
             pacmanPos.current.x = Math.round(pacmanPos.current.x);
             pacmanPos.current.y = Math.round(pacmanPos.current.y);
         }
 
-        // Grid Position for collision
+        // Grid Position for interaction
         const gridX = Math.round(pacmanPos.current.x);
         const gridY = Math.round(pacmanPos.current.y);
 
         // Eat Dots
         if (gridY >= 0 && gridY < MAZE.length && gridX >= 0 && gridX < MAZE[0].length) {
-            if (dots.current[gridY][gridX] === 0) {
+            const cellValue = dots.current[gridY][gridX];
+            if (cellValue === 0) {
                 dots.current[gridY][gridX] = 3;
                 setScore(s => s + 10);
-            } else if (dots.current[gridY][gridX] === 2) {
+            } else if (cellValue === 2) {
                 dots.current[gridY][gridX] = 3;
                 setScore(s => s + 50);
             }
         }
 
-        // Move Ghosts
+        // --- Move Ghosts ---
         ghosts.current.forEach(ghost => {
             if (isValid(ghost.pos.x) && isValid(ghost.pos.y)) {
-                // Snap to grid
                 ghost.pos.x = Math.round(ghost.pos.x);
                 ghost.pos.y = Math.round(ghost.pos.y);
 
-                // Try to change direction at intersections
+                // Find available turns excluding backwards (unless dead end)
                 const possibleDirs = [
                     { x: 1, y: 0 }, { x: -1, y: 0 }, { x: 0, y: 1 }, { x: 0, y: -1 }
-                ].filter(d => (d.x !== -ghost.dir.x || d.y !== -ghost.dir.y) && canMove(ghost.pos, d));
-                
+                ].filter(d => {
+                    const isBackwards = (d.x === -ghost.dir.x && d.y === -ghost.dir.y);
+                    return !isBackwards && canMove(ghost.pos, d);
+                });
+
                 if (possibleDirs.length > 0) {
                     ghost.dir = possibleDirs[Math.floor(Math.random() * possibleDirs.length)];
+                } else if (!canMove(ghost.pos, ghost.dir)) {
+                    // Reverse if stuck
+                    ghost.dir = { x: -ghost.dir.x, y: -ghost.dir.y };
                 }
             }
             ghost.pos.x += ghost.dir.x * GHOST_SPEED;
             ghost.pos.y += ghost.dir.y * GHOST_SPEED;
+
+            // Ghost Wrap Around X
+            if (ghost.pos.x < -0.5) ghost.pos.x = MAZE[0].length - 0.5;
+            if (ghost.pos.x > MAZE[0].length - 0.5) ghost.pos.x = -0.5;
         });
 
-        // Check Collisions with Ghosts
+        // --- Collisions ---
         ghosts.current.forEach(ghost => {
             const dist = Math.sqrt(
                 Math.pow(pacmanPos.current.x - ghost.pos.x, 2) + 
@@ -185,21 +199,27 @@ export default function Pacman() {
             );
             if (dist < 0.8) {
                 setGameOver(true);
-                if (score > highScore) {
-                    setHighScore(score);
-                    localStorage.setItem('pacman-high-score', score.toString());
-                }
             }
         });
 
-        // Check for Win (all dots eaten)
-        const remainingDots = dots.current.flat().filter(cell => cell === 0 || cell === 2).length;
-        if (remainingDots === 0) {
-            resetGame(); // Next level?
+        // --- Win Condition ---
+        const remainingDots = dots.current.flat().some(cell => cell === 0 || cell === 2);
+        if (!remainingDots) {
             setScore(s => s + 1000);
+            dots.current = MAZE.map(row => [...row]); // Simple reset for now
         }
 
-    }, [paused, gameOver, score, highScore]);
+    }, [paused, gameOver]); // Removed score dependency to prevent loop restarts
+
+    // Handle High Score and Game Over effects
+    useEffect(() => {
+        if (gameOver) {
+            if (score > highScore) {
+                setHighScore(score);
+                localStorage.setItem('pacman-high-score', score.toString());
+            }
+        }
+    }, [gameOver, score, highScore]);
 
     const draw = useCallback(() => {
         const canvas = canvasRef.current;
@@ -207,13 +227,16 @@ export default function Pacman() {
         const ctx = canvas.getContext('2d');
         if (!ctx) return;
 
+        // Run logic update first
+        update();
+
         ctx.clearRect(0, 0, canvas.width, canvas.height);
 
         // Draw Maze
         MAZE.forEach((row, y) => {
             row.forEach((cell, x) => {
                 if (cell === 1) {
-                    ctx.fillStyle = '#1e1e2e';
+                    ctx.fillStyle = '#1a1a2e';
                     ctx.fillRect(x * CELL_SIZE, y * CELL_SIZE, CELL_SIZE, CELL_SIZE);
                     ctx.strokeStyle = '#3b82f6';
                     ctx.lineWidth = 1;
@@ -226,19 +249,18 @@ export default function Pacman() {
                 } else if (dots.current[y][x] === 2) {
                     ctx.fillStyle = '#ffb852';
                     ctx.beginPath();
-                    ctx.arc(x * CELL_SIZE + CELL_SIZE/2, y * CELL_SIZE + CELL_SIZE/2, 4, 0, Math.PI * 2);
+                    ctx.arc(x * CELL_SIZE + CELL_SIZE/2, y * CELL_SIZE + CELL_SIZE/2, 5, 0, Math.PI * 2);
                     ctx.fill();
                 }
             });
         });
 
         // Draw Pacman
-        ctx.fillStyle = '#ffff00';
-        ctx.beginPath();
         const px = pacmanPos.current.x * CELL_SIZE + CELL_SIZE/2;
         const py = pacmanPos.current.y * CELL_SIZE + CELL_SIZE/2;
         
-        // Rotating mouth
+        ctx.fillStyle = '#ffff00';
+        ctx.beginPath();
         const rotation = pacmanDir.current.x === 1 ? 0 : 
                          pacmanDir.current.x === -1 ? Math.PI : 
                          pacmanDir.current.y === 1 ? Math.PI/2 : 
@@ -267,15 +289,22 @@ export default function Pacman() {
             ctx.arc(gx - 3, gy - 3, 2, 0, Math.PI * 2);
             ctx.arc(gx + 3, gy - 3, 2, 0, Math.PI * 2);
             ctx.fill();
+            
+            ctx.fillStyle = '#000';
+            ctx.beginPath();
+            ctx.arc(gx - 3 + ghost.dir.x * 1, gy - 3 + ghost.dir.y * 1, 1, 0, Math.PI * 2);
+            ctx.arc(gx + 3 + ghost.dir.x * 1, gy - 3 + ghost.dir.y * 1, 1, 0, Math.PI * 2);
+            ctx.fill();
         });
 
-        update();
         animationRef.current = requestAnimationFrame(draw);
     }, [update]);
 
     useEffect(() => {
         animationRef.current = requestAnimationFrame(draw);
-        return () => cancelAnimationFrame(animationRef.current);
+        return () => {
+            if (animationRef.current) cancelAnimationFrame(animationRef.current);
+        };
     }, [draw]);
 
     // Keyboard Controls
@@ -301,21 +330,19 @@ export default function Pacman() {
     return (
         <div className="flex flex-col h-full bg-[#0a0a0c] text-white font-sans overflow-hidden">
             {/* Header */}
-            <div className="flex justify-between items-center p-3 bg-white/5 border-b border-white/10 shrink-0">
+            <div className="flex justify-between items-center p-2 bg-white/5 border-b border-white/10 shrink-0">
                 <div className="flex items-center gap-2">
-                    <div className="w-8 h-8 rounded-lg bg-yellow-400 flex items-center justify-center shadow-lg shadow-yellow-400/20">
-                        <div className="w-4 h-4 bg-[#0a0a0c] rounded-full" style={{ clipPath: 'polygon(100% 0%, 100% 100%, 0% 100%, 0% 0%, 100% 0%, 50% 50%)' }} />
+                    <div className="w-6 h-6 rounded bg-yellow-400 flex items-center justify-center shadow-lg shadow-yellow-400/20">
+                        <div className="w-3 h-3 bg-[#0a0a0c] rounded-full" style={{ clipPath: 'polygon(100% 0%, 100% 100%, 0% 100%, 0% 0%, 100% 0%, 50% 50%)' }} />
                     </div>
                     <div>
-                        <h1 className="text-lg font-black italic tracking-tighter uppercase leading-none text-yellow-400">Pac-Man</h1>
-                        <p className="text-[8px] text-white/40 uppercase tracking-widest font-bold">Retro Edition</p>
+                        <h1 className="text-sm font-black italic tracking-tighter uppercase leading-none text-yellow-400">Pac-Man</h1>
                     </div>
                 </div>
 
                 <div className="flex gap-3">
                     <div className="text-right">
-                        <p className="text-[8px] text-white/40 uppercase font-bold tracking-wider">Score</p>
-                        <p className="text-lg font-black text-white tabular-nums">{score.toLocaleString()}</p>
+                        <p className="text-[10px] font-black text-white tabular-nums">Score: {score.toLocaleString()}</p>
                     </div>
                 </div>
             </div>
@@ -427,15 +454,67 @@ export default function Pacman() {
                 </div>
             </div>
 
-            {/* Controls */}
-            <div className="p-4 bg-white/5 border-t border-white/10 flex justify-center shrink-0">
-                <div className="grid grid-cols-3 gap-2">
-                    <div />
-                    <button onClick={() => setMoveDir(0, -1)} className="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center active:bg-yellow-400 active:text-black transition-all"><ChevronUp /></button>
-                    <div />
-                    <button onClick={() => setMoveDir(-1, 0)} className="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center active:bg-yellow-400 active:text-black transition-all"><ChevronLeft /></button>
-                    <button onClick={() => setMoveDir(0, 1)} className="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center active:bg-yellow-400 active:text-black transition-all"><ChevronDown /></button>
-                    <button onClick={() => setMoveDir(1, 0)} className="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center active:bg-yellow-400 active:text-black transition-all"><ChevronRight /></button>
+            {/* Joystick Controls */}
+            <div className="flex-1 min-h-[140px] flex items-center justify-center bg-white/5 border-t border-white/10 p-4 shrink-0">
+                <div className="relative w-28 h-28 flex items-center justify-center">
+                    {/* Joystick Base */}
+                    <div className="absolute inset-0 rounded-full border-2 border-white/10 bg-white/5 backdrop-blur-sm shadow-[inset_0_0_20px_rgba(255,255,255,0.05)]" />
+                    
+                    {/* Visual Indicators */}
+                    <div className="absolute top-1 left-1/2 -translate-x-1/2 w-1 h-1.5 bg-yellow-400/30 rounded-full" />
+                    <div className="absolute bottom-1 left-1/2 -translate-x-1/2 w-1 h-1.5 bg-yellow-400/30 rounded-full" />
+                    <div className="absolute left-1 top-1/2 -translate-y-1/2 h-1 w-1.5 bg-yellow-400/30 rounded-full" />
+                    <div className="absolute right-1 top-1/2 -translate-y-1/2 h-1 w-1.5 bg-yellow-400/30 rounded-full" />
+
+                    {/* Interactive Handle Area */}
+                    <div 
+                        className="relative w-full h-full rounded-full cursor-pointer touch-none z-10 flex items-center justify-center"
+                        onPointerDown={(e) => {
+                            const rect = e.currentTarget.getBoundingClientRect();
+                            const centerX = rect.left + rect.width / 2;
+                            const centerY = rect.top + rect.height / 2;
+                            
+                            const handleMove = (moveEvent: PointerEvent) => {
+                                const dx = moveEvent.clientX - centerX;
+                                const dy = moveEvent.clientY - centerY;
+                                const dist = Math.sqrt(dx * dx + dy * dy);
+                                
+                                if (dist > 8) {
+                                    if (Math.abs(dx) > Math.abs(dy)) {
+                                        setMoveDir(dx > 0 ? 1 : -1, 0);
+                                    } else {
+                                        setMoveDir(0, dy > 0 ? 1 : -1);
+                                    }
+                                }
+                                
+                                // Drag visual effect
+                                if (joystickHandleRef.current) {
+                                    const maxDist = 25;
+                                    const scale = Math.min(maxDist, dist) / dist;
+                                    joystickHandleRef.current.style.transform = `translate(${dx * scale}px, ${dy * scale}px)`;
+                                }
+                            };
+                            
+                            const handleUp = () => {
+                                window.removeEventListener('pointermove', handleMove);
+                                window.removeEventListener('pointerup', handleUp);
+                                if (joystickHandleRef.current) joystickHandleRef.current.style.transform = 'translate(0px, 0px)';
+                            };
+                            
+                            window.addEventListener('pointermove', handleMove);
+                            window.addEventListener('pointerup', handleUp);
+                        }}
+                    >
+                        {/* Stick Handle */}
+                        <div 
+                            ref={joystickHandleRef}
+                            className="w-12 h-12 rounded-full bg-yellow-400 shadow-[0_0_20px_rgba(250,204,21,0.4)] flex items-center justify-center transition-transform duration-75"
+                        >
+                            <div className="w-6 h-6 rounded-full border-2 border-black/10 flex items-center justify-center">
+                                <Circle className="w-3 h-3 text-black fill-current opacity-20" />
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
