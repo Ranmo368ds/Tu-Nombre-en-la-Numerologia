@@ -70,6 +70,7 @@ export default function Pacman() {
     ]);
     const dots = useRef<number[][]>(MAZE.map(row => [...row]));
     const animationRef = useRef<number>(0);
+    const scaredTimer = useRef<number>(0);
 
     // Load High Score
     useEffect(() => {
@@ -88,6 +89,7 @@ export default function Pacman() {
             { pos: { x: 10, y: 9 }, dir: { x: 0, y: 1 }, color: '#FFB852', isScared: false },
         ];
         dots.current = MAZE.map(row => [...row]);
+        scaredTimer.current = 0;
         setScore(0);
         setGameOver(false);
         setPaused(false);
@@ -159,7 +161,13 @@ export default function Pacman() {
             } else if (cellValue === 2) {
                 dots.current[gridY][gridX] = 3;
                 setScore(s => s + 50);
+                scaredTimer.current = 600; // ~10 seconds at 60fps
             }
+        }
+
+        // Timer
+        if (scaredTimer.current > 0) {
+            scaredTimer.current--;
         }
 
         // --- Move Ghosts ---
@@ -183,8 +191,9 @@ export default function Pacman() {
                     ghost.dir = { x: -ghost.dir.x, y: -ghost.dir.y };
                 }
             }
-            ghost.pos.x += ghost.dir.x * GHOST_SPEED;
-            ghost.pos.y += ghost.dir.y * GHOST_SPEED;
+            const speed = scaredTimer.current > 0 ? GHOST_SPEED * 0.5 : GHOST_SPEED;
+            ghost.pos.x += ghost.dir.x * speed;
+            ghost.pos.y += ghost.dir.y * speed;
 
             // Ghost Wrap Around X
             if (ghost.pos.x < -0.5) ghost.pos.x = MAZE[0].length - 0.5;
@@ -198,7 +207,13 @@ export default function Pacman() {
                 Math.pow(pacmanPos.current.y - ghost.pos.y, 2)
             );
             if (dist < 0.8) {
-                setGameOver(true);
+                if (scaredTimer.current > 0) {
+                    // Eat ghost
+                    ghost.pos = { x: 9, y: 9 };
+                    setScore(s => s + 200);
+                } else {
+                    setGameOver(true);
+                }
             }
         });
 
@@ -276,7 +291,14 @@ export default function Pacman() {
             const gx = ghost.pos.x * CELL_SIZE + CELL_SIZE/2;
             const gy = ghost.pos.y * CELL_SIZE + CELL_SIZE/2;
             
-            ctx.fillStyle = ghost.color;
+            // Draw Scared or Flashing
+            let ghostColor = ghost.color;
+            if (scaredTimer.current > 0) {
+                const isFlashing = scaredTimer.current < 120 && Math.floor(scaredTimer.current / 10) % 2 === 0;
+                ghostColor = isFlashing ? '#FFFFFF' : '#2121ff';
+            }
+            
+            ctx.fillStyle = ghostColor;
             ctx.beginPath();
             ctx.arc(gx, gy - 2, CELL_SIZE/2 - 2, Math.PI, 0);
             ctx.lineTo(gx + CELL_SIZE/2 - 2, gy + CELL_SIZE/2 - 2);
