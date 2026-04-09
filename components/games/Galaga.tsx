@@ -95,21 +95,6 @@ export default function Galaga() {
         }));
     }, []);
 
-    // Load High Score
-    useEffect(() => {
-        const saved = localStorage.getItem('galaga-high-score');
-        if (saved) setHighScore(parseInt(saved));
-    }, []);
-
-    const createExplosion = (x: number, y: number, color: string, count = 12) => {
-        for (let i = 0; i < count; i++) {
-            particles.current.push({
-                x, y, vx: (Math.random() - 0.5) * 8, vy: (Math.random() - 0.5) * 8,
-                life: 1.0, width: 2, height: 2, active: true, color
-            });
-        }
-    };
-
     const generatePath = (startX: number, homeX: number, homeY: number, variant = 0) => {
         const points = [];
         const steps = 100;
@@ -183,6 +168,23 @@ export default function Galaga() {
         });
         enemies.current = newEnemies;
     }, []);
+
+    // Load High Score & Initialize
+    useEffect(() => {
+        const saved = localStorage.getItem('galaga-high-score');
+        if (saved) setHighScore(parseInt(saved));
+        spawnEnemies(1);
+    }, [spawnEnemies]);
+
+    const createExplosion = (x: number, y: number, color: string, count = 12) => {
+        for (let i = 0; i < count; i++) {
+            particles.current.push({
+                x, y, vx: (Math.random() - 0.5) * 8, vy: (Math.random() - 0.5) * 8,
+                life: 1.0, width: 2, height: 2, active: true, color
+            });
+        }
+    };
+
 
     const resetGame = () => {
         playerX.current = CANVAS_WIDTH / 2 - 15;
@@ -466,13 +468,12 @@ export default function Galaga() {
             });
         }
 
-        // Functions for pixel-ish rendering
-        const drawPixelEntity = (x: number, y: number, color: string, pixels: number[][]) => {
-            const size = 2;
+        // Enhanced pixel rendering to ensure visibility
+        const drawPixelEntity = (x: number, y: number, color: string, pixels: number[][], pixelSize = 2) => {
             ctx.fillStyle = color;
             pixels.forEach((row, ry) => {
                 row.forEach((pixel, rx) => {
-                    if (pixel) ctx.fillRect(x + rx * size, y + ry * size, size, size);
+                    if (pixel) ctx.fillRect(Math.floor(x + rx * pixelSize), Math.floor(y + ry * pixelSize), pixelSize, pixelSize);
                 });
             });
         };
@@ -492,8 +493,21 @@ export default function Galaga() {
 
         const drawShip = (x: number, y: number, alpha = 1) => {
             ctx.globalAlpha = alpha;
+            // White body
             drawPixelEntity(x, y, '#ffffff', shipPixels);
-            drawPixelEntity(x, y, '#ef4444', [[0,0,0,0,0,0,1,1],[0,0,0,0,0,1,1],[0,0,0,1,1],[0,1,1],[1,1]]); // Wings detail red
+            
+            // Red accents (Corrected wings and nose)
+            const redAccents = [
+                [0,0,0,0,0,0,1,1,0,0,0,0,0,0],
+                [0,0,0,0,0,1,1,1,1,0,0,0,0,0],
+                [0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+                [0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+                [0,0,1,1,0,0,0,0,0,0,1,1,0,0],
+                [0,1,1,0,0,0,0,0,0,0,0,1,1,0],
+                [0,1,1,0,0,0,0,0,0,0,0,1,1,0],
+                [1,1,1,0,0,0,0,0,0,0,0,1,1,1],
+            ];
+            drawPixelEntity(x, y, '#ef4444', redAccents);
             ctx.globalAlpha = 1;
         };
 
