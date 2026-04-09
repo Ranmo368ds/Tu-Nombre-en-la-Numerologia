@@ -43,6 +43,9 @@ interface Asteroid {
     angle: number;
     spin: number;
     verts: Vec2[];
+    phase: number;   // sine-wave phase for vertical hover
+    hoverAmp: number; // amplitude of hover oscillation
+    hoverFreq: number; // frequency of oscillation
 }
 
 interface UFO {
@@ -84,9 +87,10 @@ function makeAsteroidVerts(radius: number): Vec2[] {
 
 function spawnAsteroid(id: number, x: number, y: number, size: 0 | 1 | 2): Asteroid {
     const radii = [48, 24, 11];
-    const speeds = [0.8, 1.4, 2.2];
+    // Much slower speeds — gentle hovering drift
+    const speeds = [0.22, 0.40, 0.65];
     const radius = radii[size];
-    const speed = speeds[size] * (0.6 + Math.random() * 0.8);
+    const speed = speeds[size] * (0.7 + Math.random() * 0.6);
     const angle = Math.random() * Math.PI * 2;
     return {
         id, x, y,
@@ -95,8 +99,11 @@ function spawnAsteroid(id: number, x: number, y: number, size: 0 | 1 | 2): Aster
         radius,
         size,
         angle: 0,
-        spin: (Math.random() - 0.5) * 0.04,
+        spin: (Math.random() - 0.5) * 0.012, // slower rotation too
         verts: makeAsteroidVerts(radius),
+        phase: Math.random() * Math.PI * 2,   // random start phase
+        hoverAmp: 0.18 + Math.random() * 0.22, // gentle up/down amplitude
+        hoverFreq: 0.008 + Math.random() * 0.01, // slow oscillation
     };
 }
 
@@ -286,13 +293,18 @@ export default function Asteroids() {
             life: b.life - 1,
         }));
 
-        // ─ Update asteroids ─
-        asteroidsRef.current = asteroidsRef.current.map(a => ({
-            ...a,
-            x: wrap(a.x + a.vx, W),
-            y: wrap(a.y + a.vy, H),
-            angle: a.angle + a.spin,
-        }));
+        // ─ Update asteroids (slow drift + sinusoidal hover) ─
+        const frame = frameRef.current;
+        asteroidsRef.current = asteroidsRef.current.map(a => {
+            // Apply gentle vertical sine-wave oscillation (hovering)
+            const hoverVy = Math.sin(frame * a.hoverFreq + a.phase) * a.hoverAmp;
+            return {
+                ...a,
+                x: wrap(a.x + a.vx, W),
+                y: wrap(a.y + a.vy + hoverVy, H),
+                angle: a.angle + a.spin,
+            };
+        });
 
         // ─ UFO Logic ─
         const ufo = ufoRef.current;
