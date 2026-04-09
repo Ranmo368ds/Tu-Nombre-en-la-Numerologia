@@ -266,6 +266,8 @@ const february2026: MonthlyFlyer = {
         { type: 'sudoku', title: 'Daily Sudoku', difficulty: 'medium' },
         { type: 'crossword', title: 'Services Crossword', difficulty: 'easy' },
         { type: 'wordsearch', title: 'Word Search', difficulty: 'easy' },
+        { type: 'tetris', title: 'Tetris Retro', difficulty: 'hard' },
+        { type: 'pacman', title: 'Paco-Man', difficulty: 'hard' },
     ],
 };
 

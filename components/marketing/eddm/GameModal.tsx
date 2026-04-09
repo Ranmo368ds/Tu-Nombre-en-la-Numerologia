@@ -5,6 +5,7 @@ import Sudoku from '../../games/Sudoku';
 import Crucigrama from '../../games/Crucigrama';
 import SopaDeLetras from '../../games/SopaDeLetras';
 import Tetris from '../../games/Tetris';
+import Pacman from '../../games/Pacman';
 
 interface GameModalProps {
     game: GameConfig;

@@ -19,6 +19,10 @@ export default function GameCard({ game }: GameCardProps) {
                 return '📝';
             case 'wordsearch':
                 return '🔍';
+            case 'tetris':
+                return '🧱';
+            case 'pacman':
+                return '🕹️';
             default:
                 return '🎮';
         }
