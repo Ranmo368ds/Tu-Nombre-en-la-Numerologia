@@ -11,6 +11,7 @@ const SopaDeLetras = dynamic(() => import('@/components/games/SopaDeLetras'), { 
 const Crucigrama = dynamic(() => import('@/components/games/Crucigrama'), { ssr: false });
 const Pacman = dynamic(() => import('@/components/games/Pacman'), { ssr: false });
 const Galaga = dynamic(() => import('@/components/games/Galaga'), { ssr: false });
+const Frogger = dynamic(() => import('@/components/games/Frogger'), { ssr: false });
 
 export default function GameEmbedPage({ params }: { params: Promise<{ game: string }> }) {
     const { game } = use(params);
@@ -23,6 +24,7 @@ export default function GameEmbedPage({ params }: { params: Promise<{ game: stri
             case 'crucigrama': return <Crucigrama />;
             case 'pacman': return <Pacman />;
             case 'galaga': return <Galaga />;
+            case 'frogger': return <Frogger />;
             default: notFound();
         }
     };
