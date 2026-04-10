@@ -251,44 +251,63 @@ export default function Tetris() {
         }, 1500);
     };
 
+    // Cell size: fill available width on mobile (max 480px wrapper, minus 16px padding each side)
+    // 10 columns + 9 gaps of 1px = 10*cell + 9
+    // target: min(calc((100vw - 32px) / 10), 30px)
+    const CELL = 'min(calc((min(100vw, 480px) - 32px) / 10), 30px)';
+
     return (
-        <div className="flex flex-col h-full bg-[#0a0a0c] text-white font-sans selection:bg-pink-500/30 overflow-hidden">
+        <div className="flex flex-col bg-[#0a0a0c] text-white font-sans selection:bg-pink-500/30 overflow-hidden" style={{ minHeight: '100%' }}>
             {/* Header Stats */}
-            <div className="flex justify-between items-center p-3 bg-white/5 border-b border-white/10 shrink-0">
+            <div className="flex justify-between items-center px-3 py-2 bg-white/5 border-b border-white/10 shrink-0">
                 <div className="flex items-center gap-2">
-                    <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-pink-500 to-purple-600 flex items-center justify-center shadow-lg shadow-pink-500/20">
-                        <Rocket className="w-5 h-5 text-white" />
+                    <div className="w-7 h-7 rounded-lg bg-gradient-to-br from-pink-500 to-purple-600 flex items-center justify-center shadow-lg shadow-pink-500/20">
+                        <Rocket className="w-4 h-4 text-white" />
                     </div>
-                    <div>
-                        <h1 className="text-lg font-black italic tracking-tighter uppercase leading-none">Tetris</h1>
-                        <p className="text-[8px] text-white/40 uppercase tracking-widest font-bold">Vibrant Edition</p>
-                    </div>
+                    <h1 className="text-base font-black italic tracking-tighter uppercase leading-none">Tetris</h1>
                 </div>
 
-                <div className="flex gap-3">
+                {/* Score + Next piece in header */}
+                <div className="flex items-center gap-3">
+                    {/* Next piece mini preview */}
+                    <div className="flex flex-col items-center">
+                        <p className="text-[7px] text-white/40 uppercase font-bold tracking-wider mb-0.5">Next</p>
+                        <div className="flex flex-col items-center justify-center w-10 h-8 bg-white/5 rounded-md border border-white/10">
+                            <div className="flex flex-col" style={{ transform: 'scale(0.55)', transformOrigin: 'center' }}>
+                                {TETROMINOES[nextPieceType].shape.map((row, y) => (
+                                    <div key={y} className="flex">
+                                        {row.map((cell, x) => (
+                                            <div key={x} className={`w-3.5 h-3.5 rounded-sm m-px ${cell ? '' : 'opacity-0'}`}
+                                                style={{ backgroundColor: TETROMINOES[nextPieceType].color }} />
+                                        ))}
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
                     <div className="text-right">
-                        <p className="text-[8px] text-white/40 uppercase font-bold tracking-wider">Puntos</p>
-                        <p className="text-lg font-black text-white tabular-nums">{score.toLocaleString()}</p>
+                        <p className="text-[7px] text-white/40 uppercase font-bold tracking-wider">Score</p>
+                        <p className="text-base font-black text-white tabular-nums">{score.toLocaleString()}</p>
                     </div>
                     <div className="text-right border-l border-white/10 pl-3">
-                        <p className="text-[8px] text-white/40 uppercase font-bold tracking-wider">Nivel</p>
-                        <p className="text-lg font-black text-pink-500 tabular-nums">{level}</p>
+                        <p className="text-[7px] text-white/40 uppercase font-bold tracking-wider">Lvl</p>
+                        <p className="text-base font-black text-pink-500 tabular-nums">{level}</p>
                     </div>
                 </div>
             </div>
 
             {/* Main Game Area */}
-            <div className="flex-1 flex flex-col items-center justify-center p-2 min-h-0 bg-transparent relative overflow-hidden">
-                {/* Visual Background Elements */}
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-pink-500/5 rounded-full blur-[100px] pointer-events-none" />
+            <div className="flex-1 flex flex-col items-center justify-start pt-2 px-2 pb-1 min-h-0 bg-transparent relative overflow-hidden">
+                {/* Ambient glow */}
+                <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-72 bg-pink-500/5 rounded-full blur-[80px] pointer-events-none" />
                 
-                <div className="relative z-10 flex flex-col items-center">
-                    {/* Game Grid - Sized reduced to 2.5vh / 18px for better fit */}
+                <div className="relative z-10 flex flex-col items-center w-full">
+                    {/* Game Grid — responsive cell size */}
                     <div 
                         className="grid bg-[#0a0a0c]/80 backdrop-blur-xl border-2 border-white/10 rounded-xl overflow-hidden shadow-2xl relative"
                         style={{
-                            gridTemplateColumns: `repeat(${BOARD_WIDTH}, min(2.5vh, 18px))`,
-                            gridTemplateRows: `repeat(${BOARD_HEIGHT}, min(2.5vh, 18px))`,
+                            gridTemplateColumns: `repeat(${BOARD_WIDTH}, ${CELL})`,
+                            gridTemplateRows: `repeat(${BOARD_HEIGHT}, ${CELL})`,
                             gap: '1px'
                         }}
                     >
@@ -335,11 +354,11 @@ export default function Tetris() {
                         )}
                     </div>
 
-                    {/* High Score Badge */}
-                    <div className="mt-3 px-3 py-1 bg-white/5 rounded-full border border-white/10 z-10 flex items-center gap-2">
+                    {/* High Score Badge — compact, below board */}
+                    <div className="mt-2 px-3 py-1 bg-white/5 rounded-full border border-white/10 z-10 flex items-center gap-2">
                         <Trophy className="w-3 h-3 text-yellow-500" />
                         <p className="text-white/40 text-[9px] font-bold uppercase tracking-widest">
-                            Récord: <span className="text-white ml-1">{highScore.toLocaleString()}</span>
+                            Best: <span className="text-white ml-1">{highScore.toLocaleString()}</span>
                         </p>
                     </div>
                 </div>
@@ -420,64 +439,48 @@ export default function Tetris() {
                 )}
             </div>
 
-            {/* Controls Bar - Compacted for mobile */}
-            <div className="p-3 bg-white/5 border-t border-white/10 flex justify-between items-center shrink-0 safe-area-bottom">
-                {/* Mobile D-Pad */}
-                <div className="flex gap-1.5">
-                    <button 
-                        onClick={() => movePiece({ x: -1, y: 0 })}
-                        className="w-11 h-11 rounded-lg bg-white/5 flex items-center justify-center active:bg-pink-500 active:scale-90 transition-all border border-white/5"
-                    >
-                        <ChevronLeft className="w-5 h-5" />
-                    </button>
-                    <div className="flex flex-col gap-1.5">
+            {/* Controls Bar — larger buttons, optimized for mobile */}
+            <div className="px-3 py-3 bg-white/5 border-t border-white/10 shrink-0 safe-area-bottom">
+                <div className="flex justify-between items-center">
+                    {/* D-Pad */}
+                    <div className="flex gap-2">
                         <button 
-                            onClick={handleRotate}
-                            className="w-11 h-11 rounded-lg bg-white/5 flex items-center justify-center active:bg-pink-500 active:scale-90 transition-all border border-white/5"
+                            onPointerDown={() => movePiece({ x: -1, y: 0 })}
+                            className="w-14 h-14 rounded-xl bg-white/5 flex items-center justify-center active:bg-pink-500 active:scale-90 transition-all border border-white/10"
                         >
-                            <RotateCcw className="w-4 h-4" />
+                            <ChevronLeft className="w-7 h-7" />
                         </button>
-                        <button 
-                            onClick={() => movePiece({ x: 0, y: 1 })}
-                            className="w-11 h-11 rounded-lg bg-white/5 flex items-center justify-center active:bg-pink-500 active:scale-90 transition-all border border-white/5"
-                        >
-                            <ChevronDown className="w-5 h-5" />
-                        </button>
-                    </div>
-                    <button 
-                        onClick={() => movePiece({ x: 1, y: 0 })}
-                        className="w-11 h-11 rounded-lg bg-white/5 flex items-center justify-center active:bg-pink-500 active:scale-90 transition-all border border-white/5"
-                    >
-                        <ChevronRight className="w-5 h-5" />
-                    </button>
-                </div>
-
-                {/* Pause/Resume and Next Piece */}
-                <div className="flex items-center gap-3">
-                    <div className="text-right hidden sm:block">
-                        <p className="text-[8px] text-white/40 uppercase font-bold tracking-wider">Siguiente</p>
-                        <div className="w-11 h-11 flex items-center justify-center bg-white/5 rounded-lg border border-white/10 mt-1">
-                            <div className="scale-[0.45]">
-                                {TETROMINOES[nextPieceType].shape.map((row, y) => (
-                                    <div key={y} className="flex">
-                                        {row.map((cell, x) => (
-                                            <div 
-                                                key={x} 
-                                                className={`w-4 h-4 rounded-sm m-0.5 ${cell ? '' : 'opacity-0'}`} 
-                                                style={{ backgroundColor: TETROMINOES[nextPieceType].color }}
-                                            />
-                                        ))}
-                                    </div>
-                                ))}
-                            </div>
+                        <div className="flex flex-col gap-2">
+                            <button 
+                                onPointerDown={handleRotate}
+                                className="w-14 h-14 rounded-xl bg-white/5 flex items-center justify-center active:bg-pink-500 active:scale-90 transition-all border border-white/10"
+                            >
+                                <RotateCcw className="w-5 h-5" />
+                            </button>
                         </div>
+                        <button 
+                            onPointerDown={() => movePiece({ x: 1, y: 0 })}
+                            className="w-14 h-14 rounded-xl bg-white/5 flex items-center justify-center active:bg-pink-500 active:scale-90 transition-all border border-white/10"
+                        >
+                            <ChevronRight className="w-7 h-7" />
+                        </button>
                     </div>
-                    <button 
-                        onClick={() => setPaused(prev => !prev)}
-                        className="w-12 h-12 rounded-full bg-white text-black flex items-center justify-center hover:scale-105 active:scale-95 transition-all shadow-xl"
-                    >
-                        {paused ? <Play className="w-5 h-5 fill-current" /> : <Pause className="w-5 h-5 fill-current" />}
-                    </button>
+
+                    {/* Right side: Down fast + Pause */}
+                    <div className="flex flex-col gap-2 items-center">
+                        <button 
+                            onPointerDown={() => movePiece({ x: 0, y: 1 })}
+                            className="w-14 h-14 rounded-xl bg-white/5 flex items-center justify-center active:bg-pink-500 active:scale-90 transition-all border border-white/10"
+                        >
+                            <ChevronDown className="w-7 h-7" />
+                        </button>
+                        <button 
+                            onClick={() => setPaused(prev => !prev)}
+                            className="w-14 h-14 rounded-xl bg-white text-black flex items-center justify-center hover:scale-105 active:scale-95 transition-all shadow-xl"
+                        >
+                            {paused ? <Play className="w-6 h-6 fill-current" /> : <Pause className="w-6 h-6 fill-current" />}
+                        </button>
+                    </div>
                 </div>
             </div>
             
