@@ -13,6 +13,7 @@ const Pacman = dynamic(() => import('@/components/games/Pacman'), { ssr: false }
 const Galaga = dynamic(() => import('@/components/games/Galaga'), { ssr: false });
 const Frogger = dynamic(() => import('@/components/games/Frogger'), { ssr: false });
 const Asteroids = dynamic(() => import('@/components/games/Asteroids'), { ssr: false });
+const Tennis = dynamic(() => import('@/components/games/Tennis'), { ssr: false });
 
 export default function GameEmbedPage({ params }: { params: Promise<{ game: string }> }) {
     const { game } = use(params);
@@ -27,6 +28,8 @@ export default function GameEmbedPage({ params }: { params: Promise<{ game: stri
             case 'galaga': return <Galaga />;
             case 'frogger': return <Frogger />;
             case 'asteroids': return <Asteroids />;
+            case 'tennis': return <Tennis />;
+
             default: notFound();
         }
     };
