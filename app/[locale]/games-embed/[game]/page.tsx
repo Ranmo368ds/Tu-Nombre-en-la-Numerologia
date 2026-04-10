@@ -15,6 +15,7 @@ const Frogger = dynamic(() => import('@/components/games/Frogger'), { ssr: false
 const Asteroids = dynamic(() => import('@/components/games/Asteroids'), { ssr: false });
 const Tennis = dynamic(() => import('@/components/games/Tennis'), { ssr: false });
 const Simon = dynamic(() => import('@/components/games/Simon'), { ssr: false });
+const Invaders = dynamic(() => import('@/components/games/Invaders'), { ssr: false });
 
 export default function GameEmbedPage({ params }: { params: Promise<{ game: string }> }) {
     const { game } = use(params);
@@ -31,6 +32,8 @@ export default function GameEmbedPage({ params }: { params: Promise<{ game: stri
             case 'asteroids': return <Asteroids />;
             case 'tennis': return <Tennis />;
             case 'simon': return <Simon />;
+            case 'invaders': return <Invaders />;
+
 
 
             default: notFound();

@@ -11,6 +11,7 @@ import Frogger from '../../games/Frogger';
 import Asteroids from '../../games/Asteroids';
 import Tennis from '../../games/Tennis';
 import Simon from '../../games/Simon';
+import Invaders from '../../games/Invaders';
 
 interface GameModalProps {
     game: GameConfig;
@@ -18,7 +19,7 @@ interface GameModalProps {
 }
 
 export default function GameModal({ game, onClose }: GameModalProps) {
-    const isArcade = game.type === 'tetris' || game.type === 'pacman' || game.type === 'galaga' || game.type === 'frogger' || game.type === 'asteroids' || game.type === 'tennis' || game.type === 'simon';
+    const isArcade = game.type === 'tetris' || game.type === 'pacman' || game.type === 'galaga' || game.type === 'frogger' || game.type === 'asteroids' || game.type === 'tennis' || game.type === 'simon' || game.type === 'invaders';
     const isTetris = game.type === 'tetris';
 
     return (
@@ -53,6 +54,7 @@ export default function GameModal({ game, onClose }: GameModalProps) {
                     {game.type === 'asteroids' && <Asteroids />}
                     {game.type === 'tennis' && <Tennis />}
                     {game.type === 'simon' && <Simon />}
+                    {game.type === 'invaders' && <Invaders />}
                 </div>
             </div>
         </div>
