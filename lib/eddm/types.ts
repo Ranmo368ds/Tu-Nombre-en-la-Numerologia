@@ -24,7 +24,7 @@ export interface EducationalPost {
 }
 
 export interface GameConfig {
-    type: 'sudoku' | 'crossword' | 'wordsearch' | 'tetris' | 'pacman' | 'galaga' | 'frogger' | 'asteroids' | 'tennis';
+    type: 'sudoku' | 'crossword' | 'wordsearch' | 'tetris' | 'pacman' | 'galaga' | 'frogger' | 'asteroids' | 'tennis' | 'simon';
     title: string;
     difficulty?: 'easy' | 'medium' | 'hard';
 }
